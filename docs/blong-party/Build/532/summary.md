@@ -1,8 +1,8 @@
-### ❌ blong-party — 14 passed, 1 failed (15 total)
+### ❌ blong-party — 15 passed, 1 failed (16 total)
 
 | Status | Suite | Test | Trace |
 | --- | --- | --- | --- |
-| 🔴 failed | googleLogin.play.ts | google login (mock) auto-registers and lands in the portal | `traces/88dc351e-44dd-46c6-b473-e4ccc49604ca-attachment.zip` |
+| 🔴 failed | googleLogin.play.ts | google login (mock) auto-registers and lands in the portal | `traces/c7e027f8-0727-4f6d-bc8d-f6743077a588-attachment.zip` |
 
 > **Traces**: Download the `playwright-traces` artifact and open `.zip` files at [trace.playwright.dev](https://trace.playwright.dev/)
 
@@ -20,6 +20,7 @@
 | 🟢 | portal.play.ts | open and close organization browse tab |
 | 🟢 | portal.play.ts | open and close person browse tab |
 | 🟢 | portal.play.ts | portal loads after login |
+| 🟢 | profile.play.ts › Party user profile | shows personal details and allows editing the profile and password |
 | 🟢 | selfRegistration.play.ts | self-registration: create account and auto-login |
 | 🟢 | selfRegistration.play.ts | self-registration: password mismatch shows inline error |
 | 🟢 | unit.play.ts › Party Unit | browse party unit |
