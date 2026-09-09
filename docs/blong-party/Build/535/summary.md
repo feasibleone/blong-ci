@@ -1,4 +1,4 @@
-### ✅ blong-party — 15 passed, 0 failed (15 total)
+### ✅ blong-party — 16 passed, 0 failed (16 total)
 
 <details><summary>All tests</summary>
 
@@ -14,6 +14,7 @@
 | 🟢 | portal.play.ts | open and close organization browse tab |
 | 🟢 | portal.play.ts | open and close person browse tab |
 | 🟢 | portal.play.ts | portal loads after login |
+| 🟢 | profile.play.ts › Party user profile | shows personal details and allows editing the profile and password |
 | 🟢 | selfRegistration.play.ts | self-registration: create account and auto-login |
 | 🟢 | selfRegistration.play.ts | self-registration: password mismatch shows inline error |
 | 🟢 | unit.play.ts › Party Unit | browse party unit |
