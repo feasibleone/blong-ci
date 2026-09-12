@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>blong-commander — Playwright Report</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.5rem; }
+    a { color: #0969da; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.4rem 0.8rem; border-bottom: 1px solid #d0d7de; }
+    th { background: #f6f8fa; font-weight: 600; }
+    tr.failed, tr.broken { background: #fff0f0; }
+    tr.flaky { background: #fff8e1; }
+    .report-link { display: inline-block; margin: 1rem 0; padding: 0.5rem 1rem; background: #0969da; color: #fff; text-decoration: none; border-radius: 6px; }
+    .report-link:hover { background: #0550ae; }
+    .trace-link { cursor: pointer; text-decoration: underline; }
+    @media (prefers-color-scheme: dark) {
+      th { background: #161b22; }
+      tr.failed, tr.broken { background: #3d1f1f; }
+      tr.flaky { background: #3d3520; }
+      a { color: #58a6ff; }
+      .report-link { background: #1f6feb; }
+      .report-link:hover { background: #388bfd; }
+    }
+  </style>
+</head>
+<body>
+  <h1>❌ blong-commander — 1 passed, 9 failed (10 total)</h1>
+  <a class="report-link" href="awesome/index.html">Open Allure Report</a>
+  <table>
+    <thead><tr><th></th><th>Suite</th><th>Test</th><th>Trace</th></tr></thead>
+    <tbody>
+      <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>access-db — browse tables (SQL via access.table.list)</td><td><a class="trace-link" data-trace="traces/177a5e78-c871-4fa0-8347-bbea906e2e59-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>k8s-dev — namespace → category → resource drill-down and item viewer</td><td><a class="trace-link" data-trace="traces/5d3f147f-06bd-48b1-918d-66446309bc71-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>kafka-dev — topics and message viewer</td><td><a class="trace-link" data-trace="traces/3482c62d-5ac8-4644-80b7-32100041daeb-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>keycloak-dev — realms and users</td><td><a class="trace-link" data-trace="traces/f2ebafb0-ecd5-466a-96e7-e3fd99f16142-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>mongo-dev — databases and collections</td><td><a class="trace-link" data-trace="traces/97ecce1f-23f8-4eb7-8e2d-dc6f409e2a4a-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>redis-dev — database index and keys</td><td><a class="trace-link" data-trace="traces/41702764-18e8-461a-8a1b-ce2231595a8c-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>s3-dev — buckets and objects</td><td><a class="trace-link" data-trace="traces/6bdc2eea-04ca-4c07-944e-1cecc440910a-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>source list — the commander home</td><td><a class="trace-link" data-trace="traces/c97e659f-ac9e-4409-a631-481f6726aae2-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>explore.play.ts</td><td>vault-dev — mounts, secrets, and masked secret viewer</td><td><a class="trace-link" data-trace="traces/a4f7dd6f-a3b2-43ad-be96-27b8a6646ed5-attachment.zip">Open Trace</a></td></tr>
+          <tr class="passed"><td>🟢</td><td>explore.play.ts</td><td>navigator mirrors the drill path; &quot;..&quot; and Backspace go up</td><td></td></tr>
+    </tbody>
+  </table>
+  <script>
+    document.querySelectorAll('.trace-link').forEach(el => {
+      el.addEventListener('click', () => {
+        const base = location.href.replace(/\/index\.html$/, '').replace(/\/$/, '');
+        const traceUrl = base + '/' + el.dataset.trace;
+        window.open('https://trace.playwright.dev/?trace=' + encodeURIComponent(traceUrl));
+      });
+    });
+  </script>
+</body>
+</html>
