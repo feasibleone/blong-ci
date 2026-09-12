@@ -1,9 +1,16 @@
-### ✅ blong-access — 24 passed, 0 failed (24 total)
+### ⚠️ blong-access — 23 passed, 0 failed, 1 flaky (24 total)
+
+| Status | Suite | Test | Trace |
+| --- | --- | --- | --- |
+| 🟡 flaky | role.play.ts › Access Role | cleanup access role | `traces/2bf667de-cb70-4319-abcf-de92d19b4a06-attachment.zip` |
+
+> **Traces**: Download the `playwright-traces` artifact and open `.zip` files at [trace.playwright.dev](https://trace.playwright.dev/)
 
 <details><summary>All tests</summary>
 
 | Status | Suite | Test |
 | --- | --- | --- |
+| 🟡 | role.play.ts › Access Role | cleanup access role |
 | 🟢 | access.play.ts › Access Access Rule | browse access access |
 | 🟢 | action.play.ts › Access Action | browse access action |
 | 🟢 | audit.play.ts › Access Audit | browse access audit |
@@ -17,7 +24,6 @@
 | 🟢 | profile.play.ts › Access user profile | applies the user preferred language at login and renders the profile page in Bulgarian |
 | 🟢 | profile.play.ts › Access user profile | opens the profile from the account menu, edits details and changes the password |
 | 🟢 | role.play.ts › Access Role | browse access role |
-| 🟢 | role.play.ts › Access Role | cleanup access role |
 | 🟢 | role.play.ts › Access Role | create access role |
 | 🟢 | role.play.ts › Access Role | edit access role |
 | 🟢 | session-popup.play.ts › Access session login popup | expired session shows the login popup and re-login recovers |
