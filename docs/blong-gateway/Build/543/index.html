@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>blong-gateway — Playwright Report</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.5rem; }
+    a { color: #0969da; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.4rem 0.8rem; border-bottom: 1px solid #d0d7de; }
+    th { background: #f6f8fa; font-weight: 600; }
+    tr.failed, tr.broken { background: #fff0f0; }
+    tr.flaky { background: #fff8e1; }
+    .report-link { display: inline-block; margin: 1rem 0; padding: 0.5rem 1rem; background: #0969da; color: #fff; text-decoration: none; border-radius: 6px; }
+    .report-link:hover { background: #0550ae; }
+    .trace-link { cursor: pointer; text-decoration: underline; }
+    @media (prefers-color-scheme: dark) {
+      th { background: #161b22; }
+      tr.failed, tr.broken { background: #3d1f1f; }
+      tr.flaky { background: #3d3520; }
+      a { color: #58a6ff; }
+      .report-link { background: #1f6feb; }
+      .report-link:hover { background: #388bfd; }
+    }
+  </style>
+</head>
+<body>
+  <h1>❌ blong-gateway — 3 passed, 9 failed (12 total)</h1>
+  <a class="report-link" href="awesome/index.html">Open Allure Report</a>
+  <table>
+    <thead><tr><th></th><th>Suite</th><th>Test</th><th>Trace</th></tr></thead>
+    <tbody>
+      <tr class="failed"><td>🔴</td><td>application.play.ts › Gateway Application</td><td>browse gateway application</td><td><a class="trace-link" data-trace="traces/01b7d915-fbcc-42fa-810a-33eabb0c3ba3-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>application.play.ts › Gateway Application</td><td>create gateway application</td><td><a class="trace-link" data-trace="traces/dd84d48f-10c5-4389-bf7a-86976e5fd31f-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>application.play.ts › Gateway Application</td><td>edit gateway application</td><td><a class="trace-link" data-trace="traces/6f984ec1-199d-4cf0-b2f1-8780cde7fbb8-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>bundle.play.ts › Gateway Bundle</td><td>browse gateway bundle</td><td><a class="trace-link" data-trace="traces/d727349c-039f-4cf8-bc91-e7a59f9d0e03-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>bundle.play.ts › Gateway Bundle</td><td>create gateway bundle</td><td><a class="trace-link" data-trace="traces/041c7c27-211f-4535-ba8d-c77616c05e74-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>bundle.play.ts › Gateway Bundle</td><td>edit gateway bundle</td><td><a class="trace-link" data-trace="traces/d85fba98-c656-478e-871b-a38f1d64a7b7-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>subscription.play.ts › Gateway Subscription</td><td>browse gateway subscription</td><td><a class="trace-link" data-trace="traces/4e2b5ff1-1988-4d1d-a0fa-774840b5ee1b-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>subscription.play.ts › Gateway Subscription</td><td>create gateway subscription</td><td><a class="trace-link" data-trace="traces/57032f5a-4625-4e49-8fd2-979ff3d5eaff-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>subscription.play.ts › Gateway Subscription</td><td>edit gateway subscription</td><td><a class="trace-link" data-trace="traces/b6b446f1-f749-48bf-afac-5300823ad412-attachment.zip">Open Trace</a></td></tr>
+          <tr class="passed"><td>🟢</td><td>application.play.ts › Gateway Application</td><td>cleanup gateway application</td><td></td></tr>
+          <tr class="passed"><td>🟢</td><td>bundle.play.ts › Gateway Bundle</td><td>cleanup gateway bundle</td><td></td></tr>
+          <tr class="passed"><td>🟢</td><td>subscription.play.ts › Gateway Subscription</td><td>cleanup gateway subscription</td><td></td></tr>
+    </tbody>
+  </table>
+  <script>
+    document.querySelectorAll('.trace-link').forEach(el => {
+      el.addEventListener('click', () => {
+        const base = location.href.replace(/\/index\.html$/, '').replace(/\/$/, '');
+        const traceUrl = base + '/' + el.dataset.trace;
+        window.open('https://trace.playwright.dev/?trace=' + encodeURIComponent(traceUrl));
+      });
+    });
+  </script>
+</body>
+</html>
