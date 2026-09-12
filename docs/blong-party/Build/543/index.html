@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>blong-party — Playwright Report</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    h1 { font-size: 1.5rem; }
+    a { color: #0969da; }
+    table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+    th, td { text-align: left; padding: 0.4rem 0.8rem; border-bottom: 1px solid #d0d7de; }
+    th { background: #f6f8fa; font-weight: 600; }
+    tr.failed, tr.broken { background: #fff0f0; }
+    tr.flaky { background: #fff8e1; }
+    .report-link { display: inline-block; margin: 1rem 0; padding: 0.5rem 1rem; background: #0969da; color: #fff; text-decoration: none; border-radius: 6px; }
+    .report-link:hover { background: #0550ae; }
+    .trace-link { cursor: pointer; text-decoration: underline; }
+    @media (prefers-color-scheme: dark) {
+      th { background: #161b22; }
+      tr.failed, tr.broken { background: #3d1f1f; }
+      tr.flaky { background: #3d3520; }
+      a { color: #58a6ff; }
+      .report-link { background: #1f6feb; }
+      .report-link:hover { background: #388bfd; }
+    }
+  </style>
+</head>
+<body>
+  <h1>❌ blong-party — 0 passed, 16 failed (16 total)</h1>
+  <a class="report-link" href="awesome/index.html">Open Allure Report</a>
+  <table>
+    <thead><tr><th></th><th>Suite</th><th>Test</th><th>Trace</th></tr></thead>
+    <tbody>
+      <tr class="failed"><td>🔴</td><td>googleLogin.play.ts</td><td>google login (mock) auto-registers and lands in the portal</td><td><a class="trace-link" data-trace="traces/79164c98-e0b6-4a05-8c67-28b977c0319a-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>organization.play.ts › Party Organization</td><td>browse party organization</td><td><a class="trace-link" data-trace="traces/2cea251d-2bd6-46a1-8131-be1972f419a7-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>organization.play.ts › Party Organization</td><td>create party organization</td><td><a class="trace-link" data-trace="traces/d57569f1-9489-4054-9a48-239d0fe441c0-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>organization.play.ts › Party Organization</td><td>edit party organization</td><td><a class="trace-link" data-trace="traces/cd6097b2-97dc-45b7-aeae-68d6866a8787-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>person.play.ts › Party Person</td><td>browse party person</td><td><a class="trace-link" data-trace="traces/f1f965de-5b18-4a71-9913-8be69cacd32d-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>person.play.ts › Party Person</td><td>create party person</td><td><a class="trace-link" data-trace="traces/33d728d8-0db8-4aa9-8c9c-5c5e4fffbb63-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>person.play.ts › Party Person</td><td>edit party person</td><td><a class="trace-link" data-trace="traces/80b6ccae-1754-4286-9b0a-6abbbb1d1ee7-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>portal.play.ts</td><td>open and close organization browse tab</td><td><a class="trace-link" data-trace="traces/2fed33da-e6bf-4145-b4be-fd6fce2bf005-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>portal.play.ts</td><td>open and close person browse tab</td><td><a class="trace-link" data-trace="traces/6a24df49-9f40-416c-a6fb-5c3740fdc130-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>portal.play.ts</td><td>portal loads after login</td><td><a class="trace-link" data-trace="traces/2afc7f05-8dfe-4df7-9bb6-d121fa573b4e-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>profile.play.ts › Party user profile</td><td>shows personal details and allows editing the profile and password</td><td><a class="trace-link" data-trace="traces/b5f48210-e991-42a4-b32a-00fbfb3d0488-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>selfRegistration.play.ts</td><td>self-registration: create account and auto-login</td><td><a class="trace-link" data-trace="traces/36bc8890-f5f0-4e12-922d-a6cccefdc58d-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>selfRegistration.play.ts</td><td>self-registration: password mismatch shows inline error</td><td><a class="trace-link" data-trace="traces/060d31d0-6ca6-4a69-b515-44972b210339-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>unit.play.ts › Party Unit</td><td>browse party unit</td><td><a class="trace-link" data-trace="traces/fbd5c669-88a4-4b8c-ab1f-89fe275419ea-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>unit.play.ts › Party Unit</td><td>create party unit</td><td><a class="trace-link" data-trace="traces/3a4e8a05-9bc6-4659-a4c6-acc865d26080-attachment.zip">Open Trace</a></td></tr>
+          <tr class="failed"><td>🔴</td><td>unit.play.ts › Party Unit</td><td>edit party unit</td><td><a class="trace-link" data-trace="traces/f4c4e3f7-e8f7-4d84-b1b5-cd3f689e8ae8-attachment.zip">Open Trace</a></td></tr>
+    </tbody>
+  </table>
+  <script>
+    document.querySelectorAll('.trace-link').forEach(el => {
+      el.addEventListener('click', () => {
+        const base = location.href.replace(/\/index\.html$/, '').replace(/\/$/, '');
+        const traceUrl = base + '/' + el.dataset.trace;
+        window.open('https://trace.playwright.dev/?trace=' + encodeURIComponent(traceUrl));
+      });
+    });
+  </script>
+</body>
+</html>
