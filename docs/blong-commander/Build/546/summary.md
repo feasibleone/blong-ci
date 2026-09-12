@@ -2,7 +2,7 @@
 
 | Status | Suite | Test | Trace |
 | --- | --- | --- | --- |
-| 🔴 failed | explore.play.ts | s3-dev — buckets and objects | `traces/f31539df-e42c-4f3e-a85d-97686f34b5f8-attachment.zip` |
+| 🔴 failed | explore.play.ts | s3-dev — buckets and objects | `traces/791fad38-b0ad-4c69-9905-a590f93ec164-attachment.zip` |
 
 > **Traces**: Download the `playwright-traces` artifact and open `.zip` files at [trace.playwright.dev](https://trace.playwright.dev/)
 
