@@ -2,7 +2,7 @@
 
 | Status | Suite | Test | Trace |
 | --- | --- | --- | --- |
-| 🟡 flaky | role.play.ts › Access Role | cleanup access role | `traces/176c070f-d2e0-4856-b3e8-4429650ecb0c-attachment.zip` |
+| 🟡 flaky | role.play.ts › Access Role | cleanup access role | `traces/795afa41-a9b0-400c-94e2-3bef417e22a9-attachment.zip` |
 
 > **Traces**: Download the `playwright-traces` artifact and open `.zip` files at [trace.playwright.dev](https://trace.playwright.dev/)
 
