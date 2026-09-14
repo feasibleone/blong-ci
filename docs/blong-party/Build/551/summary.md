@@ -1,16 +1,10 @@
-### ❌ blong-party — 15 passed, 1 failed (16 total)
-
-| Status | Suite | Test | Trace |
-| --- | --- | --- | --- |
-| 🔴 failed | googleLogin.play.ts | google login (mock) auto-registers and lands in the portal | `traces/c4d41d1b-d425-4700-a0f9-0ddc8d3ca0f2-attachment.zip` |
-
-> **Traces**: Download the `playwright-traces` artifact and open `.zip` files at [trace.playwright.dev](https://trace.playwright.dev/)
+### ✅ blong-party — 16 passed, 0 failed (16 total)
 
 <details><summary>All tests</summary>
 
 | Status | Suite | Test |
 | --- | --- | --- |
-| 🔴 | googleLogin.play.ts | google login (mock) auto-registers and lands in the portal |
+| 🟢 | googleLogin.play.ts | google login (mock) auto-registers and lands in the portal |
 | 🟢 | organization.play.ts › Party Organization | browse party organization |
 | 🟢 | organization.play.ts › Party Organization | create party organization |
 | 🟢 | organization.play.ts › Party Organization | edit party organization |
