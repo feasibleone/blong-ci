@@ -1,0 +1,364 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-09-19T20:05:05.612Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 567,
+  "commit": "021ed51799de980b5c57520709eff159323b3a18",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/35464494945",
+  "totals": {
+    "packages": 9,
+    "tests": 28,
+    "failed": 28,
+    "flaky": 0
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-cli",
+      "path": "demo/blong-cli",
+      "runner": "tap",
+      "counts": {
+        "total": 14,
+        "passed": 5,
+        "failed": 9,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "a command dispatches in-process and prints its result on stdout › and nothing was logged to stderr",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 35,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,41 @@\n-\n+2026-09-19T20:00:25.734Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-core/adapter/db/core.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM2YM59V1PPBZQ4D5HJE11 t=semantic-log://template/801b9e485f3f]\n+2026-09-19T20:00:25.781Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/accessModel.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM2YNNDQH99F8QQBHJQGWS t=semantic-log://template/d123e9aa4055]\n+2026-09-19T20:00:25.803Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/account.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM2YPBTK3314P15HFRGW6M t=semantic-log://template/97218ffb936e p=01M2XM2YNNDQH99F8QQBHJQGWS]\n+2026-09-19T20:00:25.803Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/oidc.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM2YPBTK3314P15HFRGW6N t=semantic-log://template/3b28874f459e p=01M2XM2YPBTK3314P15HFRGW6M]\n+2026-09-19T20:00:25.869Z info  server.db knex event adapter.start [r=semantic-log://record/01M2XM2YRCPHKE92QQ2EA9AT7G t=semantic-log://template/69b41198cd97]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+  configBase: /home/runner/work/blong/blong/core/blong-server\n+  config: semantic-log://payload/01M2XM2YRDENAK9FX5DYQ3Z4X5\n+2026-09-19T20:00:25.871Z info  server.subject dispatch event adapter.start [r=semantic-log://record/01M2XM2YRFK134Y0DY0JZ9TS7M t=semantic-log://template/ee3138078135]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+  configBase: /home/runner/work/blong/blong/core/blong-server\n+  config: {\"type\":\"dispatch\",\"namespace\":[\"subject\",\"access\"],\"imports\":[{},{}],\"destination\":\"db\",\"id\":\"server.subject\",\"pkg\":{\"name\":\"@feasibleone/blong-server\",\"version\":\"1.5.0\",\"description\":\"Reusable server components\",\"type\":\"module\",\"scripts\":{\"build\":\"true\",\"ci-lint\":\"blong-dev lint\"},\"dependencies\":{\"@feasibleone/blong\":\"workspace:^1.0.0\",\"@feasibleone/blong-mock\":\"workspace:^1.0.0\"},\"devDependencies\":{\"@feasibleone/blong-dev\":\"workspace:*\",\"@types/node\":\"^24\",\"typescript\":\"^6.0.3\"}}}\n+2026-09-19T20:00:25.871Z info  access.testDispatch dispatch event adapter.start [r=semantic-log://record/01M2XM2YRFK134Y0DY0JZ9TS7N t=semantic-log://template/53ea056b83e4]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+  configBase: /home/runner/work/blong/blong/realm/blong-access\n+  config: semantic-log://payload/01M2XM2YRFK134Y0DY0JZ9TS7P\n+2026-09-19T20:00:25.871Z info  blong.semlog http event adapter.start [r=semantic-log://record/01M2XM2YRFK134Y0DY0JZ9TS7Q t=semantic-log://template/d64858a846f2]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+  configBase: /home/runner/work/blong/blong/core/blong-realm\n+  config: semantic-log://payload/01M2XM2YRFK134Y0DY0JZ9TS7R\n+2026-09-19T20:00:25.872Z info  blong.blong dispatch event adapter.start [r=semantic-log://record/01M2XM2YRG6SS6AY621TR5KCM1 t=semantic-log://template/f9dcbc13356c]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+  configBase: /home/runner/work/blong/blong/core/blong-realm\n+  config: semantic-log://payload/01M2XM2YRG6SS6AY621TR5KCM2\n+2026-09-19T20:00:25.872Z info  blong.testDispatch dispatch event adapter.start [r=semantic-log://record/01M2XM2YRG6SS6AY621TR5KCM3 t=semantic-log://template/62982d1431ea]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+  configBase: /home/runner/work/blong/blong/core/blong-realm\n+  config: semantic-log://payload/01M2XM2YRG6SS6AY621TR5KCM4\n+2026-09-19T20:00:25.886Z info  server.db knex event adapter.stop [r=semantic-log://record/01M2XM2YRY346FWBZGQVNF15XD t=semantic-log://template/55c76c234d29]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+2026-09-19T20:00:25.886Z info  server.subject dispatch event adapter.stop [r=semantic-log://record/01M2XM2YRY346FWBZGQVNF15XE t=semantic-log://template/7724b0df00e7]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+2026-09-19T20:00:25.886Z info  access.testDispatch dispatch event adapter.stop [r=semantic-log://record/01M2XM2YRY346FWBZGQVNF15XF t=semantic-log://template/3aa45d5cae30 p=01M2XM2YRY346FWBZGQVNF15XE]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+2026-09-19T20:00:25.886Z info  blong.semlog http event adapter.stop [r=semantic-log://record/01M2XM2YRY346FWBZGQVNF15XG t=semantic-log://template/ba271170deff p=01M2XM2YRY346FWBZGQVNF15XF]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+2026-09-19T20:00:25.886Z info  blong.blong dispatch event adapter.stop [r=semantic-log://record/01M2XM2YRY346FWBZGQVNF15XH t=semantic-log://template/ce871b9137b6 p=01M2XM2YRY346FWBZGQVNF15XG]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+2026-09-19T20:00:25.886Z info  blong.testDispatch dispatch event adapter.stop [r=semantic-log://record/01M2XM2YRY346FWBZGQVNF15XJ t=semantic-log://template/f9f8f7acf286 p=01M2XM2YRY346FWBZGQVNF15XH]\n+  $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+blong-cli: Unknown database 'blong-cli'",
+          "stack": "Test.<anonymous> (index.test.ts:35:7)\nindex.test.ts:30:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "a command dispatches in-process and prints its result on stdout › exits clean",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 33,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (index.test.ts:33:7)\nindex.test.ts:30:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "a command dispatches in-process and prints its result on stdout › the result is the only thing on stdout",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 34,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-hello-world\n+",
+          "stack": "Test.<anonymous> (index.test.ts:34:7)\nindex.test.ts:30:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "a handler error is reported without a stack trace on stdout › the message is on stderr",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 78,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,44 @@\n-/provide --value=TEXT or --file=PATH/\n+String(\n+  2026-09-19T20:00:49.185Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-core/adapter/db/core.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3NH0HEMZ1B10Y68BT5G7 t=semantic-log://template/801b9e485f3f]\n+  2026-09-19T20:00:49.256Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/accessModel.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3NK8Z2BQCMEFAE0K8K7R t=semantic-log://template/d123e9aa4055]\n+  2026-09-19T20:00:49.337Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/account.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3NNSPKXK89T83V9BNKZK t=semantic-log://template/97218ffb936e p=01M2XM3NK8Z2BQCMEFAE0K8K7R]\n+  2026-09-19T20:00:49.338Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/oidc.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3NNTD4RR6FWMG6SRV9V4 t=semantic-log://template/3b28874f459e p=01M2XM3NNSPKXK89T83V9BNKZK]\n+  2026-09-19T20:00:49.422Z info  server.db knex event adapter.start [r=semantic-log://record/01M2XM3NRE1D6HMYPEAMZMVQB1 t=semantic-log://template/69b41198cd97]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-server\n+    config: semantic-log://payload/01M2XM3NRE1D6HMYPEAMZMVQB2\n+  2026-09-19T20:00:49.425Z info  server.subject dispatch event adapter.start [r=semantic-log://record/01M2XM3NRHHVDAR965A2QQC4CN t=semantic-log://template/ee3138078135]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-server\n+    config: {\"type\":\"dispatch\",\"namespace\":[\"subject\",\"access\"],\"imports\":[{},{}],\"destination\":\"db\",\"id\":\"server.subject\",\"pkg\":{\"name\":\"@feasibleone/blong-server\",\"version\":\"1.5.0\",\"description\":\"Reusable server components\",\"type\":\"module\",\"scripts\":{\"build\":\"true\",\"ci-lint\":\"blong-dev lint\"},\"dependencies\":{\"@feasibleone/blong\":\"workspace:^1.0.0\",\"@feasibleone/blong-mock\":\"workspace:^1.0.0\"},\"devDependencies\":{\"@feasibleone/blong-dev\":\"workspace:*\",\"@types/node\":\"^24\",\"typescript\":\"^6.0.3\"}}}\n+  2026-09-19T20:00:49.425Z info  access.testDispatch dispatch event adapter.start [r=semantic-log://record/01M2XM3NRHHVDAR965A2QQC4CP t=semantic-log://template/53ea056b83e4]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/realm/blong-access\n+    config: semantic-log://payload/01M2XM3NRHHVDAR965A2QQC4CQ\n+  2026-09-19T20:00:49.426Z info  blong.semlog http event adapter.start [r=semantic-log://record/01M2XM3NRJAW7R32C7Q5WJCE0C t=semantic-log://template/d64858a846f2]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-realm\n+    config: semantic-log://payload/01M2XM3NRJAW7R32C7Q5WJCE0D\n+  2026-09-19T20:00:49.426Z info  blong.blong dispatch event adapter.start [r=semantic-log://record/01M2XM3NRJAW7R32C7Q5WJCE0E t=semantic-log://template/f9dcbc13356c]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-realm\n+    config: semantic-log://payload/01M2XM3NRJAW7R32C7Q5WJCE0F\n+  2026-09-19T20:00:49.426Z info  blong.testDispatch dispatch event adapter.start [r=semantic-log://record/01M2XM3NRJAW7R32C7Q5WJCE0G t=semantic-log://template/62982d1431ea]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-realm\n+    config: semantic-log://payload/01M2XM3NRJAW7R32C7Q5WJCE0H\n+  2026-09-19T20:00:49.448Z info  server.db knex event adapter.stop [r=semantic-log://record/01M2XM3NS8Z9DGJTAXVM4MD0TC t=semantic-log://template/55c76c234d29]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:49.449Z info  server.subject dispatch event adapter.stop [r=semantic-log://record/01M2XM3NS9Y65ZQQ43HSD2KXK7 t=semantic-log://template/7724b0df00e7]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:49.449Z info  access.testDispatch dispatch event adapter.stop [r=semantic-log://record/01M2XM3NS9Y65ZQQ43HSD2KXK8 t=semantic-log://template/3aa45d5cae30 p=01M2XM3NS9Y65ZQQ43HSD2KXK7]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:49.449Z info  blong.semlog http event adapter.stop [r=semantic-log://record/01M2XM3NS9Y65ZQQ43HSD2KXK9 t=semantic-log://template/ba271170deff p=01M2XM3NS9Y65ZQQ43HSD2KXK8]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:49.450Z info  blong.blong dispatch event adapter.stop [r=semantic-log://record/01M2XM3NSAEY2HD8AE69AEN3NN t=semantic-log://template/ce871b9137b6 p=01M2XM3NS9Y65ZQQ43HSD2KXK9]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:49.450Z info  blong.testDispatch dispatch event adapter.stop [r=semantic-log://record/01M2XM3NSAEY2HD8AE69AEN3NP t=semantic-log://template/f9f8f7acf286 p=01M2XM3NSAEY2HD8AE69AEN3NN]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  blong-cli: Unknown database 'blong-cli'\n+  \n+)",
+          "stack": "Test.<anonymous> (index.test.ts:78:7)\nindex.test.ts:74:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the exit code says whether the command did what was asked › and says which method it could not find",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 64,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,44 @@\n-/unknown method 'text\\.bogus\\.get'/\n+String(\n+  2026-09-19T20:00:42.959Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-core/adapter/db/core.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3FEE9FQGNBB9EVXZ8CYZ t=semantic-log://template/801b9e485f3f]\n+  2026-09-19T20:00:43.004Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/accessModel.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3FFWFVW345WS6DK7ANES t=semantic-log://template/d123e9aa4055]\n+  2026-09-19T20:00:43.027Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/account.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3FGKGEQAPJ0YMNC340ZG t=semantic-log://template/97218ffb936e p=01M2XM3FFWFVW345WS6DK7ANES]\n+  2026-09-19T20:00:43.028Z error Watch Error loading /home/runner/work/blong/blong/realm/blong-access/adapter/db/oidc.ts ; probably a generic source code was put in a handler group folder [r=semantic-log://record/01M2XM3FGMNJZF0GE0D1GRCFEH t=semantic-log://template/3b28874f459e p=01M2XM3FGKGEQAPJ0YMNC340ZG]\n+  2026-09-19T20:00:43.119Z info  server.db knex event adapter.start [r=semantic-log://record/01M2XM3FKF63021TS7WR8K2B8K t=semantic-log://template/69b41198cd97]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-server\n+    config: semantic-log://payload/01M2XM3FKF63021TS7WR8K2B8M\n+  2026-09-19T20:00:43.121Z info  server.subject dispatch event adapter.start [r=semantic-log://record/01M2XM3FKH34WBSSX8JC3K54E5 t=semantic-log://template/ee3138078135]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-server\n+    config: {\"type\":\"dispatch\",\"namespace\":[\"subject\",\"access\"],\"imports\":[{},{}],\"destination\":\"db\",\"id\":\"server.subject\",\"pkg\":{\"name\":\"@feasibleone/blong-server\",\"version\":\"1.5.0\",\"description\":\"Reusable server components\",\"type\":\"module\",\"scripts\":{\"build\":\"true\",\"ci-lint\":\"blong-dev lint\"},\"dependencies\":{\"@feasibleone/blong\":\"workspace:^1.0.0\",\"@feasibleone/blong-mock\":\"workspace:^1.0.0\"},\"devDependencies\":{\"@feasibleone/blong-dev\":\"workspace:*\",\"@types/node\":\"^24\",\"typescript\":\"^6.0.3\"}}}\n+  2026-09-19T20:00:43.121Z info  access.testDispatch dispatch event adapter.start [r=semantic-log://record/01M2XM3FKH34WBSSX8JC3K54E6 t=semantic-log://template/53ea056b83e4]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/realm/blong-access\n+    config: semantic-log://payload/01M2XM3FKH34WBSSX8JC3K54E7\n+  2026-09-19T20:00:43.122Z info  blong.semlog http event adapter.start [r=semantic-log://record/01M2XM3FKJ3A3XWQ9MZRGST5F7 t=semantic-log://template/d64858a846f2]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-realm\n+    config: semantic-log://payload/01M2XM3FKJ3A3XWQ9MZRGST5F8\n+  2026-09-19T20:00:43.122Z info  blong.blong dispatch event adapter.start [r=semantic-log://record/01M2XM3FKJ3A3XWQ9MZRGST5F9 t=semantic-log://template/f9dcbc13356c]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-realm\n+    config: semantic-log://payload/01M2XM3FKJ3A3XWQ9MZRGST5FA\n+  2026-09-19T20:00:43.122Z info  blong.testDispatch dispatch event adapter.start [r=semantic-log://record/01M2XM3FKJ3A3XWQ9MZRGST5FB t=semantic-log://template/62982d1431ea]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.start\"}\n+    configBase: /home/runner/work/blong/blong/core/blong-realm\n+    config: semantic-log://payload/01M2XM3FKJ3A3XWQ9MZRGST5FC\n+  2026-09-19T20:00:43.136Z info  server.db knex event adapter.stop [r=semantic-log://record/01M2XM3FM0ZXEE4YBG6BC18Q83 t=semantic-log://template/55c76c234d29]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:43.136Z info  server.subject dispatch event adapter.stop [r=semantic-log://record/01M2XM3FM0ZXEE4YBG6BC18Q84 t=semantic-log://template/7724b0df00e7]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:43.136Z info  access.testDispatch dispatch event adapter.stop [r=semantic-log://record/01M2XM3FM0ZXEE4YBG6BC18Q85 t=semantic-log://template/3aa45d5cae30 p=01M2XM3FM0ZXEE4YBG6BC18Q84]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:43.137Z info  blong.semlog http event adapter.stop [r=semantic-log://record/01M2XM3FM1EHGXDYTRVASP4CYQ t=semantic-log://template/ba271170deff p=01M2XM3FM0ZXEE4YBG6BC18Q85]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:43.137Z info  blong.blong dispatch event adapter.stop [r=semantic-log://record/01M2XM3FM1EHGXDYTRVASP4CYR t=semantic-log://template/ce871b9137b6 p=01M2XM3FM1EHGXDYTRVASP4CYQ]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  2026-09-19T20:00:43.137Z info  blong.testDispatch dispatch event adapter.stop [r=semantic-log://record/01M2XM3FM1EHGXDYTRVASP4CYS t=semantic-log://template/f9f8f7acf286 p=01M2XM3FM1EHGXDYTRVASP4CYR]\n+    $meta: {\"mtid\":\"event\",\"method\":\"adapter.stop\"}\n+  blong-cli: Unknown database 'blong-cli'\n+  \n+)",
+          "stack": "Test.<anonymous> (index.test.ts:64:7)\nindex.test.ts:62:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the machine channel stays parseable › exits clean",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 42,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (index.test.ts:42:7)\nindex.test.ts:39:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the machine channel stays parseable › Unexpected end of JSON input",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 43,
+          "stack": "JSON.parse (<anonymous>)\nTest.t (index.test.ts:43:18)\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the platform is available, so a command can read a file › exits clean",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 53,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (index.test.ts:53:7)\nindex.test.ts:47:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the platform is available, so a command can read a file › the file is read through `this.platform` and rendered for a terminal",
+          "status": "failed",
+          "file": "index.test.ts",
+          "line": 54,
+          "message": "--- expected\n+++ actual\n@@ -1,5 +1,3 @@\n Array [\n-  \"lines: 2\",\n-  \"words: 5\",\n-  \"characters: 24\",\n+  \"\",\n ]",
+          "stack": "Test.<anonymous> (index.test.ts:54:7)\nindex.test.ts:47:3\n"
+        }
+      ]
+    },
+    {
+      "package": "blong-gateway",
+      "path": "realm/blong-gateway",
+      "runner": "playwright",
+      "counts": {
+        "total": 17,
+        "passed": 16,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "observedFlow.play.ts",
+          "test": "a flow this realm served is drawn as a diagram",
+          "status": "failed",
+          "trace": "traces/2a901196-f988-4383-9744-e1f05f70ba30-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-int-adapter",
+      "path": "test/blong-int-adapter",
+      "runner": "tap",
+      "counts": {
+        "total": 9,
+        "passed": 0,
+        "failed": 9,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "http.test.ts",
+          "test": "http.test.ts",
+          "status": "failed",
+          "file": "http.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "k8s.test.ts",
+          "test": "k8s.test.ts",
+          "status": "failed",
+          "file": "k8s.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "kafka.test.ts",
+          "test": "kafka.test.ts",
+          "status": "failed",
+          "file": "kafka.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "keycloak.test.ts",
+          "test": "keycloak.test.ts",
+          "status": "failed",
+          "file": "keycloak.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "mongodb.test.ts",
+          "test": "mongodb.test.ts",
+          "status": "failed",
+          "file": "mongodb.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "mysql.test.ts",
+          "test": "mysql.test.ts",
+          "status": "failed",
+          "file": "mysql.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "redis.test.ts",
+          "test": "redis.test.ts",
+          "status": "failed",
+          "file": "redis.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "s3.test.ts",
+          "test": "s3.test.ts",
+          "status": "failed",
+          "file": "s3.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "vault.test.ts",
+          "test": "vault.test.ts",
+          "status": "failed",
+          "file": "vault.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    },
+    {
+      "package": "blong-kukum",
+      "path": "core/blong-kukum",
+      "runner": "tap",
+      "counts": {
+        "total": 481,
+        "passed": 480,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "e2e.test.ts",
+          "test": "the Playwright leg drives the model page against committed baselines › the Playwright suite exits 0",
+          "status": "failed",
+          "file": "e2e.test.ts",
+          "line": 270,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (e2e.test.ts:270:11)\n"
+        }
+      ]
+    },
+    {
+      "package": "blong-realm",
+      "path": "core/blong-realm",
+      "runner": "playwright",
+      "counts": {
+        "total": 7,
+        "passed": 4,
+        "failed": 3,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "blong.play.ts",
+          "test": "an observed execution is drawn as a diagram",
+          "status": "failed",
+          "trace": "traces/a4886dda-6cf8-4083-822c-a016bc85fd2d-attachment.zip"
+        },
+        {
+          "suite": "blong.play.ts",
+          "test": "open blong.digest.browse",
+          "status": "failed",
+          "trace": "traces/df616cee-f6a4-4c2f-8537-e7d4e16b5ffb-attachment.zip"
+        },
+        {
+          "suite": "blong.play.ts",
+          "test": "open blong.template.browse",
+          "status": "failed",
+          "trace": "traces/22b862e3-6741-4af9-8aad-749f3aa1310b-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-suite",
+      "path": "suite/blong-suite",
+      "runner": "playwright",
+      "counts": {
+        "total": 16,
+        "passed": 15,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "portalMerge.play.ts",
+          "test": "the suite portal carries both realms’ menus",
+          "status": "failed",
+          "trace": "traces/8baad60b-4918-4168-86b8-be446e26deb4-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "config-hot-reload",
+      "path": "core/config-hot-reload",
+      "runner": "tap",
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    },
+    {
+      "package": "framework",
+      "path": "test/framework",
+      "runner": "tap",
+      "counts": {
+        "total": 2,
+        "passed": 0,
+        "failed": 2,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1"
+        },
+        {
+          "suite": "nscfg/index.test.ts",
+          "test": "nscfg/index.test.ts",
+          "status": "failed",
+          "file": "nscfg/index.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    },
+    {
+      "package": "semantic-log",
+      "path": "core/semantic-log",
+      "runner": "tap",
+      "counts": {
+        "total": 2963,
+        "passed": 2960,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 2,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "test/flow/faults.test.ts",
+          "test": "F2: a retry burst is one template at a rate-shift, not 41 new templates (PRD R6b, R12) › and it is stamped on the template the payer repeated rather than on a new one",
+          "status": "failed",
+          "file": "test/flow/faults.test.ts",
+          "line": 365,
+          "stack": "Test.<anonymous> (test/flow/faults.test.ts:365:11)\n"
+        }
+      ]
+    }
+  ]
+}
