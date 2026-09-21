@@ -1,0 +1,877 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/blong-gogo/src/SemanticLog.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">core/blong-gogo/src</a> SemanticLog.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">98.1% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>259/264</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">96.15% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>25/26</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">73.68% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>14/19</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">98.1% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>259/264</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1084x</span>
+<span class="cline-any cline-yes">1084x</span>
+<span class="cline-any cline-yes">1084x</span>
+<span class="cline-any cline-yes">1084x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">52x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">48x</span>
+<span class="cline-any cline-yes">48x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">485x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">979x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">987x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * The framework's server-side logger, backed by `@feasibleone/semantic-log`.
+ *
+ * It is the alternative to `Log` (pino) and implements the same `ILog` contract,
+ * so `Internal`'s `this.log`, `api.createLog` and every existing call site are
+ * unaffected by which one is selected. The emitter's own log — construction, one
+ * logger per component, retention, the cluster sink and the lifecycle — is
+ * `LogBase` in `@feasibleone/semantic-log/emitter`; what is left here is what is
+ * blong's, and there are three things:
+ *
+ * - **The envelope.** The framework's call sites pass `{$meta: {mtid, method}}`,
+ *   and its call records carry the same envelope (`callTrace.ts`), so both are
+ *   read here — an envelope is not something semantic-log could know about.
+ * - **The level contract.** `logger(level, bindings)` binds *downwards*: the
+ *   original implementation uses a switch with no `break`s, so asking for `info`
+ *   binds `info` through `fatal` and leaves `trace`/`debug` undefined. Call sites
+ *   depend on that: a `this.log?.debug?.()` at info level is a silent no-op rather
+ *   than a call. `ILog.logger` also promises `progress`, which is blong-lib's.
+ * - **The call gate.** Whether a flow records its calls is the framework's
+ *   configuration and its `blong grant` tokens (`callTrace.ts`), read at the
+ *   boundary that mints a flow rather than here.
+ *
+ * ## Why this *holds* a base rather than extending one
+ *
+ * `LogBase` is what blong would extend, except that it cannot: the loader decides
+ * that a module is a component by testing `prototype instanceof Internal`
+ * (`load.ts`), and semantic-log's side of the world knows nothing of `Internal` —
+ * nor should it. So the framework's class extends `Internal` as every other
+ * component does, and delegates to a `LogBase` it owns. The hooks the base would
+ * otherwise ask a subclass for are options, which is what makes that possible.
+ *
+ * The emitter is reached through `@feasibleone/semantic-log/emitter`, not the
+ * package root: the root re-exports the cluster service, which imports `fastify`,
+ * and this module is on a path `loadBrowser.ts` shares. Keeping the service out of
+ * the import graph is what stops a browser bundle from trying to resolve a server
+ * HTTP framework.
+ *
+ * ## `fatal` does not exit
+ *
+ * The emitter's `fatal` writes a record and then calls `exit`, because its own
+ * process-failure hooks install it that way. The framework's `fatal` has always
+ * meant "log this at fatal level" — pino ends nothing — and `LogBase` leaves `exit`
+ * a no-op for exactly that reason. Installing the emitter's failure capture is a
+ * separate decision, and not one this class makes for every process that logs.
+ */
+&nbsp;
+import {merge, withProgress} from '@feasibleone/blong-lib';
+import {Internal, type ICallLog, type ILog, type ILogger} from '@feasibleone/blong/types';
+import {
+    LogBase,
+    resolveHome,
+    type ClusterOptions,
+    type Format,
+    type LevelName,
+    type LoggerFace,
+    type PayloadStore,
+    type RecordStore,
+    type RetentionOptions,
+} from '@feasibleone/semantic-log/emitter';
+import type {Level, Logger as PinoLogger} from 'pino';
+import {callRecord, configureCallTrace, type CallTraceConfig} from './callTrace.ts';
+import {toLogCall} from './semanticRecord.ts';
+&nbsp;
+export {resolveHome};
+&nbsp;
+/**
+ * The threshold's type, taken from the contract rather than from pino.
+ *
+ * `ILog.logger`'s first parameter is pino's level, and the framework's own type
+ * file imports that name without re-exporting it — so the parameter is named
+ * through the interface that owns it, as `types.ts` itself does elsewhere.
+ */
+type LogLevel = Parameters&lt;ILog['logger']&gt;[0];
+&nbsp;
+/** What a suite or realm may configure under `log` when `impl` is `semantic`. */
+export interface SemanticLogConfig {
+    /** Threshold. Records below it are not emitted at all. */
+    level?: LogLevel;
+    /** `human` (one readable line) or `json` (one JSON object per record). */
+    format?: Format;
+    /** ANSI colour in human format. Opt-in, as the emitter's own option is. */
+    color?: boolean;
+    /** The service name carried on every record; the framework's own by default. */
+    service?: string;
+    /**
+     * Retain records on disk so a printed reference resolves later. The directory is
+     * the framework's log cache, which the pino transport also writes — one store,
+     * shared, so a `semantic-log://record/&lt;id&gt;` reference resolves whichever
+     * implementation emitted it.
+     */
+    cache?: RetentionOptions;
+    /**
+     * The call channel: the framework's own account of the calls this process
+     * makes and answers, and the switch that decides whether it is produced.
+     *
+     * `enabled` and `off` are the framework's decision (see `callTrace.ts`) —
+     * `off` names the entry methods whose flows are too frequent to record. This
+     * implementation adds `stdout`: the call records reach the retention store
+     * and the cluster service whether or not it is set, and setting it is what
+     * puts them on a terminal as well.
+     */
+    calls?: CallTraceConfig;
+    /**
+     * The semantic-log cluster service: where records go to be assembled into
+     * templates, flows, diagrams and incidents. `LogBase` owns what each field
+     * means — the framework's own concern here is only that a development run may
+     * start one and a deployment may point at one.
+     */
+    cluster?: ClusterOptions;
+}
+&nbsp;
+/**
+ * A pino level, as an emitter threshold.
+ *
+ * pino's vocabulary has one name the emitter does not: `silent`. It means "no
+ * records at all", which is a threshold above every level, so it is translated
+ * rather than passed through — a component configured silent must not fall back
+ * to the root's threshold and start emitting again, which is exactly what
+ * happened while `child` ignored this option.
+ */
+function thresholdOf(level: Level | 'silent' | number | undefined): LevelName | number | undefined {
+    if (level === undefined) return undefined;
+    return level === <span class="branch-0 cbranch-no" title="branch not covered" >'silent' ? Number.POSITIVE_INFINITY </span>: (level as LevelName | number);
+}
+&nbsp;
+export default class SemanticLog extends Internal implements ILog {
+    #config: SemanticLogConfig;
+    #base: LogBase;
+&nbsp;
+    public constructor(config: SemanticLogConfig) {
+        super();
+        const merged = merge&lt;SemanticLogConfig&gt;(
+            {level: 'info' as LogLevel, format: 'human' as Format, color: false},
+            config,
+        ) as SemanticLogConfig;
+        this.#config = merged;
+        this.#base = new LogBase({
+            service: merged.service ?? 'blong',
+            level: thresholdOf(merged.level),
+            format: merged.format,
+            color: merged.color,
+            cache: merged.cache,
+            // Only the printing switch is the base's business; `enabled`/`off` are
+            // the gate's, and are read where a flow is minted.
+            calls: merged.calls,
+            cluster: merged.cluster,
+            // Lazy on purpose: this module is on a path the browser bootstrap shares,
+            // and the service entry reaches `fastify`. A process with no cluster
+            // configured never loads it at all.
+            openCluster: async () =&gt;
+                (await import('@feasibleone/semantic-log/service')).openCluster,
+            // The framework's envelope, on the record and on the call site's own
+            // arguments: `{$meta: {mtid, method}}` is what its readers match on.
+            envelope: ({leg, phase}) =&gt; callRecord(leg, phase),
+            translate: args =&gt; toLogCall(args),
+        });
+    }
+&nbsp;
+    /** What the emitter retains through, and how a retained record is read back. */
+    public get store(): RecordStore &amp; PayloadStore {
+        return this.#base.store;
+    }
+&nbsp;
+    /**
+     * The address of the cluster service this process started, once it started one.
+     *
+     * The framework publishes it to the components that read the service — the realm
+     * whose pages ask it what it observed. It is the *bound* address rather than a
+     * configured one because the port is asked for, not named: two framework
+     * processes on one machine are ordinary (a dev server beside a test run, or CI
+     * running packages in parallel) and a fixed port leaves the second one with no
+     * service at all while its readers keep looking at the first one's.
+     */
+    public get clusterUrl(): string | undefined {
+        return this.#base.clusterUrl;
+    }
+&nbsp;
+    /**
+     * Install the call gate, then open the store and the cluster.
+     *
+     * The gate's configuration goes first: `enabled`/`off` decide whether a flow
+     * records, and both are read where a flow is minted, which is before the store
+     * can matter. The ambient scope the decision is carried in is semantic-log's
+     * own, reached by the vocabulary the server bootstrap attaches, so there is
+     * nothing to attach here.
+     */
+    public async init(): Promise&lt;void&gt; {
+        configureCallTrace(this.#config.calls);
+        await this.#base.init();
+    }
+&nbsp;
+    /** Flush and close everything the base opened. */
+    public async stop(): Promise&lt;void&gt; {
+        await this.#base.stop();
+    }
+&nbsp;
+    /**
+     * A pino-shaped child logger, with pino's `silent` translated first.
+     *
+     * Everything else about the child — the bindings, the component's name, the
+     * face — is the base's.
+     */
+    public child&lt;T extends string&gt;(
+        ...params: Parameters&lt;PinoLogger&lt;never&gt;['child']&gt;
+    ): PinoLogger&lt;T&gt; {
+        const [bindings, options] = params as unknown as [
+            Record&lt;string, unknown&gt; | undefined,
+            {level?: Level | 'silent' | number} | undefined,
+        ];
+        const level = thresholdOf(options?.level);
+        return this.#base.child(
+            bindings,
+            level === undefined ? undefined : {level},
+        ) as unknown as PinoLogger&lt;T&gt;;
+    }
+&nbsp;
+    public logger(
+        level: LogLevel = this.#config.level as LogLevel,
+        bindings: object,
+    ): ReturnType&lt;ILog['logger']&gt; {
+        const {name, ...rest} = bindings as {name?: string};
+        const face: LoggerFace = this.#base.componentFace(name, thresholdOf(level), rest);
+        const result: ILogger = {
+            trace: undefined,
+            debug: undefined,
+            info: undefined,
+            warn: undefined,
+            error: undefined,
+<span class="fstat-no" title="function not covered" >            fatal: undefined,</span>
+<span class="cstat-no" title="statement not covered" >        };</span>
+<span class="cstat-no" title="statement not covered" >        // The fall-through is the contract, not an oversight: see the class</span>
+        // comment. Each case binds its own level and every one below it.
+        switch (level) {
+            case 'trace':
+                result.trace = face.trace<span class="fstat-no" title="function not covered" >;</span>
+<span class="cstat-no" title="statement not covered" >            case 'debug':</span>
+                result.debug = face.<span class="fstat-no" title="function not covered" >debug;</span>
+<span class="cstat-no" title="statement not covered" >            case 'info':</span>
+                result.info = face.info;
+            case 'warn':
+                result.warn = face.warn;
+<span class="fstat-no" title="function not covered" >            case 'error':</span>
+<span class="cstat-no" title="statement not covered" >                result.error = face.error;</span>
+            case 'fatal':
+                result.fatal = face.fatal;
+        }
+        return {
+            ...result,
+            progress: <span class="fstat-no" title="function not covered" >(label, promise, options) =&gt; withProgress(result, label, promise, options),</span>
+            calls: face.calls,
+        };
+    }
+&nbsp;
+    /**
+     * The framework's own account of the calls made through this log.
+     *
+     * Present on the log itself so a component that holds the log rather than a
+     * child logger (`Gateway`) reaches the same channel as a port that holds
+     * only its logger.
+     */
+    public get calls(): ICallLog {
+        return this.#base.callsChannel(undefined);
+    }
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T18:04:44.146Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    
