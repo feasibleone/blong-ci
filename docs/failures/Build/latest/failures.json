@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-09-23T12:06:59.059Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 578,
+  "commit": "ea3e785db690164b46543c81b048b4d3ead1a807",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/35855705630",
+  "totals": {
+    "packages": 1,
+    "tests": 2,
+    "failed": 1,
+    "flaky": 1
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-suite",
+      "path": "suite/blong-suite",
+      "runner": "playwright",
+      "counts": {
+        "total": 22,
+        "passed": 20,
+        "failed": 1,
+        "flaky": 1,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "../../../demo/blong-marine/test/docs.play.ts › Editor documentation images",
+          "test": "the Editor empty and open",
+          "status": "failed",
+          "trace": "traces/736b2550-0af7-4200-bec7-e91b640c7d2f-attachment.zip"
+        },
+        {
+          "suite": "../../../demo/blong-marine/test/docs.play.ts › Portal documentation images",
+          "test": "the portal shell with two pages open",
+          "status": "flaky",
+          "trace": "traces/8354c12d-8e57-437b-bec1-e68de00bb6a4-attachment.zip"
+        }
+      ]
+    }
+  ]
+}
