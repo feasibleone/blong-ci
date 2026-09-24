@@ -1,0 +1,2827 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/semantic-log/src/context.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">core/semantic-log/src</a> context.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.2% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>861/914</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">98.36% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>120/122</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">77.77% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>42/54</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.2% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>861/914</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a>
+<a name='L410'></a><a href='#L410'>410</a>
+<a name='L411'></a><a href='#L411'>411</a>
+<a name='L412'></a><a href='#L412'>412</a>
+<a name='L413'></a><a href='#L413'>413</a>
+<a name='L414'></a><a href='#L414'>414</a>
+<a name='L415'></a><a href='#L415'>415</a>
+<a name='L416'></a><a href='#L416'>416</a>
+<a name='L417'></a><a href='#L417'>417</a>
+<a name='L418'></a><a href='#L418'>418</a>
+<a name='L419'></a><a href='#L419'>419</a>
+<a name='L420'></a><a href='#L420'>420</a>
+<a name='L421'></a><a href='#L421'>421</a>
+<a name='L422'></a><a href='#L422'>422</a>
+<a name='L423'></a><a href='#L423'>423</a>
+<a name='L424'></a><a href='#L424'>424</a>
+<a name='L425'></a><a href='#L425'>425</a>
+<a name='L426'></a><a href='#L426'>426</a>
+<a name='L427'></a><a href='#L427'>427</a>
+<a name='L428'></a><a href='#L428'>428</a>
+<a name='L429'></a><a href='#L429'>429</a>
+<a name='L430'></a><a href='#L430'>430</a>
+<a name='L431'></a><a href='#L431'>431</a>
+<a name='L432'></a><a href='#L432'>432</a>
+<a name='L433'></a><a href='#L433'>433</a>
+<a name='L434'></a><a href='#L434'>434</a>
+<a name='L435'></a><a href='#L435'>435</a>
+<a name='L436'></a><a href='#L436'>436</a>
+<a name='L437'></a><a href='#L437'>437</a>
+<a name='L438'></a><a href='#L438'>438</a>
+<a name='L439'></a><a href='#L439'>439</a>
+<a name='L440'></a><a href='#L440'>440</a>
+<a name='L441'></a><a href='#L441'>441</a>
+<a name='L442'></a><a href='#L442'>442</a>
+<a name='L443'></a><a href='#L443'>443</a>
+<a name='L444'></a><a href='#L444'>444</a>
+<a name='L445'></a><a href='#L445'>445</a>
+<a name='L446'></a><a href='#L446'>446</a>
+<a name='L447'></a><a href='#L447'>447</a>
+<a name='L448'></a><a href='#L448'>448</a>
+<a name='L449'></a><a href='#L449'>449</a>
+<a name='L450'></a><a href='#L450'>450</a>
+<a name='L451'></a><a href='#L451'>451</a>
+<a name='L452'></a><a href='#L452'>452</a>
+<a name='L453'></a><a href='#L453'>453</a>
+<a name='L454'></a><a href='#L454'>454</a>
+<a name='L455'></a><a href='#L455'>455</a>
+<a name='L456'></a><a href='#L456'>456</a>
+<a name='L457'></a><a href='#L457'>457</a>
+<a name='L458'></a><a href='#L458'>458</a>
+<a name='L459'></a><a href='#L459'>459</a>
+<a name='L460'></a><a href='#L460'>460</a>
+<a name='L461'></a><a href='#L461'>461</a>
+<a name='L462'></a><a href='#L462'>462</a>
+<a name='L463'></a><a href='#L463'>463</a>
+<a name='L464'></a><a href='#L464'>464</a>
+<a name='L465'></a><a href='#L465'>465</a>
+<a name='L466'></a><a href='#L466'>466</a>
+<a name='L467'></a><a href='#L467'>467</a>
+<a name='L468'></a><a href='#L468'>468</a>
+<a name='L469'></a><a href='#L469'>469</a>
+<a name='L470'></a><a href='#L470'>470</a>
+<a name='L471'></a><a href='#L471'>471</a>
+<a name='L472'></a><a href='#L472'>472</a>
+<a name='L473'></a><a href='#L473'>473</a>
+<a name='L474'></a><a href='#L474'>474</a>
+<a name='L475'></a><a href='#L475'>475</a>
+<a name='L476'></a><a href='#L476'>476</a>
+<a name='L477'></a><a href='#L477'>477</a>
+<a name='L478'></a><a href='#L478'>478</a>
+<a name='L479'></a><a href='#L479'>479</a>
+<a name='L480'></a><a href='#L480'>480</a>
+<a name='L481'></a><a href='#L481'>481</a>
+<a name='L482'></a><a href='#L482'>482</a>
+<a name='L483'></a><a href='#L483'>483</a>
+<a name='L484'></a><a href='#L484'>484</a>
+<a name='L485'></a><a href='#L485'>485</a>
+<a name='L486'></a><a href='#L486'>486</a>
+<a name='L487'></a><a href='#L487'>487</a>
+<a name='L488'></a><a href='#L488'>488</a>
+<a name='L489'></a><a href='#L489'>489</a>
+<a name='L490'></a><a href='#L490'>490</a>
+<a name='L491'></a><a href='#L491'>491</a>
+<a name='L492'></a><a href='#L492'>492</a>
+<a name='L493'></a><a href='#L493'>493</a>
+<a name='L494'></a><a href='#L494'>494</a>
+<a name='L495'></a><a href='#L495'>495</a>
+<a name='L496'></a><a href='#L496'>496</a>
+<a name='L497'></a><a href='#L497'>497</a>
+<a name='L498'></a><a href='#L498'>498</a>
+<a name='L499'></a><a href='#L499'>499</a>
+<a name='L500'></a><a href='#L500'>500</a>
+<a name='L501'></a><a href='#L501'>501</a>
+<a name='L502'></a><a href='#L502'>502</a>
+<a name='L503'></a><a href='#L503'>503</a>
+<a name='L504'></a><a href='#L504'>504</a>
+<a name='L505'></a><a href='#L505'>505</a>
+<a name='L506'></a><a href='#L506'>506</a>
+<a name='L507'></a><a href='#L507'>507</a>
+<a name='L508'></a><a href='#L508'>508</a>
+<a name='L509'></a><a href='#L509'>509</a>
+<a name='L510'></a><a href='#L510'>510</a>
+<a name='L511'></a><a href='#L511'>511</a>
+<a name='L512'></a><a href='#L512'>512</a>
+<a name='L513'></a><a href='#L513'>513</a>
+<a name='L514'></a><a href='#L514'>514</a>
+<a name='L515'></a><a href='#L515'>515</a>
+<a name='L516'></a><a href='#L516'>516</a>
+<a name='L517'></a><a href='#L517'>517</a>
+<a name='L518'></a><a href='#L518'>518</a>
+<a name='L519'></a><a href='#L519'>519</a>
+<a name='L520'></a><a href='#L520'>520</a>
+<a name='L521'></a><a href='#L521'>521</a>
+<a name='L522'></a><a href='#L522'>522</a>
+<a name='L523'></a><a href='#L523'>523</a>
+<a name='L524'></a><a href='#L524'>524</a>
+<a name='L525'></a><a href='#L525'>525</a>
+<a name='L526'></a><a href='#L526'>526</a>
+<a name='L527'></a><a href='#L527'>527</a>
+<a name='L528'></a><a href='#L528'>528</a>
+<a name='L529'></a><a href='#L529'>529</a>
+<a name='L530'></a><a href='#L530'>530</a>
+<a name='L531'></a><a href='#L531'>531</a>
+<a name='L532'></a><a href='#L532'>532</a>
+<a name='L533'></a><a href='#L533'>533</a>
+<a name='L534'></a><a href='#L534'>534</a>
+<a name='L535'></a><a href='#L535'>535</a>
+<a name='L536'></a><a href='#L536'>536</a>
+<a name='L537'></a><a href='#L537'>537</a>
+<a name='L538'></a><a href='#L538'>538</a>
+<a name='L539'></a><a href='#L539'>539</a>
+<a name='L540'></a><a href='#L540'>540</a>
+<a name='L541'></a><a href='#L541'>541</a>
+<a name='L542'></a><a href='#L542'>542</a>
+<a name='L543'></a><a href='#L543'>543</a>
+<a name='L544'></a><a href='#L544'>544</a>
+<a name='L545'></a><a href='#L545'>545</a>
+<a name='L546'></a><a href='#L546'>546</a>
+<a name='L547'></a><a href='#L547'>547</a>
+<a name='L548'></a><a href='#L548'>548</a>
+<a name='L549'></a><a href='#L549'>549</a>
+<a name='L550'></a><a href='#L550'>550</a>
+<a name='L551'></a><a href='#L551'>551</a>
+<a name='L552'></a><a href='#L552'>552</a>
+<a name='L553'></a><a href='#L553'>553</a>
+<a name='L554'></a><a href='#L554'>554</a>
+<a name='L555'></a><a href='#L555'>555</a>
+<a name='L556'></a><a href='#L556'>556</a>
+<a name='L557'></a><a href='#L557'>557</a>
+<a name='L558'></a><a href='#L558'>558</a>
+<a name='L559'></a><a href='#L559'>559</a>
+<a name='L560'></a><a href='#L560'>560</a>
+<a name='L561'></a><a href='#L561'>561</a>
+<a name='L562'></a><a href='#L562'>562</a>
+<a name='L563'></a><a href='#L563'>563</a>
+<a name='L564'></a><a href='#L564'>564</a>
+<a name='L565'></a><a href='#L565'>565</a>
+<a name='L566'></a><a href='#L566'>566</a>
+<a name='L567'></a><a href='#L567'>567</a>
+<a name='L568'></a><a href='#L568'>568</a>
+<a name='L569'></a><a href='#L569'>569</a>
+<a name='L570'></a><a href='#L570'>570</a>
+<a name='L571'></a><a href='#L571'>571</a>
+<a name='L572'></a><a href='#L572'>572</a>
+<a name='L573'></a><a href='#L573'>573</a>
+<a name='L574'></a><a href='#L574'>574</a>
+<a name='L575'></a><a href='#L575'>575</a>
+<a name='L576'></a><a href='#L576'>576</a>
+<a name='L577'></a><a href='#L577'>577</a>
+<a name='L578'></a><a href='#L578'>578</a>
+<a name='L579'></a><a href='#L579'>579</a>
+<a name='L580'></a><a href='#L580'>580</a>
+<a name='L581'></a><a href='#L581'>581</a>
+<a name='L582'></a><a href='#L582'>582</a>
+<a name='L583'></a><a href='#L583'>583</a>
+<a name='L584'></a><a href='#L584'>584</a>
+<a name='L585'></a><a href='#L585'>585</a>
+<a name='L586'></a><a href='#L586'>586</a>
+<a name='L587'></a><a href='#L587'>587</a>
+<a name='L588'></a><a href='#L588'>588</a>
+<a name='L589'></a><a href='#L589'>589</a>
+<a name='L590'></a><a href='#L590'>590</a>
+<a name='L591'></a><a href='#L591'>591</a>
+<a name='L592'></a><a href='#L592'>592</a>
+<a name='L593'></a><a href='#L593'>593</a>
+<a name='L594'></a><a href='#L594'>594</a>
+<a name='L595'></a><a href='#L595'>595</a>
+<a name='L596'></a><a href='#L596'>596</a>
+<a name='L597'></a><a href='#L597'>597</a>
+<a name='L598'></a><a href='#L598'>598</a>
+<a name='L599'></a><a href='#L599'>599</a>
+<a name='L600'></a><a href='#L600'>600</a>
+<a name='L601'></a><a href='#L601'>601</a>
+<a name='L602'></a><a href='#L602'>602</a>
+<a name='L603'></a><a href='#L603'>603</a>
+<a name='L604'></a><a href='#L604'>604</a>
+<a name='L605'></a><a href='#L605'>605</a>
+<a name='L606'></a><a href='#L606'>606</a>
+<a name='L607'></a><a href='#L607'>607</a>
+<a name='L608'></a><a href='#L608'>608</a>
+<a name='L609'></a><a href='#L609'>609</a>
+<a name='L610'></a><a href='#L610'>610</a>
+<a name='L611'></a><a href='#L611'>611</a>
+<a name='L612'></a><a href='#L612'>612</a>
+<a name='L613'></a><a href='#L613'>613</a>
+<a name='L614'></a><a href='#L614'>614</a>
+<a name='L615'></a><a href='#L615'>615</a>
+<a name='L616'></a><a href='#L616'>616</a>
+<a name='L617'></a><a href='#L617'>617</a>
+<a name='L618'></a><a href='#L618'>618</a>
+<a name='L619'></a><a href='#L619'>619</a>
+<a name='L620'></a><a href='#L620'>620</a>
+<a name='L621'></a><a href='#L621'>621</a>
+<a name='L622'></a><a href='#L622'>622</a>
+<a name='L623'></a><a href='#L623'>623</a>
+<a name='L624'></a><a href='#L624'>624</a>
+<a name='L625'></a><a href='#L625'>625</a>
+<a name='L626'></a><a href='#L626'>626</a>
+<a name='L627'></a><a href='#L627'>627</a>
+<a name='L628'></a><a href='#L628'>628</a>
+<a name='L629'></a><a href='#L629'>629</a>
+<a name='L630'></a><a href='#L630'>630</a>
+<a name='L631'></a><a href='#L631'>631</a>
+<a name='L632'></a><a href='#L632'>632</a>
+<a name='L633'></a><a href='#L633'>633</a>
+<a name='L634'></a><a href='#L634'>634</a>
+<a name='L635'></a><a href='#L635'>635</a>
+<a name='L636'></a><a href='#L636'>636</a>
+<a name='L637'></a><a href='#L637'>637</a>
+<a name='L638'></a><a href='#L638'>638</a>
+<a name='L639'></a><a href='#L639'>639</a>
+<a name='L640'></a><a href='#L640'>640</a>
+<a name='L641'></a><a href='#L641'>641</a>
+<a name='L642'></a><a href='#L642'>642</a>
+<a name='L643'></a><a href='#L643'>643</a>
+<a name='L644'></a><a href='#L644'>644</a>
+<a name='L645'></a><a href='#L645'>645</a>
+<a name='L646'></a><a href='#L646'>646</a>
+<a name='L647'></a><a href='#L647'>647</a>
+<a name='L648'></a><a href='#L648'>648</a>
+<a name='L649'></a><a href='#L649'>649</a>
+<a name='L650'></a><a href='#L650'>650</a>
+<a name='L651'></a><a href='#L651'>651</a>
+<a name='L652'></a><a href='#L652'>652</a>
+<a name='L653'></a><a href='#L653'>653</a>
+<a name='L654'></a><a href='#L654'>654</a>
+<a name='L655'></a><a href='#L655'>655</a>
+<a name='L656'></a><a href='#L656'>656</a>
+<a name='L657'></a><a href='#L657'>657</a>
+<a name='L658'></a><a href='#L658'>658</a>
+<a name='L659'></a><a href='#L659'>659</a>
+<a name='L660'></a><a href='#L660'>660</a>
+<a name='L661'></a><a href='#L661'>661</a>
+<a name='L662'></a><a href='#L662'>662</a>
+<a name='L663'></a><a href='#L663'>663</a>
+<a name='L664'></a><a href='#L664'>664</a>
+<a name='L665'></a><a href='#L665'>665</a>
+<a name='L666'></a><a href='#L666'>666</a>
+<a name='L667'></a><a href='#L667'>667</a>
+<a name='L668'></a><a href='#L668'>668</a>
+<a name='L669'></a><a href='#L669'>669</a>
+<a name='L670'></a><a href='#L670'>670</a>
+<a name='L671'></a><a href='#L671'>671</a>
+<a name='L672'></a><a href='#L672'>672</a>
+<a name='L673'></a><a href='#L673'>673</a>
+<a name='L674'></a><a href='#L674'>674</a>
+<a name='L675'></a><a href='#L675'>675</a>
+<a name='L676'></a><a href='#L676'>676</a>
+<a name='L677'></a><a href='#L677'>677</a>
+<a name='L678'></a><a href='#L678'>678</a>
+<a name='L679'></a><a href='#L679'>679</a>
+<a name='L680'></a><a href='#L680'>680</a>
+<a name='L681'></a><a href='#L681'>681</a>
+<a name='L682'></a><a href='#L682'>682</a>
+<a name='L683'></a><a href='#L683'>683</a>
+<a name='L684'></a><a href='#L684'>684</a>
+<a name='L685'></a><a href='#L685'>685</a>
+<a name='L686'></a><a href='#L686'>686</a>
+<a name='L687'></a><a href='#L687'>687</a>
+<a name='L688'></a><a href='#L688'>688</a>
+<a name='L689'></a><a href='#L689'>689</a>
+<a name='L690'></a><a href='#L690'>690</a>
+<a name='L691'></a><a href='#L691'>691</a>
+<a name='L692'></a><a href='#L692'>692</a>
+<a name='L693'></a><a href='#L693'>693</a>
+<a name='L694'></a><a href='#L694'>694</a>
+<a name='L695'></a><a href='#L695'>695</a>
+<a name='L696'></a><a href='#L696'>696</a>
+<a name='L697'></a><a href='#L697'>697</a>
+<a name='L698'></a><a href='#L698'>698</a>
+<a name='L699'></a><a href='#L699'>699</a>
+<a name='L700'></a><a href='#L700'>700</a>
+<a name='L701'></a><a href='#L701'>701</a>
+<a name='L702'></a><a href='#L702'>702</a>
+<a name='L703'></a><a href='#L703'>703</a>
+<a name='L704'></a><a href='#L704'>704</a>
+<a name='L705'></a><a href='#L705'>705</a>
+<a name='L706'></a><a href='#L706'>706</a>
+<a name='L707'></a><a href='#L707'>707</a>
+<a name='L708'></a><a href='#L708'>708</a>
+<a name='L709'></a><a href='#L709'>709</a>
+<a name='L710'></a><a href='#L710'>710</a>
+<a name='L711'></a><a href='#L711'>711</a>
+<a name='L712'></a><a href='#L712'>712</a>
+<a name='L713'></a><a href='#L713'>713</a>
+<a name='L714'></a><a href='#L714'>714</a>
+<a name='L715'></a><a href='#L715'>715</a>
+<a name='L716'></a><a href='#L716'>716</a>
+<a name='L717'></a><a href='#L717'>717</a>
+<a name='L718'></a><a href='#L718'>718</a>
+<a name='L719'></a><a href='#L719'>719</a>
+<a name='L720'></a><a href='#L720'>720</a>
+<a name='L721'></a><a href='#L721'>721</a>
+<a name='L722'></a><a href='#L722'>722</a>
+<a name='L723'></a><a href='#L723'>723</a>
+<a name='L724'></a><a href='#L724'>724</a>
+<a name='L725'></a><a href='#L725'>725</a>
+<a name='L726'></a><a href='#L726'>726</a>
+<a name='L727'></a><a href='#L727'>727</a>
+<a name='L728'></a><a href='#L728'>728</a>
+<a name='L729'></a><a href='#L729'>729</a>
+<a name='L730'></a><a href='#L730'>730</a>
+<a name='L731'></a><a href='#L731'>731</a>
+<a name='L732'></a><a href='#L732'>732</a>
+<a name='L733'></a><a href='#L733'>733</a>
+<a name='L734'></a><a href='#L734'>734</a>
+<a name='L735'></a><a href='#L735'>735</a>
+<a name='L736'></a><a href='#L736'>736</a>
+<a name='L737'></a><a href='#L737'>737</a>
+<a name='L738'></a><a href='#L738'>738</a>
+<a name='L739'></a><a href='#L739'>739</a>
+<a name='L740'></a><a href='#L740'>740</a>
+<a name='L741'></a><a href='#L741'>741</a>
+<a name='L742'></a><a href='#L742'>742</a>
+<a name='L743'></a><a href='#L743'>743</a>
+<a name='L744'></a><a href='#L744'>744</a>
+<a name='L745'></a><a href='#L745'>745</a>
+<a name='L746'></a><a href='#L746'>746</a>
+<a name='L747'></a><a href='#L747'>747</a>
+<a name='L748'></a><a href='#L748'>748</a>
+<a name='L749'></a><a href='#L749'>749</a>
+<a name='L750'></a><a href='#L750'>750</a>
+<a name='L751'></a><a href='#L751'>751</a>
+<a name='L752'></a><a href='#L752'>752</a>
+<a name='L753'></a><a href='#L753'>753</a>
+<a name='L754'></a><a href='#L754'>754</a>
+<a name='L755'></a><a href='#L755'>755</a>
+<a name='L756'></a><a href='#L756'>756</a>
+<a name='L757'></a><a href='#L757'>757</a>
+<a name='L758'></a><a href='#L758'>758</a>
+<a name='L759'></a><a href='#L759'>759</a>
+<a name='L760'></a><a href='#L760'>760</a>
+<a name='L761'></a><a href='#L761'>761</a>
+<a name='L762'></a><a href='#L762'>762</a>
+<a name='L763'></a><a href='#L763'>763</a>
+<a name='L764'></a><a href='#L764'>764</a>
+<a name='L765'></a><a href='#L765'>765</a>
+<a name='L766'></a><a href='#L766'>766</a>
+<a name='L767'></a><a href='#L767'>767</a>
+<a name='L768'></a><a href='#L768'>768</a>
+<a name='L769'></a><a href='#L769'>769</a>
+<a name='L770'></a><a href='#L770'>770</a>
+<a name='L771'></a><a href='#L771'>771</a>
+<a name='L772'></a><a href='#L772'>772</a>
+<a name='L773'></a><a href='#L773'>773</a>
+<a name='L774'></a><a href='#L774'>774</a>
+<a name='L775'></a><a href='#L775'>775</a>
+<a name='L776'></a><a href='#L776'>776</a>
+<a name='L777'></a><a href='#L777'>777</a>
+<a name='L778'></a><a href='#L778'>778</a>
+<a name='L779'></a><a href='#L779'>779</a>
+<a name='L780'></a><a href='#L780'>780</a>
+<a name='L781'></a><a href='#L781'>781</a>
+<a name='L782'></a><a href='#L782'>782</a>
+<a name='L783'></a><a href='#L783'>783</a>
+<a name='L784'></a><a href='#L784'>784</a>
+<a name='L785'></a><a href='#L785'>785</a>
+<a name='L786'></a><a href='#L786'>786</a>
+<a name='L787'></a><a href='#L787'>787</a>
+<a name='L788'></a><a href='#L788'>788</a>
+<a name='L789'></a><a href='#L789'>789</a>
+<a name='L790'></a><a href='#L790'>790</a>
+<a name='L791'></a><a href='#L791'>791</a>
+<a name='L792'></a><a href='#L792'>792</a>
+<a name='L793'></a><a href='#L793'>793</a>
+<a name='L794'></a><a href='#L794'>794</a>
+<a name='L795'></a><a href='#L795'>795</a>
+<a name='L796'></a><a href='#L796'>796</a>
+<a name='L797'></a><a href='#L797'>797</a>
+<a name='L798'></a><a href='#L798'>798</a>
+<a name='L799'></a><a href='#L799'>799</a>
+<a name='L800'></a><a href='#L800'>800</a>
+<a name='L801'></a><a href='#L801'>801</a>
+<a name='L802'></a><a href='#L802'>802</a>
+<a name='L803'></a><a href='#L803'>803</a>
+<a name='L804'></a><a href='#L804'>804</a>
+<a name='L805'></a><a href='#L805'>805</a>
+<a name='L806'></a><a href='#L806'>806</a>
+<a name='L807'></a><a href='#L807'>807</a>
+<a name='L808'></a><a href='#L808'>808</a>
+<a name='L809'></a><a href='#L809'>809</a>
+<a name='L810'></a><a href='#L810'>810</a>
+<a name='L811'></a><a href='#L811'>811</a>
+<a name='L812'></a><a href='#L812'>812</a>
+<a name='L813'></a><a href='#L813'>813</a>
+<a name='L814'></a><a href='#L814'>814</a>
+<a name='L815'></a><a href='#L815'>815</a>
+<a name='L816'></a><a href='#L816'>816</a>
+<a name='L817'></a><a href='#L817'>817</a>
+<a name='L818'></a><a href='#L818'>818</a>
+<a name='L819'></a><a href='#L819'>819</a>
+<a name='L820'></a><a href='#L820'>820</a>
+<a name='L821'></a><a href='#L821'>821</a>
+<a name='L822'></a><a href='#L822'>822</a>
+<a name='L823'></a><a href='#L823'>823</a>
+<a name='L824'></a><a href='#L824'>824</a>
+<a name='L825'></a><a href='#L825'>825</a>
+<a name='L826'></a><a href='#L826'>826</a>
+<a name='L827'></a><a href='#L827'>827</a>
+<a name='L828'></a><a href='#L828'>828</a>
+<a name='L829'></a><a href='#L829'>829</a>
+<a name='L830'></a><a href='#L830'>830</a>
+<a name='L831'></a><a href='#L831'>831</a>
+<a name='L832'></a><a href='#L832'>832</a>
+<a name='L833'></a><a href='#L833'>833</a>
+<a name='L834'></a><a href='#L834'>834</a>
+<a name='L835'></a><a href='#L835'>835</a>
+<a name='L836'></a><a href='#L836'>836</a>
+<a name='L837'></a><a href='#L837'>837</a>
+<a name='L838'></a><a href='#L838'>838</a>
+<a name='L839'></a><a href='#L839'>839</a>
+<a name='L840'></a><a href='#L840'>840</a>
+<a name='L841'></a><a href='#L841'>841</a>
+<a name='L842'></a><a href='#L842'>842</a>
+<a name='L843'></a><a href='#L843'>843</a>
+<a name='L844'></a><a href='#L844'>844</a>
+<a name='L845'></a><a href='#L845'>845</a>
+<a name='L846'></a><a href='#L846'>846</a>
+<a name='L847'></a><a href='#L847'>847</a>
+<a name='L848'></a><a href='#L848'>848</a>
+<a name='L849'></a><a href='#L849'>849</a>
+<a name='L850'></a><a href='#L850'>850</a>
+<a name='L851'></a><a href='#L851'>851</a>
+<a name='L852'></a><a href='#L852'>852</a>
+<a name='L853'></a><a href='#L853'>853</a>
+<a name='L854'></a><a href='#L854'>854</a>
+<a name='L855'></a><a href='#L855'>855</a>
+<a name='L856'></a><a href='#L856'>856</a>
+<a name='L857'></a><a href='#L857'>857</a>
+<a name='L858'></a><a href='#L858'>858</a>
+<a name='L859'></a><a href='#L859'>859</a>
+<a name='L860'></a><a href='#L860'>860</a>
+<a name='L861'></a><a href='#L861'>861</a>
+<a name='L862'></a><a href='#L862'>862</a>
+<a name='L863'></a><a href='#L863'>863</a>
+<a name='L864'></a><a href='#L864'>864</a>
+<a name='L865'></a><a href='#L865'>865</a>
+<a name='L866'></a><a href='#L866'>866</a>
+<a name='L867'></a><a href='#L867'>867</a>
+<a name='L868'></a><a href='#L868'>868</a>
+<a name='L869'></a><a href='#L869'>869</a>
+<a name='L870'></a><a href='#L870'>870</a>
+<a name='L871'></a><a href='#L871'>871</a>
+<a name='L872'></a><a href='#L872'>872</a>
+<a name='L873'></a><a href='#L873'>873</a>
+<a name='L874'></a><a href='#L874'>874</a>
+<a name='L875'></a><a href='#L875'>875</a>
+<a name='L876'></a><a href='#L876'>876</a>
+<a name='L877'></a><a href='#L877'>877</a>
+<a name='L878'></a><a href='#L878'>878</a>
+<a name='L879'></a><a href='#L879'>879</a>
+<a name='L880'></a><a href='#L880'>880</a>
+<a name='L881'></a><a href='#L881'>881</a>
+<a name='L882'></a><a href='#L882'>882</a>
+<a name='L883'></a><a href='#L883'>883</a>
+<a name='L884'></a><a href='#L884'>884</a>
+<a name='L885'></a><a href='#L885'>885</a>
+<a name='L886'></a><a href='#L886'>886</a>
+<a name='L887'></a><a href='#L887'>887</a>
+<a name='L888'></a><a href='#L888'>888</a>
+<a name='L889'></a><a href='#L889'>889</a>
+<a name='L890'></a><a href='#L890'>890</a>
+<a name='L891'></a><a href='#L891'>891</a>
+<a name='L892'></a><a href='#L892'>892</a>
+<a name='L893'></a><a href='#L893'>893</a>
+<a name='L894'></a><a href='#L894'>894</a>
+<a name='L895'></a><a href='#L895'>895</a>
+<a name='L896'></a><a href='#L896'>896</a>
+<a name='L897'></a><a href='#L897'>897</a>
+<a name='L898'></a><a href='#L898'>898</a>
+<a name='L899'></a><a href='#L899'>899</a>
+<a name='L900'></a><a href='#L900'>900</a>
+<a name='L901'></a><a href='#L901'>901</a>
+<a name='L902'></a><a href='#L902'>902</a>
+<a name='L903'></a><a href='#L903'>903</a>
+<a name='L904'></a><a href='#L904'>904</a>
+<a name='L905'></a><a href='#L905'>905</a>
+<a name='L906'></a><a href='#L906'>906</a>
+<a name='L907'></a><a href='#L907'>907</a>
+<a name='L908'></a><a href='#L908'>908</a>
+<a name='L909'></a><a href='#L909'>909</a>
+<a name='L910'></a><a href='#L910'>910</a>
+<a name='L911'></a><a href='#L911'>911</a>
+<a name='L912'></a><a href='#L912'>912</a>
+<a name='L913'></a><a href='#L913'>913</a>
+<a name='L914'></a><a href='#L914'>914</a>
+<a name='L915'></a><a href='#L915'>915</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">131884x</span>
+<span class="cline-any cline-yes">131884x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8337x</span>
+<span class="cline-any cline-yes">8337x</span>
+<span class="cline-any cline-yes">8337x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1204x</span>
+<span class="cline-any cline-yes">1204x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5264x</span>
+<span class="cline-any cline-yes">5264x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1377x</span>
+<span class="cline-any cline-yes">1377x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1796x</span>
+<span class="cline-any cline-yes">1796x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">84x</span>
+<span class="cline-any cline-yes">84x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14885x</span>
+<span class="cline-any cline-yes">14885x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">19948x</span>
+<span class="cline-any cline-yes">19948x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">12204x</span>
+<span class="cline-any cline-yes">12204x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1603x</span>
+<span class="cline-any cline-yes">1603x</span>
+<span class="cline-any cline-yes">1603x</span>
+<span class="cline-any cline-yes">1170x</span>
+<span class="cline-any cline-yes">1170x</span>
+<span class="cline-any cline-yes">433x</span>
+<span class="cline-any cline-yes">433x</span>
+<span class="cline-any cline-yes">433x</span>
+<span class="cline-any cline-yes">433x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1613x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1603x</span>
+<span class="cline-any cline-yes">1603x</span>
+<span class="cline-any cline-yes">1613x</span>
+<span class="cline-any cline-yes">1613x</span>
+<span class="cline-any cline-yes">1613x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1505x</span>
+<span class="cline-any cline-yes">1505x</span>
+<span class="cline-any cline-yes">1505x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1510x</span>
+<span class="cline-any cline-yes">1510x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1510x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1510x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3105x</span>
+<span class="cline-any cline-yes">3105x</span>
+<span class="cline-any cline-yes">3105x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">3108x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">550x</span>
+<span class="cline-any cline-yes">550x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">545x</span>
+<span class="cline-any cline-yes">545x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1901x</span>
+<span class="cline-any cline-yes">1901x</span>
+<span class="cline-any cline-yes">1901x</span>
+<span class="cline-any cline-yes">1901x</span>
+<span class="cline-any cline-yes">1901x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1918x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1831x</span>
+<span class="cline-any cline-yes">1831x</span>
+<span class="cline-any cline-yes">1831x</span>
+<span class="cline-any cline-yes">1831x</span>
+<span class="cline-any cline-yes">1831x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">787x</span>
+<span class="cline-any cline-yes">787x</span>
+<span class="cline-any cline-yes">787x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">784x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">204x</span>
+<span class="cline-any cline-yes">204x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">15412x</span>
+<span class="cline-any cline-yes">15412x</span>
+<span class="cline-any cline-yes">15083x</span>
+<span class="cline-any cline-yes">15083x</span>
+<span class="cline-any cline-yes">329x</span>
+<span class="cline-any cline-yes">329x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">16331x</span>
+<span class="cline-any cline-yes">16331x</span>
+<span class="cline-any cline-yes">13651x</span>
+<span class="cline-any cline-yes">13651x</span>
+<span class="cline-any cline-yes">2680x</span>
+<span class="cline-any cline-yes">2968x</span>
+<span class="cline-any cline-yes">2659x</span>
+<span class="cline-any cline-yes">2659x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1033x</span>
+<span class="cline-any cline-yes">1033x</span>
+<span class="cline-any cline-yes">1033x</span>
+<span class="cline-any cline-yes">615x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">418x</span>
+<span class="cline-any cline-yes">418x</span>
+<span class="cline-any cline-yes">418x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">206x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">190x</span>
+<span class="cline-any cline-yes">190x</span>
+<span class="cline-any cline-yes">190x</span>
+<span class="cline-any cline-yes">190x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1190x</span>
+<span class="cline-any cline-yes">1190x</span>
+<span class="cline-any cline-yes">1190x</span>
+<span class="cline-any cline-yes">598x</span>
+<span class="cline-any cline-yes">598x</span>
+<span class="cline-any cline-yes">592x</span>
+<span class="cline-any cline-yes">592x</span>
+<span class="cline-any cline-yes">592x</span>
+<span class="cline-any cline-yes">592x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">984x</span>
+<span class="cline-any cline-yes">984x</span>
+<span class="cline-any cline-yes">984x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">923x</span>
+<span class="cline-any cline-yes">923x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">917x</span>
+<span class="cline-any cline-yes">917x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">924x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">18711x</span>
+<span class="cline-any cline-yes">18711x</span>
+<span class="cline-any cline-yes">18711x</span>
+<span class="cline-any cline-yes">17398x</span>
+<span class="cline-any cline-yes">17398x</span>
+<span class="cline-any cline-yes">1313x</span>
+<span class="cline-any cline-yes">1313x</span>
+<span class="cline-any cline-yes">1313x</span>
+<span class="cline-any cline-yes">1313x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">15399x</span>
+<span class="cline-any cline-yes">15399x</span>
+<span class="cline-any cline-yes">15399x</span>
+<span class="cline-any cline-yes">15399x</span>
+<span class="cline-any cline-yes">15399x</span>
+<span class="cline-any cline-yes">15399x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">15401x</span>
+<span class="cline-any cline-yes">15401x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Ambient context propagation (PRD R7 intent, R9 flow and step progress, R22
+ * leg identity).
+ *
+ * `AsyncLocalStorage` is what makes intent and flow position visible on every
+ * descendant record without threading a parameter through every call — the
+ * spec's "propagates automatically across async boundaries" acceptance.
+ */
+&nbsp;
+import {AsyncLocalStorage} from 'node:async_hooks';
+import type {Decision, FlowState, IntentState, Point, Progress, RegionMark} from './record.ts';
+import {assertUlid} from './ulid.ts';
+&nbsp;
+/**
+ * Mutable box holding the rationale that is waiting for the next record.
+ *
+ * A rationale cannot be a plain field on the store: every scope-creating helper
+ * below (`extend`, `withFlow`, `step`) rebuilds the store with `{...context}`,
+ * which copies a field's *value*. A copy held by an enclosing or sibling scope
+ * would then survive the take and hand the same rationale to a second record.
+ * Spreading a box copies only the *reference*, so clearing `box.decision` is
+ * visible to every scope that inherited that box — which is what makes the take
+ * one-shot globally rather than once per scope.
+ */
+export interface DecisionHolder {
+    decision?: Decision;
+}
+&nbsp;
+/**
+ * Mutable box holding the points waiting for the next record (PRD R26).
+ *
+ * A box for the same structural reason as {@link DecisionHolder}: every
+ * scope-creating helper rebuilds the store with `{...context}`, which copies a
+ * field's *value* but a box's *reference*. Two points announced in nested scopes
+ * therefore land in one list, and clearing the box is visible to every scope that
+ * inherited it — which is what makes the take one-shot globally rather than once
+ * per scope.
+ */
+export interface PointsHolder {
+    points?: Point[];
+}
+&nbsp;
+/**
+ * Mutable box holding the branches opened in this scope (PRD R27).
+ *
+ * The marks a *call* may report when it answers — see {@link takeProgress}. A box
+ * like the points one, and for the same reason: a nested scope spreads the context,
+ * so a list created inside the branch would be private to the branch and never
+ * reach the scope that has to report it.
+ */
+export interface VisitedRegions {
+    regions?: RegionMark[];
+}
+&nbsp;
+/** A box counting the regions opened in one scope. */
+export interface RegionCounter {
+    next: number;
+}
+&nbsp;
+/**
+ * Mutable box holding the id of the most recently emitted record in this scope
+ * (PRD R7).
+ *
+ * The same structural reason as {@link DecisionHolder} applies in the mirror
+ * direction, and it is why the memory cannot be a plain field on the store:
+ * `extend`, `withFlow` and `step` each rebuild the store with `{...context}`,
+ * which copies a field's *value*. A value copied into a nested scope dead-ends
+ * the causal chain at every scope boundary — a record emitted inside `step`
+ * would be remembered only in the step's copy, so the record emitted after the
+ * step would name whatever preceded the step and the step's own records would
+ * be missing from the reconstructed chain. Spreading carries the *box* by
+ * reference instead, so a write made in a nested scope is visible to the scope
+ * that encloses it and to any nested scope entered afterwards.
+ */
+export interface RecordMemory {
+    /** The most recently emitted record id, or absent before the first. */
+    last?: string;
+}
+&nbsp;
+export interface AmbientContext {
+    intent?: IntentState;
+    flow?: FlowState;
+    trace?: string;
+    /**
+     * The capabilities decided for this execution: one switch per capability
+     * name, `true` for on and `false` for explicitly off.
+     *
+     * A capability is not a level — it does not make a record louder or quieter,
+     * it decides whether a kind of record is produced at all — and it is not a
+     * per-record question either: it belongs to the whole execution, which is why
+     * it lives here rather than being passed to each call. A capability that is
+     * absent is undecided, which is what lets a configured default apply; one
+     * that is present was decided where the execution began (a grant, a
+     * configuration, a caller in another process) and every record written inside
+     * inherits it. See `src/capability.ts` for the switches that use it, and
+     * `src/propagation.ts` for how a decision reaches the next process.
+     */
+    capabilities?: Record&lt;string, boolean&gt;;
+    /**
+     * The leg this scope is part of (PRD R22) — the one call it performs, or the
+     * one it is answering.
+     *
+     * Kept beside `flow` rather than inside it because the flow object is shared
+     * by reference with every nested scope, which is what makes `step`'s
+     * position persist outward; replacing that object to attach a leg would
+     * detach the position from the scope that encloses it. The logger merges the
+     * two when it assembles a record, so on the wire and in the cache they are
+     * one object.
+     */
+    leg?: string;
+    /**
+     * The unit that declared that leg — the logical unit the call was made *by*.
+     *
+     * Its own field rather than a prefix of the leg id, which is what the id used to
+     * carry: the id is the label an arrow is drawn with, and a label that repeated the
+     * caller read as `gateway.db/gateway.bundle.find` where `db/gateway.bundle.find`
+     * says the same thing once. Declared by the **caller**, like {@link legTo}, and
+     * adopted from the wire by a callee: a receiver that reports a call without saying
+     * who made it leaves the edge it belongs to undrawn.
+     */
+    legFrom?: string;
+    /**
+     * The receiving participant the caller declared for that leg. Set only where a
+     * call is **declared** — the callee adopting an inbound leg deliberately does
+     * not set it, because "who I expected to answer" is the caller's statement and
+     * would read as a declaration made at the other end.
+     */
+    legTo?: string;
+    /**
+     * The leg's position in the execution: a path of counters (`1`, `1.2`), which
+     * is what orders one execution's calls without any coordinator — see
+     * {@link bindLeg}.
+     */
+    legSeq?: string;
+    /**
+     * Counts the legs declared in this scope, so siblings number in order.
+     *
+     * A box, and installed before a leg scope is entered, for the same reason the
+     * record memory is: a scope-creating helper spreads the context, so a counter
+     * created *inside* such a scope would be private to it, and two sibling calls
+     * would both take the number 1.
+     */
+    legCounter?: LegCounter;
+    /** Steps taken in the current flow, in order. */
+    steps?: string[];
+    /** Box holding the rationale waiting to be attached to a record (PRD R11). */
+    pendingDecision?: DecisionHolder;
+    /**
+     * The branches this scope is running inside, outermost first (PRD R26).
+     *
+     * A plain field rather than a box, unlike the rationale: a mark is never
+     * *taken*, it is read by every record the branch emits, and copying it into a
+     * nested scope is what lets an inner decision extend the chain rather than
+     * replace it. Scoped rather than persisted, like a leg — a record emitted
+     * after the branch returned is not part of it.
+     */
+    regions?: RegionMark[];
+    /** Box holding the milestones waiting to be attached to a record (PRD R26). */
+    pendingPoints?: PointsHolder;
+    /**
+     * Box holding the branches opened in this scope (PRD R27), for the call that will
+     * report them when it answers.
+     *
+     * Distinct from {@link regions}, which is the chain *this* scope is in: this one
+     * collects branches that were opened and **closed** below it, which is the only way a
+     * callee's branch can reach a record — by the time the handler returns, the chain is
+     * empty again.
+     */
+    visitedRegions?: VisitedRegions;
+    /**
+     * Counts the regions opened in this scope, so a nested one reads `1.1`.
+     *
+     * A box, and installed before the region scope is entered, for the reason
+     * {@link legCounter} gives: a counter created *inside* such a scope would be
+     * private to it, and two sibling branches would both take the number 1.
+     */
+    regionCounter?: RegionCounter;
+    /** Box holding the id of the most recently emitted record (PRD R7). */
+    recordMemory?: RecordMemory;
+}
+&nbsp;
+const storage = new AsyncLocalStorage&lt;AmbientContext&gt;();
+&nbsp;
+/** The ambient context for the current async execution. */
+export function currentContext(): AmbientContext {
+    return storage.getStore() ?? {};
+}
+&nbsp;
+function extend(patch: AmbientContext): AmbientContext {
+    return {...currentContext(), ...patch};
+}
+&nbsp;
+/** Run `fn` with `intent` active. Nested calls override and then restore. */
+export function withIntent&lt;T&gt;(intent: IntentState, fn: () =&gt; T): T {
+    return storage.run(extend({intent}), fn);
+}
+&nbsp;
+/**
+ * Run `fn` with `name` switched on or off.
+ *
+ * The switch covers everything the scope does, including what its calls do in
+ * another process: the decision is published with the identity
+ * (`identityHeaders`), so a capability turned off here is off downstream too.
+ * Nested scopes may override one capability without disturbing the others, which
+ * is what keeps a decision taken at the entry point intact while a particular
+ * span changes its mind.
+ */
+export function withCapability&lt;T&gt;(name: string, on: boolean, fn: () =&gt; T): T {
+    return storage.run(extend({capabilities: {...currentCapabilities(), [name]: on}}), fn);
+}
+&nbsp;
+/**
+ * Enter a capability for the rest of the current async execution —
+ * {@link withCapability}'s hook form, for a boundary that decides before the
+ * code it decides for runs (an HTTP hook, for instance).
+ */
+export function enterCapability(name: string, on: boolean): void {
+    storage.enterWith(extend({capabilities: {...currentCapabilities(), [name]: on}}));
+}
+&nbsp;
+/** The decided state of a capability, or `undefined` when nothing decided it. */
+export function capabilityState(name: string): boolean | undefined {
+    return currentContext().capabilities?.[name];
+}
+&nbsp;
+/** Every capability decided in this scope, as a copy the caller may keep. */
+export function currentCapabilities(): Record&lt;string, boolean&gt; {
+    return {...currentContext().capabilities};
+}
+&nbsp;
+/** Associate a causal trace id with the current scope (PRD R7). */
+export function bindTrace&lt;T&gt;(trace: string, fn: () =&gt; T): T {
+    return storage.run(extend({trace}), fn);
+}
+&nbsp;
+/**
+ * Enter a trace for the rest of the current async execution — {@link bindTrace}'s
+ * hook form.
+ *
+ * See {@link enterFlow} for when entering is the right shape and what it costs.
+ */
+export function enterTrace(trace: string): void {
+    storage.enterWith(extend({trace}));
+}
+&nbsp;
+/** The ambient trace id, which becomes the record's `trace` reference. */
+export function currentTrace(): string | undefined {
+    return currentContext().trace;
+}
+&nbsp;
+/**
+ * The shape of a leg id (PRD R22, ruled 2026-09-14; the caller moved out of it
+ * 2026-09-22).
+ *
+ * Letters (either case), digits, and `.`, `-`, `_` or `/` as separators. One charset
+ * serves four consumers at once: the id is lawful as an HTTP header value, it is
+ * greppable in source (which is what the id -&gt; file cross-reference is built
+ * from), it needs no escaping to be a mermaid label, and it cannot contain the
+ * `;` that silently breaks a generated sequence diagram. Case is *not* folded,
+ * because a leg is usually named after the participant that makes the call and
+ * participant names are written in code (`hubA.quote.proxy` names the same
+ * participant the source does). Enforced rather than recommended, because an id
+ * that breaks one of those four fails somewhere other than the place that made
+ * the mistake.
+ *
+ * The id is the **method the call reaches its callee with**, which is why `/` is
+ * allowed here and not in a participant name: blong's destination rewrite prefixes a
+ * hop with the namespace it forwards to (`db/gateway.bundle.find`), the receiver strips
+ * it, and a label that hid the prefix would not be the method that was called. Who
+ * made the call is a separate identity ({@link AmbientContext.legFrom}); repeating it
+ * in the id cost every arrow its readability and never added information the diagram
+ * did not already have at the arrow's other end.
+ */
+const LEG_NAME = /^[A-Za-z0-9][A-Za-z0-9._/-]*$/;
+&nbsp;
+/**
+ * The shape of a participant name: the same, without the `/` (see above).
+ *
+ * Letters (either case), digits, and `.`, `-` or `_` as separators, for the four
+ * consumers above.
+ */
+const NAME = /^[A-Za-z0-9][A-Za-z0-9._-]*$/;
+&nbsp;
+/**
+ * Whether `value` is a leg id (PRD R22).
+ *
+ * Exported because the two directions of propagation need the same verdict and
+ * they must disagree about what to do with it: a **declared** leg is application
+ * code, so a malformed one is caller misuse that fails fast (`bindLeg` throws),
+ * while a leg **arriving on the wire** comes from another process, and an
+ * unbalanced peer must not be able to break a request by sending a bad value. An
+ * inbound value that is not a leg id is therefore read as no leg at all — the
+ * same treatment the ingest gives an unusable flow kind — rather than thrown.
+ */
+export function isLegId(value: unknown): boolean {
+    return typeof value === 'string' &amp;&amp; LEG_NAME.test(value);
+}
+&nbsp;
+/**
+ * Whether `value` is the name of a participant — the receiving end a caller
+ * declares.
+ *
+ * The same charset as a leg id and deliberately a separate predicate: an id names
+ * a call site, a name names a service that emits, and a reader that conflated them
+ * could not say which of the two a bad value broke.
+ */
+export function isServiceName(value: unknown): boolean {
+    return typeof value === 'string' &amp;&amp; NAME.test(value);
+}
+&nbsp;
+/**
+ * Whether `value` is a leg sequence: a path of counters (`1`, `1.2`, `1.2.1`).
+ *
+ * A **path** rather than a number, because the counter has to order one execution's
+ * calls with no coordinator: the caller numbers the calls it makes from a counter
+ * in its own scope, and the receiving end numbers its own calls as children of the
+ * number it was given. Two services that each made a first call would both report
+ * `1`, and a flat number would leave the union unable to order them — while
+ * `1`, `1.1`, `1.2`, `2` is a depth-first order of the execution, which is exactly
+ * what a sequence diagram is drawn from.
+ *
+ * Timestamps are deliberately **not** used for this: two records emitted inside one
+ * millisecond cannot be ordered by a millisecond-resolution clock, and a direction
+ * that rests on arrival order instead (i.e. on which service flushed its sink
+ * first) is a coin flip that looks like a measurement. Measured on the fixtures, 7
+ * of the 14 inter-scheme legs tied.
+ */
+const LEG_SEQ = /^[0-9]+(?:\.[0-9]+)*$/;
+&nbsp;
+export function isLegSeq(value: unknown): boolean {
+    return typeof value === 'string' &amp;&amp; LEG_SEQ.test(value);
+}
+&nbsp;
+/** A box counting the legs declared in one scope. */
+export interface LegCounter {
+    next: number;
+}
+&nbsp;
+/** The leg a scope is part of (PRD R22). */
+export interface LegIdentity {
+    /** The method the call reaches its callee with. */
+    id: string;
+    /** The logical unit that declared the call. */
+    from?: string;
+    /** The receiving participant, where this scope declared the call. */
+    to?: string;
+    /** The leg's position in the execution, where it has one. */
+    seq?: string;
+}
+&nbsp;
+/**
+ * Ensure this scope has a leg counter, and return it.
+ *
+ * The same reasoning as {@link ensureRecordMemory}: it has to exist **before** a
+ * leg scope is entered, because entering one spreads the context — a counter
+ * created inside would be private to that scope and two sibling calls would both
+ * take the number 1.
+ */
+function ensureLegCounter(): LegCounter {
+    const existing = currentContext().legCounter;
+    if (existing !== undefined) {
+        return existing;
+    }
+    const box: LegCounter = {next: 0};
+    storage.enterWith({...currentContext(), legCounter: box});
+    return box;
+}
+&nbsp;
+/** Throws unless a flow is bound, which every leg requires. */
+function assertInFlow(leg: string): void {
+    if (currentContext().flow === undefined) {
+        throw new TypeError(
+            `leg ${JSON.stringify(leg)} was bound outside a flow; run it inside withFlow`,
+        );
+    }
+}
+&nbsp;
+/**
+ * Run `fn` as the **caller** of one call (PRD R22).
+ *
+ * A call is declared, not inferred: the id names the method the call reaches its callee
+ * with, `from` names the logical unit that declares it, `to` names the participant the
+ * caller expects to answer, and the position is taken from a counter in this scope. All
+ * four travel with the request.
+ *
+ * `from` is stated rather than derived, and it is no longer read out of the id (which
+ * used to be `&lt;caller&gt;.&lt;method&gt;`): a label wants the method, and who made the call is
+ * identity, not part of a name. It is required for the same reason `to` is — a call whose
+ * source is unnamed draws an arrow from nowhere — and it is what a receiver reports back
+ * when it answers.
+ *
+ * `to` is required because declaration is what makes an *attempt* observable: a
+ * call whose receiver never answers — because it is missing, failing, or wired to
+ * the wrong address — still appears in the observed shape, and its missing receipt
+ * is then a fact about the deployment rather than an edge that cannot be drawn. It
+ * is also what lets the receiver check that it is the one that was meant.
+ *
+ * `seq` is assigned here rather than measured: the counter lives in the enclosing
+ * scope, the first call in an execution is `1`, and a call made while answering
+ * `1` is `1.1`. That is a depth-first order of the execution, obtained without any
+ * coordination between processes — see {@link isLegSeq} for why a clock cannot do
+ * this job.
+ *
+ * A leg belongs to a flow's call, so binding one outside a flow has nothing to
+ * attribute it to and **throws**, exactly as `step` does: this is caller misuse,
+ * and inventing a flow to hold it would put a lie in the data (D3). The id and the
+ * receiver are validated for the same reason — a malformed one is a local mistake
+ * and would otherwise reach a header, a grep and a diagram before anyone noticed.
+ *
+ * Scoped, not positional: unlike `step` — which deliberately leaves the last known
+ * position visible in the enclosing scope, so a stalled flow reports where it
+ * stopped — a leg is visible only inside `fn`. A record emitted after the call
+ * returns is not part of the call.
+ */
+export function bindLeg&lt;T&gt;(leg: {id: string; from: string; to: string}, fn: () =&gt; T): T {
+    if (!isLegId(leg.id)) {
+        throw new TypeError(
+            `<span class="fstat-no" title="function not covered" >leg id must be letters, digits and '.', '-', '_' or '/', got ${JSON.stringify(leg.id)}`,</span>
+<span class="cstat-no" title="statement not covered" >        );</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    if (!isServiceName(leg.from)) {</span>
+<span class="cstat-no" title="statement not covered" >        throw new TypeError(</span>
+            `leg ${JSON.stringify(leg.id)} must name the unit that declares it, got ${<span class="fstat-no" title="function not covered" >JSON.stringify(leg.from)}`,</span>
+<span class="cstat-no" title="statement not covered" >        );</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    if (!isServiceName(leg.to)) {</span>
+<span class="cstat-no" title="statement not covered" >        throw new TypeError(</span>
+            `leg ${JSON.stringify(leg.id)} must name the participant it calls, got ${JSON.stringify(leg.to)}`,
+        );
+    }
+    const parent = currentContext().legSeq;
+    const counter = ensureLegCounter();
+    const <span class="fstat-no" title="function not covered" >seq = parent === undefined ? String(++counter.next) : `${parent}.${++counter.next}`;</span>
+    return enter({id: leg.id, from: leg.from, to: leg.to, seq}, fn);
+}
+&nbsp;
+/**
+ * Run `fn` as the **receiver** of a call someone else declared (PRD R22).
+ *
+ * The receiving end adopts the id, the caller and the position, so its records name the
+ * same call as the caller's and are ordered with it; it deliberately does **not** adopt
+ * `to`, which is the caller's statement about where the call was aimed. Its own calls are
+ * declared with {@link bindLeg} and numbered as children of `seq`.
+ *
+ * `from` is adopted because it is part of the declaration that travelled: a receiver
+ * reporting a call without saying who made it leaves the edge undrawn for a reader, and
+ * the pairing of a call with its answer is by both ends, not by the method alone (two
+ * units may call the same method in one execution, and those are two calls).
+ *
+ * The value has already been validated where it was read off the wire
+ * (`flow/participant.ts`), so anything reaching here was chosen in code — and a
+ * malformed id or position from *here* is caller misuse and throws.
+ */
+export function bindInboundLeg&lt;T&gt;(leg: {id: string; from?: string; seq?: string}, fn: () =&gt; T): T {
+    assertInboundLeg(leg);
+    return enter({id: leg.id, from: leg.from, seq: leg.seq}, fn);
+}
+&nbsp;
+/**
+ * Enter a received call's leg for the rest of the current async execution —
+ * {@link bindInboundLeg}'s hook form.
+ *
+ * The leg a request is *answered* under has to be installed before the framework
+ * hooks that reject it, or the one call that failed is the one the observed picture
+ * cannot show. Validated the same way and for the same reason: what reaches either
+ * of these was chosen in code, so a malformed value is caller misuse.
+ */
+export function enterInboundLeg(leg: {id: string; from?: string; seq?: string}): void {
+    assertInboundLeg(leg);
+    storage.enterWith(extend(legIdentity({id: leg.id, from: leg.from, seq: leg.seq})));
+}
+&nbsp;
+/** Reject a leg that was chosen in code but is not lawful (PRD R22). */
+function assertInboundLeg(leg: {id: string; from?: string; seq?: string}): void {
+    if (!isLegId(leg.id)) {
+        throw new TypeError(
+            `leg id must be letters, digits and '.', '-', '_' or '/', got ${JSON.stringify(leg.id)}`,
+        );
+    }
+    if (leg.from !== undefined &amp;&amp; !isServiceName(leg.from)) {
+        throw new TypeError(
+            `leg ${JSON.stringify(leg.id)} must name the unit that declares it, got ${JSON.stringify(leg.from)}`,
+        );
+    }
+    if (leg.seq !== undefined &amp;&amp; !isLegSeq(leg.seq)) {
+        throw new TypeError(
+            `leg ${JSON.stringify(leg.id)}<span class="fstat-no" title="function not covered" > has a malformed position, got ${JSON.stringify(leg.seq)}`,</span>
+<span class="cstat-no" title="statement not covered" >        );</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+/** Install one leg for `fn`, from a local declaration or an adopted one. */
+function enter&lt;T&gt;(leg: {id: string; from?: string; to?: string; seq?: string}, fn: () =&gt; T): T {
+    return storage.run(extend(legIdentity(leg)), fn);
+}
+&nbsp;
+/** The leg a scope is part of, as the ambient context holds it. */
+function legIdentity(leg: {
+    id: string;
+    from?: string;
+    to?: string;
+    seq?: string;
+}): Pick&lt;AmbientContext, 'leg' | 'legFrom' | 'legTo' | 'legSeq' | 'legCounter'&gt; {
+    assertInFlow(leg.id);
+    // The memory box has to exist *before* the leg scope is entered: entering spreads
+<span class="fstat-no" title="function not covered" >    // the context, so a box first installed inside the leg would never reach the</span>
+<span class="cstat-no" title="statement not covered" >    // scope that encloses the call, and the caller's next record would lose its</span>
+    // causal parent (PRD R7).
+    ensureRecordMemory();
+    return {leg: leg.id, legFrom: leg.from, legTo: leg.to, legSeq: leg.seq, legCounter: {next: 0}};
+}
+&nbsp;
+/** The ambient leg, or `undefined` when this scope is not part of a call. */
+export function currentLeg(): LegIdentity | undefined {
+    const context = currentContext();
+    if (context.leg === undefined) {
+        return undefined;
+    }
+    return {id: context.leg, from: context.legFrom, to: context.legTo, seq: context.legSeq};
+}
+&nbsp;
+/**
+ * Run `fn` inside a flow identified by a caller-minted ULID and a stable kind
+ * (PRD R9, amended 2026-09-13).
+ *
+ * The two parts answer two questions. `id` names **one execution** of the flow
+ * (*which run*), so it is validated before the store is entered: an absent,
+ * empty or malformed id is caller misuse and throws synchronously (D3) rather
+ * than being carried into every record the scope emits as a fabricated
+ * identity. `kind` names the flow **as a process** (*which recurring process*),
+ * outliving any single run, and is the key the cluster service observes drift
+ * under (R6c); a flow with no stable name has no drift key, so an absent or
+ * empty kind is the same caller misuse and throws the same way. `id` is not the
+ * trace id (a trace may span more than one flow) and neither value is minted
+ * here — the library only carries what the caller supplies.
+ */
+/** The flow a scope runs in, as the ambient context holds it. Validates the identity. */
+function flowIdentity(flow: {
+    id: string;
+    kind: string;
+    step?: string | null;
+}): Pick&lt;AmbientContext, 'flow' | 'steps'&gt; {
+    assertUlid(flow.id, 'flow id');
+    if (typeof flow.kind !== 'string' || flow.kind.length === 0) {
+        throw new TypeError(
+            `flow kind must be a non-empty string, got ${JSON.stringify(flow.kind)}`,
+        );
+    }
+    return {
+        flow: {
+            id: flow.id,
+            kind: flow.kind,
+            step: flow.step ?? undefined,
+            index: -1,
+            status: 'running',
+        },
+        steps: [],
+    };
+}
+&nbsp;
+export function withFlow&lt;T&gt;(
+    flow: {id: string; kind: string; step?: string | null},
+    fn: () =&gt; T,
+): T {
+    return storage.run(extend(flowIdentity(flow)), fn);
+}
+&nbsp;
+/**
+ * Enter a flow for the rest of the current async execution (PRD R9) — the hook
+ * form of {@link withFlow}.
+ *
+ * `withFlow` scopes a callback, which is the wrong shape for a server hook: a
+ * Fastify `onRequest` hook returns, and the framework that called it continues the
+ * request. There is no callback to wrap, yet the work that follows — the auth and
+ * metering hooks, the route handler, every call they make — must still name the
+ * flow. `enterWith` publishes the store for the current execution and everything
+ * created from it afterwards, which is exactly that reach.
+ *
+ * What it costs, and why both exist: an entered store is never popped, so it stays
+ * visible to whatever else that execution starts. That is right for one request's
+ * own hooks and wrong for a library call, so `withFlow` remains the default and
+ * this is used where a framework boundary makes it unavoidable.
+ */
+export function enterFlow(flow: {id: string; kind: string}): void {
+    storage.enterWith(extend(flowIdentity(flow)));
+}
+&nbsp;
+/**
+ * Advance the flow to `name`, run `fn`, and record the outcome. `step` is the
+ * only writer of the flow state: it mutates the per-flow object `withFlow`
+ * placed in the ambient context, so the position persists in the enclosing
+ * scope after the step returns — a stalled flow reports its last known step.
+ *
+ * The body runs under a store that carries that same flow object, so the
+ * position is visible from `currentContext()` *during* the step. A step taken
+ * outside any flow **throws**: it has no identity to report, and minting one —
+ * the `{id: 'unnamed'}` this used to fabricate — would put a lie in the data.
+ * A step belongs to a flow the caller opened; caller misuse fails fast (D3).
+ *
+ * The terminal status is written in a `finally` rather than through
+ * `storage.enterWith`, which would apply to the step's own scope only and never
+ * reach the caller.
+ *
+ * Steps are sequential by design. Two `step` calls running concurrently inside
+ * one flow share that flow's object and its `steps` array, and each writes
+ * `step`/`index`: the reported position would describe whichever advanced last,
+ * and `steps` would interleave the two. Await a step before starting the next;
+ * concurrent position tracking within one flow is not offered.
+ */
+export async function step&lt;T&gt;(name: string, fn: () =&gt; Promise&lt;T&gt; | T): Promise&lt;T&gt; {
+    const context = currentContext();
+    const flow = context.flow;
+    if (flow === undefined) {
+        throw new TypeError(
+            `step ${JSON.stringify(name)} was called outside a flow; run it inside withFlow`,
+        );
+    }
+    // `withFlow` installs the step list together with the flow, and every scope-creating
+    // helper below spreads the context, so the list is present wherever the flow is.
+    const steps = context.steps as string[];
+    flow.step = name;
+    flow.index = steps.length;
+    steps.push(name);
+    flow.status = 'running';
+    let outcome: FlowState['status'] = 'completed';
+    return storage.run({...context, flow, steps}, async () =&gt; {
+        try {
+            return await fn();
+        } catch (error) {
+            outcome = 'failed';
+            throw error;
+            // V8 block coverage reports a phantom zero-count branch on the `finally`
+            // clause below: its body is covered, but no execution can mark the clause
+            // itself as taken (reproduced in plain JavaScript), so it is ignored
+            // rather than left as a permanent false gap.
+            /* v8 ignore next */
+        } finally {
+            flow.status = outcome;
+        }
+    });
+}
+&nbsp;
+/**
+ * Record a branch rationale for the next emitted record (PRD R11).
+ *
+ * The slot lives in the ambient context rather than in the logger so that a
+ * framework-free caller can state *why* it branched without holding a logger,
+ * and so that the rationale travels with the async scope it was decided in.
+ * `enterWith` (rather than `run`) is what lets the value outlive the call: the
+ * decision is made before the record that reports it, and the caller does not
+ * return from `decide` inside a callback.
+ *
+ * A *fresh* box is installed on every call, even when the enclosing scope
+ * already carries one: a nested decision then belongs to the scope that
+ * recorded it and cannot leak outward through an inherited box, and an
+ * enclosing decision is not clobbered by a nested one. What must travel by
+ * reference is the box itself — see `takeDecision`.
+ */
+export function recordDecision(decision: Decision): void {
+    storage.enterWith({...currentContext(), pendingDecision: {decision}});
+}
+&nbsp;
+/**
+ * Take the pending rationale, clearing it so it attaches to exactly one record.
+ *
+ * A decision describes one branch taken once, so it is consumed rather than
+ * broadcast: a second call returns `undefined` and the following record does
+ * not repeat it. The boxes are cleared by *mutating the box*, not by swapping
+ * the store: `withFlow`, `withIntent` and `step` each rebuild the store per
+ * scope by spreading, so the box is the one thing they carry by reference.
+ * Swapping the store reached the current scope only — an ancestor or sibling
+ * copy kept its uncleared rationale and handed it to a second record. Nothing
+ * is emitted here — a decision with no record after it simply never surfaces,
+ * and is dropped with the scope that held it.
+ */
+export function takeDecision(): Decision | undefined {
+    const holder = currentContext().pendingDecision;
+    if (!holder) {
+        return undefined;
+    }
+    const {decision} = holder;
+<span class="fstat-no" title="function not covered" >    holder.decision = undefined;</span>
+<span class="cstat-no" title="statement not covered" >    return decision;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/**</span>
+<span class="cstat-no" title="statement not covered" > * Report a milestone for the next emitted record (PRD R26).</span>
+<span class="cstat-no" title="statement not covered" > *</span>
+<span class="cstat-no" title="statement not covered" > * The reporting half of the progress-point contract — `decide` in `src/decide.ts`</span>
+<span class="cstat-no" title="statement not covered" > * is the branching half — and it follows `recordDecision` in every respect. The</span>
+<span class="cstat-no" title="statement not covered" > * slot lives in the ambient context rather than in the logger, so a</span>
+<span class="cstat-no" title="statement not covered" > * framework-free caller can report a moment without holding a logger, and</span>
+<span class="cstat-no" title="statement not covered" > * `enterWith` lets the point outlive the call that announced it, because the</span>
+<span class="cstat-no" title="statement not covered" > * record that carries it is emitted afterwards. A point with no record after it</span>
+<span class="cstat-no" title="statement not covered" > * is dropped with the scope that held it, exactly as a rationale is.</span>
+<span class="cstat-no" title="statement not covered" > */</span>
+export function point(name: string, data?: unknown): void {
+    const holder = ensurePointsHolder();
+    holder.points = <span class="fstat-no" title="function not covered" >[...(holder.points ?? []), data === undefined ? {name} : {name, data}];</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/**</span>
+ * Take the pending points, clearing them so they attach to exactly one record.
+ *
+ * A point describes one moment, so the list is consumed rather than broadcast,
+ * and the box is cleared by mutation for the reason {@link takeDecision}
+ * documents. `undefined` when there were none, so the logger can leave the slot
+ * out of the record entirely instead of assembling an empty one.
+ */
+export function takePoints(): Point[] | undefined {
+    const holder = currentContext().pendingPoints;
+    if (holder === undefined) {
+        return undefined;
+    }
+    const points = holder.points;
+    if (points === undefined) {
+        return undefined;
+    }
+    holder.points = undefined;
+    return points;
+}
+&nbsp;
+/** The branches this scope is running inside, outermost first (PRD R26). */
+export <span class="fstat-no" title="function not covered" >function currentRegions(): RegionMark[] | undefined {</span>
+<span class="cstat-no" title="statement not covered" >    return currentContext().regions;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >/** The innermost branch this scope is running inside, when it is (PRD R26). */</span>
+<span class="cstat-no" title="statement not covered" >export function currentRegion(): RegionMark | undefined {</span>
+    const regions = currentContext().regions;
+    return regions?.[regions.length - 1];
+}
+&nbsp;
+/**
+ * Run `fn` as the chosen branch of a decision (PRD R26).
+ *
+ * Scoped, not persistent: a record emitted after the branch returned is not part
+ * of it, and unlike a rationale the mark is not consumed by the first record that
+ * carries it — it is read by *every* record the branch emits, which is what makes
+ * the span of an `alt` block the calls the branch actually made.
+ *
+ * The id is minted here rather than by the caller because this is the only place
+ * that knows both the branch and the scope it is nested in, so a branch taken
+ * inside another branch reads `1.1` and the nesting is visible in the data.
+ */
+export function withRegion&lt;T&gt;(
+    region: {discriminator: string; candidates: string[]; chosen: string},
+    fn: () =&gt; T,
+): T {
+    // The record memory box has to exist *before* the region scope is entered, for
+    // the reason {@link legIdentity} gives: entering spreads the context, so a box
+    // first created inside the branch would never reach the scope that encloses it
+<span class="fstat-no" title="function not covered" >    // and the caller's next record would lose its causal parent.</span>
+<span class="cstat-no" title="statement not covered" >    ensureRecordMemory();</span>
+<span class="cstat-no" title="statement not covered" >    const enclosing = currentContext().regions;</span>
+<span class="cstat-no" title="statement not covered" >    const innermost = enclosing?.[enclosing.length - 1];</span>
+<span class="cstat-no" title="statement not covered" >    const counter = ensureRegionCounter();</span>
+<span class="cstat-no" title="statement not covered" >    const id =</span>
+<span class="cstat-no" title="statement not covered" >        innermost === undefined ? String(++counter.next) : `${innermost.id}.${++counter.next}`;</span>
+<span class="cstat-no" title="statement not covered" >    // A fresh counter for the branch's own children — the rule `legIdentity`</span>
+<span class="cstat-no" title="statement not covered" >    // applies to a leg's children — so a branch taken inside this one reads</span>
+<span class="cstat-no" title="statement not covered" >    // `3.1` rather than continuing the enclosing sequence.</span>
+<span class="cstat-no" title="statement not covered" >    const mark = {</span>
+<span class="cstat-no" title="statement not covered" >        ...region,</span>
+<span class="cstat-no" title="statement not covered" >        id,</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >        // Read before the branch is entered, from the scope's own points box: a point</span></span>
+<span class="cstat-no" title="statement not covered" >        // announced before the decision is not the decision's work (PRD R27).</span>
+        pointsBefore: currentContext().pendingPoints?.points?.length ?? 0,
+    };
+    // Reported twice, deliberately: by the records emitted *inside* the branch (their
+    // `regions` chain, which is what draws the block around them) and by the call that
+    // took it (`takeProgress`, which is what lets a branch taken inside a handler be
+    // seen at all — the branch's own scope is closed by the time that call answers).
+    const visited = ensureVisitedRegions();
+    visited.regions = [...(visited.regions ?? []), mark];
+    return storage.run(
+        {
+            ...currentContext(),
+            regions: [...(enclosing ?? []), mark],
+            regionCounter: {next: 0},
+        },
+        fn,
+    );
+}
+&nbsp;
+/** Ensure this scope has a points box, and return it. */
+function ensurePointsHolder(): PointsHolder {
+    const existing = currentContext().pendingPoints;
+    if (existing !== undefined) {
+<span class="fstat-no" title="function not covered" >        return existing;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >    const box: PointsHolder = {};</span>
+    storage.enterWith({...currentContext(), pendingPoints: box});
+    return box;
+}
+&nbsp;
+/** Ensure this scope has a region counter, and return it. */
+function ensureRegionCounter(): RegionCounter {
+    const existing = currentContext().regionCounter;
+    if (existing !== undefined) {
+        return existing;
+    }
+    const box: RegionCounter = {next: 0};
+    storage.enterWith({...currentContext(), regionCounter: box});
+    return box;
+}
+&nbsp;
+/** Ensure this scope has a visited-regions box, and return it. */
+function ensureVisitedRegions(): VisitedRegions {
+    const existing = currentContext().visitedRegions;
+    if (existing !== undefined) {
+        return existing;
+    }
+    const box: VisitedRegions = {};
+    storage.enterWith({...currentContext(), visitedRegions: box});
+    return box;
+}
+&nbsp;
+/**
+ * Start collecting what this scope announces (PRD R26/R27).
+ *
+ * The receiver calls this **before** it runs a handler, and the timing is the whole point: the
+ * boxes the collection reads are installed with `enterWith`, which reaches the current context and
+ * what follows it — never a frame that is already suspended. A handler that waits for something
+ * (an inner call, a promise) before it announces anything resumes in a context whose boxes were
+ * created *after* the receiver's own continuation was bound, so a collection that only read at the
+ * end would miss everything staged after that wait. That is exactly what happened: a handler's
+ * points and branches reached no record at all.
+ */
+export function beginProgress(): void {
+    ensurePointsHolder();
+    ensureVisitedRegions();
+}
+&nbsp;
+/**
+ * Take the progress announced in this scope, clearing it (PRD R26/R27).
+ *
+ * The receiver's half of the contract: a call's handler announces points and takes
+ * branches, and this is what the framework around the handler reads when the handler
+ * returns, so the call can report what its own work was (see `CallPhase`).
+ *
+ * Points are consumed — a point describes one moment, and the record that carries it is
+ * the answer — and so are the **visited** branches, because a branch taken inside a nested
+ * call belongs to that call's answer, which is nearer the moment it happened. A scope that
+ * has nothing to report returns `undefined`, so a call with no progress writes no record.
+ */
+export function takeProgress(): Progress | undefined {
+    const points = takePoints();
+    const holder = currentContext().visitedRegions;
+    const regions = holder?.regions;
+    if (holder !== undefined) {
+        holder.regions = undefined;
+    }
+    if (points === undefined &amp;&amp; regions === undefined) {
+        return undefined;
+    }
+    return {...(regions ? {regions} : {}), ...(points ? {points} : {})};
+}
+&nbsp;
+/**
+ * Announce progress a caller already holds, on the next record of this scope (PRD
+ * R26/R27).
+ *
+ * The receiving half of {@link takeProgress}: a framework that collected what a handler
+ * announced re-stages it so the record it is about to write carries it — the points as
+ * points, the branch marks as the chain the record sits in. Nothing is interpreted here:
+ * what was taken is what is announced.
+ */
+export function attachProgress(progress: Progress): void {
+    for (const entry of progress.points<span class="branch-0 cbranch-no" title="branch not covered" > ?? [])</span> {
+        point(entry.name, entry.data);
+    }
+    const marks = progress.regions<span class="branch-0 cbranch-no" title="branch not covered" > ?? [];</span>
+    if (marks.length &gt; 0) {
+        storage.enterWith({
+            ...currentContext(),
+            regions: [...(currentRegions() ?? []), ...marks],
+        });
+    }
+}
+&nbsp;
+/**
+ * Ensure this scope has a memory box, and return it.
+ *
+ * `enterWith` installs the box in the *current* async execution, so a box created
+ * here is visible to the enclosing scope and to any scope entered afterwards —
+ * which is why it has to exist **before** a scope-creating helper snapshots the
+ * context. Creating it lazily inside such a scope would leave the scope that
+ * encloses the call without a box, and the next record emitted there would lose
+ * its causal parent: one chain would silently become several.
+ */
+function ensureRecordMemory(): RecordMemory {
+    const existing = currentContext().recordMemory;
+    if (existing !== undefined) {
+        return existing;
+    }
+    const box: RecordMemory = {};
+    storage.enterWith({...currentContext(), recordMemory: box});
+    return box;
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >/** Remember the most recent record id, so the next record can point at it. */</span></span>
+<span class="cstat-no" title="statement not covered" >export function rememberRecord(id: string): void {</span>
+    // A box already installed is mutated in place, so the update travels *back* to
+    // the enclosing scope and *forward* into nested scopes by reference. A sibling
+    // scope entered before this call keeps its own (empty) memory rather than
+    // inheriting this record as its parent.
+    ensureRecordMemory().last = id;
+}
+&nbsp;
+/** The most recent record id in this scope, if any (PRD R7). */
+export function lastRecordId(): string | undefined {
+    return currentContext().recordMemory?.last;
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-24T15:24:31.808Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    
