@@ -1,0 +1,652 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for realm/blong-gateway/test/observedMergeFlow.play.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">realm/blong-gateway/test</a> observedMergeFlow.play.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">81.48% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>154/189</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">80% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>4/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>1/1</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">81.48% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>154/189</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * The merge flow this realm serves, drawn from what the run observed.
+ *
+ * `observedFlow.play.ts` draws a **read** this realm answers — one hop, no
+ * instrumentation. This spec draws the management write beside it,
+ * `gateway.bundle.merge`, and it is the demonstration the progress-point contract
+ * (PRD R26/R27) exists for: the handler announces checkpoints and takes a branch, so
+ * the diagram carries notes *and* an alternative, which is the difference between
+ * "a call happened" and "here is what the logic was doing".
+ *
+ * The flow is **produced**, not hoped for. The merge is invoked from the page — the
+ * realm contributes a browser subject namespace (`browser/orchestrator/subject/init.ts`),
+ * so `gateway.*` resolves bare there — and the gateway records the call it dispatched,
+ * by itself. Nothing application-level logs the diagram: the points and the branch are
+ * announced by the handler and ride the records the framework was already writing.
+ *
+ * The bundle is merged **without** a declared `roleBit`, so the run takes the
+ * `allocated` branch and the diagram shows the alternative it did not take. Both paths
+ * are real: a declared bit is how the meter tests merge their bundles, and the
+ * allocation is what a seed's plain `role` map does. Which one a run took is the
+ * branch's own record, so the capture does not depend on the answer.
+ *
+ * Two artifacts come out of one capture, as in the read spec: the screenshot (this
+ * file's `-snapshots/` directory) proves the browser drew the diagram, and
+ * `docs/observedMergeFlow.md` holds the mermaid text a reviewer reads in a diff.
+ * Regenerate it deliberately with `BLONG_REGENERATE_DIAGRAMS=1`.
+ */
+import {type Portal, expect, test} from '@feasibleone/blong-browser/playwright';
+import {
+    captureDiagram,
+    diagramText,
+    drawsACall,
+} from '@feasibleone/blong-browser/playwright/diagram';
+&nbsp;
+test.use({blongPermissions: true});
+&nbsp;
+/** The kind to draw: the write this realm answers, pinned by name. */
+const REALM_KIND = 'gateway.bundle.merge';
+&nbsp;
+/** The bundle the run merges. Named so the bundle suite's own cleanup removes it. */
+const DEMO_BUNDLE = 'Playwright Merge Demo';
+&nbsp;
+/**
+ * Ask this realm to merge a bundle — the call the diagram is drawn from.
+ *
+ * `gatewayBundleMerge` is the browser name of `gateway.bundle.merge`: the portal's
+ * adapter resolves it through the realm's subject namespace, and the empty second
+ * argument is the `$meta` a page has no business filling in — the dispatch builds the
+ * one the handler sees, and attaching the progress-point handles to it is the
+ * framework's job, not the caller's.
+ */
+async function mergeABundle(portal: Portal): Promise&lt;void&gt; {
+    const result = await portal.page.evaluate(async () =&gt; {
+<span class="cstat-no" title="statement not covered" >        const handler = (window as unknown as {__blongHandler?: Record&lt;string, unknown&gt;})</span>
+<span class="cstat-no" title="statement not covered" >            .__blongHandler;</span>
+<span class="cstat-no" title="statement not covered" >        if (handler === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error(</span>
+<span class="cstat-no" title="statement not covered" >                'the page exposed no `__blongHandler`, so the test hook is off: the browser ' +</span>
+<span class="cstat-no" title="statement not covered" >                    'config did not carry `portal.testHook` for this run (see index.browser.ts). ' +</span>
+<span class="cstat-no" title="statement not covered" >                    'There is no other way to invoke a management method from the page.',</span>
+<span class="cstat-no" title="statement not covered" >            );</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        const merge = handler['gatewayBundleMerge'] as</span>
+<span class="cstat-no" title="statement not covered" >            | ((p: object, m: object) =&gt; Promise&lt;unknown&gt;)</span>
+<span class="cstat-no" title="statement not covered" >            | undefined;</span>
+<span class="cstat-no" title="statement not covered" >        if (typeof merge !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >            throw new Error(</span>
+<span class="cstat-no" title="statement not covered" >                'the handler proxy exposes no `gatewayBundleMerge`; it has: ' +</span>
+<span class="cstat-no" title="statement not covered" >                    Object.keys(handler).join(', '),</span>
+<span class="cstat-no" title="statement not covered" >            );</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
+<span class="cstat-no" title="statement not covered" >        return merge(</span>
+<span class="cstat-no" title="statement not covered" >            {</span>
+<span class="cstat-no" title="statement not covered" >                bundle: {</span>
+<span class="cstat-no" title="statement not covered" >                    'Playwright Merge Demo': {</span>
+<span class="cstat-no" title="statement not covered" >                        capability: 'playwright-merge-demo',</span>
+<span class="cstat-no" title="statement not covered" >                        actions: 'gateway.bundle.find,gateway.bundle.get',</span>
+<span class="cstat-no" title="statement not covered" >                        baseMonthlyCredits: 250,</span>
+<span class="cstat-no" title="statement not covered" >                        rateLimit: 25,</span>
+<span class="cstat-no" title="statement not covered" >                        description: 'Merged by Playwright, to draw the merge',</span>
+<span class="cstat-no" title="statement not covered" >                    },</span>
+<span class="cstat-no" title="statement not covered" >                },</span>
+<span class="cstat-no" title="statement not covered" >            },</span>
+<span class="cstat-no" title="statement not covered" >            {},</span>
+<span class="cstat-no" title="statement not covered" >        );</span>
+    });
+    expect(result, 'the merge reported success').toMatchObject({success: true});
+}
+&nbsp;
+test('a checkpoint and a branch are drawn for a flow this realm served', async ({portal}) =&gt; {
+    // A DataTable renders its empty state as a row of its own, so a bare `tbody tr` also
+    // matches "Nothing observed yet". A data row is the one with an execution cell.
+    const rows = portal.page
+        .locator('.p-datatable-tbody tr')
+        .filter({has: portal.page.locator('[data-testid="flow-execution"]')});
+    const pinned = rows.filter({hasText: REALM_KIND}).first();
+&nbsp;
+    // Producing the flow and reading it back is retried as a pair, for the reason the read
+    // spec documents: the list is built from the ledger of what has been *served*, and a read
+    // taken moments after a call can come back without it. Merging again on each attempt is
+    // safe — the merge is an ensure, so a second execution says the same thing as the first.
+    await expect(async () =&gt; {
+        await portal.page.reload();
+        // The portal must have rendered before the page can call anything: the test hook that
+        // exposes `__blongHandler` is installed when the app mounts, so evaluating straight after
+        // a reload races the boot and reads `undefined` (the fixture's own specs wait for the
+        // menubar for the same reason).
+        await expect(portal.page.locator('.blong-portal-menubar')).toBeVisible();
+        await mergeABundle(portal);
+        await portal.menuClick('blong.flow.browse');
+        await portal.waitForTableData();
+        // Addressed by its own label: the portal keeps every opened page mounted, so the
+        // management pages' search boxes carry the same test id and a test id alone matches
+        // more than one input.
+        await portal.page.getByRole('textbox', {name: 'Filter'}).fill(REALM_KIND);
+        await expect(pinned).toBeVisible({timeout: 5_000});
+    }).toPass({timeout: 40_000});
+&nbsp;
+    await pinned.click();
+    await expect(portal.page.locator('[data-diagram-rendered]')).toBeVisible();
+&nbsp;
+    const diagram = await diagramText(portal);
+&nbsp;
+    // What must hold today: the flow this realm served is observable, and the hop the realm's
+    // answer declared is drawn.
+    expect(drawsACall(diagram), 'the diagram draws the merge hop').toBe(true);
+    expect(diagram, 'the merge the page asked for is on the drawing').toContain(
+        'gateway.bundle.merge',
+    );
+&nbsp;
+    if (!drawsACall(diagram)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        test.skip(true, 'the service declared no calls for this execution, so there is no hop');</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+    await captureDiagram(portal, expect, {
+        name: 'observed-merge-flow-gateway',
+        artifact: 'docs/observedMergeFlow.md',
+        diagram,
+    });
+&nbsp;
+    // What the feature adds, and what the receiver's answer exists for: the handler's work is
+    // drawn beside the hop it answered. `merge-started` is the first checkpoint the handler
+    // announces and the rest follow it, each named by the code that announced it.
+    //
+    // Before the adapter collected this, all of it was dropped: the records of a call are written
+    // by the framework around the handler, so the scope the handler staged into never emitted one
+    // (measured: 0 of 5056 retained records carried `progress`). This assertion failed then and
+    // passes now, which is why it is here rather than in the framework's own tests alone.
+    //
+    // And it is drawn over `db`, not over `gateway`: the merge handler is reached across the wire
+    // through the realm's db adapter, so the work being reported is the *receiver's*. A note read
+    // off the leg alone lands on the caller, which reads as if the caller had done it.
+    expect(
+        diagram,
+        'a checkpoint is drawn as a note, over the participant that announced it',
+    ).toMatch(/Note over db: point: merge-started\n/);
+    expect(diagram, 'and every phase it announced').toMatch(/Note over db: point: graph-merged\n/);
+});
+&nbsp;
+test('the branch the handler took is drawn as an alt block', async ({portal}) =&gt; {
+    // The second half of the same delivery (PRD R27). A handler's branch is opened and closed
+    // inside the handler, so what has to reach the answer is not the *chain* the callee is in
+    // (`currentRegions`, empty by then) but the branches it visited — `takeProgress` collects the
+    // latter, and it is what this spec exists to prove end to end.
+    //
+    // The collection has to be installed *before* the handler runs: the boxes it reads are
+    // entered with `enterWith`, which reaches the current context and what follows it and never a
+    // frame that is already suspended. The handler waits for the db round trip before it decides
+    // anything, so a box created on the receiver's side of that wait was invisible to it — the
+    // points survived (their box was made by the first checkpoint, before the wait) and the branch
+    // mark did not (T-136). With `beginProgress()` called first, both arrive.
+    const rows = portal.page
+        .locator('.p-datatable-tbody tr')
+        .filter({has: portal.page.locator('[data-testid="flow-execution"]')});
+    const pinned = rows.filter({hasText: REALM_KIND}).first();
+    await portal.menuClick('blong.flow.browse');
+    await portal.waitForTableData();
+    await portal.page.getByRole('textbox', {name: 'Filter'}).fill(REALM_KIND);
+    await expect(pinned).toBeVisible({timeout: 40_000});
+    await pinned.click();
+    await expect(portal.page.locator('[data-diagram-rendered]')).toBeVisible();
+&nbsp;
+    const diagram = await diagramText(portal);
+    expect(diagram, 'the branch is drawn as an alt block').toMatch(/alt role-bit = declared\n/);
+    expect(diagram, 'naming the alternative it did not take').toMatch(/else allocated\n/);
+    expect(diagram, 'and the point announced inside the taken branch').toMatch(
+        /Note over db: point: role-bit-allocated\n/,
+    );
+});
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-26T22:57:55.569Z
+            </div>
+        <script src="../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
+    </body>
+</html>
+    
