@@ -1,0 +1,2719 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/semantic-log/src/service/flowLedger.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../../../index.html">All files</a> / <a href="index.html">core/semantic-log/src/service</a> flowLedger.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>878/878</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">98.59% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>140/142</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>28/28</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>878/878</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a>
+<a name='L295'></a><a href='#L295'>295</a>
+<a name='L296'></a><a href='#L296'>296</a>
+<a name='L297'></a><a href='#L297'>297</a>
+<a name='L298'></a><a href='#L298'>298</a>
+<a name='L299'></a><a href='#L299'>299</a>
+<a name='L300'></a><a href='#L300'>300</a>
+<a name='L301'></a><a href='#L301'>301</a>
+<a name='L302'></a><a href='#L302'>302</a>
+<a name='L303'></a><a href='#L303'>303</a>
+<a name='L304'></a><a href='#L304'>304</a>
+<a name='L305'></a><a href='#L305'>305</a>
+<a name='L306'></a><a href='#L306'>306</a>
+<a name='L307'></a><a href='#L307'>307</a>
+<a name='L308'></a><a href='#L308'>308</a>
+<a name='L309'></a><a href='#L309'>309</a>
+<a name='L310'></a><a href='#L310'>310</a>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a>
+<a name='L318'></a><a href='#L318'>318</a>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a>
+<a name='L334'></a><a href='#L334'>334</a>
+<a name='L335'></a><a href='#L335'>335</a>
+<a name='L336'></a><a href='#L336'>336</a>
+<a name='L337'></a><a href='#L337'>337</a>
+<a name='L338'></a><a href='#L338'>338</a>
+<a name='L339'></a><a href='#L339'>339</a>
+<a name='L340'></a><a href='#L340'>340</a>
+<a name='L341'></a><a href='#L341'>341</a>
+<a name='L342'></a><a href='#L342'>342</a>
+<a name='L343'></a><a href='#L343'>343</a>
+<a name='L344'></a><a href='#L344'>344</a>
+<a name='L345'></a><a href='#L345'>345</a>
+<a name='L346'></a><a href='#L346'>346</a>
+<a name='L347'></a><a href='#L347'>347</a>
+<a name='L348'></a><a href='#L348'>348</a>
+<a name='L349'></a><a href='#L349'>349</a>
+<a name='L350'></a><a href='#L350'>350</a>
+<a name='L351'></a><a href='#L351'>351</a>
+<a name='L352'></a><a href='#L352'>352</a>
+<a name='L353'></a><a href='#L353'>353</a>
+<a name='L354'></a><a href='#L354'>354</a>
+<a name='L355'></a><a href='#L355'>355</a>
+<a name='L356'></a><a href='#L356'>356</a>
+<a name='L357'></a><a href='#L357'>357</a>
+<a name='L358'></a><a href='#L358'>358</a>
+<a name='L359'></a><a href='#L359'>359</a>
+<a name='L360'></a><a href='#L360'>360</a>
+<a name='L361'></a><a href='#L361'>361</a>
+<a name='L362'></a><a href='#L362'>362</a>
+<a name='L363'></a><a href='#L363'>363</a>
+<a name='L364'></a><a href='#L364'>364</a>
+<a name='L365'></a><a href='#L365'>365</a>
+<a name='L366'></a><a href='#L366'>366</a>
+<a name='L367'></a><a href='#L367'>367</a>
+<a name='L368'></a><a href='#L368'>368</a>
+<a name='L369'></a><a href='#L369'>369</a>
+<a name='L370'></a><a href='#L370'>370</a>
+<a name='L371'></a><a href='#L371'>371</a>
+<a name='L372'></a><a href='#L372'>372</a>
+<a name='L373'></a><a href='#L373'>373</a>
+<a name='L374'></a><a href='#L374'>374</a>
+<a name='L375'></a><a href='#L375'>375</a>
+<a name='L376'></a><a href='#L376'>376</a>
+<a name='L377'></a><a href='#L377'>377</a>
+<a name='L378'></a><a href='#L378'>378</a>
+<a name='L379'></a><a href='#L379'>379</a>
+<a name='L380'></a><a href='#L380'>380</a>
+<a name='L381'></a><a href='#L381'>381</a>
+<a name='L382'></a><a href='#L382'>382</a>
+<a name='L383'></a><a href='#L383'>383</a>
+<a name='L384'></a><a href='#L384'>384</a>
+<a name='L385'></a><a href='#L385'>385</a>
+<a name='L386'></a><a href='#L386'>386</a>
+<a name='L387'></a><a href='#L387'>387</a>
+<a name='L388'></a><a href='#L388'>388</a>
+<a name='L389'></a><a href='#L389'>389</a>
+<a name='L390'></a><a href='#L390'>390</a>
+<a name='L391'></a><a href='#L391'>391</a>
+<a name='L392'></a><a href='#L392'>392</a>
+<a name='L393'></a><a href='#L393'>393</a>
+<a name='L394'></a><a href='#L394'>394</a>
+<a name='L395'></a><a href='#L395'>395</a>
+<a name='L396'></a><a href='#L396'>396</a>
+<a name='L397'></a><a href='#L397'>397</a>
+<a name='L398'></a><a href='#L398'>398</a>
+<a name='L399'></a><a href='#L399'>399</a>
+<a name='L400'></a><a href='#L400'>400</a>
+<a name='L401'></a><a href='#L401'>401</a>
+<a name='L402'></a><a href='#L402'>402</a>
+<a name='L403'></a><a href='#L403'>403</a>
+<a name='L404'></a><a href='#L404'>404</a>
+<a name='L405'></a><a href='#L405'>405</a>
+<a name='L406'></a><a href='#L406'>406</a>
+<a name='L407'></a><a href='#L407'>407</a>
+<a name='L408'></a><a href='#L408'>408</a>
+<a name='L409'></a><a href='#L409'>409</a>
+<a name='L410'></a><a href='#L410'>410</a>
+<a name='L411'></a><a href='#L411'>411</a>
+<a name='L412'></a><a href='#L412'>412</a>
+<a name='L413'></a><a href='#L413'>413</a>
+<a name='L414'></a><a href='#L414'>414</a>
+<a name='L415'></a><a href='#L415'>415</a>
+<a name='L416'></a><a href='#L416'>416</a>
+<a name='L417'></a><a href='#L417'>417</a>
+<a name='L418'></a><a href='#L418'>418</a>
+<a name='L419'></a><a href='#L419'>419</a>
+<a name='L420'></a><a href='#L420'>420</a>
+<a name='L421'></a><a href='#L421'>421</a>
+<a name='L422'></a><a href='#L422'>422</a>
+<a name='L423'></a><a href='#L423'>423</a>
+<a name='L424'></a><a href='#L424'>424</a>
+<a name='L425'></a><a href='#L425'>425</a>
+<a name='L426'></a><a href='#L426'>426</a>
+<a name='L427'></a><a href='#L427'>427</a>
+<a name='L428'></a><a href='#L428'>428</a>
+<a name='L429'></a><a href='#L429'>429</a>
+<a name='L430'></a><a href='#L430'>430</a>
+<a name='L431'></a><a href='#L431'>431</a>
+<a name='L432'></a><a href='#L432'>432</a>
+<a name='L433'></a><a href='#L433'>433</a>
+<a name='L434'></a><a href='#L434'>434</a>
+<a name='L435'></a><a href='#L435'>435</a>
+<a name='L436'></a><a href='#L436'>436</a>
+<a name='L437'></a><a href='#L437'>437</a>
+<a name='L438'></a><a href='#L438'>438</a>
+<a name='L439'></a><a href='#L439'>439</a>
+<a name='L440'></a><a href='#L440'>440</a>
+<a name='L441'></a><a href='#L441'>441</a>
+<a name='L442'></a><a href='#L442'>442</a>
+<a name='L443'></a><a href='#L443'>443</a>
+<a name='L444'></a><a href='#L444'>444</a>
+<a name='L445'></a><a href='#L445'>445</a>
+<a name='L446'></a><a href='#L446'>446</a>
+<a name='L447'></a><a href='#L447'>447</a>
+<a name='L448'></a><a href='#L448'>448</a>
+<a name='L449'></a><a href='#L449'>449</a>
+<a name='L450'></a><a href='#L450'>450</a>
+<a name='L451'></a><a href='#L451'>451</a>
+<a name='L452'></a><a href='#L452'>452</a>
+<a name='L453'></a><a href='#L453'>453</a>
+<a name='L454'></a><a href='#L454'>454</a>
+<a name='L455'></a><a href='#L455'>455</a>
+<a name='L456'></a><a href='#L456'>456</a>
+<a name='L457'></a><a href='#L457'>457</a>
+<a name='L458'></a><a href='#L458'>458</a>
+<a name='L459'></a><a href='#L459'>459</a>
+<a name='L460'></a><a href='#L460'>460</a>
+<a name='L461'></a><a href='#L461'>461</a>
+<a name='L462'></a><a href='#L462'>462</a>
+<a name='L463'></a><a href='#L463'>463</a>
+<a name='L464'></a><a href='#L464'>464</a>
+<a name='L465'></a><a href='#L465'>465</a>
+<a name='L466'></a><a href='#L466'>466</a>
+<a name='L467'></a><a href='#L467'>467</a>
+<a name='L468'></a><a href='#L468'>468</a>
+<a name='L469'></a><a href='#L469'>469</a>
+<a name='L470'></a><a href='#L470'>470</a>
+<a name='L471'></a><a href='#L471'>471</a>
+<a name='L472'></a><a href='#L472'>472</a>
+<a name='L473'></a><a href='#L473'>473</a>
+<a name='L474'></a><a href='#L474'>474</a>
+<a name='L475'></a><a href='#L475'>475</a>
+<a name='L476'></a><a href='#L476'>476</a>
+<a name='L477'></a><a href='#L477'>477</a>
+<a name='L478'></a><a href='#L478'>478</a>
+<a name='L479'></a><a href='#L479'>479</a>
+<a name='L480'></a><a href='#L480'>480</a>
+<a name='L481'></a><a href='#L481'>481</a>
+<a name='L482'></a><a href='#L482'>482</a>
+<a name='L483'></a><a href='#L483'>483</a>
+<a name='L484'></a><a href='#L484'>484</a>
+<a name='L485'></a><a href='#L485'>485</a>
+<a name='L486'></a><a href='#L486'>486</a>
+<a name='L487'></a><a href='#L487'>487</a>
+<a name='L488'></a><a href='#L488'>488</a>
+<a name='L489'></a><a href='#L489'>489</a>
+<a name='L490'></a><a href='#L490'>490</a>
+<a name='L491'></a><a href='#L491'>491</a>
+<a name='L492'></a><a href='#L492'>492</a>
+<a name='L493'></a><a href='#L493'>493</a>
+<a name='L494'></a><a href='#L494'>494</a>
+<a name='L495'></a><a href='#L495'>495</a>
+<a name='L496'></a><a href='#L496'>496</a>
+<a name='L497'></a><a href='#L497'>497</a>
+<a name='L498'></a><a href='#L498'>498</a>
+<a name='L499'></a><a href='#L499'>499</a>
+<a name='L500'></a><a href='#L500'>500</a>
+<a name='L501'></a><a href='#L501'>501</a>
+<a name='L502'></a><a href='#L502'>502</a>
+<a name='L503'></a><a href='#L503'>503</a>
+<a name='L504'></a><a href='#L504'>504</a>
+<a name='L505'></a><a href='#L505'>505</a>
+<a name='L506'></a><a href='#L506'>506</a>
+<a name='L507'></a><a href='#L507'>507</a>
+<a name='L508'></a><a href='#L508'>508</a>
+<a name='L509'></a><a href='#L509'>509</a>
+<a name='L510'></a><a href='#L510'>510</a>
+<a name='L511'></a><a href='#L511'>511</a>
+<a name='L512'></a><a href='#L512'>512</a>
+<a name='L513'></a><a href='#L513'>513</a>
+<a name='L514'></a><a href='#L514'>514</a>
+<a name='L515'></a><a href='#L515'>515</a>
+<a name='L516'></a><a href='#L516'>516</a>
+<a name='L517'></a><a href='#L517'>517</a>
+<a name='L518'></a><a href='#L518'>518</a>
+<a name='L519'></a><a href='#L519'>519</a>
+<a name='L520'></a><a href='#L520'>520</a>
+<a name='L521'></a><a href='#L521'>521</a>
+<a name='L522'></a><a href='#L522'>522</a>
+<a name='L523'></a><a href='#L523'>523</a>
+<a name='L524'></a><a href='#L524'>524</a>
+<a name='L525'></a><a href='#L525'>525</a>
+<a name='L526'></a><a href='#L526'>526</a>
+<a name='L527'></a><a href='#L527'>527</a>
+<a name='L528'></a><a href='#L528'>528</a>
+<a name='L529'></a><a href='#L529'>529</a>
+<a name='L530'></a><a href='#L530'>530</a>
+<a name='L531'></a><a href='#L531'>531</a>
+<a name='L532'></a><a href='#L532'>532</a>
+<a name='L533'></a><a href='#L533'>533</a>
+<a name='L534'></a><a href='#L534'>534</a>
+<a name='L535'></a><a href='#L535'>535</a>
+<a name='L536'></a><a href='#L536'>536</a>
+<a name='L537'></a><a href='#L537'>537</a>
+<a name='L538'></a><a href='#L538'>538</a>
+<a name='L539'></a><a href='#L539'>539</a>
+<a name='L540'></a><a href='#L540'>540</a>
+<a name='L541'></a><a href='#L541'>541</a>
+<a name='L542'></a><a href='#L542'>542</a>
+<a name='L543'></a><a href='#L543'>543</a>
+<a name='L544'></a><a href='#L544'>544</a>
+<a name='L545'></a><a href='#L545'>545</a>
+<a name='L546'></a><a href='#L546'>546</a>
+<a name='L547'></a><a href='#L547'>547</a>
+<a name='L548'></a><a href='#L548'>548</a>
+<a name='L549'></a><a href='#L549'>549</a>
+<a name='L550'></a><a href='#L550'>550</a>
+<a name='L551'></a><a href='#L551'>551</a>
+<a name='L552'></a><a href='#L552'>552</a>
+<a name='L553'></a><a href='#L553'>553</a>
+<a name='L554'></a><a href='#L554'>554</a>
+<a name='L555'></a><a href='#L555'>555</a>
+<a name='L556'></a><a href='#L556'>556</a>
+<a name='L557'></a><a href='#L557'>557</a>
+<a name='L558'></a><a href='#L558'>558</a>
+<a name='L559'></a><a href='#L559'>559</a>
+<a name='L560'></a><a href='#L560'>560</a>
+<a name='L561'></a><a href='#L561'>561</a>
+<a name='L562'></a><a href='#L562'>562</a>
+<a name='L563'></a><a href='#L563'>563</a>
+<a name='L564'></a><a href='#L564'>564</a>
+<a name='L565'></a><a href='#L565'>565</a>
+<a name='L566'></a><a href='#L566'>566</a>
+<a name='L567'></a><a href='#L567'>567</a>
+<a name='L568'></a><a href='#L568'>568</a>
+<a name='L569'></a><a href='#L569'>569</a>
+<a name='L570'></a><a href='#L570'>570</a>
+<a name='L571'></a><a href='#L571'>571</a>
+<a name='L572'></a><a href='#L572'>572</a>
+<a name='L573'></a><a href='#L573'>573</a>
+<a name='L574'></a><a href='#L574'>574</a>
+<a name='L575'></a><a href='#L575'>575</a>
+<a name='L576'></a><a href='#L576'>576</a>
+<a name='L577'></a><a href='#L577'>577</a>
+<a name='L578'></a><a href='#L578'>578</a>
+<a name='L579'></a><a href='#L579'>579</a>
+<a name='L580'></a><a href='#L580'>580</a>
+<a name='L581'></a><a href='#L581'>581</a>
+<a name='L582'></a><a href='#L582'>582</a>
+<a name='L583'></a><a href='#L583'>583</a>
+<a name='L584'></a><a href='#L584'>584</a>
+<a name='L585'></a><a href='#L585'>585</a>
+<a name='L586'></a><a href='#L586'>586</a>
+<a name='L587'></a><a href='#L587'>587</a>
+<a name='L588'></a><a href='#L588'>588</a>
+<a name='L589'></a><a href='#L589'>589</a>
+<a name='L590'></a><a href='#L590'>590</a>
+<a name='L591'></a><a href='#L591'>591</a>
+<a name='L592'></a><a href='#L592'>592</a>
+<a name='L593'></a><a href='#L593'>593</a>
+<a name='L594'></a><a href='#L594'>594</a>
+<a name='L595'></a><a href='#L595'>595</a>
+<a name='L596'></a><a href='#L596'>596</a>
+<a name='L597'></a><a href='#L597'>597</a>
+<a name='L598'></a><a href='#L598'>598</a>
+<a name='L599'></a><a href='#L599'>599</a>
+<a name='L600'></a><a href='#L600'>600</a>
+<a name='L601'></a><a href='#L601'>601</a>
+<a name='L602'></a><a href='#L602'>602</a>
+<a name='L603'></a><a href='#L603'>603</a>
+<a name='L604'></a><a href='#L604'>604</a>
+<a name='L605'></a><a href='#L605'>605</a>
+<a name='L606'></a><a href='#L606'>606</a>
+<a name='L607'></a><a href='#L607'>607</a>
+<a name='L608'></a><a href='#L608'>608</a>
+<a name='L609'></a><a href='#L609'>609</a>
+<a name='L610'></a><a href='#L610'>610</a>
+<a name='L611'></a><a href='#L611'>611</a>
+<a name='L612'></a><a href='#L612'>612</a>
+<a name='L613'></a><a href='#L613'>613</a>
+<a name='L614'></a><a href='#L614'>614</a>
+<a name='L615'></a><a href='#L615'>615</a>
+<a name='L616'></a><a href='#L616'>616</a>
+<a name='L617'></a><a href='#L617'>617</a>
+<a name='L618'></a><a href='#L618'>618</a>
+<a name='L619'></a><a href='#L619'>619</a>
+<a name='L620'></a><a href='#L620'>620</a>
+<a name='L621'></a><a href='#L621'>621</a>
+<a name='L622'></a><a href='#L622'>622</a>
+<a name='L623'></a><a href='#L623'>623</a>
+<a name='L624'></a><a href='#L624'>624</a>
+<a name='L625'></a><a href='#L625'>625</a>
+<a name='L626'></a><a href='#L626'>626</a>
+<a name='L627'></a><a href='#L627'>627</a>
+<a name='L628'></a><a href='#L628'>628</a>
+<a name='L629'></a><a href='#L629'>629</a>
+<a name='L630'></a><a href='#L630'>630</a>
+<a name='L631'></a><a href='#L631'>631</a>
+<a name='L632'></a><a href='#L632'>632</a>
+<a name='L633'></a><a href='#L633'>633</a>
+<a name='L634'></a><a href='#L634'>634</a>
+<a name='L635'></a><a href='#L635'>635</a>
+<a name='L636'></a><a href='#L636'>636</a>
+<a name='L637'></a><a href='#L637'>637</a>
+<a name='L638'></a><a href='#L638'>638</a>
+<a name='L639'></a><a href='#L639'>639</a>
+<a name='L640'></a><a href='#L640'>640</a>
+<a name='L641'></a><a href='#L641'>641</a>
+<a name='L642'></a><a href='#L642'>642</a>
+<a name='L643'></a><a href='#L643'>643</a>
+<a name='L644'></a><a href='#L644'>644</a>
+<a name='L645'></a><a href='#L645'>645</a>
+<a name='L646'></a><a href='#L646'>646</a>
+<a name='L647'></a><a href='#L647'>647</a>
+<a name='L648'></a><a href='#L648'>648</a>
+<a name='L649'></a><a href='#L649'>649</a>
+<a name='L650'></a><a href='#L650'>650</a>
+<a name='L651'></a><a href='#L651'>651</a>
+<a name='L652'></a><a href='#L652'>652</a>
+<a name='L653'></a><a href='#L653'>653</a>
+<a name='L654'></a><a href='#L654'>654</a>
+<a name='L655'></a><a href='#L655'>655</a>
+<a name='L656'></a><a href='#L656'>656</a>
+<a name='L657'></a><a href='#L657'>657</a>
+<a name='L658'></a><a href='#L658'>658</a>
+<a name='L659'></a><a href='#L659'>659</a>
+<a name='L660'></a><a href='#L660'>660</a>
+<a name='L661'></a><a href='#L661'>661</a>
+<a name='L662'></a><a href='#L662'>662</a>
+<a name='L663'></a><a href='#L663'>663</a>
+<a name='L664'></a><a href='#L664'>664</a>
+<a name='L665'></a><a href='#L665'>665</a>
+<a name='L666'></a><a href='#L666'>666</a>
+<a name='L667'></a><a href='#L667'>667</a>
+<a name='L668'></a><a href='#L668'>668</a>
+<a name='L669'></a><a href='#L669'>669</a>
+<a name='L670'></a><a href='#L670'>670</a>
+<a name='L671'></a><a href='#L671'>671</a>
+<a name='L672'></a><a href='#L672'>672</a>
+<a name='L673'></a><a href='#L673'>673</a>
+<a name='L674'></a><a href='#L674'>674</a>
+<a name='L675'></a><a href='#L675'>675</a>
+<a name='L676'></a><a href='#L676'>676</a>
+<a name='L677'></a><a href='#L677'>677</a>
+<a name='L678'></a><a href='#L678'>678</a>
+<a name='L679'></a><a href='#L679'>679</a>
+<a name='L680'></a><a href='#L680'>680</a>
+<a name='L681'></a><a href='#L681'>681</a>
+<a name='L682'></a><a href='#L682'>682</a>
+<a name='L683'></a><a href='#L683'>683</a>
+<a name='L684'></a><a href='#L684'>684</a>
+<a name='L685'></a><a href='#L685'>685</a>
+<a name='L686'></a><a href='#L686'>686</a>
+<a name='L687'></a><a href='#L687'>687</a>
+<a name='L688'></a><a href='#L688'>688</a>
+<a name='L689'></a><a href='#L689'>689</a>
+<a name='L690'></a><a href='#L690'>690</a>
+<a name='L691'></a><a href='#L691'>691</a>
+<a name='L692'></a><a href='#L692'>692</a>
+<a name='L693'></a><a href='#L693'>693</a>
+<a name='L694'></a><a href='#L694'>694</a>
+<a name='L695'></a><a href='#L695'>695</a>
+<a name='L696'></a><a href='#L696'>696</a>
+<a name='L697'></a><a href='#L697'>697</a>
+<a name='L698'></a><a href='#L698'>698</a>
+<a name='L699'></a><a href='#L699'>699</a>
+<a name='L700'></a><a href='#L700'>700</a>
+<a name='L701'></a><a href='#L701'>701</a>
+<a name='L702'></a><a href='#L702'>702</a>
+<a name='L703'></a><a href='#L703'>703</a>
+<a name='L704'></a><a href='#L704'>704</a>
+<a name='L705'></a><a href='#L705'>705</a>
+<a name='L706'></a><a href='#L706'>706</a>
+<a name='L707'></a><a href='#L707'>707</a>
+<a name='L708'></a><a href='#L708'>708</a>
+<a name='L709'></a><a href='#L709'>709</a>
+<a name='L710'></a><a href='#L710'>710</a>
+<a name='L711'></a><a href='#L711'>711</a>
+<a name='L712'></a><a href='#L712'>712</a>
+<a name='L713'></a><a href='#L713'>713</a>
+<a name='L714'></a><a href='#L714'>714</a>
+<a name='L715'></a><a href='#L715'>715</a>
+<a name='L716'></a><a href='#L716'>716</a>
+<a name='L717'></a><a href='#L717'>717</a>
+<a name='L718'></a><a href='#L718'>718</a>
+<a name='L719'></a><a href='#L719'>719</a>
+<a name='L720'></a><a href='#L720'>720</a>
+<a name='L721'></a><a href='#L721'>721</a>
+<a name='L722'></a><a href='#L722'>722</a>
+<a name='L723'></a><a href='#L723'>723</a>
+<a name='L724'></a><a href='#L724'>724</a>
+<a name='L725'></a><a href='#L725'>725</a>
+<a name='L726'></a><a href='#L726'>726</a>
+<a name='L727'></a><a href='#L727'>727</a>
+<a name='L728'></a><a href='#L728'>728</a>
+<a name='L729'></a><a href='#L729'>729</a>
+<a name='L730'></a><a href='#L730'>730</a>
+<a name='L731'></a><a href='#L731'>731</a>
+<a name='L732'></a><a href='#L732'>732</a>
+<a name='L733'></a><a href='#L733'>733</a>
+<a name='L734'></a><a href='#L734'>734</a>
+<a name='L735'></a><a href='#L735'>735</a>
+<a name='L736'></a><a href='#L736'>736</a>
+<a name='L737'></a><a href='#L737'>737</a>
+<a name='L738'></a><a href='#L738'>738</a>
+<a name='L739'></a><a href='#L739'>739</a>
+<a name='L740'></a><a href='#L740'>740</a>
+<a name='L741'></a><a href='#L741'>741</a>
+<a name='L742'></a><a href='#L742'>742</a>
+<a name='L743'></a><a href='#L743'>743</a>
+<a name='L744'></a><a href='#L744'>744</a>
+<a name='L745'></a><a href='#L745'>745</a>
+<a name='L746'></a><a href='#L746'>746</a>
+<a name='L747'></a><a href='#L747'>747</a>
+<a name='L748'></a><a href='#L748'>748</a>
+<a name='L749'></a><a href='#L749'>749</a>
+<a name='L750'></a><a href='#L750'>750</a>
+<a name='L751'></a><a href='#L751'>751</a>
+<a name='L752'></a><a href='#L752'>752</a>
+<a name='L753'></a><a href='#L753'>753</a>
+<a name='L754'></a><a href='#L754'>754</a>
+<a name='L755'></a><a href='#L755'>755</a>
+<a name='L756'></a><a href='#L756'>756</a>
+<a name='L757'></a><a href='#L757'>757</a>
+<a name='L758'></a><a href='#L758'>758</a>
+<a name='L759'></a><a href='#L759'>759</a>
+<a name='L760'></a><a href='#L760'>760</a>
+<a name='L761'></a><a href='#L761'>761</a>
+<a name='L762'></a><a href='#L762'>762</a>
+<a name='L763'></a><a href='#L763'>763</a>
+<a name='L764'></a><a href='#L764'>764</a>
+<a name='L765'></a><a href='#L765'>765</a>
+<a name='L766'></a><a href='#L766'>766</a>
+<a name='L767'></a><a href='#L767'>767</a>
+<a name='L768'></a><a href='#L768'>768</a>
+<a name='L769'></a><a href='#L769'>769</a>
+<a name='L770'></a><a href='#L770'>770</a>
+<a name='L771'></a><a href='#L771'>771</a>
+<a name='L772'></a><a href='#L772'>772</a>
+<a name='L773'></a><a href='#L773'>773</a>
+<a name='L774'></a><a href='#L774'>774</a>
+<a name='L775'></a><a href='#L775'>775</a>
+<a name='L776'></a><a href='#L776'>776</a>
+<a name='L777'></a><a href='#L777'>777</a>
+<a name='L778'></a><a href='#L778'>778</a>
+<a name='L779'></a><a href='#L779'>779</a>
+<a name='L780'></a><a href='#L780'>780</a>
+<a name='L781'></a><a href='#L781'>781</a>
+<a name='L782'></a><a href='#L782'>782</a>
+<a name='L783'></a><a href='#L783'>783</a>
+<a name='L784'></a><a href='#L784'>784</a>
+<a name='L785'></a><a href='#L785'>785</a>
+<a name='L786'></a><a href='#L786'>786</a>
+<a name='L787'></a><a href='#L787'>787</a>
+<a name='L788'></a><a href='#L788'>788</a>
+<a name='L789'></a><a href='#L789'>789</a>
+<a name='L790'></a><a href='#L790'>790</a>
+<a name='L791'></a><a href='#L791'>791</a>
+<a name='L792'></a><a href='#L792'>792</a>
+<a name='L793'></a><a href='#L793'>793</a>
+<a name='L794'></a><a href='#L794'>794</a>
+<a name='L795'></a><a href='#L795'>795</a>
+<a name='L796'></a><a href='#L796'>796</a>
+<a name='L797'></a><a href='#L797'>797</a>
+<a name='L798'></a><a href='#L798'>798</a>
+<a name='L799'></a><a href='#L799'>799</a>
+<a name='L800'></a><a href='#L800'>800</a>
+<a name='L801'></a><a href='#L801'>801</a>
+<a name='L802'></a><a href='#L802'>802</a>
+<a name='L803'></a><a href='#L803'>803</a>
+<a name='L804'></a><a href='#L804'>804</a>
+<a name='L805'></a><a href='#L805'>805</a>
+<a name='L806'></a><a href='#L806'>806</a>
+<a name='L807'></a><a href='#L807'>807</a>
+<a name='L808'></a><a href='#L808'>808</a>
+<a name='L809'></a><a href='#L809'>809</a>
+<a name='L810'></a><a href='#L810'>810</a>
+<a name='L811'></a><a href='#L811'>811</a>
+<a name='L812'></a><a href='#L812'>812</a>
+<a name='L813'></a><a href='#L813'>813</a>
+<a name='L814'></a><a href='#L814'>814</a>
+<a name='L815'></a><a href='#L815'>815</a>
+<a name='L816'></a><a href='#L816'>816</a>
+<a name='L817'></a><a href='#L817'>817</a>
+<a name='L818'></a><a href='#L818'>818</a>
+<a name='L819'></a><a href='#L819'>819</a>
+<a name='L820'></a><a href='#L820'>820</a>
+<a name='L821'></a><a href='#L821'>821</a>
+<a name='L822'></a><a href='#L822'>822</a>
+<a name='L823'></a><a href='#L823'>823</a>
+<a name='L824'></a><a href='#L824'>824</a>
+<a name='L825'></a><a href='#L825'>825</a>
+<a name='L826'></a><a href='#L826'>826</a>
+<a name='L827'></a><a href='#L827'>827</a>
+<a name='L828'></a><a href='#L828'>828</a>
+<a name='L829'></a><a href='#L829'>829</a>
+<a name='L830'></a><a href='#L830'>830</a>
+<a name='L831'></a><a href='#L831'>831</a>
+<a name='L832'></a><a href='#L832'>832</a>
+<a name='L833'></a><a href='#L833'>833</a>
+<a name='L834'></a><a href='#L834'>834</a>
+<a name='L835'></a><a href='#L835'>835</a>
+<a name='L836'></a><a href='#L836'>836</a>
+<a name='L837'></a><a href='#L837'>837</a>
+<a name='L838'></a><a href='#L838'>838</a>
+<a name='L839'></a><a href='#L839'>839</a>
+<a name='L840'></a><a href='#L840'>840</a>
+<a name='L841'></a><a href='#L841'>841</a>
+<a name='L842'></a><a href='#L842'>842</a>
+<a name='L843'></a><a href='#L843'>843</a>
+<a name='L844'></a><a href='#L844'>844</a>
+<a name='L845'></a><a href='#L845'>845</a>
+<a name='L846'></a><a href='#L846'>846</a>
+<a name='L847'></a><a href='#L847'>847</a>
+<a name='L848'></a><a href='#L848'>848</a>
+<a name='L849'></a><a href='#L849'>849</a>
+<a name='L850'></a><a href='#L850'>850</a>
+<a name='L851'></a><a href='#L851'>851</a>
+<a name='L852'></a><a href='#L852'>852</a>
+<a name='L853'></a><a href='#L853'>853</a>
+<a name='L854'></a><a href='#L854'>854</a>
+<a name='L855'></a><a href='#L855'>855</a>
+<a name='L856'></a><a href='#L856'>856</a>
+<a name='L857'></a><a href='#L857'>857</a>
+<a name='L858'></a><a href='#L858'>858</a>
+<a name='L859'></a><a href='#L859'>859</a>
+<a name='L860'></a><a href='#L860'>860</a>
+<a name='L861'></a><a href='#L861'>861</a>
+<a name='L862'></a><a href='#L862'>862</a>
+<a name='L863'></a><a href='#L863'>863</a>
+<a name='L864'></a><a href='#L864'>864</a>
+<a name='L865'></a><a href='#L865'>865</a>
+<a name='L866'></a><a href='#L866'>866</a>
+<a name='L867'></a><a href='#L867'>867</a>
+<a name='L868'></a><a href='#L868'>868</a>
+<a name='L869'></a><a href='#L869'>869</a>
+<a name='L870'></a><a href='#L870'>870</a>
+<a name='L871'></a><a href='#L871'>871</a>
+<a name='L872'></a><a href='#L872'>872</a>
+<a name='L873'></a><a href='#L873'>873</a>
+<a name='L874'></a><a href='#L874'>874</a>
+<a name='L875'></a><a href='#L875'>875</a>
+<a name='L876'></a><a href='#L876'>876</a>
+<a name='L877'></a><a href='#L877'>877</a>
+<a name='L878'></a><a href='#L878'>878</a>
+<a name='L879'></a><a href='#L879'>879</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1963x</span>
+<span class="cline-any cline-yes">1963x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">156x</span>
+<span class="cline-any cline-yes">156x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4345x</span>
+<span class="cline-any cline-yes">4345x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2088x</span>
+<span class="cline-any cline-yes">2088x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2499x</span>
+<span class="cline-any cline-yes">2499x</span>
+<span class="cline-any cline-yes">2499x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">260x</span>
+<span class="cline-any cline-yes">260x</span>
+<span class="cline-any cline-yes">260x</span>
+<span class="cline-any cline-yes">260x</span>
+<span class="cline-any cline-yes">260x</span>
+<span class="cline-any cline-yes">260x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">146x</span>
+<span class="cline-any cline-yes">146x</span>
+<span class="cline-any cline-yes">146x</span>
+<span class="cline-any cline-yes">146x</span>
+<span class="cline-any cline-yes">130x</span>
+<span class="cline-any cline-yes">130x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">146x</span>
+<span class="cline-any cline-yes">146x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-yes">117x</span>
+<span class="cline-any cline-yes">117x</span>
+<span class="cline-any cline-yes">117x</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5225x</span>
+<span class="cline-any cline-yes">5225x</span>
+<span class="cline-any cline-yes">879x</span>
+<span class="cline-any cline-yes">879x</span>
+<span class="cline-any cline-yes">5216x</span>
+<span class="cline-any cline-yes">5225x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">5225x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">1966x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">2110x</span>
+<span class="cline-any cline-yes">2110x</span>
+<span class="cline-any cline-yes">2109x</span>
+<span class="cline-any cline-yes">2109x</span>
+<span class="cline-any cline-yes">2110x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2110x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4483x</span>
+<span class="cline-any cline-yes">4111x</span>
+<span class="cline-any cline-yes">4111x</span>
+<span class="cline-any cline-yes">5225x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">53x</span>
+<span class="cline-any cline-yes">53x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">159x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">262x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">257x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4074x</span>
+<span class="cline-any cline-yes">4074x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">667x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">1759x</span>
+<span class="cline-any cline-yes">1759x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">1074x</span>
+<span class="cline-any cline-yes">1074x</span>
+<span class="cline-any cline-yes">1074x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">1578x</span>
+<span class="cline-any cline-yes">1578x</span>
+<span class="cline-any cline-yes">1578x</span>
+<span class="cline-any cline-yes">1578x</span>
+<span class="cline-any cline-yes">1578x</span>
+<span class="cline-any cline-yes">1578x</span>
+<span class="cline-any cline-yes">4076x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">2495x</span>
+<span class="cline-any cline-yes">2496x</span>
+<span class="cline-any cline-yes">4074x</span>
+<span class="cline-any cline-yes">3955x</span>
+<span class="cline-any cline-yes">674x</span>
+<span class="cline-any cline-yes">674x</span>
+<span class="cline-any cline-yes">674x</span>
+<span class="cline-any cline-yes">674x</span>
+<span class="cline-any cline-yes">674x</span>
+<span class="cline-any cline-yes">3955x</span>
+<span class="cline-any cline-yes">3955x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">1081x</span>
+<span class="cline-any cline-yes">3955x</span>
+<span class="cline-any cline-yes">1026x</span>
+<span class="cline-any cline-yes">1026x</span>
+<span class="cline-any cline-yes">1026x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">15x</span>
+<span class="cline-any cline-yes">1026x</span>
+<span class="cline-any cline-yes">3955x</span>
+<span class="cline-any cline-yes">4074x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4346x</span>
+<span class="cline-any cline-yes">4345x</span>
+<span class="cline-any cline-yes">4345x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">67x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">35x</span>
+<span class="cline-any cline-yes">38x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-yes">33x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// cspell:ignore kindless
+/**
+ * The flow ledger: what the service observed of each flow (PRD R22, R23).
+ *
+ * Two questions, two answers, deliberately kept apart from `FlowShapes`:
+ *
+ * - **`FlowShapes`** accumulates the *template-ref sequence* of an execution,
+ *   because that is what drift compares. It holds an execution only while it is
+ *   in flight and hands the sequence over once, at termination.
+ * - **the ledger** retains what the *diagrams* need, and the two diagrams need
+ *   different things: one execution's ordered calls; and, per flow **kind**, a
+ *   running union of the calls ever observed under it — what was seen, not what
+ *   was declared anywhere.
+ *
+ * Retaining per-execution state keyed by the caller's ULID is also what closes
+ * R9's *partial* verdict: records are now indexed by flow id, so one execution's
+ * chain is a lookup rather than a scan.
+ *
+ * ## A call is a declaration, not a deduction
+ *
+ * The caller names both ends, and states both: the leg id it mints is the method the call
+ * reaches its callee with (`gateway.bundle.find`, `db/gateway.bundle.find`), and the unit
+ * that made the call and the receiver it expects are the `legFrom` and `legTo` it declared
+ * with it. So an edge is known from **one** observation — the caller's — and a receiver that
+ * never answers (missing, failing, or wired to the wrong address) still appears in the
+ * observed shape. What its silence costs is the `observed` count on the edge, which is a
+ * fact about the deployment instead of a line that cannot be drawn.
+ *
+ * The caller used to be read out of the id, which began with it. It is a field now because
+ * the id is what a diagram draws on the arrow: repeating the caller there made every label
+ * say what its own arrow already said (`public.gateway.bundle.find` between `public` and
+ * `gateway`), and the longer it got the less of the diagram could be read. Nothing is derived
+ * from the id today — an observation whose identity carries no caller contributes no edge,
+ * because the source of an arrow is not something to infer from whichever process happened
+ * to write a record (D-210, D-249).
+ *
+ * Whether that edge was *answered* is a separate question, answered by the
+ * **declaration** rather than by the record that carries the receipt. A leg a caller
+ * declared toward one target, and then observed from the receiving side, was
+ * answered by that target — whatever name the process that wrote the record happens
+ * to have. One process hosts many namespaces, and in development a whole suite, so a
+ * credit that compared the writer's service to the callee would make an answered call
+ * a property of how the deployment is split rather than of what happened (D-210).
+ *
+ * ## Position, not time
+ *
+ * Calls are ordered by the **counter path** the caller assigned (`1`, `1.2`), not
+ * by any timestamp. Two records emitted inside one millisecond cannot be ordered by
+ * a millisecond-resolution clock; measured on the inter-scheme fixture, 7 of its 14
+ * legs tied, and a direction resting on arrival order is a coin flip that looks
+ * like a measurement. The counter is assigned without a coordinator — the receiver
+ * numbers its own calls as children of the position it was handed — so the paths
+ * form a depth-first order of the execution, which is what a sequence diagram is
+ * drawn in.
+ *
+ * The union is a running aggregate, like the drift history: it is fed as events
+ * arrive rather than when an execution ends, so a *stalled* flow still contributes
+ * the calls it was seen to make, and evicting an execution's detail does not
+ * un-observe it. Retention has two bounds, and neither loss is silent — an execution
+ * dropped by the cap is reported by {@link FlowLedger.evictions} and a call dropped
+ * by the per-execution cap by {@link FlowLedger.truncations}.
+ */
+&nbsp;
+import type {RegionMark} from '../record.ts';
+import {isUlid} from '../ulid.ts';
+import {legOf, progressOf, refFromFingerprint, type IngestEvent} from './registry.ts';
+&nbsp;
+/** Executions whose detail is retained for the instance view. */
+const DEFAULT_EXECUTION_LIMIT = 1000;
+&nbsp;
+/** Calls one execution retains in detail, each end of a call counted apart. */
+const DEFAULT_STEP_LIMIT = 256;
+&nbsp;
+/** One observed traversal of one call, as one event reported it. */
+export interface LegObservation {
+    /** The method the call reached its callee with — what a diagram labels the arrow. */
+    leg: string;
+    /** The process that emitted the record — information, never the caller. */
+    service: string;
+    /** The logical unit that declared the call; absent when the identity named none. */
+    from?: string;
+    /** The receiver the **caller** declared; absent on a receiver's own records. */
+    to?: string;
+    /**
+     * The phase the record was written in (PRD R26/R27).
+     *
+     * It is what says which end of the call wrote it, and the only thing that does:
+     * a receiver adopts the identity the caller sent, so `to` is present on its answer
+     * too. `start`/`end`/`error` are the caller's, `received`/`answered` the receiver's.
+     */
+    phase?: string;
+    /** The call's position in the execution, as the caller assigned it. */
+    seq?: string;
+    /** The step the record sat in, when the emitter reported one. */
+    step?: string;
+    /** The flow position the emitter reported, when it reported one. */
+    index?: number;
+    /** The branches the record was emitted inside, outermost first (PRD R26). */
+    regions?: RegionMark[];
+    /** Milestones announced with the record (PRD R26), drawn as notes over its call. */
+    points?: string[];
+    time: number;
+    /** The record the observation came from, so a diagram can name its evidence. */
+    ref: string;
+}
+&nbsp;
+/** One declared call, and how much of it was seen. */
+export interface LegEnd {
+    caller: string;
+    callee: string;
+    /** Declarations observed for this pair — one per execution, however many records it logged. */
+    count: number;
+    /** Of those, the attempts whose receiver was also observed. */
+    observed: number;
+    /**
+     * The branches declarations of this pair were observed inside, when any were
+     * (PRD R26/R27).
+     *
+     * Tallied here rather than on the leg because a count lives where the *pair*
+     * lives: one leg reaches two receivers only in a deployment that cannot make up
+     * its mind, and each pair's branching is then its own. Absent when the call was
+     * never inside a branch, which is what keeps an un-branched call drawn flat.
+     */
+    branches?: ObservedBranch[];
+}
+&nbsp;
+/**
+ * One branch that declarations of a call were observed inside (PRD R26).
+ *
+ * Keyed by the discriminator and the branch taken, so the *same* decision taken in
+ * every execution of a flow is one entry with a count — which is what a union
+ * needs to draw one `alt` block rather than one per run.
+ */
+export interface ObservedBranch {
+    /** The discriminator consulted. */
+    discriminator: string;
+    /** Every candidate it weighed, in evaluation order. */
+    candidates: string[];
+    /** The branch taken. */
+    chosen: string;
+    /** Declarations of this pair observed inside this branch. */
+    count: number;
+    /** Of those, the ones a receiver was also observed for. */
+    observed: number;
+}
+&nbsp;
+/** A call as the union knows it. */
+export interface ObservedLeg {
+    leg: string;
+    /** Declarations observed for it, over every caller. */
+    count: number;
+    first: number;
+    last: number;
+    /** The step it was observed in, most often — the phase it belongs to. */
+    step?: string;
+    /** The position its declarations carried, first seen. Orders the union. */
+    seq?: string;
+    /** Services seen logging it, in first-observation order. */
+    services: string[];
+    /** Ends observed, most frequently declared first. */
+    ends: LegEnd[];
+}
+&nbsp;
+/**
+ * Fold what a later event on a leg reported into the observation already held for it.
+ *
+ * A union, not an overwrite, and a union by name: points travel as names and branches as named
+ * marks, so the same point announced twice is one note and the same branch taken twice is one
+ * alternative. Arrival order is the only order the service has.
+ */
+function mergeProgress(
+    target: LegObservation,
+    progress: {regions: RegionMark[]; points: string[]} | undefined,
+): void {
+    if (progress === undefined) {
+        return;
+    }
+    if (progress.points.length &gt; 0) {
+        const known = new Set(target.points ?? []);
+        const added = progress.points.filter(name =&gt; !known.has(name));
+        if (added.length &gt; 0) {
+            target.points = [...(target.points ?? []), ...added];
+        }
+    }
+    if (progress.regions.length &gt; 0) {
+        const named = (mark: RegionMark) =&gt; `${mark.discriminator}\u0000${mark.chosen}`;
+        const known = new Set((target.regions ?? []).map(named));
+        const added = progress.regions.filter(mark =&gt; !known.has(named(mark)));
+        if (added.length &gt; 0) {
+            target.regions = [...(target.regions ?? []), ...added];
+        }
+    }
+}
+&nbsp;
+/** The phases a call is recorded in, as `callTrace` names them. */
+const CALL_PHASES: readonly string[] = ['start', 'end', 'error', 'received', 'answered'];
+&nbsp;
+/** Does this phase belong to the end that answers the call rather than the one that made it? */
+export function receiverPhase(phase: string | undefined): boolean {
+    return phase === 'received' || phase === 'answered';
+}
+&nbsp;
+/**
+ * The phase the record was written in, read off the method it was addressed by.
+ *
+ * `callTrace` names the envelope's method `&lt;leg&gt;.&lt;phase&gt;` — the record model the ledger
+ * already reads a call out of — so the phase travels without a field of its own. Anything
+ * else is absent: a method that is not `&lt;leg&gt;.&lt;phase&gt;` says nothing about which end wrote
+ * the record, and a guess would attribute one end's work to the other.
+ */
+function phaseOf(event: IngestEvent): string | undefined {
+    const operation = event.operation;
+    if (operation === undefined) {
+        return undefined;
+    }
+    const tail = operation.slice(operation.lastIndexOf('.') + 1);
+    return CALL_PHASES.includes(<span class="branch-0 cbranch-no" title="branch not covered" >tail) ? tail : u</span>ndefined;
+}
+&nbsp;
+/** The branch an end already knows, or a new tally for it. */
+function branchOf(
+    end: LegEnd,
+    mark: {discriminator: string; candidates: string[]; chosen: string},
+): ObservedBranch {
+    const branches = (end.branches ??= []);
+    const found = branches.find(
+        branch =&gt; branch.discriminator === mark.discriminator &amp;&amp; branch.chosen === mark.chosen,
+    );
+    if (found !== undefined) {
+        return found;
+    }
+    const branch: ObservedBranch = {
+        discriminator: mark.discriminator,
+        candidates: mark.candidates,
+        chosen: mark.chosen,
+        count: 0,
+        observed: 0,
+    };
+    branches.push(branch);
+    return branch;
+}
+&nbsp;
+/** What was observed of one flow kind. */
+export interface FlowUnion {
+    kind: string;
+    /** Executions observed under this kind. */
+    executions: number;
+    /** Every service seen in one of them, in first-observation order. */
+    services: string[];
+    /** Calls observed, in the order their positions give them. */
+    legs: ObservedLeg[];
+}
+&nbsp;
+/** What was observed of one execution, without its per-record detail. */
+export interface FlowSummary {
+    id: string;
+    kind?: string;
+    /** Every service seen emitting a record of it, in first-observation order. */
+    services: string[];
+    /** Template refs traversed, in observation order — the shape drift compares. */
+    refs: string[];
+    /** Calls traversed, ordered by their positions. */
+    legs: string[];
+    /** Has the emitter reported a terminal status for it? */
+    closed: boolean;
+}
+&nbsp;
+/** What was observed of one execution. */
+export interface FlowExecution extends FlowSummary {
+    observations: LegObservation[];
+}
+&nbsp;
+/** One declaration this execution made, and what has been counted for it. */
+interface Declaration {
+    caller: string;
+    callee: string;
+    /** Has it been counted in the aggregate? */
+    counted: boolean;
+    /** Has a receipt been credited to it? */
+    credited: boolean;
+    /**
+     * The branch this declaration was made in, when it was made in one.
+     *
+     * Remembered so the *answer* can be credited to that branch. Looking for the
+     * branch on the answering record instead does not work: an answer is written by
+     * the callee, in another process, and a branch is ambient context that does not
+     * cross a process boundary — so the answer would be credited to no branch and a
+     * union would draw a call nobody answered. The answer belongs to the call, and
+     * the call was made in the branch this remembers.
+     */
+    branch?: ObservedBranch;
+}
+&nbsp;
+/** What one execution has declared and seen answered for one call. */
+interface LegSeen {
+    /** Declarations made for the call, by pair. */
+    declared: Map&lt;string, Declaration&gt;;
+    /**
+     * Services observed carrying the call without declaring it — the receiving side.
+     * Who wrote a receipt is **information**, for the reader of a diagram: the credit
+     * below rests on the declaration, never on these names.
+     */
+    answered: Set&lt;string&gt;;
+}
+&nbsp;
+/**
+ * Whether a receipt seen for a leg can be attributed to a declaration.
+ *
+ * A record with no declared target says *that* the leg was answered, and not which target
+ * answered it. That is enough when the leg was declared toward one callee in this
+ * execution — and not when it was declared toward two, which is one call id reused toward
+ * two receivers, i.e. the caller misuse the id exists to make impossible. Contradictory
+ * data gets the conservative reading: neither edge is credited, so both are drawn
+ * unanswered, instead of a coin flip deciding which of them claims to have been answered.
+ *
+ * Exported so the diagram and the ledger reach the same verdict about an arrow
+ * from this rule, and a second copy of it is how the two views drifted once already.
+ */
+export function attributable(declaredTargets: number, receipts: number): boolean {
+    return declaredTargets === 1 &amp;&amp; receipts &gt; 0;
+}
+&nbsp;
+/**
+ * Per-execution state.
+ */
+interface ExecutionState {
+    kind?: string;
+    /**
+     * The kind's aggregate, once the kind is known. Held here rather than looked up
+     * per observation because a kindless execution has none — which is the one
+     * reachable case the aggregation has to pass over, and it cannot be expressed as
+     * a lookup that is allowed to fail.
+     */
+    union?: KindState;
+    /** Every service seen emitting a record of this execution — a record needs no leg to count. */
+    services: Set&lt;string&gt;;
+    observations: LegObservation[];
+    /** Event ids already observed, so a redelivery is not a second attempt. */
+    seen: Set&lt;string&gt;;
+    /**
+     * The observations this execution already retains, one per call and end.
+     *
+     * A call site that makes the same call again in one execution — a loop over a
+     * list, a retry — is still the one call a diagram draws, and {@link FlowLedger.aggregate}
+     * already counts it once. Without this, every record of every repetition was
+     * retained, and the per-execution budget was spent on one call: measured on the
+     * gateway's test flow, 296 records for four leg ids truncated 150 steps, and the
+     * diagram showed only the first step of the group.
+     */
+    retained: Set&lt;string&gt;;
+    /**
+     * The observation this execution retained for each call and end, by the same key as
+     * {@link retained}.
+     *
+     * Held so a later event on a leg can still contribute what only it carries: a call's
+     * *answer* (`answered`) is a second receiver-side event on a leg whose receipt came first,
+     * and what its handler announced is there. Without this, the rule that keeps one detail per
+     * call would drop every point a realm handler reports (PRD R26/R27).
+     */
+    detail: Map&lt;string, LegObservation&gt;;
+    /**
+     * What this execution declared and saw answered, per call.
+     *
+     * Kept per execution because both counters are **per execution**: a receiver that
+     * logs three records about one call answered it once, and credit has to be given
+     * when the two halves arrive in either order — a receipt can reach the service
+     * before the declaration that aimed at it, since two processes flush their sinks
+     * independently.
+     */
+    legs: Map&lt;string, LegSeen&gt;;
+    refs: string[];
+    closed: boolean;
+    /** Monotonic recency, for eviction. */
+    touched: number;
+}
+&nbsp;
+interface LegAggregate {
+    count: number;
+    first: number;
+    last: number;
+    /** Step name to the declarations observed in it. */
+    steps: Map&lt;string, number&gt;;
+    /** Services seen logging this call, in first-observation order. */
+    services: Set&lt;string&gt;;
+    seq?: string;
+    ends: Map&lt;string, LegEnd&gt;;
+}
+&nbsp;
+interface KindState {
+    executions: number;
+    services: Set&lt;string&gt;;
+    legs: Map&lt;string, LegAggregate&gt;;
+    touched: number;
+}
+&nbsp;
+/** The key one declared pair is aggregated under. */
+function pairKey(caller: string, callee: string): string {
+    return `${caller}\u0000${callee}`;
+}
+&nbsp;
+/**
+ * A path of counters, zero-padded per component so a plain string compare orders
+ * paths numerically: `1` &lt; `1.1` &lt; `2`. Six digits is more siblings than an
+ * execution can have records.
+ */
+function seqKey(seq: string): string {
+    return seq
+        .split('.')
+        .map(part =&gt; part.padStart(6, '0'))
+        .join('.');
+}
+&nbsp;
+/** Order two calls by the position they were given, a tie by id. */
+export function comparePosition(
+    a: {id: string; seq?: string},
+    b: {id: string; seq?: string},
+): number {
+    if (a.seq !== undefined &amp;&amp; b.seq !== undefined) {
+        return seqKey(a.seq).localeCompare(seqKey(b.seq)) || a.id.localeCompare(b.id);
+    }
+    // A call observed without a position (an emitter that sent none) sorts last, and
+    // two of those are ordered by id: the order stays total and deterministic.
+    if (a.seq === b.seq) {
+        return a.id.localeCompare(b.id);
+    }
+    return a.seq === undefined ? 1 : -1;
+}
+&nbsp;
+/** The most frequent key of a count map, ties settled by first sight. */
+function mostFrequent(counts: Map&lt;string, number&gt;): string | undefined {
+    let best: string | undefined;
+    let bestCount = 0;
+    for (const [key, count] of counts) {
+        if (count &gt; bestCount) {
+            best = key;
+            bestCount = count;
+        }
+    }
+    return best;
+}
+&nbsp;
+/**
+ * The flow ledger. Fed from the ingest's accepted-event seam, beside the lineage
+ * index, so both views are built from one stream of events in one order.
+ */
+export class FlowLedger {
+    private readonly executionLimit: number;
+&nbsp;
+    private readonly stepLimit: number;
+&nbsp;
+    private readonly byExecution = new Map&lt;string, ExecutionState&gt;();
+&nbsp;
+    private readonly byKind = new Map&lt;string, KindState&gt;();
+&nbsp;
+    private sequence = 0;
+&nbsp;
+    private evictionCount = 0;
+&nbsp;
+    private truncationCount = 0;
+&nbsp;
+    constructor(
+        executionLimit: number = DEFAULT_EXECUTION_LIMIT,
+        stepLimit: number = DEFAULT_STEP_LIMIT,
+    ) {
+        this.executionLimit = executionLimit;
+        this.stepLimit = stepLimit;
+    }
+&nbsp;
+    /**
+     * Record one accepted event.
+     *
+     * An event with no flow, a flow id that is not a ULID, or no call is not an
+     * error. The first two are already reported by `FlowShapes` (which counts a flow
+     * id it cannot place as a straggler) and are declined here rather than counted
+     * twice; the third simply means the record belongs to no observed call. Nothing
+     * on this path throws: it runs on the ingest, where a peer's malformed value must
+     * not break a batch (D3).
+     *
+     * A record naming an execution whose terminal status was already reported is
+     * **still observed**, and that is deliberate: between two processes arrival order is
+     * not emission order. Measured on the single-scheme fixture, the payer's sink is
+     * flushed first, so its `transfer complete` reached the service before the hub's
+     * last four records — and refusing them lost the hub's own declaration of
+     * `hub.transfer.deliver`, i.e. a whole edge of the flow, plus three receipts. The
+     * execution's end is a fact about the emitter's report (`closed`), not a claim about
+     * what other participants have yet to deliver.
+     */
+    observe(event: IngestEvent): void {
+        const flow = event.flow;
+        if (flow === undefined || !isUlid(flow.id)) {
+            return;
+        }
+        const state = this.byExecution.get(flow.id) ?? this.open(flow.id);
+        if (state.kind === undefined &amp;&amp; typeof flow.kind === 'string' &amp;&amp; flow.kind.length &gt; 0) {
+            state.kind = flow.kind;
+            state.union = this.countKind(flow.kind);
+        }
+        state.touched = ++this.sequence;
+        // A record needs no call to prove its service took part: the entry records that
+        // sit between hops belong to the flow, and a diagram that omitted their service
+        // would be missing a participant the reader can see in the records.
+        state.services.add(event.service);
+        const leg = legOf(event);
+        const progress = progressOf(event);
+        const phase = phaseOf(event);
+        if (leg !== undefined &amp;&amp; !state.seen.has(event.id)) {
+            state.seen.add(event.id);
+            const observation: LegObservation = {
+                leg: leg.id,
+                service: event.service,
+                from: leg.from,
+                to: leg.to,
+                ...(phase === undefined ? {<span class="branch-0 cbranch-no" title="branch not covered" >} : {phase})</span>,
+                seq: leg.seq,
+                step: flow.step,
+                index: flow.index,
+                time: event.time,
+                ref: event.id,
+                ...(progress
+                    ? {
+                          ...(progress.regions.length &gt; 0 ? {regions: progress.regions} : {}),
+                          ...(progress.points.length &gt; 0 ? {points: progress.points} : {}),
+                      }
+                    : {}),
+            };
+            // The counters are kept for every record — they are per execution and
+            // idempotent, and a repetition's own timestamps are the honest ones — while
+            // the *detail* is retained once per call and end: a leg is one call however
+            // many records were logged about it, which is the unit the cap is meant to
+            // bound. The key carries the caller as well as the method, because two units
+            // may call the same method in one execution — two calls, two arrows, and the
+            // second is not a repeat of the first.
+            this.aggregate(state, observation);
+            // The key carries the caller, the method **and the phase**: two units may call the
+            // same method in one execution — two calls, two arrows — and the two ends of one
+            // call write records under the same identity, so the phase is what keeps the
+            // receiver's answer from being filed as the caller's own work.
+            const call = `${leg.id}\u0000${leg.from ?? ''}\u0000${leg.to === undefined ? 'receipt' : 'declaration'}\u0000${phase ?? ''}`;
+            const held = state.detail.get(call);
+            if (held !== undefined) {
+                // The detail is kept once, but the **progress** is cumulative: what a receiver's
+                // answer announces exists on no other record of the leg, so dropping it with the
+                // "already retained" verdict would lose it silently (PRD R26/R27).
+                mergeProgress(held, progress);
+            } else {
+                state.retained.add(call);
+                if (state.observations.length &lt; this.stepLimit) {
+                    state.observations.push(observation);
+                    state.detail.set(call, observation);
+                } else {
+                    this.truncationCount++;
+                }
+            }
+        }
+        if (state.refs.length &lt; this.stepLimit) {
+            state.refs.push(refFromFingerprint(event.fingerprint));
+        }
+        if (flow.status === 'completed' || flow.status === 'failed') {
+            state.closed = true;
+        }
+        this.enforceLimit();
+    }
+&nbsp;
+    /** The retained detail of one execution, or `undefined` when it is not held. */
+    executionOf(flowId: string): FlowExecution | undefined {
+        const state = this.byExecution.get(flowId);
+        if (state === undefined) {
+            return undefined;
+        }
+        return {
+            ...this.summaryOf(flowId, state),
+            observations: state.observations.map(o =&gt; ({...o})),
+        };
+    }
+&nbsp;
+    /**
+     * Every retained execution, most recently observed first, without its per-record
+     * detail. Bounded by the retention cap, like the detail itself.
+     *
+     * The recency counter is bumped by every accepted event and never reset, so two
+     * retained executions cannot hold the same one and the order needs no tie-break.
+     */
+    executions(): FlowSummary[] {
+        return [...this.byExecution.entries()]
+            .sort((a, b) =&gt; b[1].touched - a[1].touched)
+            .map(([flowId, state]) =&gt; this.summaryOf(flowId, state));
+    }
+&nbsp;
+    /** The summary view of one execution's state. */
+    private summaryOf(flowId: string, state: ExecutionState): FlowSummary {
+        return {
+            id: flowId,
+            kind: state.kind,
+            services: [...state.services],
+            refs: [...state.refs],
+            legs: callsOf(state.observations),
+            closed: state.closed,
+        };
+    }
+&nbsp;
+    /** The union observed for one kind, or `undefined` when it has none. */
+    unionOf(kind: string): FlowUnion | undefined {
+        const state = this.byKind.get(kind);
+        if (state === undefined) {
+            return undefined;
+        }
+        return {
+            kind,
+            executions: state.executions,
+            services: [...state.services],
+            legs: [...state.legs.entries()]
+                .map(([leg, aggregate]) =&gt; ({
+                    leg,
+                    count: aggregate.count,
+                    first: aggregate.first,
+                    last: aggregate.last,
+                    step: mostFrequent(aggregate.steps),
+                    seq: aggregate.seq,
+                    services: [...aggregate.services],
+                    ends: [...aggregate.ends.values()]
+                        .map(end =&gt; ({...end}))
+                        .sort(
+                            (a, b) =&gt;
+                                b.count - a.count ||
+                                a.caller.localeCompare(b.caller) ||
+                                a.callee.localeCompare(b.callee),
+                        ),
+                }))
+                .sort((a, b) =&gt; comparePosition({id: a.leg, seq: a.seq}, {id: b.leg, seq: b.seq})),
+        };
+    }
+&nbsp;
+    /** The kinds observed, most recently touched first. */
+    kinds(): string[] {
+        return [...this.byKind.entries()]
+            .sort((a, b) =&gt; b[1].touched - a[1].touched || a[0].localeCompare(b[0]))
+            .map(([kind]) =&gt; kind);
+    }
+&nbsp;
+    /** How many executions are retained in detail. */
+    size(): number {
+        return this.byExecution.size;
+    }
+&nbsp;
+    /** Executions dropped by the retention cap. */
+    evictions(): number {
+        return this.evictionCount;
+    }
+&nbsp;
+    /** Calls dropped by the per-execution cap. */
+    truncations(): number {
+        return this.truncationCount;
+    }
+&nbsp;
+    /** Every union, for the snapshot. */
+    unions(): FlowUnion[] {
+        return this.kinds().map(kind =&gt; this.unionOf(kind) as FlowUnion);
+    }
+&nbsp;
+    /**
+     * Replace the unions with those read from a snapshot.
+     *
+     * Only the unions are restored: the per-execution detail is a process-lifetime
+     * surface, like the lineage index, the incident store and the drift history. What
+     * should outlive a restart is what a restart cannot re-derive — the calls observed
+     * under a kind — while one execution's steps are of interest only while it is
+     * recent. The loader validates the shape before this runs (`persistence.ts`), so a
+     * malformed union is reported there rather than half-restored here.
+     */
+    restore(unions: readonly FlowUnion[]): void {
+        this.byKind.clear();
+        for (const union of unions) {
+            const legs = new Map&lt;string, LegAggregate&gt;();
+            for (const leg of union.legs) {
+                legs.set(leg.leg, {
+                    count: leg.count,
+                    first: leg.first,
+                    last: leg.last,
+                    steps: new Map(leg.step === undefined ? [] : [[leg.step, leg.count]]),
+                    services: new Set(leg.services),
+                    seq: leg.seq,
+                    ends: new Map(leg.ends.map(end =&gt; [pairKey(end.caller, end.callee), {...end}])),
+                });
+            }
+            this.byKind.set(union.kind, {
+                executions: union.executions,
+                services: new Set(union.services),
+                legs,
+                touched: ++this.sequence,
+            });
+        }
+    }
+&nbsp;
+    /** Open a fresh execution. The kind is adopted (and counted) by the observer. */
+    private open(flowId: string): ExecutionState {
+        const state: ExecutionState = {
+            services: new Set&lt;string&gt;(),
+            observations: [],
+            seen: new Set&lt;string&gt;(),
+            retained: new Set&lt;string&gt;(),
+            detail: new Map&lt;string, LegObservation&gt;(),
+            legs: new Map&lt;string, LegSeen&gt;(),
+            refs: [],
+            closed: false,
+            touched: 0,
+        };
+        this.byExecution.set(flowId, state);
+        return state;
+    }
+&nbsp;
+    /** Count one execution toward a kind, creating the kind's aggregate if needed. */
+    private countKind(kind: string): KindState {
+        const state = this.byKind.get(kind) ?? {
+            executions: 0,
+            services: new Set&lt;string&gt;(),
+            legs: new Map&lt;string, LegAggregate&gt;(),
+            touched: 0,
+        };
+        state.executions++;
+        this.byKind.set(kind, state);
+        return state;
+    }
+&nbsp;
+    /**
+     * Add one observation to its kind's aggregate.
+     *
+     * Both counters are **per execution, not per record**: a receiver that logs three
+     * records about one call answered it once, and one call declared once cannot be
+     * answered twice. A record that **declares** a receiver states the edge; a record
+     * that merely carries the call — the receiver's own — records who answered it.
+     *
+     * The declaration's bookkeeping is therefore *re-applied* after either half
+     * arrives, and the flags make that idempotent: a receipt can reach the service
+     * before the declaration that aimed at it, since two processes flush their sinks
+     * independently, and crediting on arrival order would have made the answer depend
+     * on which of them happened to flush first.
+     *
+     * A call seen only from the receiver's side appears with **no end at all**, which is
+     * the honest shape of it: nobody said who called, and the union reports that rather
+     * than inventing a caller from whichever service it happened to see first.
+     *
+     * A receipt is credited to the declaration, and attributed through it (see
+     * {@link attributable}): the receiving side's own name is on the observation and in
+     * the union's `services`, but it is never the condition.
+     */
+    private aggregate(state: ExecutionState, observation: LegObservation): void {
+        const kindState = state.union;
+        if (kindState === undefined) {
+            // A flow with no stable name has no union to be observed under. Its calls
+            // are still retained for the instance view, and the loss is the same one
+            // `FlowShapes` counts as kindless — counted there, not twice.
+            return;
+        }
+        kindState.touched = this.sequence;
+        kindState.services.add(observation.service);
+        const aggregate = kindState.legs.get(observation.leg) ?? {
+            count: 0,
+            first: observation.time,
+            last: observation.time,
+            steps: new Map&lt;string, number&gt;(),
+            services: new Set&lt;string&gt;(),
+            seq: observation.seq,
+            ends: new Map&lt;string, LegEnd&gt;(),
+        };
+        kindState.legs.set(observation.leg, aggregate);
+        aggregate.first = Math.min(aggregate.first, observation.time);
+        aggregate.last = Math.max(aggregate.last, observation.time);
+        aggregate.services.add(observation.service);
+        if (observation.step !== undefined) {
+            aggregate.steps.set(observation.step, (aggregate.steps.get(observation.step) ?? 0) + 1);
+        }
+        const seen = state.legs.get(observation.leg) ?? {
+            declared: new Map&lt;string, Declaration&gt;(),
+            answered: new Set&lt;string&gt;(),
+        };
+        state.legs.set(observation.leg, seen);
+        if (observation.to === undefined) {
+            // A record with no declared target is the receiving side of this leg. Which
+            // service wrote it is information, not a condition: one service can host many
+            // realms, adapters and orchestrators, so requiring its name to equal the callee
+            // would make an answered call a property of how the deployment is split rather
+            // than of what happened.
+            seen.answered.add(observation.service);
+        } else {
+            // The caller is the unit the identity declares — the logical unit that made the
+            // call, which in blong is the namespace that served it — so an arrow starts at a
+            // namespace and reads the same in a monolith and in microservices. It is *not*
+            // derived from the id any more, and the process that wrote the record is never
+            // consulted: one process hosts many namespaces, so an identity taken from the
+            // writer collapses every participant of a monolith into one, which is a property
+            // of how the deployment is split rather than of what happened (D-210). An
+            // identity that named no caller contributes no end at all: the source of an arrow
+            // is not something to invent, and the counters below already treat silence as
+            // silence.
+            const caller = observation.from;
+            if (caller !== undefined) {
+                // Created **once** per pair: a call site that logs several records about the
+                // one call it made (a request and its answer, a preparation and its commit)
+                // is one attempt, and re-creating the entry would reset the flags below and
+                // count the same attempt again — which is how the payer's discovery, logged
+                // twice inside one leg, came to be reported as two calls.
+                const key = pairKey(caller, observation.to);
+                if (!seen.declared.has(key)) {
+                    seen.declared.set(key, {
+                        caller,
+                        callee: observation.to,
+                        counted: false,
+                        credited: false,
+                    });
+                }
+            }
+        }
+        for (const [key, declared] of seen.declared) {
+            const end = aggregate.ends.get(key) ?? {
+                caller: declared.caller,
+                callee: declared.callee,
+                count: 0,
+                observed: 0,
+            };
+            aggregate.ends.set(key, end);
+            if (!declared.counted) {
+                declared.counted = true;
+                aggregate.count++;
+                end.count++;
+                // The branch this declaration was observed inside (PRD R26). Tailed
+                // with the declaration rather than with every record about it, so a
+                // chatty call site is still one call inside its branch.
+                const innermost = observation.regions?.[observation.regions.length - 1];
+                if (innermost !== undefined) {
+                    const branch = branchOf(end, innermost);
+                    branch.count++;
+                    declared.branch = branch;
+                }
+            }
+            if (!declared.credited &amp;&amp; attributable(seen.declared.size, seen.answered.size)) {
+                declared.credited = true;
+                end.observed++;
+                if (declared.branch !== undefined) {
+                    declared.branch.observed++;
+                }
+            }
+        }
+    }
+&nbsp;
+    /** Evict the least-recently-observed execution when the cap is exceeded. */
+    private enforceLimit(): void {
+        if (this.byExecution.size &lt;= this.executionLimit) {
+            return;
+        }
+        // The same shape `FlowShapes` uses, down to the sentinel: the map is never
+        // empty here (its size exceeds the cap), so the loop always finds a victim,
+        // and a guard for "no victim" would be a branch nothing can take.
+        let victim = '';
+        let oldest = Number.POSITIVE_INFINITY;
+        for (const [flowId, state] of this.byExecution) {
+            if (state.touched &lt; oldest) {
+                oldest = state.touched;
+                victim = flowId;
+            }
+        }
+        this.byExecution.delete(victim);
+        this.evictionCount++;
+    }
+}
+&nbsp;
+/** The calls one execution made or answered, deduplicated, in position order. */
+function callsOf(observations: readonly LegObservation[]): string[] {
+    const seen = new Map&lt;string, string | undefined&gt;();
+    for (const observation of observations) {
+        if (!seen.has(observation.leg)) {
+            seen.set(observation.leg, observation.seq);
+        }
+    }
+    return [...seen.entries()]
+        .map(([leg, seq]) =&gt; ({id: leg, seq}))
+        .sort(comparePosition)
+        .map(leg =&gt; leg.id);
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-26T20:44:48.179Z
+            </div>
+        <script src="../../../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../../../sorter.js"></script>
+        <script src="../../../../block-navigation.js"></script>
+    </body>
+</html>
+    
