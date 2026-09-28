@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/46</span>
+                <span class='fraction'>46/46</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/46</span>
+                <span class='fraction'>46/46</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -109,98 +109,98 @@
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/**</span></span></span>
-<span class="cstat-no" title="statement not covered" > * Coral CRUD — Browse, Create, Edit full-stack tests.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Covers every widget type: text, select, dropdown, number, checkbox, date, textarea.</span>
-<span class="cstat-no" title="statement not covered" > * Widget types are auto-detected from the DOM — no explicit `widget:` needed.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >import {expect, test} from '@feasibleone/blong-browser/playwright';</span>
-<span class="cstat-no" title="statement not covered" >import {browseModel, createAndEditModel} from '@feasibleone/blong-browser/playwright/model';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.use({blongPermissions: true});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.describe('Marine Coral', () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    browseModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'marine',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'coral',</span>
-<span class="cstat-no" title="statement not covered" >        searchText: 'Staghorn',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    createAndEditModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'marine',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'coral',</span>
-<span class="cstat-no" title="statement not covered" >        fields: {</span>
-<span class="cstat-no" title="statement not covered" >            'coral.coralName': 'Test Playwright Coral',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.coralType': 'Soft Coral',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.familyId': 'Gorgoniidae',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.habitatId': 'Coral Triangle',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.maxDepth': 25,</span>
-<span class="cstat-no" title="statement not covered" >            'coral.colorPattern': 'Purple and white',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.conservationStatus': 'Near Threatened',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.isEndangered': true,</span>
-<span class="cstat-no" title="statement not covered" >            'coral.discoveryDate': '06/15/2024',</span>
-<span class="cstat-no" title="statement not covered" >            'coral.coralDescription': 'A test coral created by Playwright',</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        editFields: {</span>
-<span class="cstat-no" title="statement not covered" >            'coral.coralName': 'Test Playwright Coral Edited',</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        // Pin the edit test to the record this spec created. Without it the edit</span>
-<span class="cstat-no" title="statement not covered" >        // test opens the first row of the unfiltered table — which is the only</span>
-<span class="cstat-no" title="statement not covered" >        // coral the demo database seeds (`Staghorn Coral`, `marineCoralMerge.yaml`)</span>
-<span class="cstat-no" title="statement not covered" >        // — and renames it, taking that record away from `docs.play.ts` (F-255).</span>
-<span class="cstat-no" title="statement not covered" >        search: 'Test Playwright Coral',</span>
-<span class="cstat-no" title="statement not covered" >        // The created coral is a Gorgoniidae, and the table shows the branch the</span>
-<span class="cstat-no" title="statement not covered" >        // navigator has selected — its first family by default.</span>
-<span class="cstat-no" title="statement not covered" >        navigatorNode: 'Gorgoniidae',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L47'></a><a href='#L47'>47</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Coral CRUD — Browse, Create, Edit full-stack tests.
+ *
+ * Covers every widget type: text, select, dropdown, number, checkbox, date, textarea.
+ * Widget types are auto-detected from the DOM — no explicit `widget:` needed.
+ */
+import {expect, test} from '@feasibleone/blong-browser/playwright';
+import {browseModel, createAndEditModel} from '@feasibleone/blong-browser/playwright/model';
+&nbsp;
+test.use({blongPermissions: true});
+&nbsp;
+test.describe('Marine Coral', () =&gt; {
+    browseModel(test, expect, {
+        subject: 'marine',
+        object: 'coral',
+        searchText: 'Staghorn',
+    });
+&nbsp;
+    createAndEditModel(test, expect, {
+        subject: 'marine',
+        object: 'coral',
+        fields: {
+            'coral.coralName': 'Test Playwright Coral',
+            'coral.coralType': 'Soft Coral',
+            'coral.familyId': 'Gorgoniidae',
+            'coral.habitatId': 'Coral Triangle',
+            'coral.maxDepth': 25,
+            'coral.colorPattern': 'Purple and white',
+            'coral.conservationStatus': 'Near Threatened',
+            'coral.isEndangered': true,
+            'coral.discoveryDate': '06/15/2024',
+            'coral.coralDescription': 'A test coral created by Playwright',
+        },
+        editFields: {
+            'coral.coralName': 'Test Playwright Coral Edited',
+        },
+        // Pin the edit test to the record this spec created. Without it the edit
+        // test opens the first row of the unfiltered table — which is the only
+        // coral the demo database seeds (`Staghorn Coral`, `marineCoralMerge.yaml`)
+        // — and renames it, taking that record away from `docs.play.ts` (F-255).
+        search: 'Test Playwright Coral',
+        // The created coral is a Gorgoniidae, and the table shows the branch the
+        // navigator has selected — its first family by default.
+        navigatorNode: 'Gorgoniidae',
+    });
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -208,7 +208,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

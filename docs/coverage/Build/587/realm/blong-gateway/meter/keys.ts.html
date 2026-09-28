@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/44</span>
+                <span class='fraction'>44/44</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/44</span>
+                <span class='fraction'>44/44</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -107,94 +107,94 @@
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
-<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >// Redis key layout for the ApiGateway metering layer.</span></span></span>
-<span class="cstat-no" title="statement not covered" >//</span>
-<span class="cstat-no" title="statement not covered" >// Every key for one application carries the same `{app:&lt;id&gt;}` hash tag so that,</span>
-<span class="cstat-no" title="statement not covered" >// in a Redis Cluster topology, all keys for that application resolve to the</span>
-<span class="cstat-no" title="statement not covered" >// same slot.  This keeps the metering Lua script atomic on a single shard —</span>
-<span class="cstat-no" title="statement not covered" >// the script only touches keys that share the tag.</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Config hash for a bundle: {baseMonthlyCredits, rateLimit, rateWindowSec}. */</span>
-<span class="cstat-no" title="statement not covered" >export function cfgKey(applicationId: string, bundle: string): string {</span>
-<span class="cstat-no" title="statement not covered" >    return `{app:${applicationId}}:cfg:${bundle}`;</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * Monthly credit bucket key for the given `YYYY-MM` month.</span>
-<span class="cstat-no" title="statement not covered" > * HASH: {balance, base, updatedAt}.  The Lua script auto-initialises it with</span>
-<span class="cstat-no" title="statement not covered" > * the subscription base allowance on the first request of a new month, giving a</span>
-<span class="cstat-no" title="statement not covered" > * deterministic monthly reset.  External management scripts may scale credits</span>
-<span class="cstat-no" title="statement not covered" > * mid-month by running `HINCRBY &lt;key&gt; balance &lt;delta&gt;` directly.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export function creditsKey(applicationId: string, month: string): string {</span>
-<span class="cstat-no" title="statement not covered" >    return `{app:${applicationId}}:credits:${month}`;</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Fixed-window rate counter key (per bundle) with TTL. */</span>
-<span class="cstat-no" title="statement not covered" >export function rateKey(</span>
-<span class="cstat-no" title="statement not covered" >    applicationId: string,</span>
-<span class="cstat-no" title="statement not covered" >    bundle: string,</span>
-<span class="cstat-no" title="statement not covered" >    windowSec: number,</span>
-<span class="cstat-no" title="statement not covered" >    now: number,</span>
-<span class="cstat-no" title="statement not covered" >): string {</span>
-<span class="cstat-no" title="statement not covered" >    const window = Math.floor(now / windowSec);</span>
-<span class="cstat-no" title="statement not covered" >    return `{app:${applicationId}}:rate:${bundle}:${window}`;</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * The `YYYY-MM` bucket for the given epoch timestamp (UTC, so the reset is</span>
-<span class="cstat-no" title="statement not covered" > * deterministic across instances).</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export function monthKey(now: number): string {</span>
-<span class="cstat-no" title="statement not covered" >    const date = new Date(now * 1000);</span>
-<span class="cstat-no" title="statement not covered" >    const year = date.getUTCFullYear();</span>
-<span class="cstat-no" title="statement not covered" >    const month = String(date.getUTCMonth() + 1).padStart(2, '0');</span>
-<span class="cstat-no" title="statement not covered" >    return `${year}-${month}`;</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+<a name='L45'></a><a href='#L45'>45</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Redis key layout for the ApiGateway metering layer.
+//
+// Every key for one application carries the same `{app:&lt;id&gt;}` hash tag so that,
+// in a Redis Cluster topology, all keys for that application resolve to the
+// same slot.  This keeps the metering Lua script atomic on a single shard —
+// the script only touches keys that share the tag.
+&nbsp;
+/** Config hash for a bundle: {baseMonthlyCredits, rateLimit, rateWindowSec}. */
+export function cfgKey(applicationId: string, bundle: string): string {
+    return `{app:${applicationId}}:cfg:${bundle}`;
+}
+&nbsp;
+/**
+ * Monthly credit bucket key for the given `YYYY-MM` month.
+ * HASH: {balance, base, updatedAt}.  The Lua script auto-initialises it with
+ * the subscription base allowance on the first request of a new month, giving a
+ * deterministic monthly reset.  External management scripts may scale credits
+ * mid-month by running `HINCRBY &lt;key&gt; balance &lt;delta&gt;` directly.
+ */
+export function creditsKey(applicationId: string, month: string): string {
+    return `{app:${applicationId}}:credits:${month}`;
+}
+&nbsp;
+/** Fixed-window rate counter key (per bundle) with TTL. */
+export function rateKey(
+    applicationId: string,
+    bundle: string,
+    windowSec: number,
+    now: number,
+): string {
+    const window = Math.floor(now / windowSec);
+    return `{app:${applicationId}}:rate:${bundle}:${window}`;
+}
+&nbsp;
+/**
+ * The `YYYY-MM` bucket for the given epoch timestamp (UTC, so the reset is
+ * deterministic across instances).
+ */
+export function monthKey(now: number): string {
+    const date = new Date(now * 1000);
+    const year = date.getUTCFullYear();
+    const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+    return `${year}-${month}`;
+}
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -202,7 +202,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/45</span>
+                <span class='fraction'>45/45</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">60% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/45</span>
+                <span class='fraction'>45/45</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -108,96 +108,96 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {type IMeta, handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >type KnexQb = any;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Default "delete after" interval (seconds) — sessions older than this are purged. */</span>
-<span class="cstat-no" title="statement not covered" >const DEFAULT_DELETE_AFTER = 24 * 60 * 60;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * `access.session.cleanup` — purge stale sessions.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Dialect-neutral (no stored procedure, no SQL date functions): the cutoff is</span>
-<span class="cstat-no" title="statement not covered" > * computed in JS and passed as a bound parameter.  A session row is deleted</span>
-<span class="cstat-no" title="statement not covered" > * when ANY of these hold (relative to `now - deleteAfter`):</span>
-<span class="cstat-no" title="statement not covered" > *  - revoked more than `deleteAfter` ago (`isRevoked = 1` and `revokedAt`</span>
-<span class="cstat-no" title="statement not covered" > *    before the cutoff),</span>
-<span class="cstat-no" title="statement not covered" > *  - inactive for more than `deleteAfter` (`lastActivityAt` before the</span>
-<span class="cstat-no" title="statement not covered" > *    cutoff),</span>
-<span class="cstat-no" title="statement not covered" > *  - expired (refresh-token lifetime passed) more than `deleteAfter` ago.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Call it periodically (scheduled orchestrator) or lazily from the login /</span>
-<span class="cstat-no" title="statement not covered" > * refresh / restore flows to keep the table bounded.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Wire: `access.session.cleanup`.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(() =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >    async accessSessionCleanup(</span>
-<span class="cstat-no" title="statement not covered" >        params: {</span>
-<span class="cstat-no" title="statement not covered" >            /** "Delete after" interval in seconds (default 24 h). */</span>
-<span class="cstat-no" title="statement not covered" >            deleteAfter?: number;</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        $meta: IMeta,</span>
-<span class="cstat-no" title="statement not covered" >    ): Promise&lt;{deleted: number}&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const qb: KnexQb = this.config?.context?.queryBuilder;</span>
-<span class="cstat-no" title="statement not covered" >        if (!qb) throw new Error('Database not available');</span>
-<span class="cstat-no" title="statement not covered" >        const cutoff = new Date(Date.now() - (params.deleteAfter ?? DEFAULT_DELETE_AFTER) * 1000);</span>
-<span class="cstat-no" title="statement not covered" >        const deleted = await qb('access_session')</span>
-<span class="cstat-no" title="statement not covered" >            .where(function (this: KnexQb) {</span>
-<span class="cstat-no" title="statement not covered" >                this.where('isRevoked', 1).andWhere('revokedAt', '&lt;', cutoff);</span>
-<span class="cstat-no" title="statement not covered" >            })</span>
-<span class="cstat-no" title="statement not covered" >            .orWhere('lastActivityAt', '&lt;', cutoff)</span>
-<span class="cstat-no" title="statement not covered" >            .orWhere('expiresAt', '&lt;', cutoff)</span>
-<span class="cstat-no" title="statement not covered" >            .del();</span>
-<span class="cstat-no" title="statement not covered" >        return {deleted};</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >}));</span>
+<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {type IMeta, handler} from '@feasibleone/blong';
+&nbsp;
+type KnexQb = any;
+&nbsp;
+/** Default "delete after" interval (seconds) — sessions older than this are purged. */
+const DEFAULT_DELETE_AFTER = 24 * 60 * 60;
+&nbsp;
+/**
+ * `access.session.cleanup` — purge stale sessions.
+ *
+ * Dialect-neutral (no stored procedure, no SQL date functions): the cutoff is
+ * computed in JS and passed as a bound parameter.  A session row is deleted
+ * when ANY of these hold (relative to `now - deleteAfter`):
+ *  - revoked more than `deleteAfter` ago (`isRevoked = 1` and `revokedAt`
+ *    before the cutoff),
+ *  - inactive for more than `deleteAfter` (`lastActivityAt` before the
+ *    cutoff),
+ *  - expired (refresh-token lifetime passed) more than `deleteAfter` ago.
+ *
+ * Call it periodically (scheduled orchestrator) or lazily from the login /
+ * refresh / restore flows to keep the table bounded.
+ *
+ * Wire: `access.session.cleanup`.
+ */
+export default handler(() =&gt; ({
+    async accessSessionCleanup(
+        params: {
+            /** "Delete after" interval in seconds (default 24 h). */
+            deleteAfter?: number;
+        },
+        $meta: IMeta,
+    ): Promise&lt;{deleted: number}&gt; {
+        const qb: KnexQb = this.config?.context?.queryBuilder;
+        if (!qb) <span class="branch-0 cbranch-no" title="branch not covered" >throw new Error('Database not available');</span>
+        const cutoff = new Date(Date.now() - (params.deleteAfter<span class="branch-0 cbranch-no" title="branch not covered" > ?? DEFAULT_DELETE_AFTER</span>) * 1000);
+        const deleted = await qb('access_session')
+            .where(function (this: KnexQb) {
+                this.where('isRevoked', 1).andWhere('revokedAt', '&lt;', cutoff);
+            })
+            .orWhere('lastActivityAt', '&lt;', cutoff)
+            .orWhere('expiresAt', '&lt;', cutoff)
+            .del();
+        return {deleted};
+    },
+}));
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -205,7 +205,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

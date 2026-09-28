@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -95,70 +95,70 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * The answer every read comes back through.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * `response.receive` is the framework's other conversion seam: the port loop runs it on</span>
-<span class="cstat-no" title="statement not covered" > * what the adapter's `exec` returned, with the method and the response's own meta, so one</span>
-<span class="cstat-no" title="statement not covered" > * handler here unwraps every one of the six reads. What it does is exactly what the reads</span>
-<span class="cstat-no" title="statement not covered" > * would otherwise each do by hand — hand the body on, and refuse to flatten a refusal into</span>
-<span class="cstat-no" title="statement not covered" > * an empty answer.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * The status travels with the failure because the service's refusals are answers of its</span>
-<span class="cstat-no" title="statement not covered" > * own: `404` says the execution was never retained, which a page has to be able to tell</span>
-<span class="cstat-no" title="statement not covered" > * apart from "nothing has been observed yet". The URL is read off the response rather than</span>
-<span class="cstat-no" title="statement not covered" > * from a parameter, because this handler serves six paths and knows none of them.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(</span>
-<span class="cstat-no" title="statement not covered" >    () =&gt;</span>
-<span class="cstat-no" title="statement not covered" >        function responseReceive(response: {</span>
-<span class="cstat-no" title="statement not covered" >            statusCode: number;</span>
-<span class="cstat-no" title="statement not covered" >            body: unknown;</span>
-<span class="cstat-no" title="statement not covered" >            request?: {requestUrl?: string | URL};</span>
-<span class="cstat-no" title="statement not covered" >        }) {</span>
-<span class="cstat-no" title="statement not covered" >            if (response.statusCode &lt; 200 || response.statusCode &gt;= 300) {</span>
-<span class="cstat-no" title="statement not covered" >                throw new Error(</span>
-<span class="cstat-no" title="statement not covered" >                    `the semantic log service answered ${String(response.statusCode)} for ` +</span>
-<span class="cstat-no" title="statement not covered" >                        `${String(response.request?.requestUrl ?? '')}`,</span>
-<span class="cstat-no" title="statement not covered" >                );</span>
-<span class="cstat-no" title="statement not covered" >            }</span>
-<span class="cstat-no" title="statement not covered" >            return response.body;</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {handler} from '@feasibleone/blong';
+&nbsp;
+/**
+ * The answer every read comes back through.
+ *
+ * `response.receive` is the framework's other conversion seam: the port loop runs it on
+ * what the adapter's `exec` returned, with the method and the response's own meta, so one
+ * handler here unwraps every one of the six reads. What it does is exactly what the reads
+ * would otherwise each do by hand — hand the body on, and refuse to flatten a refusal into
+ * an empty answer.
+ *
+ * The status travels with the failure because the service's refusals are answers of its
+ * own: `404` says the execution was never retained, which a page has to be able to tell
+ * apart from "nothing has been observed yet". The URL is read off the response rather than
+ * from a parameter, because this handler serves six paths and knows none of them.
+ */
+export default handler(
+    () =&gt;
+        function responseReceive(response: {
+            statusCode: number;
+            body: unknown;
+            request?: {requestUrl?: string | URL};
+        }) {
+            if (response.statusCode &lt; 200 || response.statusCode &gt;= 300) {
+                throw new Error(
+                    `the semantic log service answered ${String(response.statusCode)} for ` +
+                        `${String(response.request?.<span class="branch-0 cbranch-no" title="branch not covered" >requestUrl ?? '')}`,</span>
+                );
+            }
+            return response.body;
+        },
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -166,7 +166,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

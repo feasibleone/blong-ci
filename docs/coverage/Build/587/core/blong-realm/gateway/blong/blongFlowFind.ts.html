@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/29</span>
+                <span class='fraction'>29/29</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/29</span>
+                <span class='fraction'>29/29</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -92,64 +92,64 @@
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
-<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {validation} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * `blong.flow.find` — the gateway's declaration of the realm's flow read.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * A method is only routed by the gateway when the realm's `gateway` layer declares it,</span>
-<span class="cstat-no" title="statement not covered" > * and for this realm that makes these files the *only* place its six methods are</span>
-<span class="cstat-no" title="statement not covered" > * declared: the adapter holds conversions rather than handlers, so nothing else names</span>
-<span class="cstat-no" title="statement not covered" > * the method. Without this file the route does not exist, and a call answers JSON-RPC</span>
-<span class="cstat-no" title="statement not covered" > * `-32000 Not Found` — which is what every page in this realm did until these</span>
-<span class="cstat-no" title="statement not covered" > * declarations were added. In-process calls (the realm's own tap flow) never noticed,</span>
-<span class="cstat-no" title="statement not covered" > * because they resolve against the whole server registry rather than the gateway's</span>
-<span class="cstat-no" title="statement not covered" > * routes.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * The read itself is the `adapter/semlog/` conversion pair for this method —</span>
-<span class="cstat-no" title="statement not covered" > * `blongFlowFindRequestSend` builds the request, `responseReceive` takes the answer —</span>
-<span class="cstat-no" title="statement not covered" > * reached through the `blong` dispatch orchestrator.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default validation(</span>
-<span class="cstat-no" title="statement not covered" >    async ({lib: {type}}) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >        function blongFlowFind() {</span>
-<span class="cstat-no" title="statement not covered" >            return {</span>
-<span class="cstat-no" title="statement not covered" >                params: type.Object({}),</span>
-<span class="cstat-no" title="statement not covered" >                // The service owns the shape of what it observed; declaring it here</span>
-<span class="cstat-no" title="statement not covered" >                // would be a second, drifting copy of an external contract.</span>
-<span class="cstat-no" title="statement not covered" >                result: type.Unknown(),</span>
-<span class="cstat-no" title="statement not covered" >            };</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L30'></a><a href='#L30'>30</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {validation} from '@feasibleone/blong';
+&nbsp;
+/**
+ * `blong.flow.find` — the gateway's declaration of the realm's flow read.
+ *
+ * A method is only routed by the gateway when the realm's `gateway` layer declares it,
+ * and for this realm that makes these files the *only* place its six methods are
+ * declared: the adapter holds conversions rather than handlers, so nothing else names
+ * the method. Without this file the route does not exist, and a call answers JSON-RPC
+ * `-32000 Not Found` — which is what every page in this realm did until these
+ * declarations were added. In-process calls (the realm's own tap flow) never noticed,
+ * because they resolve against the whole server registry rather than the gateway's
+ * routes.
+ *
+ * The read itself is the `adapter/semlog/` conversion pair for this method —
+ * `blongFlowFindRequestSend` builds the request, `responseReceive` takes the answer —
+ * reached through the `blong` dispatch orchestrator.
+ */
+export default validation(
+    async ({lib: {type}}) =&gt;
+        function blongFlowFind() {
+            return {
+                params: type.Object({}),
+                // The service owns the shape of what it observed; declaring it here
+                // would be a second, drifting copy of an external contract.
+                result: type.Unknown(),
+            };
+        },
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -157,7 +157,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

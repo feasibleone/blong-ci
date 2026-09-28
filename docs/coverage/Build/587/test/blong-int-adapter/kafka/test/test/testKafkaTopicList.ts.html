@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/40</span>
+                <span class='fraction'>40/40</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/40</span>
+                <span class='fraction'>40/40</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -103,86 +103,86 @@
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {handler, type IMeta} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import type Assert from 'node:assert';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * testKafkaTopicList — integration test for the commander explore vocabulary of</span>
-<span class="cstat-no" title="statement not covered" > * `adapter.kafka`:</span>
-<span class="cstat-no" title="statement not covered" > *   `broker.topic.list` → enumerate topics from broker metadata</span>
-<span class="cstat-no" title="statement not covered" > *   `broker.topic.find` → read a batch of recent messages (partitions are</span>
-<span class="cstat-no" title="statement not covered" > *                         surfaced as message metadata, not tree nodes)</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(</span>
-<span class="cstat-no" title="statement not covered" >    ({lib: {group}, handler: {brokerMessageProduce, brokerTopicList, brokerTopicFind}}) =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >        testKafkaTopicList: ({name = 'kafka topic explore list'}: {name?: string}) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >            group(name)([</span>
-<span class="cstat-no" title="statement not covered" >                async function listTopics(assert: typeof Assert, {$meta}: {$meta: IMeta}) {</span>
-<span class="cstat-no" title="statement not covered" >                    const result = await brokerTopicList({}, $meta);</span>
-<span class="cstat-no" title="statement not covered" >                    const items = (result as {items?: unknown[]}).items ?? [];</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(Array.isArray(items), 'topic.list should return items');</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(</span>
-<span class="cstat-no" title="statement not covered" >                        items.every(item =&gt; typeof (item as {topic?: string}).topic === 'string'),</span>
-<span class="cstat-no" title="statement not covered" >                        'topic.list items should carry a topic name',</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    return result;</span>
-<span class="cstat-no" title="statement not covered" >                },</span>
-<span class="cstat-no" title="statement not covered" >                async function findMessages(assert: typeof Assert, {$meta}: {$meta: IMeta}) {</span>
-<span class="cstat-no" title="statement not covered" >                    await brokerMessageProduce(</span>
-<span class="cstat-no" title="statement not covered" >                        {topic: 'blong-integration', message: 'commander-list-test-' + Date.now()},</span>
-<span class="cstat-no" title="statement not covered" >                        $meta,</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    const result = await brokerTopicFind(</span>
-<span class="cstat-no" title="statement not covered" >                        {topic: 'blong-integration', limit: 5},</span>
-<span class="cstat-no" title="statement not covered" >                        $meta,</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    const items = (result as {items?: unknown[]}).items ?? [];</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(Array.isArray(items), 'topic.find should return items');</span>
-<span class="cstat-no" title="statement not covered" >                    return result;</span>
-<span class="cstat-no" title="statement not covered" >                },</span>
-<span class="cstat-no" title="statement not covered" >            ]),</span>
-<span class="cstat-no" title="statement not covered" >    }),</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {handler, type IMeta} from '@feasibleone/blong';
+import type Assert from 'node:assert';
+&nbsp;
+/**
+ * testKafkaTopicList — integration test for the commander explore vocabulary of
+ * `adapter.kafka`:
+ *   `broker.topic.list` → enumerate topics from broker metadata
+ *   `broker.topic.find` → read a batch of recent messages (partitions are
+ *                         surfaced as message metadata, not tree nodes)
+ */
+export default handler(
+    ({lib: {group}, handler: {brokerMessageProduce, brokerTopicList, brokerTopicFind}}) =&gt; ({
+        testKafkaTopicList: ({name = 'kafka topic explore list'}: {name?: string}) =&gt;
+            group(name)([
+                async function listTopics(assert: typeof Assert, {$meta}: {$meta: IMeta}) {
+                    const result = await brokerTopicList({}, $meta);
+                    const items = (result as {items?: unknown[]}).items ?? [];
+                    assert.ok(Array.isArray(items), 'topic.list should return items');
+                    assert.ok(
+                        items.every(item =&gt; typeof (item as {topic?: string}).topic === 'string'),
+                        'topic.list items should carry a topic name',
+                    );
+                    return result;
+                },
+                async function findMessages(assert: typeof Assert, {$meta}: {$meta: IMeta}) {
+                    await brokerMessageProduce(
+                        {topic: 'blong-integration', message: 'commander-list-test-' + Date.now()},
+                        $meta,
+                    );
+                    const result = await brokerTopicFind(
+                        {topic: 'blong-integration', limit: 5},
+                        $meta,
+                    );
+                    const items = (result as {items?: unknown[]}).items ?? [];
+                    assert.ok(Array.isArray(items), 'topic.find should return items');
+                    return result;
+                },
+            ]),
+    }),
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -190,7 +190,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">38.88% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/36</span>
+                <span class='fraction'>14/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">38.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/36</span>
+                <span class='fraction'>14/36</span>
             </div>
         
             
@@ -99,7 +99,25 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -116,44 +134,26 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import type {ICommanderSource} from '../../types.ts';</span>
-<span class="cstat-no" title="statement not covered" >import {sources as defaultSources} from '../../config/sources.ts';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Resolve `{field}` tokens against the node. */</span>
-<span class="cstat-no" title="statement not covered" >function resolve(text: string, node: Record&lt;string, unknown&gt; | null): string {</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {handler} from '@feasibleone/blong';
+import type {ICommanderSource} from '../../types.ts';
+import {sources as defaultSources} from '../../config/sources.ts';
+&nbsp;
+/** Resolve `{field}` tokens against the node. */
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function resolve(text: string, node: Record&lt;string, unknown&gt; | null): string {</span></span>
 <span class="cstat-no" title="statement not covered" >    return text.replace(/\{([^}]+)\}/g, (_match, expr: string) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        const value = node?.[expr.trim()];</span>
 <span class="cstat-no" title="statement not covered" >        return value === undefined || value === null ? '' : String(value);</span>
 <span class="cstat-no" title="statement not covered" >    });</span>
 <span class="cstat-no" title="statement not covered" >}</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * commanderNodeGet — fetch a leaf node's full content via the level's `open`</span>
-<span class="cstat-no" title="statement not covered" > * triple (e.g. `{ns}.pod.log`, `{ns}.object.get`, `{ns}.secret.get`).</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(</span>
-<span class="cstat-no" title="statement not covered" >    ({config, handler: h}) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >        async function commanderNodeGet(</span>
+&nbsp;
+/**
+ * commanderNodeGet — fetch a leaf node's full content via the level's `open`
+ * triple (e.g. `{ns}.pod.log`, `{ns}.object.get`, `{ns}.secret.get`).
+ */
+export default handler(
+    ({config, handler: h}) =&gt;
+<span class="fstat-no" title="function not covered" >        async function commanderNodeGet(</span>
 <span class="cstat-no" title="statement not covered" >            params: {source: string; level: number; node?: Record&lt;string, unknown&gt;},</span>
 <span class="cstat-no" title="statement not covered" >            $meta: Record&lt;string, unknown&gt;,</span>
 <span class="cstat-no" title="statement not covered" >        ) {</span>
@@ -170,7 +170,7 @@
 <span class="cstat-no" title="statement not covered" >            }</span>
 <span class="cstat-no" title="statement not covered" >            return h[method](openParams, $meta);</span>
 <span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -178,7 +178,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

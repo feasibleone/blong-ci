@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,82 +101,82 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {validation} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * `access.acl.edit` — explicit validation override.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Same shape as `access.acl.add`: the auto-generated schema would reject the</span>
-<span class="cstat-no" title="statement not covered" > * virtual display fields the editor round-trips (the handler drops them).</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default validation(</span>
-<span class="cstat-no" title="statement not covered" >    async ({lib: {type}}) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >        function accessAclEdit() {</span>
-<span class="cstat-no" title="statement not covered" >            return {</span>
-<span class="cstat-no" title="statement not covered" >                params: type.Object(</span>
-<span class="cstat-no" title="statement not covered" >                    {</span>
-<span class="cstat-no" title="statement not covered" >                        acl: type.Object(</span>
-<span class="cstat-no" title="statement not covered" >                            {</span>
-<span class="cstat-no" title="statement not covered" >                                aclId: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                principalId: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                actionId: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                targetKind: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                targetId: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                effect: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                isActive: type.Optional(</span>
-<span class="cstat-no" title="statement not covered" >                                    type.Union([type.Boolean(), type.Literal(0), type.Literal(1)]),</span>
-<span class="cstat-no" title="statement not covered" >                                ),</span>
-<span class="cstat-no" title="statement not covered" >                                principalName: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                actionName: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                                targetName: type.Optional(type.String()),</span>
-<span class="cstat-no" title="statement not covered" >                            },</span>
-<span class="cstat-no" title="statement not covered" >                            {additionalProperties: true},</span>
-<span class="cstat-no" title="statement not covered" >                        ),</span>
-<span class="cstat-no" title="statement not covered" >                    },</span>
-<span class="cstat-no" title="statement not covered" >                    {additionalProperties: true},</span>
-<span class="cstat-no" title="statement not covered" >                ),</span>
-<span class="cstat-no" title="statement not covered" >                result: type.Object({}, {additionalProperties: true}),</span>
-<span class="cstat-no" title="statement not covered" >            };</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {validation} from '@feasibleone/blong';
+&nbsp;
+/**
+ * `access.acl.edit` — explicit validation override.
+ *
+ * Same shape as `access.acl.add`: the auto-generated schema would reject the
+ * virtual display fields the editor round-trips (the handler drops them).
+ */
+export default validation(
+    async ({lib: {type}}) =&gt;
+        function accessAclEdit() {
+            return {
+                params: type.Object(
+                    {
+                        acl: type.Object(
+                            {
+                                aclId: type.Optional(type.String()),
+                                principalId: type.Optional(type.String()),
+                                actionId: type.Optional(type.String()),
+                                targetKind: type.Optional(type.String()),
+                                targetId: type.Optional(type.String()),
+                                effect: type.Optional(type.String()),
+                                isActive: type.Optional(
+                                    type.Union([type.Boolean(), type.Literal(0), type.Literal(1)]),
+                                ),
+                                principalName: type.Optional(type.String()),
+                                actionName: type.Optional(type.String()),
+                                targetName: type.Optional(type.String()),
+                            },
+                            {additionalProperties: true},
+                        ),
+                    },
+                    {additionalProperties: true},
+                ),
+                result: type.Object({}, {additionalProperties: true}),
+            };
+        },
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -184,7 +184,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/39</span>
+                <span class='fraction'>39/39</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/39</span>
+                <span class='fraction'>39/39</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,84 +102,84 @@
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {library} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** The input both `text` handlers work from. */</span>
-<span class="cstat-no" title="statement not covered" >export type TextParams = {</span>
-<span class="cstat-no" title="statement not covered" >    /** Text given on the command line. */</span>
-<span class="cstat-no" title="statement not covered" >    value?: string;</span>
-<span class="cstat-no" title="statement not covered" >    /** A file to read the text from instead. */</span>
-<span class="cstat-no" title="statement not covered" >    file?: string;</span>
-<span class="cstat-no" title="statement not covered" >};</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** The slice of the platform this library needs (`IPlatformApi` structurally). */</span>
-<span class="cstat-no" title="statement not covered" >type TextPlatform = {</span>
-<span class="cstat-no" title="statement not covered" >    readFileSync(path: string, options: {encoding: BufferEncoding}): string | Buffer;</span>
-<span class="cstat-no" title="statement not covered" >};</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * The text a command should operate on — `--value`, or the contents of `--file`.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * A `library()` function rather than a handler: it has no endpoint of its own,</span>
-<span class="cstat-no" title="statement not covered" > * and both handlers need it. It is attached to the handler proxy as</span>
-<span class="cstat-no" title="statement not covered" > * `lib.textInput` for every handler in this group, so neither has to import it —</span>
-<span class="cstat-no" title="statement not covered" > * the framework's IoC rule.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * It reads the platform off `this`, exactly as a handler does. Under the `cli`</span>
-<span class="cstat-no" title="statement not covered" > * intent that is the Node platform, which is how a command reaches the</span>
-<span class="cstat-no" title="statement not covered" > * filesystem: no HTTP server and no browser sandbox are involved.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default library(</span>
-<span class="cstat-no" title="statement not covered" >    () =&gt;</span>
-<span class="cstat-no" title="statement not covered" >        function textInput(this: {platform: TextPlatform}, params: TextParams): string {</span>
-<span class="cstat-no" title="statement not covered" >            if (params.value !== undefined) return String(params.value);</span>
-<span class="cstat-no" title="statement not covered" >            if (params.file !== undefined) {</span>
-<span class="cstat-no" title="statement not covered" >                return String(this.platform.readFileSync(params.file, {encoding: 'utf-8'}));</span>
-<span class="cstat-no" title="statement not covered" >            }</span>
-<span class="cstat-no" title="statement not covered" >            // A real realm would define this in the error layer instead of throwing a</span>
-<span class="cstat-no" title="statement not covered" >            // plain Error — see the `blong-error` skill. The demo keeps it short.</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('provide --value=TEXT or --file=PATH');</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {library} from '@feasibleone/blong';
+&nbsp;
+/** The input both `text` handlers work from. */
+export type TextParams = {
+    /** Text given on the command line. */
+    value?: string;
+    /** A file to read the text from instead. */
+    file?: string;
+};
+&nbsp;
+/** The slice of the platform this library needs (`IPlatformApi` structurally). */
+type TextPlatform = {
+    readFileSync(path: string, options: {encoding: BufferEncoding}): string | Buffer;
+};
+&nbsp;
+/**
+ * The text a command should operate on — `--value`, or the contents of `--file`.
+ *
+ * A `library()` function rather than a handler: it has no endpoint of its own,
+ * and both handlers need it. It is attached to the handler proxy as
+ * `lib.textInput` for every handler in this group, so neither has to import it —
+ * the framework's IoC rule.
+ *
+ * It reads the platform off `this`, exactly as a handler does. Under the `cli`
+ * intent that is the Node platform, which is how a command reaches the
+ * filesystem: no HTTP server and no browser sandbox are involved.
+ */
+export default library(
+    () =&gt;
+        function textInput(this: {platform: TextPlatform}, params: TextParams): string {
+            if (params.value !== undefined) return String(params.value);
+            if (params.file !== undefined) {
+                return String(this.platform.readFileSync(params.file, {encoding: 'utf-8'}));
+            }
+            // A real realm would define this in the error layer instead of throwing a
+            // plain Error — see the `blong-error` skill. The demo keeps it short.
+            throw new Error('provide --value=TEXT or --file=PATH');
+        },
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -187,7 +187,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

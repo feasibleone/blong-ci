@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -95,70 +95,70 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import type Assert from 'node:assert';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export default handler(</span>
-<span class="cstat-no" title="statement not covered" >    ({lib: {group}, handler: {mongoDocumentAdd, mongoDocumentFind}}) =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >        testMongodbDocumentInsert: ({name = 'mongodb document insert'}: {name?: string}) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >            group(name)([</span>
-<span class="cstat-no" title="statement not covered" >                async function insertDocument(assert: typeof Assert, {$meta}) {</span>
-<span class="cstat-no" title="statement not covered" >                    const testData = {testField: 'hello-from-blong-test', testTs: Date.now()};</span>
-<span class="cstat-no" title="statement not covered" >                    const result = await mongoDocumentAdd(testData, $meta);</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(result, 'Insert should return a result');</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(</span>
-<span class="cstat-no" title="statement not covered" >                        (result as {insertedId?: unknown}).insertedId,</span>
-<span class="cstat-no" title="statement not covered" >                        'Insert should return an insertedId',</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    return result;</span>
-<span class="cstat-no" title="statement not covered" >                },</span>
-<span class="cstat-no" title="statement not covered" >                async function findDocuments(assert: typeof Assert, {$meta}) {</span>
-<span class="cstat-no" title="statement not covered" >                    const result = await mongoDocumentFind(</span>
-<span class="cstat-no" title="statement not covered" >                        {testField: 'hello-from-blong-test'},</span>
-<span class="cstat-no" title="statement not covered" >                        $meta,</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(Array.isArray(result), 'Find should return an array');</span>
-<span class="cstat-no" title="statement not covered" >                    assert.ok(</span>
-<span class="cstat-no" title="statement not covered" >                        (result as unknown[]).length &gt; 0,</span>
-<span class="cstat-no" title="statement not covered" >                        'Find should return at least one document',</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    return result;</span>
-<span class="cstat-no" title="statement not covered" >                },</span>
-<span class="cstat-no" title="statement not covered" >            ]),</span>
-<span class="cstat-no" title="statement not covered" >    }),</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {handler} from '@feasibleone/blong';
+import type Assert from 'node:assert';
+&nbsp;
+export default handler(
+    ({lib: {group}, handler: {mongoDocumentAdd, mongoDocumentFind}}) =&gt; ({
+        testMongodbDocumentInsert: ({name = 'mongodb document insert'}: {name?: string}) =&gt;
+            group(name)([
+                async function insertDocument(assert: typeof Assert, {$meta}) {
+                    const testData = {testField: 'hello-from-blong-test', testTs: Date.now()};
+                    const result = await mongoDocumentAdd(testData, $meta);
+                    assert.ok(result, 'Insert should return a result');
+                    assert.ok(
+                        (result as {insertedId?: unknown}).insertedId,
+                        'Insert should return an insertedId',
+                    );
+                    return result;
+                },
+                async function findDocuments(assert: typeof Assert, {$meta}) {
+                    const result = await mongoDocumentFind(
+                        {testField: 'hello-from-blong-test'},
+                        $meta,
+                    );
+                    assert.ok(Array.isArray(result), 'Find should return an array');
+                    assert.ok(
+                        (result as unknown[]).length &gt; 0,
+                        'Find should return at least one document',
+                    );
+                    return result;
+                },
+            ]),
+    }),
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -166,7 +166,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

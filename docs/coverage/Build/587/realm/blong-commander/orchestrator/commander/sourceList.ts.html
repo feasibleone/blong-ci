@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/31</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>14/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/31</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -94,68 +94,68 @@
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import type {ICommanderSource} from '../../types.ts';</span>
-<span class="cstat-no" title="statement not covered" >import {sources as defaultSources} from '../../config/sources.ts';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Normalise a triple to the gateway methodId (dots stripped, lowercased). */</span>
-<span class="cstat-no" title="statement not covered" >const methodId = (name: string): string =&gt; name.replace(/\./g, '').toLowerCase();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * commanderSourceList — return the configured commander sources, filtered by</span>
-<span class="cstat-no" title="statement not covered" > * the caller's granted actions (`$meta.auth.actions`, populated by the gateway</span>
-<span class="cstat-no" title="statement not covered" > * authorize handler). Sources/levels without a `permission` are always shown.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(</span>
-<span class="cstat-no" title="statement not covered" >    ({config}) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >        async function commanderSourceList(_params, $meta) {</span>
-<span class="cstat-no" title="statement not covered" >            const sources = (config as {sources?: ICommanderSource[]}).sources ?? defaultSources;</span>
-<span class="cstat-no" title="statement not covered" >            const actions = ($meta as {auth?: {actions?: string[]}}).auth?.actions;</span>
-<span class="cstat-no" title="statement not covered" >            const allowed = actions?.length ? new Set(actions.map(methodId)) : null;</span>
-<span class="cstat-no" title="statement not covered" >            const canShow = (permission?: string): boolean =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >                if (!permission || !allowed) return true;</span>
-<span class="cstat-no" title="statement not covered" >                return allowed.has(methodId(permission));</span>
-<span class="cstat-no" title="statement not covered" >            };</span>
-<span class="cstat-no" title="statement not covered" >            const items = sources</span>
-<span class="cstat-no" title="statement not covered" >                .filter(source =&gt; canShow(source.permission))</span>
-<span class="cstat-no" title="statement not covered" >                .map(source =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >                    ...source,</span>
-<span class="cstat-no" title="statement not covered" >                    levels: source.levels.filter(level =&gt; canShow(level.permission)),</span>
-<span class="cstat-no" title="statement not covered" >                }));</span>
-<span class="cstat-no" title="statement not covered" >            return {items};</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L32'></a><a href='#L32'>32</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">81x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {handler} from '@feasibleone/blong';
+import type {ICommanderSource} from '../../types.ts';
+import {sources as defaultSources} from '../../config/sources.ts';
+&nbsp;
+/** Normalise a triple to the gateway methodId (dots stripped, lowercased). */
+const methodId = (name: string): string =&gt; name.replace(/\./g, '').toLowerCase();
+&nbsp;
+/**
+ * commanderSourceList — return the configured commander sources, filtered by
+ * the caller's granted actions (`$meta.auth.actions`, populated by the gateway
+ * authorize handler). Sources/levels without a `permission` are always shown.
+ */
+export default handler(
+    ({config}) =&gt;
+        async function commanderSourceList(_params, $meta) {
+            const sources = (config as {sources?: ICommanderSource[]}).sources ?? defaultSources;
+            const actions = ($meta as {auth?: {actions?: string[]}}).auth?.actions;
+            const allowed = actions?.length ? new Set(actions.map(methodId)) : null;
+            const canShow = (permission?: string): boolean =&gt; {
+                if (!permission || !allowed) return true;
+                return allowed.has(methodId(permission));
+            };
+            const items = sources
+                .filter(source =&gt; canShow(source.permission))
+                .map(source =&gt; ({
+                    ...source,
+                    levels: source.levels.filter(level =&gt; canShow(level.permission)),
+                }));
+            return {items};
+        },
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -163,7 +163,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

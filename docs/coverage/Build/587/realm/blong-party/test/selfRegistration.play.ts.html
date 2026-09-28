@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/47</span>
+                <span class='fraction'>47/47</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/47</span>
+                <span class='fraction'>47/47</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -110,100 +110,100 @@
 <a name='L45'></a><a href='#L45'>45</a>
 <a name='L46'></a><a href='#L46'>46</a>
 <a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/**</span></span></span>
-<span class="cstat-no" title="statement not covered" > * Self-registration flow — Playwright tests with screenshots.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Starts unauthenticated (raw `page` fixture), opens the self-registration</span>
-<span class="cstat-no" title="statement not covered" > * form from the Login screen's Register button, fills it in and verifies the</span>
-<span class="cstat-no" title="statement not covered" > * auto-login lands in the portal.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >import {expect, test} from '@feasibleone/blong-browser/playwright';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test('self-registration: create account and auto-login', async ({page}) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    await page.goto('/');</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page.getByTestId('login-submit')).toBeVisible({timeout: 10000});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    // Open the registration form via the Register button (component/user.selfRegistration)</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByRole('button', {name: 'Register'}).click();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page.getByTestId('register-submit')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page).toHaveScreenshot('self-registration-form.png');</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    // Fill the form with a unique email so tests are repeatable</span>
-<span class="cstat-no" title="statement not covered" >    const email = `guest.play.${Date.now()}@example.com`;</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('First Name').fill('Playwright');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Last Name').fill('Guest');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Email Address').fill(email);</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Password', {exact: true}).fill('testPassword');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Confirm Password', {exact: true}).fill('testPassword');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByTestId('register-submit').click();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    // Auto-login lands in the portal</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page.locator('.blong-portal-menubar')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page).toHaveScreenshot('self-registration-portal.png');</span>
-<span class="cstat-no" title="statement not covered" >});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test('self-registration: password mismatch shows inline error', async ({page}) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    await page.goto('/');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByRole('button', {name: 'Register'}).click();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page.getByTestId('register-submit')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('First Name').fill('Playwright');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Last Name').fill('Guest');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Email Address').fill(`guest.mismatch.${Date.now()}@example.com`);</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Password', {exact: true}).fill('testPassword');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByLabel('Confirm Password', {exact: true}).fill('different');</span>
-<span class="cstat-no" title="statement not covered" >    await page.getByTestId('register-submit').click();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    await expect(page.getByText('Passwords do not match')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(page).toHaveScreenshot('self-registration-password-mismatch.png');</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Self-registration flow — Playwright tests with screenshots.
+ *
+ * Starts unauthenticated (raw `page` fixture), opens the self-registration
+ * form from the Login screen's Register button, fills it in and verifies the
+ * auto-login lands in the portal.
+ */
+import {expect, test} from '@feasibleone/blong-browser/playwright';
+&nbsp;
+test('self-registration: create account and auto-login', async ({page}) =&gt; {
+    await page.goto('/');
+    await expect(page.getByTestId('login-submit')).toBeVisible({timeout: 10000});
+&nbsp;
+    // Open the registration form via the Register button (component/user.selfRegistration)
+    await page.getByRole('button', {name: 'Register'}).click();
+    await expect(page.getByTestId('register-submit')).toBeVisible();
+    await expect(page).toHaveScreenshot('self-registration-form.png');
+&nbsp;
+    // Fill the form with a unique email so tests are repeatable
+    const email = `guest.play.${Date.now()}@example.com`;
+    await page.getByLabel('First Name').fill('Playwright');
+    await page.getByLabel('Last Name').fill('Guest');
+    await page.getByLabel('Email Address').fill(email);
+    await page.getByLabel('Password', {exact: true}).fill('testPassword');
+    await page.getByLabel('Confirm Password', {exact: true}).fill('testPassword');
+    await page.getByTestId('register-submit').click();
+&nbsp;
+    // Auto-login lands in the portal
+    await expect(page.locator('.blong-portal-menubar')).toBeVisible();
+    await expect(page).toHaveScreenshot('self-registration-portal.png');
+});
+&nbsp;
+test('self-registration: password mismatch shows inline error', async ({page}) =&gt; {
+    await page.goto('/');
+    await page.getByRole('button', {name: 'Register'}).click();
+    await expect(page.getByTestId('register-submit')).toBeVisible();
+&nbsp;
+    await page.getByLabel('First Name').fill('Playwright');
+    await page.getByLabel('Last Name').fill('Guest');
+    await page.getByLabel('Email Address').fill(`guest.mismatch.${Date.now()}@example.com`);
+    await page.getByLabel('Password', {exact: true}).fill('testPassword');
+    await page.getByLabel('Confirm Password', {exact: true}).fill('different');
+    await page.getByTestId('register-submit').click();
+&nbsp;
+    await expect(page.getByText('Passwords do not match')).toBeVisible();
+    await expect(page).toHaveScreenshot('self-registration-password-mismatch.png');
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -211,7 +211,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/32</span>
+                <span class='fraction'>32/32</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -95,70 +95,70 @@
 <a name='L30'></a><a href='#L30'>30</a>
 <a name='L31'></a><a href='#L31'>31</a>
 <a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {type IMeta, handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >import * as model from './accessModel.ts';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >type KnexQb = any;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * `access.session.rotate` — rotate a session's refresh-token hash and update</span>
-<span class="cstat-no" title="statement not covered" > * its last-activity timestamp after a successful renewal.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * The `tokenHash` column holds the SHA-256 hex of the CURRENT refresh token.</span>
-<span class="cstat-no" title="statement not covered" > * Renewal mints a fresh refresh token, so the hash must be rotated — this is</span>
-<span class="cstat-no" title="statement not covered" > * what makes a stolen, already-used refresh token useless (replay detection on</span>
-<span class="cstat-no" title="statement not covered" > * next use: the presented token's hash will not match the stored one).</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Wire: `access.session.rotate` — called by `login.token.refresh`.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(() =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >    async accessSessionRotate(</span>
-<span class="cstat-no" title="statement not covered" >        params: {sessionId: string; tokenHash: string},</span>
-<span class="cstat-no" title="statement not covered" >        $meta: IMeta,</span>
-<span class="cstat-no" title="statement not covered" >    ): Promise&lt;{success: boolean}&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const qb: KnexQb = this.config?.context?.queryBuilder;</span>
-<span class="cstat-no" title="statement not covered" >        if (!qb) throw new Error('Database not available');</span>
-<span class="cstat-no" title="statement not covered" >        const hex = model.binHex(params.sessionId);</span>
-<span class="cstat-no" title="statement not covered" >        if (!hex) return {success: false};</span>
-<span class="cstat-no" title="statement not covered" >        const updated = await qb('access_session')</span>
-<span class="cstat-no" title="statement not covered" >            .where('sessionId', Buffer.from(hex, 'hex'))</span>
-<span class="cstat-no" title="statement not covered" >            .update({tokenHash: params.tokenHash, lastActivityAt: new Date()});</span>
-<span class="cstat-no" title="statement not covered" >        return {success: !!updated};</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >}));</span>
+<a name='L33'></a><a href='#L33'>33</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {type IMeta, handler} from '@feasibleone/blong';
+&nbsp;
+import * as model from './accessModel.ts';
+&nbsp;
+type KnexQb = any;
+&nbsp;
+/**
+ * `access.session.rotate` — rotate a session's refresh-token hash and update
+ * its last-activity timestamp after a successful renewal.
+ *
+ * The `tokenHash` column holds the SHA-256 hex of the CURRENT refresh token.
+ * Renewal mints a fresh refresh token, so the hash must be rotated — this is
+ * what makes a stolen, already-used refresh token useless (replay detection on
+ * next use: the presented token's hash will not match the stored one).
+ *
+ * Wire: `access.session.rotate` — called by `login.token.refresh`.
+ */
+export default handler(() =&gt; ({
+    async accessSessionRotate(
+        params: {sessionId: string; tokenHash: string},
+        $meta: IMeta,
+    ): Promise&lt;{success: boolean}&gt; {
+        const qb: KnexQb = this.config?.context?.queryBuilder;
+        if (!qb) <span class="branch-0 cbranch-no" title="branch not covered" >throw new Error('Database not available');</span>
+        const hex = model.binHex(params.sessionId);
+        if (!hex) <span class="branch-0 cbranch-no" title="branch not covered" >return {success: false};</span>
+        const updated = await qb('access_session')
+            .where('sessionId', Buffer.from(hex, 'hex'))
+            .update({tokenHash: params.tokenHash, lastActivityAt: new Date()});
+        return {success: !!updated};
+    },
+}));
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -166,7 +166,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

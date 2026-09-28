@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/28</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/28</span>
+                <span class='fraction'>28/28</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -91,62 +91,62 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {type IMeta, handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" >import type Assert from 'node:assert';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >export default handler(</span>
-<span class="cstat-no" title="statement not covered" >    ({lib: {group}, handler: {testLoginTokenCreate, testUserAdminLogin, subjectNumberSum}}) =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >        testNumberSum: ({name = 'demo'}: {name?: string}, $meta: IMeta) =&gt;</span>
-<span class="cstat-no" title="statement not covered" >            group(name)([</span>
-<span class="cstat-no" title="statement not covered" >                testLoginTokenCreate({}, $meta),</span>
-<span class="cstat-no" title="statement not covered" >                testUserAdminLogin({}, $meta),</span>
-<span class="cstat-no" title="statement not covered" >                async function sum(assert: typeof Assert, {$meta}: {$meta: IMeta}) {</span>
-<span class="cstat-no" title="statement not covered" >                    assert.equal(</span>
-<span class="cstat-no" title="statement not covered" >                        await subjectNumberSum([1000, 200, 30, 4], $meta),</span>
-<span class="cstat-no" title="statement not covered" >                        1234,</span>
-<span class="cstat-no" title="statement not covered" >                        'sum array',</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                    assert.equal(await subjectNumberSum([], $meta), 0, 'sum empty array');</span>
-<span class="cstat-no" title="statement not covered" >                    await assert.rejects(</span>
-<span class="cstat-no" title="statement not covered" >                        subjectNumberSum([-1], {</span>
-<span class="cstat-no" title="statement not covered" >                            ...$meta,</span>
-<span class="cstat-no" title="statement not covered" >                            expect: 'subjectSum',</span>
-<span class="cstat-no" title="statement not covered" >                        }) as Promise&lt;unknown&gt;,</span>
-<span class="cstat-no" title="statement not covered" >                        {type: 'subjectSum'},</span>
-<span class="cstat-no" title="statement not covered" >                        'reject negative',</span>
-<span class="cstat-no" title="statement not covered" >                    );</span>
-<span class="cstat-no" title="statement not covered" >                },</span>
-<span class="cstat-no" title="statement not covered" >            ]),</span>
-<span class="cstat-no" title="statement not covered" >    }),</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {type IMeta, handler} from '@feasibleone/blong';
+import type Assert from 'node:assert';
+&nbsp;
+export default handler(
+    ({lib: {group}, handler: {testLoginTokenCreate, testUserAdminLogin, subjectNumberSum}}) =&gt; ({
+        testNumberSum: ({name = 'demo'}: {name?: string}, $meta: IMeta) =&gt;
+            group(name)([
+                testLoginTokenCreate({}, $meta),
+                testUserAdminLogin({}, $meta),
+                async function sum(assert: typeof Assert, {$meta}: {$meta: IMeta}) {
+                    assert.equal(
+                        await subjectNumberSum([1000, 200, 30, 4], $meta),
+                        1234,
+                        'sum array',
+                    );
+                    assert.equal(await subjectNumberSum([], $meta), 0, 'sum empty array');
+                    await assert.rejects(
+                        subjectNumberSum([-1], {
+                            ...$meta,
+                            expect: 'subjectSum',
+                        }) as Promise&lt;unknown&gt;,
+                        {type: 'subjectSum'},
+                        'reject negative',
+                    );
+                },
+            ]),
+    }),
+);
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -154,7 +154,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/53</span>
+                <span class='fraction'>53/53</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/53</span>
+                <span class='fraction'>53/53</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -116,112 +116,112 @@
 <a name='L51'></a><a href='#L51'>51</a>
 <a name='L52'></a><a href='#L52'>52</a>
 <a name='L53'></a><a href='#L53'>53</a>
-<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/**</span></span></span>
-<span class="cstat-no" title="statement not covered" > * Gateway Bundle management UI — Browse, Create, Edit full-stack tests.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Bundles wrap an `access.role` (bundleId === roleId), so create goes through</span>
-<span class="cstat-no" title="statement not covered" > * the custom `gateway.bundle.add` handler which creates the role + bundle row.</span>
-<span class="cstat-no" title="statement not covered" > * Test-created bundles carry a "Playwright" description marker; `cleanupModel`</span>
-<span class="cstat-no" title="statement not covered" > * removes previous runs' rows via the browse page filter (runs first, in</span>
-<span class="cstat-no" title="statement not covered" > * declaration order), and the browse screenshot filters to the seeded Vision</span>
-<span class="cstat-no" title="statement not covered" > * AI bundle.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >import {expect, test} from '@feasibleone/blong-browser/playwright';</span>
-<span class="cstat-no" title="statement not covered" >import {</span>
-<span class="cstat-no" title="statement not covered" >    browseModel,</span>
-<span class="cstat-no" title="statement not covered" >    cleanupModel,</span>
-<span class="cstat-no" title="statement not covered" >    createAndEditModel,</span>
-<span class="cstat-no" title="statement not covered" >} from '@feasibleone/blong-browser/playwright/model';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.use({blongPermissions: true});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.describe('Gateway Bundle', () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    // Remove test-created rows from previous runs (first test in this file), so</span>
-<span class="cstat-no" title="statement not covered" >    // the DB does not need to be recreated between runs.</span>
-<span class="cstat-no" title="statement not covered" >    cleanupModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'gateway',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'bundle',</span>
-<span class="cstat-no" title="statement not covered" >        search: 'Playwright',</span>
-<span class="cstat-no" title="statement not covered" >        removeMethod: 'gateway.bundle.remove',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    // Browse screenshot filters to the seeded Vision AI bundle so it stays</span>
-<span class="cstat-no" title="statement not covered" >    // stable regardless of any test-created rows.</span>
-<span class="cstat-no" title="statement not covered" >    browseModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'gateway',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'bundle',</span>
-<span class="cstat-no" title="statement not covered" >        searchText: 'Vision',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    createAndEditModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'gateway',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'bundle',</span>
-<span class="cstat-no" title="statement not covered" >        fields: {</span>
-<span class="cstat-no" title="statement not covered" >            'bundle.baseMonthlyCredits': 1000,</span>
-<span class="cstat-no" title="statement not covered" >            'bundle.rateLimit': 50,</span>
-<span class="cstat-no" title="statement not covered" >            'bundle.rateWindowSec': 60,</span>
-<span class="cstat-no" title="statement not covered" >            'bundle.description': 'A test bundle created by Playwright',</span>
-<span class="cstat-no" title="statement not covered" >            'bundle.isActive': true,</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        editFields: {</span>
-<span class="cstat-no" title="statement not covered" >            'bundle.description': 'Edited by Playwright',</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        search: 'Playwright',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Gateway Bundle management UI — Browse, Create, Edit full-stack tests.
+ *
+ * Bundles wrap an `access.role` (bundleId === roleId), so create goes through
+ * the custom `gateway.bundle.add` handler which creates the role + bundle row.
+ * Test-created bundles carry a "Playwright" description marker; `cleanupModel`
+ * removes previous runs' rows via the browse page filter (runs first, in
+ * declaration order), and the browse screenshot filters to the seeded Vision
+ * AI bundle.
+ */
+import {expect, test} from '@feasibleone/blong-browser/playwright';
+import {
+    browseModel,
+    cleanupModel,
+    createAndEditModel,
+} from '@feasibleone/blong-browser/playwright/model';
+&nbsp;
+test.use({blongPermissions: true});
+&nbsp;
+test.describe('Gateway Bundle', () =&gt; {
+    // Remove test-created rows from previous runs (first test in this file), so
+    // the DB does not need to be recreated between runs.
+    cleanupModel(test, expect, {
+        subject: 'gateway',
+        object: 'bundle',
+        search: 'Playwright',
+        removeMethod: 'gateway.bundle.remove',
+    });
+&nbsp;
+    // Browse screenshot filters to the seeded Vision AI bundle so it stays
+    // stable regardless of any test-created rows.
+    browseModel(test, expect, {
+        subject: 'gateway',
+        object: 'bundle',
+        searchText: 'Vision',
+    });
+&nbsp;
+    createAndEditModel(test, expect, {
+        subject: 'gateway',
+        object: 'bundle',
+        fields: {
+            'bundle.baseMonthlyCredits': 1000,
+            'bundle.rateLimit': 50,
+            'bundle.rateWindowSec': 60,
+            'bundle.description': 'A test bundle created by Playwright',
+            'bundle.isActive': true,
+        },
+        editFields: {
+            'bundle.description': 'Edited by Playwright',
+        },
+        search: 'Playwright',
+    });
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -229,7 +229,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,82 +101,82 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {type IMeta, handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >import * as model from './accessModel.ts';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >type KnexQb = any;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * `access.user.remove` — delete a user and everything that references it.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Removes the `hasRole` graph edges (refreshing the materialized path), the</span>
-<span class="cstat-no" title="statement not covered" > * credential rows, any session rows, the `access_user` row and finally the</span>
-<span class="cstat-no" title="statement not covered" > * `core_resource` row.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(() =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >    async accessUserRemove(</span>
-<span class="cstat-no" title="statement not covered" >        params: {userId?: string},</span>
-<span class="cstat-no" title="statement not covered" >        $meta: IMeta,</span>
-<span class="cstat-no" title="statement not covered" >    ): Promise&lt;{success: boolean}&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const qb: KnexQb = this.config?.context?.queryBuilder;</span>
-<span class="cstat-no" title="statement not covered" >        if (!qb) throw new Error('Database not available');</span>
-<span class="cstat-no" title="statement not covered" >        const hex = model.binHex(params.userId);</span>
-<span class="cstat-no" title="statement not covered" >        if (!hex) return {success: true};</span>
-<span class="cstat-no" title="statement not covered" >        const buf = Buffer.from(hex, 'hex');</span>
-<span class="cstat-no" title="statement not covered" >        const roleIds = await model.listEdgeObjectIds(qb, hex, 'hasRole');</span>
-<span class="cstat-no" title="statement not covered" >        if (roleIds.length) {</span>
-<span class="cstat-no" title="statement not covered" >            await qb('core_triple')</span>
-<span class="cstat-no" title="statement not covered" >                .where('subjectId', buf)</span>
-<span class="cstat-no" title="statement not covered" >                .where('predicateName', 'hasRole')</span>
-<span class="cstat-no" title="statement not covered" >                .del();</span>
-<span class="cstat-no" title="statement not covered" >            await qb.raw('CALL access_pathRefresh()');</span>
-<span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >        await qb('access_credential').where('userId', buf).del();</span>
-<span class="cstat-no" title="statement not covered" >        await qb('access_session').where('userId', buf).del();</span>
-<span class="cstat-no" title="statement not covered" >        await qb('access_user').where('userId', buf).del();</span>
-<span class="cstat-no" title="statement not covered" >        await qb('core_resource').where('resourceId', buf).del();</span>
-<span class="cstat-no" title="statement not covered" >        return {success: true};</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >}));</span>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {type IMeta, handler} from '@feasibleone/blong';
+&nbsp;
+import * as model from './accessModel.ts';
+&nbsp;
+type KnexQb = any;
+&nbsp;
+/**
+ * `access.user.remove` — delete a user and everything that references it.
+ *
+ * Removes the `hasRole` graph edges (refreshing the materialized path), the
+ * credential rows, any session rows, the `access_user` row and finally the
+ * `core_resource` row.
+ */
+export default handler(() =&gt; ({
+    async accessUserRemove(
+        params: {userId?: string},
+        $meta: IMeta,
+    ): Promise&lt;{success: boolean}&gt; {
+        const qb: KnexQb = this.config?.context?.queryBuilder;
+        if (!qb) <span class="branch-0 cbranch-no" title="branch not covered" >throw new Error('Database not available');</span>
+        const hex = model.binHex(params.userId);
+        if (!hex) <span class="branch-0 cbranch-no" title="branch not covered" >return {success: true};</span>
+        const buf = Buffer.from(hex, 'hex');
+        const roleIds = await model.listEdgeObjectIds(qb, hex, 'hasRole');
+        if (roleIds.length) {
+            await qb('core_triple')
+                .where('subjectId', buf)
+                .where('predicateName', 'hasRole')
+                .del();
+            await qb.raw('CALL access_pathRefresh()');
+        }
+        await qb('access_credential').where('userId', buf).del();
+        await qb('access_session').where('userId', buf).del();
+        await qb('access_user').where('userId', buf).del();
+        await qb('core_resource').where('resourceId', buf).del();
+        return {success: true};
+    },
+}));
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -184,7 +184,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

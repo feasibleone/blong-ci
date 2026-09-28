@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/38</span>
+                <span class='fraction'>38/38</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -101,82 +101,82 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/**</span></span></span>
-<span class="cstat-no" title="statement not covered" > * Two realms, one portal — the composition proof for `portalConfigMerge`.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * This realm's menu is model-driven; the framework realm answers `portalConfigGet`</span>
-<span class="cstat-no" title="statement not covered" > * for its own hand-written pages. A port resolves that method name to a single</span>
-<span class="cstat-no" title="statement not covered" > * function — the newest group shadows the earlier ones — so loading the framework</span>
-<span class="cstat-no" title="statement not covered" > * realm here used to replace this realm's menu outright, and every one of this</span>
-<span class="cstat-no" title="statement not covered" > * package's own specs timed out waiting for `portal-menu-gateway`. The shell now</span>
-<span class="cstat-no" title="statement not covered" > * asks `portalConfigMerge`, which asks every provider and composes the answers.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * So this spec is the cross-realm evidence: both menus render, the framework realm's</span>
-<span class="cstat-no" title="statement not covered" > * page opens from the composed menu, and this package's own specs (which assert</span>
-<span class="cstat-no" title="statement not covered" > * `portal-menu-gateway`) still pass beside them.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >import {expect, test} from '@feasibleone/blong-browser/playwright';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.use({blongPermissions: true});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test('both realms contribute their menu to one portal', async ({portal}) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    await expect(portal.page.locator('.blong-portal-menubar')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(portal.page.getByTestId('portal-menu-gateway')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >    await expect(portal.page.getByTestId('portal-menu-blong')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >    // The suite configures its own title, and the first provider to set one is the</span>
-<span class="cstat-no" title="statement not covered" >    // model aggregator — reading that same `ui.portal.portal` slice.</span>
-<span class="cstat-no" title="statement not covered" >    await expect(portal.page.locator('.blong-portal-brand')).toHaveText('Blong Gateway');</span>
-<span class="cstat-no" title="statement not covered" >    await expect(portal.page.locator('.blong-portal-menubar')).toHaveScreenshot(</span>
-<span class="cstat-no" title="statement not covered" >        'portal-merged.png',</span>
-<span class="cstat-no" title="statement not covered" >    );</span>
-<span class="cstat-no" title="statement not covered" >});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test('a page of the framework realm opens from the composed menu', async ({portal}) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    await portal.menuClick('blong.template.browse');</span>
-<span class="cstat-no" title="statement not covered" >    await portal.waitForTableData();</span>
-<span class="cstat-no" title="statement not covered" >    // `:visible` scopes to the open tab: a composed portal keeps the pages it has</span>
-<span class="cstat-no" title="statement not covered" >    // opened in the DOM, so a sibling panel's rows match the plain selector and a</span>
-<span class="cstat-no" title="statement not covered" >    // hidden one is what `.first()` would find.</span>
-<span class="cstat-no" title="statement not covered" >    await expect(portal.page.locator('.p-datatable-tbody tr:visible').first()).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Two realms, one portal — the composition proof for `portalConfigMerge`.
+ *
+ * This realm's menu is model-driven; the framework realm answers `portalConfigGet`
+ * for its own hand-written pages. A port resolves that method name to a single
+ * function — the newest group shadows the earlier ones — so loading the framework
+ * realm here used to replace this realm's menu outright, and every one of this
+ * package's own specs timed out waiting for `portal-menu-gateway`. The shell now
+ * asks `portalConfigMerge`, which asks every provider and composes the answers.
+ *
+ * So this spec is the cross-realm evidence: both menus render, the framework realm's
+ * page opens from the composed menu, and this package's own specs (which assert
+ * `portal-menu-gateway`) still pass beside them.
+ */
+import {expect, test} from '@feasibleone/blong-browser/playwright';
+&nbsp;
+test.use({blongPermissions: true});
+&nbsp;
+test('both realms contribute their menu to one portal', async ({portal}) =&gt; {
+    await expect(portal.page.locator('.blong-portal-menubar')).toBeVisible();
+    await expect(portal.page.getByTestId('portal-menu-gateway')).toBeVisible();
+    await expect(portal.page.getByTestId('portal-menu-blong')).toBeVisible();
+    // The suite configures its own title, and the first provider to set one is the
+    // model aggregator — reading that same `ui.portal.portal` slice.
+    await expect(portal.page.locator('.blong-portal-brand')).toHaveText('Blong Gateway');
+    await expect(portal.page.locator('.blong-portal-menubar')).toHaveScreenshot(
+        'portal-merged.png',
+    );
+});
+&nbsp;
+test('a page of the framework realm opens from the composed menu', async ({portal}) =&gt; {
+    await portal.menuClick('blong.template.browse');
+    await portal.waitForTableData();
+    // `:visible` scopes to the open tab: a composed portal keeps the pages it has
+    // opened in the DOM, so a sibling panel's rows match the plain selector and a
+    // hidden one is what `.first()` would find.
+    await expect(portal.page.locator('.p-datatable-tbody tr:visible').first()).toBeVisible();
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -184,7 +184,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

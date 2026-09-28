@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/35</span>
+                <span class='fraction'>35/35</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/35</span>
+                <span class='fraction'>35/35</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -98,76 +98,76 @@
 <a name='L33'></a><a href='#L33'>33</a>
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
-<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {type IMeta, handler} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >import * as model from './accessModel.ts';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >type KnexQb = any;</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * `access.role.get` — the role row plus its **effective ACL**: the explicit</span>
-<span class="cstat-no" title="statement not covered" > * `access_acl` rules that apply to the role and the implicit `hasScope` grants</span>
-<span class="cstat-no" title="statement not covered" > * it holds, each explained as a row (`source`, `effect`, names). `matrix`</span>
-<span class="cstat-no" title="statement not covered" > * carries the same scope-level rules as the editable scope × CRUD grid (see</span>
-<span class="cstat-no" title="statement not covered" > * `syncAclMatrix`).</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * The role row itself comes from the automatic knex CRUD (`super.exec`); the</span>
-<span class="cstat-no" title="statement not covered" > * effective rows are the same ones `access.acl.list` reports, so the read-only</span>
-<span class="cstat-no" title="statement not covered" > * "Access" tab of the role page and the API agree by construction.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default handler(({handler: {accessAclList}}) =&gt; ({</span>
-<span class="cstat-no" title="statement not covered" >    async accessRoleGet(params: {roleId?: string}, $meta: IMeta): Promise&lt;Record&lt;string, unknown&gt;&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const qb: KnexQb = this.config?.context?.queryBuilder;</span>
-<span class="cstat-no" title="statement not covered" >        if (!qb) throw new Error('Database not available');</span>
-<span class="cstat-no" title="statement not covered" >        const result = (await super.exec(params, $meta)) as Record&lt;string, unknown&gt;;</span>
-<span class="cstat-no" title="statement not covered" >        const role = (result.role ?? {}) as {roleId?: string};</span>
-<span class="cstat-no" title="statement not covered" >        const principalId = params.roleId ?? role.roleId;</span>
-<span class="cstat-no" title="statement not covered" >        if (principalId) {</span>
-<span class="cstat-no" title="statement not covered" >            const acl = await accessAclList&lt;{items: Array&lt;Record&lt;string, unknown&gt;&gt;}&gt;(</span>
-<span class="cstat-no" title="statement not covered" >                {principalType: 'role', principalId},</span>
-<span class="cstat-no" title="statement not covered" >                $meta,</span>
-<span class="cstat-no" title="statement not covered" >            );</span>
-<span class="cstat-no" title="statement not covered" >            result.effective = acl.items;</span>
-<span class="cstat-no" title="statement not covered" >            result.matrix = await model.aclMatrixRows(qb, principalId);</span>
-<span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >        return result;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
-<span class="cstat-no" title="statement not covered" >}));</span>
+<a name='L36'></a><a href='#L36'>36</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {type IMeta, handler} from '@feasibleone/blong';
+&nbsp;
+import * as model from './accessModel.ts';
+&nbsp;
+type KnexQb = any;
+&nbsp;
+/**
+ * `access.role.get` — the role row plus its **effective ACL**: the explicit
+ * `access_acl` rules that apply to the role and the implicit `hasScope` grants
+ * it holds, each explained as a row (`source`, `effect`, names). `matrix`
+ * carries the same scope-level rules as the editable scope × CRUD grid (see
+ * `syncAclMatrix`).
+ *
+ * The role row itself comes from the automatic knex CRUD (`super.exec`); the
+ * effective rows are the same ones `access.acl.list` reports, so the read-only
+ * "Access" tab of the role page and the API agree by construction.
+ */
+export default handler(({handler: {accessAclList}}) =&gt; ({
+    async accessRoleGet(params: {roleId?: string}, $meta: IMeta): Promise&lt;Record&lt;string, unknown&gt;&gt; {
+        const qb: KnexQb = this.config?.context?.queryBuilder;
+        if (!qb) <span class="branch-0 cbranch-no" title="branch not covered" >throw new Error('Database not available');</span>
+        const result = (await super.exec(params, $meta)) as Record&lt;string, unknown&gt;;
+        const role = (result.role<span class="branch-0 cbranch-no" title="branch not covered" > ?? {}) as {roleId?: string};</span>
+        const principalId = params.roleId<span class="branch-0 cbranch-no" title="branch not covered" > ?? role.roleId;</span>
+        if (principalId) {
+            const acl = await accessAclList&lt;{items: Array&lt;Record&lt;string, unknown&gt;&gt;}&gt;(
+                {principalType: 'role', principalId},
+                $meta,
+            );
+            result.effective = acl.items;
+            result.matrix = await model.aclMatrixRows(qb, principalId);
+        }
+        return result;
+    },
+}));
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -175,7 +175,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

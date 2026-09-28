@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generatedAt": "2026-09-28T15:51:24.344Z",
+  "generatedAt": "2026-09-28T20:00:15.523Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
   "run": 587,
   "commit": "72b36268211b9b050c10ef5ed548a121f0caf78f",
   "runUrl": "https://github.com/feasibleone/blong/actions/runs/36445568265",
   "totals": {
-    "packages": 19,
-    "tests": 59,
-    "failed": 59,
+    "packages": 3,
+    "tests": 4,
+    "failed": 4,
     "flaky": 0,
-    "newFailures": 0
+    "newFailures": 2
   },
   "allure": "index.html",
   "packages": [
@@ -19,11 +19,12 @@
       "package": "blong-access",
       "path": "realm/blong-access",
       "runners": [
-        "tap"
+        "tap",
+        "playwright"
       ],
       "counts": {
-        "total": 1,
-        "passed": 0,
+        "total": 82,
+        "passed": 81,
         "failed": 1,
         "flaky": 0,
         "skipped": 0,
@@ -31,520 +32,16 @@
       },
       "failures": [
         {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
+          "suite": "user.play.ts › Access User",
+          "test": "edit access user",
           "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-cli",
-      "path": "demo/blong-cli",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 14,
-        "passed": 4,
-        "failed": 10,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "a command dispatches in-process and prints its result on stdout › and nothing of its own reached stderr",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 62,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,16 @@\n-Array []\n+Array [\n+  \"node:internal/modules/run_main:107\",\n+  \"    triggerUncaughtException(\",\n+  \"    ^\",\n+  \"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/runner/work/blong/blong/demo/blong-cli/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/demo/blong-cli/cli.ts\",\n+  \"    at finalizeResolution (node:internal/modules/esm/resolve:272:11)\",\n+  \"    at moduleResolve (node:internal/modules/esm/resolve:879:10)\",\n+  \"    at defaultResolve (node:internal/modules/esm/resolve:1006:11)\",\n+  \"    at nextResolve (node:internal/modules/esm/hooks:785:28)\",\n+  \"    at AsyncLoaderHooksOnLoaderHookWorker.resolve (node:internal/modules/esm/hooks:269:30)\",\n+  \"    at MessagePort.handleMessage (node:internal/modules/esm/worker:251:24)\",\n+  \"    at [nodejs.internal.kHybridDispatch] (node:internal/event_target:848:20)\",\n+  \"    at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28) {\",\n+  \"}\",\n+  \"Node.js v24.21.0\",\n+]",
-          "stack": "Test.<anonymous> (index.test.ts:62:7)\nindex.test.ts:57:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "a command dispatches in-process and prints its result on stdout › exits clean",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 60,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (index.test.ts:60:7)\nindex.test.ts:57:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "a command dispatches in-process and prints its result on stdout › the result is the only thing on stdout",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 61,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-hello-world\n+",
-          "stack": "Test.<anonymous> (index.test.ts:61:7)\nindex.test.ts:57:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "a handler error is reported without a stack trace on stdout › the message is on stderr",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 105,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,21 @@\n-/provide --value=TEXT or --file=PATH/\n+String(\n+  \n+  node:internal/modules/run_main:107\n+      triggerUncaughtException(\n+      ^\n+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/runner/work/blong/blong/demo/blong-cli/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/demo/blong-cli/cli.ts\n+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)\n+      at moduleResolve (node:internal/modules/esm/resolve:879:10)\n+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)\n+      at nextResolve (node:internal/modules/esm/hooks:785:28)\n+      at AsyncLoaderHooksOnLoaderHookWorker.resolve (node:internal/modules/esm/hooks:269:30)\n+      at MessagePort.handleMessage (node:internal/modules/esm/worker:251:24)\n+      at [nodejs.internal.kHybridDispatch] (node:internal/event_target:848:20)\n+      at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28) {\n+    code: 'ERR_MODULE_NOT_FOUND',\n+    url: 'file:///home/runner/work/blong/blong/demo/blong-cli/node_modules/@feasibleone/blong/dist/types.js'\n+  }\n+  \n+  Node.js v24.21.0\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:105:7)\nindex.test.ts:101:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "the exit code says whether the command did what was asked › --help is not a failure",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 97,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (index.test.ts:97:7)\nindex.test.ts:89:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "the exit code says whether the command did what was asked › and says which method it could not find",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 91,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,21 @@\n-/unknown method 'text\\.bogus\\.get'/\n+String(\n+  \n+  node:internal/modules/run_main:107\n+      triggerUncaughtException(\n+      ^\n+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/runner/work/blong/blong/demo/blong-cli/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/demo/blong-cli/cli.ts\n+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)\n+      at moduleResolve (node:internal/modules/esm/resolve:879:10)\n+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)\n+      at nextResolve (node:internal/modules/esm/hooks:785:28)\n+      at AsyncLoaderHooksOnLoaderHookWorker.resolve (node:internal/modules/esm/hooks:269:30)\n+      at MessagePort.handleMessage (node:internal/modules/esm/worker:251:24)\n+      at [nodejs.internal.kHybridDispatch] (node:internal/event_target:848:20)\n+      at MessagePort.<anonymous> (node:internal/per_context/messageport:23:28) {\n+    code: 'ERR_MODULE_NOT_FOUND',\n+    url: 'file:///home/runner/work/blong/blong/demo/blong-cli/node_modules/@feasibleone/blong/dist/types.js'\n+  }\n+  \n+  Node.js v24.21.0\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:91:7)\nindex.test.ts:89:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "the machine channel stays parseable › exits clean",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 69,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (index.test.ts:69:7)\nindex.test.ts:66:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "the machine channel stays parseable › Unexpected end of JSON input",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 70,
-          "stack": "JSON.parse (<anonymous>)\nTest.t (index.test.ts:70:18)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "the platform is available, so a command can read a file › exits clean",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 80,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (index.test.ts:80:7)\nindex.test.ts:74:3\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "the platform is available, so a command can read a file › the file is read through `this.platform` and rendered for a terminal",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 81,
-          "message": "--- expected\n+++ actual\n@@ -1,5 +1,3 @@\n Array [\n-  \"lines: 2\",\n-  \"words: 5\",\n-  \"characters: 24\",\n+  \"\",\n ]",
-          "stack": "Test.<anonymous> (index.test.ts:81:7)\nindex.test.ts:74:3\n"
-        }
-      ]
-    },
-    {
-      "package": "blong-commander",
-      "path": "realm/blong-commander",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "commander.test.ts",
-          "test": "commander.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "commander.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-cucumber",
-      "path": "core/blong-cucumber",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-eip",
-      "path": "demo/blong-eip",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-gateway",
-      "path": "realm/blong-gateway",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-gogo",
-      "path": "core/blong-gogo",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 530,
-        "passed": 524,
-        "failed": 6,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "src/graceful-shutdown.spawn.test.ts",
-          "test": "blong CLI exits 0 with the shutdown marker after timeout sends SIGTERM › exit code 0 (graceful shutdown), got 1",
-          "status": "failed",
-          "runner": "tap",
-          "file": "src/graceful-shutdown.spawn.test.ts",
-          "line": 64,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (src/graceful-shutdown.spawn.test.ts:64:11)\n"
-        },
-        {
-          "suite": "src/graceful-shutdown.spawn.test.ts",
-          "test": "blong CLI exits 0 with the shutdown marker after timeout sends SIGTERM › stderr contains the shutdown marker",
-          "status": "failed",
-          "runner": "tap",
-          "file": "src/graceful-shutdown.spawn.test.ts",
-          "line": 65,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,23 @@\n-/blong: shutting down on SIGTERM/\n+String(\n+  node:internal/modules/esm/resolve:272\n+      throw new ERR_MODULE_NOT_FOUND(\n+            ^\n+  \n+  Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/home/runner/work/blong/blong/core/blong-gogo/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/core/blong-gogo/src/adapter/schema/knex/binary.ts\n+      at finalizeResolution (node:internal/modules/esm/resolve:272:11)\n+      at moduleResolve (node:internal/modules/esm/resolve:879:10)\n+      at defaultResolve (node:internal/modules/esm/resolve:1006:11)\n+      at #cachedDefaultResolve (node:internal/modules/esm/loader:705:20)\n+      at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:725:38)\n+      at ModuleLoader.resolveSync (node:internal/modules/esm/loader:763:56)\n+      at #resolve (node:internal/modules/esm/loader:687:17)\n+      at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:607:35)\n+      at ModuleJob.syncLink (node:internal/modules/esm/module_job:276:33)\n+      at ModuleJob.link (node:internal/modules/esm/module_job:381:17) {\n+    code: 'ERR_MODULE_NOT_FOUND',\n+    url: 'file:///home/runner/work/blong/blong/core/blong-gogo/node_modules/@feasibleone/blong/dist/types.js'\n+  }\n+  \n+  Node.js v24.21.0\n+  \n+)",
-          "stack": "Test.<anonymous> (src/graceful-shutdown.spawn.test.ts:65:11)\n"
-        },
-        {
-          "suite": "src/graceful-shutdown.spawn.test.ts",
-          "test": "blong CLI exits 0 with the shutdown marker after timeout sends SIGTERM › teardown ran (adapter.stop events fired)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "src/graceful-shutdown.spawn.test.ts",
-          "line": 66,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,7 @@\n-/adapter\\.stop/\n+String(\n+  2026-09-28T15:50:11.966Z warn  blong-hello server operation \"start adapter\" took 1001ms [semlog://t/f7566fdfa431]\n+    label: start adapter\n+    elapsedMs: 1001\n+    progress: {\"done\":0,\"total\":1}\n+  \n+)",
-          "stack": "Test.<anonymous> (src/graceful-shutdown.spawn.test.ts:66:11)\n"
-        },
-        {
-          "suite": "src/ci.intent.test.ts",
-          "test": "src/ci.intent.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "src/ci.intent.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "src/exit.intent.test.ts",
-          "test": "src/exit.intent.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "src/exit.intent.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "src/frameworkRealms.test.ts",
-          "test": "src/frameworkRealms.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "src/frameworkRealms.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-int-adapter",
-      "path": "test/blong-int-adapter",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 9,
-        "passed": 0,
-        "failed": 9,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "http.test.ts",
-          "test": "http.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "http.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "k8s.test.ts",
-          "test": "k8s.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "k8s.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "kafka.test.ts",
-          "test": "kafka.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "kafka.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "keycloak.test.ts",
-          "test": "keycloak.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "keycloak.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "mongodb.test.ts",
-          "test": "mongodb.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "mongodb.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "mysql.test.ts",
-          "test": "mysql.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "mysql.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "redis.test.ts",
-          "test": "redis.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "redis.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "s3.test.ts",
-          "test": "s3.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "s3.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "vault.test.ts",
-          "test": "vault.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "vault.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-int-sql",
-      "path": "test/blong-int-sql",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-kopi",
-      "path": "core/blong-kopi",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-kukum",
-      "path": "core/blong-kukum",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 362,
-        "passed": 357,
-        "failed": 5,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "e2e.test.ts",
-          "test": "e2e.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "libraries.test.ts",
-          "test": "libraries.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "libraries.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "operations.test.ts",
-          "test": "operations.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "operations.test.ts",
-          "message": "test process exited with code 1"
-        },
-        {
-          "suite": "scaffold.test.ts",
-          "test": "scaffold.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "scaffold.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-party",
-      "path": "realm/blong-party",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/b6044c73-fb70-413b-ae20-0abb35e3b837-attachment.zip"
         }
       ]
     },
@@ -552,11 +49,12 @@
       "package": "blong-realm",
       "path": "core/blong-realm",
       "runners": [
-        "tap"
+        "tap",
+        "playwright"
       ],
       "counts": {
-        "total": 1,
-        "passed": 0,
+        "total": 15,
+        "passed": 14,
         "failed": 1,
         "flaky": 0,
         "skipped": 0,
@@ -564,260 +62,49 @@
       },
       "failures": [
         {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
+          "suite": "blong.play.ts",
+          "test": "open blong.digest.browse",
           "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 3,
+            "failedRuns": 0
+          },
+          "trace": "traces/243db245-00de-4f20-b7b7-de6c4c0b223c-attachment.zip"
         }
       ]
     },
     {
-      "package": "blong-sim-api",
-      "path": "test/blong-sim-api",
+      "package": "semantic-log",
+      "path": "core/semantic-log",
       "runners": [
         "tap"
       ],
       "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-sim-tcp",
-      "path": "test/blong-sim-tcp",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-ttk",
-      "path": "tools/blong-ttk",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 122,
-        "passed": 108,
-        "failed": 14,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "callback register → wait → receive full coordination flow › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackRegister.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callback register throws on duplicate correlationId › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackRegister.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callback store coordination › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackRegister.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callbackCallbackWait rejects on timeout › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackRegister.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callbackCallbackWait throws when no prior register › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackWait.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callbackReceive returns not-found for unregistered correlationId › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackReceive.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callbackRuleDispatch - matches rule and returns decision › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackRuleDispatch.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callbackRuleDispatch - method mismatch does not match rule › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackRuleDispatch.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "callbackRuleDispatch - returns mockCallback when no rules match › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackRuleDispatch.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        },
-        {
-          "suite": "integration.test.ts",
-          "test": "integration - callback coordination › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/callback/orchestrator/callback/callbackCallbackRegister.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "integration.test.ts"
-        },
-        {
-          "suite": "integration.test.ts",
-          "test": "integration - execute example collection with TestExecutor › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/examples/collections/simple-transfer.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "integration.test.ts"
-        },
-        {
-          "suite": "migration.test.ts",
-          "test": "migration - migrateMigrateHelperExtract finds shared operations › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/migrate/orchestrator/migrate/migrateMigrateHelperExtract.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "migration.test.ts"
-        },
-        {
-          "suite": "migration.test.ts",
-          "test": "migration e2e - migrateMigrateCollectionConvert full pipeline with syntax check › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/migrate/orchestrator/migrate/migrateMigrateCollectionConvert.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "migration.test.ts"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "server.ts exports default › Cannot find module '/home/runner/work/blong/blong/tools/blong-ttk/node_modules/@feasibleone/blong/dist/types.js' imported from /home/runner/work/blong/blong/tools/blong-ttk/server.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts"
-        }
-      ]
-    },
-    {
-      "package": "config-hot-reload",
-      "path": "core/config-hot-reload",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "framework",
-      "path": "test/framework",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 2,
-        "passed": 0,
+        "total": 3242,
+        "passed": 3238,
         "failed": 2,
         "flaky": 0,
-        "skipped": 0,
+        "skipped": 2,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
+          "suite": "src/cache.test.ts",
+          "test": "a slow index scan is reported, and the directory is reclaimed",
           "status": "failed",
           "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
+          "file": "src/cache.test.ts",
+          "line": 532,
+          "message": "suite failed"
         },
         {
-          "suite": "nscfg/index.test.ts",
-          "test": "nscfg/index.test.ts",
+          "suite": "src/cache.test.ts",
+          "test": "ENOTEMPTY: directory not empty, rmdir '/tmp/semantic-log-cache-HHcqpJ'",
           "status": "failed",
           "runner": "tap",
-          "file": "nscfg/index.test.ts",
-          "message": "test process exited with code 1"
-        }
-      ]
-    },
-    {
-      "package": "handler-test-poc",
-      "path": "demo/handler-test-poc",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1"
+          "file": "src/cache.test.ts"
         }
       ]
     }

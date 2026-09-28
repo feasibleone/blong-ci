@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/43</span>
+                <span class='fraction'>43/43</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/43</span>
+                <span class='fraction'>43/43</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -106,92 +106,92 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import {library} from '@feasibleone/blong';</span></span></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Identity-flow selector for the Google exchange (`oidc` default, `oauth` option). */</span>
-<span class="cstat-no" title="statement not covered" >export type GoogleFlow = 'oidc' | 'oauth';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Google OAuth client configuration consumed by `accessIdentityCheck`. */</span>
-<span class="cstat-no" title="statement not covered" >export type GoogleConfig = {</span>
-<span class="cstat-no" title="statement not covered" >    /** Provider base URL — local mock in dev, `https://accounts.google.com` in production. */</span>
-<span class="cstat-no" title="statement not covered" >    baseUrl?: string;</span>
-<span class="cstat-no" title="statement not covered" >    clientId?: string;</span>
-<span class="cstat-no" title="statement not covered" >    clientSecret?: string;</span>
-<span class="cstat-no" title="statement not covered" >    redirectUri?: string;</span>
-<span class="cstat-no" title="statement not covered" >    /**</span>
-<span class="cstat-no" title="statement not covered" >     * Full authorization endpoint (e.g. Google's</span>
-<span class="cstat-no" title="statement not covered" >     * `https://accounts.google.com/o/oauth2/v2/auth`).  When unset it is</span>
-<span class="cstat-no" title="statement not covered" >     * resolved from OIDC discovery (`authorization_endpoint`), falling back to</span>
-<span class="cstat-no" title="statement not covered" >     * `${baseUrl}/authorize` (the local mock's path).</span>
-<span class="cstat-no" title="statement not covered" >     */</span>
-<span class="cstat-no" title="statement not covered" >    authorizationEndpoint?: string;</span>
-<span class="cstat-no" title="statement not covered" >    /**</span>
-<span class="cstat-no" title="statement not covered" >     * OIDC discovery document URL (OIDC flow).  Defaults to</span>
-<span class="cstat-no" title="statement not covered" >     * `${baseUrl}/.well-known/openid-configuration`; when unset/unreachable the</span>
-<span class="cstat-no" title="statement not covered" >     * flow falls back to `${baseUrl}/token` + `${baseUrl}/certs`.</span>
-<span class="cstat-no" title="statement not covered" >     */</span>
-<span class="cstat-no" title="statement not covered" >    discoveryUrl?: string;</span>
-<span class="cstat-no" title="statement not covered" >};</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/**</span>
-<span class="cstat-no" title="statement not covered" > * Google OAuth client configuration.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Read from the realm's `db` config slice (`config.&lt;intent&gt;.db.google` declared in</span>
-<span class="cstat-no" title="statement not covered" > * `server.ts`), so every suite that includes the access realm reuses the same defaults —</span>
-<span class="cstat-no" title="statement not covered" > * the local mock in `dev`, real Google endpoints (or an override) elsewhere.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >export default library(({config}) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    const google = ((config?.google ?? {}) as GoogleConfig);</span>
-<span class="cstat-no" title="statement not covered" >    return {</span>
-<span class="cstat-no" title="statement not covered" >        /** Return the effective Google OAuth client config from the realm `db.google` slice. */</span>
-<span class="cstat-no" title="statement not covered" >        googleConfig(): GoogleConfig {</span>
-<span class="cstat-no" title="statement not covered" >            return google;</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >    };</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {library} from '@feasibleone/blong';
+&nbsp;
+/** Identity-flow selector for the Google exchange (`oidc` default, `oauth` option). */
+export type GoogleFlow = 'oidc' | 'oauth';
+&nbsp;
+/** Google OAuth client configuration consumed by `accessIdentityCheck`. */
+export type GoogleConfig = {
+    /** Provider base URL — local mock in dev, `https://accounts.google.com` in production. */
+    baseUrl?: string;
+    clientId?: string;
+    clientSecret?: string;
+    redirectUri?: string;
+    /**
+     * Full authorization endpoint (e.g. Google's
+     * `https://accounts.google.com/o/oauth2/v2/auth`).  When unset it is
+     * resolved from OIDC discovery (`authorization_endpoint`), falling back to
+     * `${baseUrl}/authorize` (the local mock's path).
+     */
+    authorizationEndpoint?: string;
+    /**
+     * OIDC discovery document URL (OIDC flow).  Defaults to
+     * `${baseUrl}/.well-known/openid-configuration`; when unset/unreachable the
+     * flow falls back to `${baseUrl}/token` + `${baseUrl}/certs`.
+     */
+    discoveryUrl?: string;
+};
+&nbsp;
+/**
+ * Google OAuth client configuration.
+ *
+ * Read from the realm's `db` config slice (`config.&lt;intent&gt;.db.google` declared in
+ * `server.ts`), so every suite that includes the access realm reuses the same defaults —
+ * the local mock in `dev`, real Google endpoints (or an override) elsewhere.
+ */
+export default library(({config}) =&gt; {
+    const google = ((config?.<span class="branch-0 cbranch-no" title="branch not covered" >google ?? {}) as GoogleConfig);</span>
+    return {
+        /** Return the effective Google OAuth client config from the realm `db.google` slice. */
+        googleConfig(): GoogleConfig {
+            return google;
+        },
+    };
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -199,7 +199,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

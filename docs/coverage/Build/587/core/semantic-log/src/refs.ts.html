@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.89% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>130/137</span>
+                <span class='fraction'>137/137</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">93.33% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>14/15</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>11/11</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>8/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.89% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>130/137</span>
+                <span class='fraction'>137/137</span>
             </div>
         
             
@@ -276,13 +276,13 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">12774x</span>
-<span class="cline-any cline-yes">12774x</span>
+<span class="cline-any cline-yes">16620x</span>
+<span class="cline-any cline-yes">16620x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">79x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -317,17 +317,17 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">23825x</span>
-<span class="cline-any cline-yes">23825x</span>
-<span class="cline-any cline-yes">429771x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-yes">12908x</span>
-<span class="cline-any cline-yes">12908x</span>
+<span class="cline-any cline-yes">34219x</span>
+<span class="cline-any cline-yes">34219x</span>
+<span class="cline-any cline-yes">646171x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-yes">20132x</span>
+<span class="cline-any cline-yes">20132x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -416,7 +416,7 @@ export function mintRecordRef(): string {
     return mintUlid();
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >/** Mint a monotonic payload reference without contacting anything (PRD R19). */</span></span>
+/** Mint a monotonic payload reference without contacting anything (PRD R19). */
 export function mintPayloadRef(): string {
     return mintUlid();
 }
@@ -456,13 +456,13 @@ function encodeChar(char: string): string {
 export function encodeSegment(id: string): string {
     let out = '';
     for (const char of id) {
-        out += UNRESERVED.test<span class="fstat-no" title="function not covered" >(char) ? char : encodeChar(char);</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >    return out;</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >/** Build a dereferenceable reference URI. */</span>
-<span class="cstat-no" title="statement not covered" >export function refUri(kind: RefKind, id: string): string {</span>
+        out += UNRESERVED.test(char) ? char : encodeChar(char);
+    }
+    return out;
+}
+&nbsp;
+/** Build a dereferenceable reference URI. */
+export function refUri(kind: RefKind, id: string<span class="branch-0 cbranch-no" title="branch not covered" >): string {</span>
     return `${REF_SCHEME}://${KIND_SEGMENT[kind]}/${encodeSegment(id)}`;
 }
 &nbsp;
@@ -481,7 +481,7 @@ export function hyperlink(kind: RefKind, id: string, label?: string): string {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/39</span>
+                <span class='fraction'>39/39</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/39</span>
+                <span class='fraction'>39/39</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -102,84 +102,84 @@
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
 <a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/**</span></span></span>
-<span class="cstat-no" title="statement not covered" > * Organization CRUD — Browse, Create, Edit full-stack tests.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * `party.organization` is guarded by a record-level ACL whose scope *is* the</span>
-<span class="cstat-no" title="statement not covered" > * organization (units point at it, `selfScope`).  The Admin role carries the</span>
-<span class="cstat-no" title="statement not covered" > * wildcard allow-all rule the access realm seeds, so an organization it creates</span>
-<span class="cstat-no" title="statement not covered" > * stays readable — that is what makes the create flow work.</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >import {expect, test} from '@feasibleone/blong-browser/playwright';</span>
-<span class="cstat-no" title="statement not covered" >import {browseModel, createAndEditModel} from '@feasibleone/blong-browser/playwright/model';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.use({blongPermissions: true});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.describe('Party Organization', () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    browseModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'party',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'organization',</span>
-<span class="cstat-no" title="statement not covered" >        searchText: 'Global Bank',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    createAndEditModel(test, expect, {</span>
-<span class="cstat-no" title="statement not covered" >        subject: 'party',</span>
-<span class="cstat-no" title="statement not covered" >        object: 'organization',</span>
-<span class="cstat-no" title="statement not covered" >        fields: {</span>
-<span class="cstat-no" title="statement not covered" >            'organization.legalName': 'Test Playwright Organization',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.tradingName': 'TestOrg PW',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.registrationNumber': 'REG-PW-00001',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.taxId': 'TX-PW-0000000',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.establishedDate': '01/01/2020',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.industry': 'Technology',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.website': 'https://testplaywright.example.com',</span>
-<span class="cstat-no" title="statement not covered" >            'organization.notes': 'A test organization created by Playwright',</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        editFields: {</span>
-<span class="cstat-no" title="statement not covered" >            'organization.legalName': 'Test Playwright Organization Edited',</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        search: 'Test Playwright',</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L40'></a><a href='#L40'>40</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Organization CRUD — Browse, Create, Edit full-stack tests.
+ *
+ * `party.organization` is guarded by a record-level ACL whose scope *is* the
+ * organization (units point at it, `selfScope`).  The Admin role carries the
+ * wildcard allow-all rule the access realm seeds, so an organization it creates
+ * stays readable — that is what makes the create flow work.
+ */
+import {expect, test} from '@feasibleone/blong-browser/playwright';
+import {browseModel, createAndEditModel} from '@feasibleone/blong-browser/playwright/model';
+&nbsp;
+test.use({blongPermissions: true});
+&nbsp;
+test.describe('Party Organization', () =&gt; {
+    browseModel(test, expect, {
+        subject: 'party',
+        object: 'organization',
+        searchText: 'Global Bank',
+    });
+&nbsp;
+    createAndEditModel(test, expect, {
+        subject: 'party',
+        object: 'organization',
+        fields: {
+            'organization.legalName': 'Test Playwright Organization',
+            'organization.tradingName': 'TestOrg PW',
+            'organization.registrationNumber': 'REG-PW-00001',
+            'organization.taxId': 'TX-PW-0000000',
+            'organization.establishedDate': '01/01/2020',
+            'organization.industry': 'Technology',
+            'organization.website': 'https://testplaywright.example.com',
+            'organization.notes': 'A test organization created by Playwright',
+        },
+        editFields: {
+            'organization.legalName': 'Test Playwright Organization Edited',
+        },
+        search: 'Test Playwright',
+    });
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -187,7 +187,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

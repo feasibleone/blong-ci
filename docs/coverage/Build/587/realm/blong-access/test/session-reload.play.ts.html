@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/49</span>
+                <span class='fraction'>49/49</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/0</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/49</span>
+                <span class='fraction'>49/49</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -112,104 +112,104 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/**</span></span></span>
-<span class="cstat-no" title="statement not covered" > * Session reload &amp; logout — the reload-skip-login (restore cookie) and</span>
-<span class="cstat-no" title="statement not covered" > * logout-then-reload (cookie cleared + session revoked) interactions.</span>
-<span class="cstat-no" title="statement not covered" > *</span>
-<span class="cstat-no" title="statement not covered" > * Screenshots (baseline via `npm run playwright:update`, verify via</span>
-<span class="cstat-no" title="statement not covered" > * `npm run playwright`):</span>
-<span class="cstat-no" title="statement not covered" > *   - `reloaded-session.png`    — reload with a live session skips login</span>
-<span class="cstat-no" title="statement not covered" > *   - `logged-out-reload.png`   — after logout, reload shows the login screen</span>
-<span class="cstat-no" title="statement not covered" > */</span>
-<span class="cstat-no" title="statement not covered" >import {expect, test} from '@feasibleone/blong-browser/playwright';</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.use({blongPermissions: true});</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >test.describe('Access session reload &amp; logout', () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    test('reload skips the login screen when a live session cookie exists', async ({</span>
-<span class="cstat-no" title="statement not covered" >        page,</span>
-<span class="cstat-no" title="statement not covered" >        portal,</span>
-<span class="cstat-no" title="statement not covered" >    }) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        // The portal fixture has already logged in → the restore cookie is set.</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page.locator('.blong-portal-menubar')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        // Reload — the boot-time restore should exchange the cookie for tokens</span>
-<span class="cstat-no" title="statement not covered" >        // and render the portal directly, WITHOUT the login form.</span>
-<span class="cstat-no" title="statement not covered" >        await page.reload();</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page.locator('.blong-portal-menubar')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page.locator('input[name="username"]')).toHaveCount(0);</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page).toHaveScreenshot('reloaded-session.png');</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    test('logout revokes the session and reload shows the login screen', async ({</span>
-<span class="cstat-no" title="statement not covered" >        page,</span>
-<span class="cstat-no" title="statement not covered" >        portal,</span>
-<span class="cstat-no" title="statement not covered" >    }) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page.locator('.blong-portal-menubar')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        // Logout via the account menu → server-side revoke + restore-cookie</span>
-<span class="cstat-no" title="statement not covered" >        // cleared + local state reset.</span>
-<span class="cstat-no" title="statement not covered" >        await page.locator('.blong-account-menu__avatar').click();</span>
-<span class="cstat-no" title="statement not covered" >        await page.locator('.blong-account-menu__menu .p-menuitem-link', {</span>
-<span class="cstat-no" title="statement not covered" >            hasText: 'Sign out',</span>
-<span class="cstat-no" title="statement not covered" >        }).click();</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page.locator('input[name="username"]')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >        // Reload — no cookie → the login screen is shown again.</span>
-<span class="cstat-no" title="statement not covered" >        await page.reload();</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page.locator('input[name="username"]')).toBeVisible();</span>
-<span class="cstat-no" title="statement not covered" >        await expect(page).toHaveScreenshot('logged-out-reload.png');</span>
-<span class="cstat-no" title="statement not covered" >    });</span>
-<span class="cstat-no" title="statement not covered" >});</span>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Session reload &amp; logout — the reload-skip-login (restore cookie) and
+ * logout-then-reload (cookie cleared + session revoked) interactions.
+ *
+ * Screenshots (baseline via `npm run playwright:update`, verify via
+ * `npm run playwright`):
+ *   - `reloaded-session.png`    — reload with a live session skips login
+ *   - `logged-out-reload.png`   — after logout, reload shows the login screen
+ */
+import {expect, test} from '@feasibleone/blong-browser/playwright';
+&nbsp;
+test.use({blongPermissions: true});
+&nbsp;
+test.describe('Access session reload &amp; logout', () =&gt; {
+    test('reload skips the login screen when a live session cookie exists', async ({
+        page,
+        portal,
+    }) =&gt; {
+        // The portal fixture has already logged in → the restore cookie is set.
+        await expect(page.locator('.blong-portal-menubar')).toBeVisible();
+&nbsp;
+        // Reload — the boot-time restore should exchange the cookie for tokens
+        // and render the portal directly, WITHOUT the login form.
+        await page.reload();
+        await expect(page.locator('.blong-portal-menubar')).toBeVisible();
+        await expect(page.locator('input[name="username"]')).toHaveCount(0);
+        await expect(page).toHaveScreenshot('reloaded-session.png');
+    });
+&nbsp;
+    test('logout revokes the session and reload shows the login screen', async ({
+        page,
+        portal,
+    }) =&gt; {
+        await expect(page.locator('.blong-portal-menubar')).toBeVisible();
+&nbsp;
+        // Logout via the account menu → server-side revoke + restore-cookie
+        // cleared + local state reset.
+        await page.locator('.blong-account-menu__avatar').click();
+        await page.locator('.blong-account-menu__menu .p-menuitem-link', {
+            hasText: 'Sign out',
+        }).click();
+        await expect(page.locator('input[name="username"]')).toBeVisible();
+&nbsp;
+        // Reload — no cookie → the login screen is shown again.
+        await page.reload();
+        await expect(page.locator('input[name="username"]')).toBeVisible();
+        await expect(page).toHaveScreenshot('logged-out-reload.png');
+    });
+});
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -217,7 +217,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

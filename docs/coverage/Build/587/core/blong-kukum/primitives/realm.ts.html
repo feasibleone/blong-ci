@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.56% </span>
+                <span class="strong">93.15% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>61/73</span>
+                <span class='fraction'>68/73</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">66.66% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>2/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.56% </span>
+                <span class="strong">93.15% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>61/73</span>
+                <span class='fraction'>68/73</span>
             </div>
         
             
@@ -151,18 +151,18 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -223,19 +223,19 @@ const realm: PrimitiveDescriptor = {
     kinds: ['default'],
     defaultKind: 'default',
     roots: [],
-<span class="fstat-no" title="function not covered" >    check(ctx) {</span>
-<span class="cstat-no" title="statement not covered" >        const problems = checkSubject(ctx.subject);</span>
-<span class="cstat-no" title="statement not covered" >        // The realm template substitutes `$subject` into identifiers and derives</span>
-<span class="cstat-no" title="statement not covered" >        // seed method names from `&lt;subject&gt;&lt;Object&gt;Merge`, so a multi-word name</span>
-<span class="cstat-no" title="statement not covered" >        // produces a realm whose seeds dispatch to a non-existent method.</span>
-<span class="cstat-no" title="statement not covered" >        if (!/^[a-z][a-z0-9]*$/.test(ctx.subject)) {</span>
+    check(ctx) {
+        const problems = checkSubject(ctx.subject);
+        // The realm template substitutes `$subject` into identifiers and derives
+        // seed method names from `&lt;subject&gt;&lt;Object&gt;Merge`, so a multi-word name
+        // produces a realm whose seeds dispatch to a non-existent method.
+        if (!/^[a-z][a-z0-9]*$/.test(ctx.subject)) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >            problems.push(</span>
 <span class="cstat-no" title="statement not covered" >                `realm name '${ctx.subject}' must be a single lowercase word — the template ` +</span>
 <span class="cstat-no" title="statement not covered" >                    'substitutes it into identifiers and derives seed method names from it',</span>
 <span class="cstat-no" title="statement not covered" >            );</span>
 <span class="cstat-no" title="statement not covered" >        }</span>
-<span class="cstat-no" title="statement not covered" >        return problems;</span>
-<span class="cstat-no" title="statement not covered" >    },</span>
+        return problems;
+    },
     files(ctx) {
         const name = ctx.subject;
         return [
@@ -289,7 +289,7 @@ export default realm;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2026-09-28T15:51:21.007Z
+                at 2026-09-28T20:00:09.919Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>
