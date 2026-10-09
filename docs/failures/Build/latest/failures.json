@@ -1,20 +1,163 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-05T10:17:05.936Z",
+  "generatedAt": "2026-10-09T22:10:28.611Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 595,
-  "commit": "383de802e778f4c9b049a288ed2f3cb1669e6768",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/37288090929",
+  "run": 596,
+  "commit": "fb5e1bcadbc80468b41390635c4175c3c9fb31b2",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/37990995033",
   "totals": {
-    "packages": 1,
-    "tests": 5,
-    "failed": 5,
-    "flaky": 0,
-    "newFailures": 0
+    "packages": 4,
+    "tests": 14,
+    "failed": 13,
+    "flaky": 1,
+    "newFailures": 2
   },
   "allure": "index.html",
   "packages": [
+    {
+      "package": "blong-commander",
+      "path": "realm/blong-commander",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 15,
+        "passed": 13,
+        "failed": 1,
+        "flaky": 1,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "explore.play.ts",
+          "test": "k8s-dev — namespace → category → resource drill-down and item viewer",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/928af5e9-d1a1-4fa0-8615-350d8ec35645-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "keycloak-dev — realms and users",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/d2834eac-02b4-453a-8dbc-f1a32368cb5d-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-dev",
+      "path": "tools/blong-dev",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 879,
+        "passed": 873,
+        "failed": 6,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "src/memory/hindsight/hindsightPage.test.ts",
+          "test": "a documentation page carries the taxonomy the entries are told apart by › it is a documentation page",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/memory/hindsight/hindsightPage.test.ts",
+          "line": 75,
+          "stack": "Test.<anonymous> (src/memory/hindsight/hindsightPage.test.ts:75:7)\nsrc/memory/hindsight/hindsightPage.test.ts:50:3\n"
+        },
+        {
+          "suite": "src/memory/hindsight/hindsightPage.test.ts",
+          "test": "a skill carries the procedural tags › it is an agent skill",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/memory/hindsight/hindsightPage.test.ts",
+          "line": 103,
+          "stack": "Test.<anonymous> (src/memory/hindsight/hindsightPage.test.ts:103:7)\nsrc/memory/hindsight/hindsightPage.test.ts:84:3\n"
+        },
+        {
+          "suite": "src/memory/hindsight/hindsightSources.test.ts",
+          "test": "sourceTags names the tags a reconcile owns › the pages",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/memory/hindsight/hindsightSources.test.ts",
+          "line": 58,
+          "message": "--- expected\n+++ actual\n@@ -1,4 +1,4 @@\n Array [\n-  \"type:documentation\",\n-  \"type:agent-skill\",\n+  \"kind:documentation\",\n+  \"kind:agent-skill\",\n ]",
+          "stack": "Test.<anonymous> (src/memory/hindsight/hindsightSources.test.ts:58:7)\nsrc/memory/hindsight/hindsightSources.test.ts:56:3\n"
+        },
+        {
+          "suite": "src/commands/memory.test.ts",
+          "test": "the memory command layer › a page ingest sends the pages under their own ids and tags › a page carries the documentation tag",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/commands/memory.test.ts",
+          "line": 384,
+          "stack": "Test.<anonymous> (src/commands/memory.test.ts:384:11)\n"
+        },
+        {
+          "suite": "src/commands/memory.test.ts",
+          "test": "the memory command layer › a search across sources asks with a tag group › the sources are alternatives — a flat list would be an AND and match nothing",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/commands/memory.test.ts",
+          "line": 329,
+          "message": "--- expected\n+++ actual\n@@ -1,16 +1,16 @@\n Array [\n   Object {\n     \"or\": Array [\n       Object {\n         \"tags\": Array [\n           \"memory\",\n         ],\n       },\n       Object {\n         \"tags\": Array [\n-          \"type:documentation\",\n+          \"kind:documentation\",\n         ],\n       },\n     ],\n   },\n ]",
+          "stack": "Test.<anonymous> (src/commands/memory.test.ts:329:11)\n"
+        },
+        {
+          "suite": "src/commands/memory.test.ts",
+          "test": "the memory command layer › a search for pages asks with the page tag, not the entry tag › a page search never carries the entry tag, so it cannot drift back to entries",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/commands/memory.test.ts",
+          "line": 313,
+          "message": "--- expected\n+++ actual\n@@ -1,3 +1,3 @@\n Array [\n-  \"type:documentation\",\n+  \"kind:documentation\",\n ]",
+          "stack": "Test.<anonymous> (src/commands/memory.test.ts:313:11)\n"
+        }
+      ]
+    },
+    {
+      "package": "blong-gateway",
+      "path": "realm/blong-gateway",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 21,
+        "passed": 20,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "blong-gateway meter flow (browser) › gateway meter http flow › rateProbeBlocked › rate probe third call was blocked",
+          "status": "failed",
+          "runner": "tap",
+          "file": "browser/test/test/testMeterHttpFlow.ts",
+          "line": 220,
+          "message": "simple",
+          "stack": "rateProbeBlocked (browser/test/test/testMeterHttpFlow.ts:220:28)\nexecuteStepFn (../../core/blong-chain/index.ts:831:34)\nTest.<anonymous> (../../core/blong-chain/index.ts:995:17)\n"
+        }
+      ]
+    },
     {
       "package": "blong-party",
       "path": "realm/blong-party",
