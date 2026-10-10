@@ -1,137 +1,20 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-10T15:18:29.951Z",
+  "generatedAt": "2026-10-10T17:26:20.055Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 599,
-  "commit": "d63e4f08db58384b40e27f94a3531459e898432b",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/38061058646",
+  "run": 600,
+  "commit": "0d97d0652c43c17598ccabe89acfc5f11fa20c60",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/38069591545",
   "totals": {
-    "packages": 3,
-    "tests": 10,
-    "failed": 10,
+    "packages": 1,
+    "tests": 2,
+    "failed": 2,
     "flaky": 0,
-    "newFailures": 1
+    "newFailures": 0
   },
   "allure": "index.html",
   "packages": [
-    {
-      "package": "blong-ci-report",
-      "path": "test/blong-ci-report",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 135,
-        "passed": 128,
-        "failed": 7,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport leaves the deltas out when there is no baseline › counts, time and coverage stand on their own",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 664,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,18 @@\n-/^\\| fake-fail \\| ❌ \\| 8 \\| 2 \\| 0 \\| — \\| 10 \\| 1m 05s ⏱️ logs in as the seeded user 11s \\| 25% \\|$/m\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests**\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 | 20s ⏱️ logs in as the seeded user 11s | 25% |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 | 1.9s | 80% |\n+  | fake-silent | — | — | — | — | — | — | — | 50% |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:664:11)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport leaves the deltas out when there is no baseline › the run cost is stated without a delta",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 662,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,18 @@\n-/· 2m 15s of test time\\*\\*/\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests**\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 | 20s ⏱️ logs in as the seeded user 11s | 25% |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 | 1.9s | 80% |\n+  | fake-silent | — | — | — | — | — | — | — | 50% |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:662:11)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport merges metrics, coverage, deltas and links into one table › a grown package: test delta, faster than before, coverage up",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 536,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,35 @@\n-/^\\| fake-pass \\| ✅ \\| 12 \\| 0 \\| 0 \\| — \\| 12 \\(\\+2\\) \\| 4\\.2s \\(-3\\.8s\\) \\| 🟢 80% \\(\\+10\\.0pp\\) \\| — \\|$/m\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests** — build #551\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  *vs last merged main: tests 32 (+12), coverage 44.3% (+11.0pp)*\n+  \n+  📊 [Coverage report](https://example.test/blong-ci/coverage/Build/551/) · 🤖 Failure report: [this run](https://example.test/blong-ci/failures/Build/551/failures.json) · [latest](https://example.test/blong-ci/failures/Build/latest/failures.json)\n+  \n+  > 1 package(s) produced no test report.\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  > Failures: 2 new (green on main) · 1 already failing there · 1 intermittent there.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage | Report |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 (+2) | 20s ⏱️ logs in as the seeded user 11s | 🔴 25% (-5.0pp) | [report](https://example.test/blong-ci/fake-fail/Build/551/) |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 (+2) | 1.9s | 🟢 80% (+10.0pp) | — |\n+  | fake-silent | — | — | — | — | — | — | — | 🟡 50% (-0.4pp) | — |\n+  \n+  ### Failed suites (4 test(s))\n+  \n+  | Package | Suite | Test | Status | History | Location | Trace |\n+  | --- | --- | --- | --- | --- | --- | --- |\n+  | fake-both (playwright) | fake-both.playwright.test | opens the roles tab | 🔴 failed | new | `realm/fake-both/test/opens-the-roles-tab.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-fail | fake-fail.playwright.test | logs in as the seeded user | 🔴 failed | recurring | `realm/fake-fail/test/logs-in-as-the-seeded-user.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-fail | fake-fail.playwright.test | opens the report tab | 🔴 failed | new | `realm/fake-fail/test/opens-the-report-tab.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-flaky | fake-flaky.tap.test | retries a transient failure | 🟡 flaky | intermittent | `tools/fake-flaky/test.ts` | — |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:536:11)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport merges metrics, coverage, deltas and links into one table › a regressed package links its published report",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 546,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,35 @@\n-/^\\| fake-fail \\| ❌ \\| 8 \\| 2 \\| 0 \\| — \\| 10 \\(\\+2\\) \\| 1m 05s \\(\\+5\\.0s\\) ⏱️ logs in as the seeded user 11s \\| 🔴 25% \\(-5\\.0pp\\) \\| \\[report\\]\\(https:\\/\\/example\\.test\\/blong-ci\\/fake-fail\\/Build\\/551\\/\\) \\|$/m\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests** — build #551\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  *vs last merged main: tests 32 (+12), coverage 44.3% (+11.0pp)*\n+  \n+  📊 [Coverage report](https://example.test/blong-ci/coverage/Build/551/) · 🤖 Failure report: [this run](https://example.test/blong-ci/failures/Build/551/failures.json) · [latest](https://example.test/blong-ci/failures/Build/latest/failures.json)\n+  \n+  > 1 package(s) produced no test report.\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  > Failures: 2 new (green on main) · 1 already failing there · 1 intermittent there.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage | Report |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 (+2) | 20s ⏱️ logs in as the seeded user 11s | 🔴 25% (-5.0pp) | [report](https://example.test/blong-ci/fake-fail/Build/551/) |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 (+2) | 1.9s | 🟢 80% (+10.0pp) | — |\n+  | fake-silent | — | — | — | — | — | — | — | 🟡 50% (-0.4pp) | — |\n+  \n+  ### Failed suites (4 test(s))\n+  \n+  | Package | Suite | Test | Status | History | Location | Trace |\n+  | --- | --- | --- | --- | --- | --- | --- |\n+  | fake-both (playwright) | fake-both.playwright.test | opens the roles tab | 🔴 failed | new | `realm/fake-both/test/opens-the-roles-tab.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-fail | fake-fail.playwright.test | logs in as the seeded user | 🔴 failed | recurring | `realm/fake-fail/test/logs-in-as-the-seeded-user.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-fail | fake-fail.playwright.test | opens the report tab | 🔴 failed | new | `realm/fake-fail/test/opens-the-report-tab.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-flaky | fake-flaky.tap.test | retries a transient failure | 🟡 flaky | intermittent | `tools/fake-flaky/test.ts` | — |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:546:11)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport merges metrics, coverage, deltas and links into one table › a two-runner package names its legs, and its slowest test sits in the duration cell",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 541,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,35 @@\n-/^\\| fake-both \\(tap 4 · playwright 2 ❌\\) \\| ❌ \\| 4 \\| 1 \\| 0 \\| 1 \\| 6 \\| 54s ⏱️ opens the roles tab 8\\.2s \\| — \\| — \\|$/m\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests** — build #551\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  *vs last merged main: tests 32 (+12), coverage 44.3% (+11.0pp)*\n+  \n+  📊 [Coverage report](https://example.test/blong-ci/coverage/Build/551/) · 🤖 Failure report: [this run](https://example.test/blong-ci/failures/Build/551/failures.json) · [latest](https://example.test/blong-ci/failures/Build/latest/failures.json)\n+  \n+  > 1 package(s) produced no test report.\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  > Failures: 2 new (green on main) · 1 already failing there · 1 intermittent there.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage | Report |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 (+2) | 20s ⏱️ logs in as the seeded user 11s | 🔴 25% (-5.0pp) | [report](https://example.test/blong-ci/fake-fail/Build/551/) |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 (+2) | 1.9s | 🟢 80% (+10.0pp) | — |\n+  | fake-silent | — | — | — | — | — | — | — | 🟡 50% (-0.4pp) | — |\n+  \n+  ### Failed suites (4 test(s))\n+  \n+  | Package | Suite | Test | Status | History | Location | Trace |\n+  | --- | --- | --- | --- | --- | --- | --- |\n+  | fake-both (playwright) | fake-both.playwright.test | opens the roles tab | 🔴 failed | new | `realm/fake-both/test/opens-the-roles-tab.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-fail | fake-fail.playwright.test | logs in as the seeded user | 🔴 failed | recurring | `realm/fake-fail/test/logs-in-as-the-seeded-user.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-fail | fake-fail.playwright.test | opens the report tab | 🔴 failed | new | `realm/fake-fail/test/opens-the-report-tab.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-flaky | fake-flaky.tap.test | retries a transient failure | 🟡 flaky | intermittent | `tools/fake-flaky/test.ts` | — |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:541:11)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport merges metrics, coverage, deltas and links into one table › an unmoved coverage number carries no mark",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 577,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,31 @@\n-/^\\| fake-pass \\| ✅ \\| 12 \\| 0 \\| 0 \\| — \\| 12 \\(\\+2\\) \\| 4\\.2s \\(-3\\.8s\\) \\| 80% \\(0\\.0pp\\) \\|/m\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests**\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  *vs last merged main: tests 32 (+12), coverage 44.3% (+11.0pp)*\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  > Failures: 2 new (green on main) · 1 already failing there · 1 intermittent there.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 (+2) | 20s ⏱️ logs in as the seeded user 11s | 🔴 25% (-5.0pp) |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 (+2) | 1.9s | 80% (0.0pp) |\n+  | fake-silent | — | — | — | — | — | — | — | 🟡 50% (-0.4pp) |\n+  \n+  ### Failed suites (4 test(s))\n+  \n+  | Package | Suite | Test | Status | History | Location | Trace |\n+  | --- | --- | --- | --- | --- | --- | --- |\n+  | fake-both (playwright) | fake-both.playwright.test | opens the roles tab | 🔴 failed | new | `realm/fake-both/test/opens-the-roles-tab.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-fail | fake-fail.playwright.test | logs in as the seeded user | 🔴 failed | recurring | `realm/fake-fail/test/logs-in-as-the-seeded-user.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-fail | fake-fail.playwright.test | opens the report tab | 🔴 failed | new | `realm/fake-fail/test/opens-the-report-tab.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-flaky | fake-flaky.tap.test | retries a transient failure | 🟡 flaky | intermittent | `tools/fake-flaky/test.ts` | — |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:577:11)\n"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "renderCiReport merges metrics, coverage, deltas and links into one table › totals line carries the counts, what the run cost, and how that compares",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "line": 505,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,35 @@\n-/\\*\\*4 package\\(s\\) · 26 passed, 3 failed, 1 flaky \\(32 total\\) · 2m 15s \\(\\+15s\\) of test time\\*\\* — build #551/\n+String(\n+  ## CI Summary\n+  \n+  **4 package(s) · 26 passed, 3 failed, 1 flaky (32 total) · 47s of test time, 1m 28s outside the tests** — build #551\n+  \n+  *by runner: tap 20 · playwright 12 (3 failed)*\n+  \n+  *vs last merged main: tests 32 (+12), coverage 44.3% (+11.0pp)*\n+  \n+  📊 [Coverage report](https://example.test/blong-ci/coverage/Build/551/) · 🤖 Failure report: [this run](https://example.test/blong-ci/failures/Build/551/failures.json) · [latest](https://example.test/blong-ci/failures/Build/latest/failures.json)\n+  \n+  > 1 package(s) produced no test report.\n+  \n+  > 1 skipped, 1 todo in 2 package(s): fake-both 1, fake-flaky 1.\n+  \n+  > Failures: 2 new (green on main) · 1 already failing there · 1 intermittent there.\n+  \n+  | Package | Result | Passed | Failed | Flaky | Not run | Total | Duration | Coverage | Report |\n+  | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |\n+  | fake-both (tap 4 302ms · playwright 2 16s ❌) | ❌ | 4 | 1 | 0 | 1 | 6 | 17s ⏱️ opens the roles tab 8.2s | — | — |\n+  | fake-fail | ❌ | 8 | 2 | 0 | — | 10 (+2) | 20s ⏱️ logs in as the seeded user 11s | 🔴 25% (-5.0pp) | [report](https://example.test/blong-ci/fake-fail/Build/551/) |\n+  | fake-flaky | ⚠️ | 2 | 0 | 1 | 1 | 4 | 8.2s ⏱️ handles a cold cache 5.1s | — | — |\n+  | fake-pass | ✅ | 12 | 0 | 0 | — | 12 (+2) | 1.9s | 🟢 80% (+10.0pp) | — |\n+  | fake-silent | — | — | — | — | — | — | — | 🟡 50% (-0.4pp) | — |\n+  \n+  ### Failed suites (4 test(s))\n+  \n+  | Package | Suite | Test | Status | History | Location | Trace |\n+  | --- | --- | --- | --- | --- | --- | --- |\n+  | fake-both (playwright) | fake-both.playwright.test | opens the roles tab | 🔴 failed | new | `realm/fake-both/test/opens-the-roles-tab.play.ts:42` | `traces/aaaa1111-2222-3333-4444-555555555555-attachment.zip` |\n+  | fake-fail | fake-fail.playwright.test | logs in as the seeded user | 🔴 failed | recurring | `realm/fake-fail/test/logs-in-as-the-seeded-user.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-fail | fake-fail.playwright.test | opens the report tab | 🔴 failed | new | `realm/fake-fail/test/opens-the-report-tab.play.ts:42` | [trace](https://trace.playwright.dev/?trace=https%3A%2F%2Fexample.test%2Fblong-ci%2Ffake-fail%2FBuild%2F551%2Ftraces%2Faaaa1111-2222-3333-4444-555555555555-attachment.zip) |\n+  | fake-flaky | fake-flaky.tap.test | retries a transient failure | 🟡 flaky | intermittent | `tools/fake-flaky/test.ts` | — |\n+  \n+)",
-          "stack": "Test.<anonymous> (index.test.ts:505:11)\n"
-        }
-      ]
-    },
-    {
-      "package": "blong-commander",
-      "path": "realm/blong-commander",
-      "runners": [
-        "tap",
-        "playwright"
-      ],
-      "counts": {
-        "total": 28,
-        "passed": 27,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "explore.play.ts",
-          "test": "keycloak-dev — realms and users",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/088c6963-8925-40fd-a760-dc086064441b-attachment.zip"
-        }
-      ]
-    },
     {
       "package": "blong-party",
       "path": "realm/blong-party",
