@@ -1,0 +1,394 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-14T19:07:42.769Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 618,
+  "commit": "43eacc1fb69dc14b9d1fbd34646a668ae3284b34",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/38617157250",
+  "totals": {
+    "packages": 7,
+    "tests": 24,
+    "failed": 24,
+    "flaky": 0,
+    "newFailures": 12
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-access",
+      "path": "realm/blong-access",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    },
+    {
+      "package": "blong-cli",
+      "path": "demo/blong-cli",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 14,
+        "passed": 7,
+        "failed": 7,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "a command dispatches in-process and prints its result on stdout › and nothing of its own reached stderr",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 62,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,3 @@\n-Array []\n+Array [\n+  \"blong-cli: Invalid configuration for blong-cli:\",\n+]",
+          "stack": "Test.<anonymous> (index.test.ts:62:7)\nindex.test.ts:57:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "a command dispatches in-process and prints its result on stdout › exits clean",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 60,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (index.test.ts:60:7)\nindex.test.ts:57:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "a command dispatches in-process and prints its result on stdout › the result is the only thing on stdout",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 61,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-hello-world\n+",
+          "stack": "Test.<anonymous> (index.test.ts:61:7)\nindex.test.ts:57:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the machine channel stays parseable › exits clean",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 69,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (index.test.ts:69:7)\nindex.test.ts:66:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the machine channel stays parseable › Unexpected end of JSON input",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 70,
+          "stack": "JSON.parse (<anonymous>)\nTest.t (index.test.ts:70:18)\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the platform is available, so a command can read a file › exits clean",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 80,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (index.test.ts:80:7)\nindex.test.ts:74:3\n"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "the platform is available, so a command can read a file › the file is read through `this.platform` and rendered for a terminal",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "line": 81,
+          "message": "--- expected\n+++ actual\n@@ -1,5 +1,3 @@\n Array [\n-  \"lines: 2\",\n-  \"words: 5\",\n-  \"characters: 24\",\n+  \"\",\n ]",
+          "stack": "Test.<anonymous> (index.test.ts:81:7)\nindex.test.ts:74:3\n"
+        }
+      ]
+    },
+    {
+      "package": "blong-commander",
+      "path": "realm/blong-commander",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 28,
+        "passed": 16,
+        "failed": 12,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "explore.play.ts",
+          "test": "access-db — browse tables (SQL via access.table.list)",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/714121e4-4ac3-4da9-b63c-7b31d0360581-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "k8s-dev — namespace → category → resource drill-down and item viewer",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/9b66ef5f-6084-44b6-bba0-10369a01d592-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "kafka-dev — topics and message viewer",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/3e01143a-2df2-43f7-ad74-90699505b335-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "keycloak-dev — realms and users",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/9ce1031c-47da-4be5-83b0-c9a4e529f155-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "mongo-dev — databases and collections",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/ed2ae870-3e0a-401a-a967-f6828bbf5313-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "navigator mirrors the drill path; \"..\" and Backspace go up",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/7fcde42c-1920-4d01-a9e4-d43348cd514d-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "redis-dev — database index and keys",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/920db17d-261d-4375-8c7a-d3663350b874-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "s3-dev — buckets and objects",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/6ff65535-b767-4139-b83a-73e665615e0a-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "source list — the commander home",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/557a7b0f-15b0-4947-9720-33730dff6cfe-attachment.zip"
+        },
+        {
+          "suite": "observedBranchList.play.ts",
+          "test": "the orchestrator dispatch is drawn with its milestones and its outgoing leg",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/62ec4e74-9cd1-4dff-a20b-ba60375a7852-attachment.zip"
+        },
+        {
+          "suite": "docs.play.ts › Commander documentation images",
+          "test": "the source list and one drilled source",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/7a04adb0-4fe3-45af-b911-d82fd5480bf8-attachment.zip"
+        },
+        {
+          "suite": "explore.play.ts",
+          "test": "vault-dev — mounts, secrets, and masked secret viewer",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/22f1b69a-1e27-47b9-88e4-81c6f3aa1b31-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-gateway",
+      "path": "realm/blong-gateway",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    },
+    {
+      "package": "blong-gogo",
+      "path": "core/blong-gogo",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 782,
+        "passed": 781,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "src/graceful-shutdown.spawn.test.ts",
+          "test": "blong CLI exits 0 with the shutdown marker after timeout sends SIGTERM › exit code 0 (graceful shutdown), got 1",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/graceful-shutdown.spawn.test.ts",
+          "line": 64,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (src/graceful-shutdown.spawn.test.ts:64:11)\n"
+        }
+      ]
+    },
+    {
+      "package": "blong-party",
+      "path": "realm/blong-party",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    },
+    {
+      "package": "framework",
+      "path": "test/framework",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 2,
+        "passed": 1,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "nscfg/index.test.ts",
+          "test": "nscfg/index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "nscfg/index.test.ts",
+          "message": "test process exited with code 1"
+        }
+      ]
+    }
+  ]
+}
