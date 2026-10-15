@@ -1,0 +1,66 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-15T19:33:55.185Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 622,
+  "commit": "776c9c603f056887d7682587f32e195d3b5207b3",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/38791173525",
+  "totals": {
+    "packages": 2,
+    "tests": 2,
+    "failed": 2,
+    "flaky": 0,
+    "newFailures": 0
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-cli",
+      "path": "demo/blong-cli",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 12,
+        "passed": 11,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "(unparsed)",
+          "test": "tap exited with code 1 without reporting a failing test",
+          "status": "failed",
+          "runner": "tap"
+        }
+      ]
+    },
+    {
+      "package": "blong-kukum",
+      "path": "core/blong-kukum",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 559,
+        "passed": 558,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "kukum meta endpoints over the gateway › timeout!",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts"
+        }
+      ]
+    }
+  ]
+}
