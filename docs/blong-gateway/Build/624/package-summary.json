@@ -1,0 +1,29 @@
+{
+  "package": "blong-gateway",
+  "status": "passed",
+  "counts": {
+    "total": 21,
+    "passed": 21,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 4523.499000000001,
+  "outsideTestsMs": 52029.501,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 21,
+        "passed": 21,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 56553
+    }
+  ]
+}
