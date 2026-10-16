@@ -1,0 +1,29 @@
+{
+  "package": "blong-ci-report",
+  "status": "passed",
+  "counts": {
+    "total": 142,
+    "passed": 142,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 10813,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 142,
+        "passed": 142,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 10813
+    }
+  ]
+}
