@@ -1,0 +1,376 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-17T18:39:42.735Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 629,
+  "commit": "6d80cdc9531b80500bbd615d1d8929a16d815173",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/39057849500",
+  "totals": {
+    "packages": 8,
+    "tests": 23,
+    "failed": 23,
+    "flaky": 0,
+    "newFailures": 0
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-access",
+      "path": "realm/blong-access",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 9,
+        "passed": 8,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "      elapsedMs: 6751\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:39:14.556Z warn  blong-access browser operation \"start testClient\" took 6753ms [semlog://t/3c1d1ab0c5c9]\n      label: start testClient\n      elapsedMs: 6753\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:39:14.600Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:39:14.647Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    2026-10-17T18:39:14.698Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/browser/orchestrator/subject [semlog://t/5479766abf…\n    1..0 # no tests found\nnot ok 2 - index.test.ts # time=14275.681ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-access\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-access/index.test.ts\n  jobId: 0"
+        }
+      ]
+    },
+    {
+      "package": "blong-commander",
+      "path": "realm/blong-commander",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 14,
+        "passed": 13,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "commander.test.ts",
+          "test": "commander.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "commander.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:37:38.195Z warn  commander server operation \"start adapter\" took 6706ms [semlog://t/aea41419e0e3]\n      label: start adapter\n      elapsedMs: 6706\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:37:38.236Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:37:38.272Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    1..0 # no tests found\nnot ok 2 - commander.test.ts # time=14349.368ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-commander\n  externalID: commander.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-commander/commander.test.ts\n  jobId: 0"
+        }
+      ]
+    },
+    {
+      "package": "blong-gateway",
+      "path": "realm/blong-gateway",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "      elapsedMs: 7402\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:29.695Z warn  blong-gateway browser operation \"start testClient\" took 7467ms [semlog://t/31d54b7e4a38]\n      label: start testClient\n      elapsedMs: 7467\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:29.775Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:36:29.897Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    2026-10-17T18:36:30.032Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/browser/orchestrator/subject [semlog://t/5479766abf…\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=15451.884ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-gateway\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-gateway/index.test.ts\n  exitCode: 1"
+        }
+      ]
+    },
+    {
+      "package": "blong-int-adapter",
+      "path": "test/blong-int-adapter",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 9,
+        "passed": 0,
+        "failed": 9,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "http.test.ts",
+          "test": "http.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "http.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "k8s.test.ts",
+          "test": "k8s.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "k8s.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "kafka.test.ts",
+          "test": "kafka.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "kafka.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "keycloak.test.ts",
+          "test": "keycloak.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "keycloak.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "mongodb.test.ts",
+          "test": "mongodb.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "mongodb.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "mysql.test.ts",
+          "test": "mysql.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "mysql.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "redis.test.ts",
+          "test": "redis.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "redis.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "s3.test.ts",
+          "test": "s3.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "s3.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        },
+        {
+          "suite": "vault.test.ts",
+          "test": "vault.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "vault.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:35:56.379Z info  int-adapter config event config.load [semlog://t/b73fff5acded]\n      files: []\n      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:36:08.527Z warn  int-adapter server operation \"start adapter\" took 10701ms [semlog://t/d1ec4523433c]\n      label: start adapter\n      elapsedMs: 10701\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:36:08.543Z error Watch Error loading /home/runner/work/blong/blong/test/blong-int-adapter/vault/test/fixtures/secret.ts ; probably a generic …\n    1..0 # no tests found\nnot ok 9 - vault.test.ts # time=21745.115ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/test/blong-int-adapter\n  externalID: vault.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/test/blong-int-adapter/vault.test.ts\n  jobId: 2"
+        }
+      ]
+    },
+    {
+      "package": "blong-kopi",
+      "path": "core/blong-kopi",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "      label: start testClient\n      elapsedMs: 4570\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:34:51.595Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/browser/orchestrator/subject [semlog://t/5479766abf…\n    2026-10-17T18:34:51.636Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-kopi/orchestrator/subject [semlog://t/1a0137c63429]\n    2026-10-17T18:34:51.707Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:34:51.740Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-access/browser/orchestrator/component [semlog://t/b83efdf…\n    2026-10-17T18:34:51.745Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    2026-10-17T18:34:51.854Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-access/browser/orchestrator/subject [semlog://t/18a92757d…\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=9829.625ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/core/blong-kopi\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/core/blong-kopi/index.test.ts\n  exitCode: 1"
+        }
+      ]
+    },
+    {
+      "package": "blong-kukum",
+      "path": "core/blong-kukum",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 586,
+        "passed": 578,
+        "failed": 8,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "      env: [\"BLONG_MASTER_KEY\"]\n      argv: []\n    2026-10-17T18:35:01.727Z warn  blong-kukum server operation \"start adapter\" took 4753ms [semlog://t/17ec46d0db2f]\n      label: start adapter\n      elapsedMs: 4753\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:35:01.750Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-kukum/orchestrator/kukum [semlog://t/30551628684f]\n    2026-10-17T18:35:01.868Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:35:01.905Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    1..0 # no tests found\nnot ok 3 - index.test.ts # time=9729.21ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/core/blong-kukum\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/core/blong-kukum/index.test.ts\n  exitCode: 1"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the Playwright leg drives the model page against committed baselines › the added entity was browsed",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 281,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,33 @@\n-/Gadget › browse/\n+String(\n+  [WebServer] 2026-10-17T18:34:46.153Z info  e2e-realm config event config.load [semlog://t/a2aa1bb62a56]\n+  [WebServer]   files: []\n+  [WebServer]   env: [\"BLONG_MASTER_KEY\"]\n+  [WebServer]   argv: [\"gateway\",\"resolution\"]\n+  [WebServer] 2026-10-17T18:34:49.171Z warn  e2e-realm server operation \"start adapter\" took 2741ms [semlog://t/2c582a460636]\n+  [WebServer]   label: start adapter\n+  [WebServer]   elapsedMs: 2741\n+  [WebServer]   progress: {\"done\":1,\"total\":1}\n+  [WebServer] 2026-10-17T18:34:49.187Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-kukum/test/fixture/e2e-realm/orchestrator/subject [semlog://t/5322dd3044d5]\n+  [WebServer] 2026-10-17T18:34:49.200Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n+  [WebServer] 2026-10-17T18:34:49.214Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n+  Error: Process from config.webServer was not able to start. Exit code: 1\n+  \n+  Allure report: .ci-report/publish (1 producer(s), ../../../_assets/allure/allure-main-6f0bce86191fbb13.js)\n+  [WebServer] file:///home/runner/work/blong/blong/realm/blong-core/adapter/db/handlerGroup.ts:1\n+  [WebServer] import {handlerGroup} from '@feasibleone/blong';\n+  [WebServer]         ^^^^^^^^^^^^\n+  [WebServer] SyntaxError: The requested module '@feasibleone/blong' does not provide an export named 'handlerGroup'\n+  [WebServer]     at #asyncInstantiate (node:internal/modules/esm/module_job:455:21)\n+  [WebServer]     at async ModuleJob.run (node:internal/modules/esm/module_job:553:5)\n+  [WebServer]     at async node:internal/modules/esm/loader:647:26\n+  [WebServer]     at async Watch._loadHandlers (file:///home/runner/work/blong/blong/core/blong-gogo/src/Watch.ts:460:27)\n+  [WebServer]     at async loadRealm (file:///home/runner/work/blong/blong/core/blong-gogo/src/load.ts:1572:33)\n+  [WebServer]     at async file:///home/runner/work/blong/blong/core/blong-gogo/src/load.ts:1788:33\n+  [WebServer]     at async withProgress (file:///home/runner/work/blong/blong/core/blong-lib/index.ts:368:16)\n+  [WebServer]     at async loadRealm (file:///home/runner/work/blong/blong/core/blong-gogo/src/load.ts:1673:13)\n+  [WebServer]     at async runPlatform (file:///home/runner/work/blong/blong/core/blong-gogo/src/runServer.ts:129:22)\n+  [WebServer]     at async runTarget (file:///home/runner/work/blong/blong/core/blong-gogo/src/runServer.ts:164:16)\n+  [WebServer] \n+  [WebServer] Node.js v24.21.0\n+  \n+)",
+          "stack": "Test.<anonymous> (e2e.test.ts:281:11)\n",
+          "evidence": "            t.match(output, new RegExp(`${ADDED_NAME} › browse`), 'the added entity was browsed');\n        },\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -0\n    +1\n  ...\n\nnot ok 3 - the added entity was browsed\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,33 @@\n    -/Gadget › browse/\n    +String(\n    +  [WebServer] 2026-10-17T18:34:46.153Z info  e2e-realm config event config.load [semlog://t/a2aa1bb62a56]\n    +  [WebServer]   files: []\n    +  [WebServer]   env: [\"BLONG_MASTER_KEY\"]\n    +  [WebServer]   argv: [\"gateway\",\"resolution\"]\n    +  [WebServer] 2026-10-17T18:34:49.171Z warn  e2e-realm server operation \"start adapter\" took 2741ms [semlog://t/2c582a460636]"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the Playwright leg drives the model page against committed baselines › the Playwright suite exits 0",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 280,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (e2e.test.ts:280:11)\n",
+          "evidence": "    {skip: skipped},\n...\n\n# Subtest: every added primitive is covered by those tests\nok 1 - all 10 artifacts are covered\n1..1\nok 3 - every added primitive is covered by those tests # time=1.178ms\n\n# Subtest: the Playwright leg drives the model page against committed baselines\nok 1 - the added entity has committed baselines\nnot ok 2 - the Playwright suite exits 0\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 280\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:280:11)\n  source: >2\n            }"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the realm runs its server and browser tests over the added entity › the added browser group ran",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 196,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/e2e flow browser › addGadget$/m\n+\"# e2e-realm: 0 passed, 1 failed (1 total)\"",
+          "stack": "Test.<anonymous> (e2e.test.ts:196:11)\n",
+          "evidence": "    Test.<anonymous> (e2e.test.ts:195:11)\n  source: >2\n            const names = [summary, ...passed].join('\\n');\n            t.match(names, /(^| › )addGadget$/m, 'the added server test ran: add');\n            t.match(names, /(^| › )findGadget$/m, 'the added server test ran: find');\n    ----------^\n            t.match(names, /e2e flow browser › addGadget$/m, 'the added browser group ran');\n        },\n  ...\n\nnot ok 7 - the added browser group ran\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/e2e flow browser › addGadget$/m\n    +\"# e2e-realm: 0 passed, 1 failed (1 total)\"\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 196\n    columnNumber: 11\n    typeName: Test"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the realm runs its server and browser tests over the added entity › the added server test ran: add",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 194,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/(^| › )addGadget$/m\n+\"# e2e-realm: 0 passed, 1 failed (1 total)\"",
+          "stack": "Test.<anonymous> (e2e.test.ts:194:11)\n",
+          "evidence": "            const names = [summary, ...passed].join('\\n');\n            t.match(names, /(^| › )addGadget$/m, 'the added server test ran: add');\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -0\n    +1\n  ...\n\nnot ok 5 - the added server test ran: add\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/(^| › )addGadget$/m\n    +\"# e2e-realm: 0 passed, 1 failed (1 total)\"\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 194\n    columnNumber: 11\n    typeName: Test"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the realm runs its server and browser tests over the added entity › the added server test ran: find",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 195,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/(^| › )findGadget$/m\n+\"# e2e-realm: 0 passed, 1 failed (1 total)\"",
+          "stack": "Test.<anonymous> (e2e.test.ts:195:11)\n",
+          "evidence": "    Test.<anonymous> (e2e.test.ts:194:11)\n  source: >2\n            t.equal(failed, 0, 'the report records no failing test');\n            const names = [summary, ...passed].join('\\n');\n            t.match(names, /(^| › )addGadget$/m, 'the added server test ran: add');\n    ----------^\n            t.match(names, /(^| › )findGadget$/m, 'the added server test ran: find');\n            t.match(names, /e2e flow browser › addGadget$/m, 'the added browser group ran');\n  ...\n\nnot ok 6 - the added server test ran: find\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/(^| › )findGadget$/m\n    +\"# e2e-realm: 0 passed, 1 failed (1 total)\"\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 195\n    columnNumber: 11\n    typeName: Test"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the realm runs its server and browser tests over the added entity › the realm suite exits 0",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 179,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (e2e.test.ts:179:11)\n",
+          "evidence": "ok 2 - regenerated meta/type/gadget.ts\nok 3 - regenerated server/test/test/testGadget.ts\nok 4 - regenerated browser/test/test/testGadget.flow.ts\nok 5 - regenerated meta/model/e2eGadgetModel.ts\nok 6 - every generated test group was registered\nok 7 - the committed baselines survived the regeneration\n1..7\nok 1 - the fixtures are regenerated from the templates on every run # time=41.297ms\n\n# Subtest: the realm runs its server and browser tests over the added entity\nnot ok 1 - the realm suite exits 0\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 179\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:179:11)\n  source: >2\n            }"
+        },
+        {
+          "suite": "e2e.test.ts",
+          "test": "the realm runs its server and browser tests over the added entity › the report records no failing test",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 192,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (e2e.test.ts:192:11)\n",
+          "evidence": "  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -0\n    +1\n  ...\n\nok 2 - no tap failures in the console output\nok 3 - the tap leg reported into the package (the report holds every runner that did)\nnot ok 4 - the report records no failing test\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 192\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:192:11)\n  source: >2\n                'the tap leg reported into the package (the report holds every runner that did)',\n            );"
+        }
+      ]
+    },
+    {
+      "package": "blong-party",
+      "path": "realm/blong-party",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "      elapsedMs: 6038\n      progress: {\"done\":0,\"total\":1}\n    2026-10-17T18:32:30.923Z warn  blong-party browser operation \"start testClient\" took 6049ms [semlog://t/0eea0861c281]\n      label: start testClient\n      elapsedMs: 6049\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:32:30.943Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:32:30.994Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    2026-10-17T18:32:31.065Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/browser/orchestrator/subject [semlog://t/5479766abf…\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=11403.289ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-party\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-party/index.test.ts\n  exitCode: 1"
+        }
+      ]
+    },
+    {
+      "package": "blong-realm",
+      "path": "core/blong-realm",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "index.test.ts",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "test process exited with code 1",
+          "evidence": "    2026-10-17T18:32:16.666Z warn  blong-realm browser operation \"start testClient\" took 5401ms [semlog://t/d77ff394e014]\n      label: start testClient\n      elapsedMs: 5401\n      progress: {\"done\":1,\"total\":1}\n    2026-10-17T18:32:16.758Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/browser/orchestrator/subject [semlog://t/5479766abf…\n    2026-10-17T18:32:16.794Z info  ApiSchema Generating dir /home/runner/work/blong/blong/core/blong-server/orchestrator/subject [semlog://t/66909e9b3825]\n    2026-10-17T18:32:16.825Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-login/orchestrator/login [semlog://t/e2340bcc4d9e]\n    2026-10-17T18:32:17.046Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-access/browser/orchestrator/component [semlog://t/b83efdf…\n    2026-10-17T18:32:17.062Z info  ApiSchema Generating dir /home/runner/work/blong/blong/realm/blong-access/browser/orchestrator/subject [semlog://t/18a92757d…\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=11137.764ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/core/blong-realm\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.21.0/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/core/blong-realm/index.test.ts\n  exitCode: 1"
+        }
+      ]
+    }
+  ]
+}

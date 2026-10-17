@@ -1,0 +1,29 @@
+{
+  "package": "blong-kopi",
+  "status": "failed",
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 9829.625,
+  "outsideTestsMs": 1344.375,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "failed",
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 11174
+    }
+  ]
+}
