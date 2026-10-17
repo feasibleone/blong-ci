@@ -1,0 +1,57 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-17T13:44:36.041Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 627,
+  "commit": "cee12f5e6ad7815f47636852962742b02631f0e9",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/39035957574",
+  "totals": {
+    "packages": 1,
+    "tests": 2,
+    "failed": 2,
+    "flaky": 0,
+    "newFailures": 0
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-dev",
+      "path": "tools/blong-dev",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1239,
+        "passed": 1235,
+        "failed": 2,
+        "flaky": 0,
+        "skipped": 2,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "src/report/allurePublish.test.ts",
+          "test": "publishAllureReport merges every producer into one report › and the bundle is published with it",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/report/allurePublish.test.ts",
+          "line": 114,
+          "stack": "Test.<anonymous> (src/report/allurePublish.test.ts:114:7)\n",
+          "evidence": "  source: >2\n        const page = readFileSync(publishedPage, 'utf8');\n        t.equal(page.includes('data:text/javascript'), false, 'the bundle is not inlined');\n        t.match(page, /src=\"\\.\\/allure-main-[0-9a-f]{16}\\.js\"/, 'the page points at a file beside it');\n    ------^\n        t.ok(published.mainBundle, 'the result names the bundle the page loads');\n        t.ok(\n  ...\n\nok 13 - the result names the bundle the page loads\nnot ok 14 - and the bundle is published with it\n  ---\n  at:\n    fileName: src/report/allurePublish.test.ts\n    lineNumber: 114\n    columnNumber: 7\n    typeName: Test\n  stack: |\n    Test.<anonymous> (src/report/allurePublish.test.ts:114:7)\n  source: >2\n        t.match(page, /src=\"\\.\\/allure-main-[0-9a-f]{16}\\.js\"/, 'the page points at a file beside it');\n        t.ok(published.mainBundle, 'the result names the bundle the page loads');\n        t.ok("
+        },
+        {
+          "suite": "src/report/allurePublish.test.ts",
+          "test": "publishAllureReport merges every producer into one report › the page points at a file beside it",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/report/allurePublish.test.ts",
+          "line": 112,
+          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/src=\"\\.\\/allure-main-[0-9a-f]{16}\\.js\"/\n+\"<!doctype html><html><body><script   src=\\\"../../../_assets/allure/allure-main-26e545fd9d7c90ff.js\\\"></script></body></html>\"",
+          "stack": "Test.<anonymous> (src/report/allurePublish.test.ts:112:7)\n",
+          "evidence": "ok 2 - both producers went into it\nok 3 - should be equal\nok 4 - both producers results are in the one directory Allure renders\nok 5 - the trace archive moved to the published directory\nok 6 - and out of what the single-file report embeds\nok 7 - should be equal\nok 8 - the published report is a single file\nok 9 - should be equal\nok 10 - the report was published\nok 11 - the bundle is not inlined\nnot ok 12 - the page points at a file beside it\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/src=\"\\.\\/allure-main-[0-9a-f]{16}\\.js\"/\n    +\"<!doctype html><html><body><script   src=\\\"../../../_assets/allure/allure-main-26e545fd9d7c90ff.js\\\"></script></body></html>\"\n  at:\n    fileName: src/report/allurePublish.test.ts\n    lineNumber: 112\n    columnNumber: 7\n    typeName: Test"
+        }
+      ]
+    }
+  ]
+}
