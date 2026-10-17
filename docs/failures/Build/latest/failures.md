@@ -1,8 +1,8 @@
 # Failed tests
 
-_feasibleone/blong · workflow Build · build #627_
+_feasibleone/blong · workflow Build · build #628_
 
-[Full run](https://github.com/feasibleone/blong/actions/runs/39035957574) | [Allure report](index.html)
+[Full run](https://github.com/feasibleone/blong/actions/runs/39046139202) | [Allure report](index.html)
 
 **2 failing test(s) in 1 package(s)**
 
