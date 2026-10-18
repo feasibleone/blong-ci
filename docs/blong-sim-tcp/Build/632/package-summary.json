@@ -1,0 +1,29 @@
+{
+  "package": "blong-sim-tcp",
+  "status": "passed",
+  "counts": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 20.918,
+  "outsideTestsMs": 16819.082,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 16840
+    }
+  ]
+}
