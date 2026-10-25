@@ -1,0 +1,29 @@
+{
+  "package": "blong-allure",
+  "status": "passed",
+  "counts": {
+    "total": 63,
+    "passed": 63,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 2300,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 63,
+        "passed": 63,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 2300
+    }
+  ]
+}
