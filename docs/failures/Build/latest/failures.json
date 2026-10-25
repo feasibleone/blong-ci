@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-25T14:18:37.199Z",
+  "generatedAt": "2026-10-25T16:53:32.370Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 634,
-  "commit": "9ee4a10a4e059ac3b7c37fc450179a6a87ca8fb7",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/40199201955",
+  "run": 635,
+  "commit": "5aa8d44cd7a50df40e7e28f66f43092fcaef53fe",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/40211522445",
   "totals": {
-    "packages": 6,
-    "tests": 8,
-    "failed": 8,
+    "packages": 3,
+    "tests": 5,
+    "failed": 5,
     "flaky": 0,
-    "newFailures": 6
+    "newFailures": 1
   },
   "allure": "index.html",
   "packages": [
@@ -24,25 +24,13 @@
       ],
       "counts": {
         "total": 28,
-        "passed": 26,
-        "failed": 2,
+        "passed": 27,
+        "failed": 1,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
-        {
-          "suite": "explore.play.ts",
-          "test": "kafka-dev — topics and message viewer",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/4ca877a7-360e-4848-9c03-5913b51f9c76-attachment.zip"
-        },
         {
           "suite": "explore.play.ts",
           "test": "vault-dev — mounts, secrets, and masked secret viewer",
@@ -53,106 +41,45 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/fee8f930-254e-4e29-ad5e-1493397a243e-attachment.zip"
+          "trace": "traces/1d86b895-b277-4fb2-9d88-839bc9cbd686-attachment.zip"
         }
       ]
     },
     {
-      "package": "blong-kukum",
-      "path": "core/blong-kukum",
+      "package": "blong-dev",
+      "path": "tools/blong-dev",
       "runners": [
         "tap"
       ],
       "counts": {
-        "total": 607,
-        "passed": 606,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "e2e.test.ts",
-          "test": "the Playwright leg drives the model page against committed baselines › the Playwright suite exits 0",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "line": 280,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (e2e.test.ts:280:11)\n",
-          "evidence": "1..7\nok 2 - the realm runs its server and browser tests over the added entity # time=17817.959ms\n\n# Subtest: every added primitive is covered by those tests\nok 1 - all 10 artifacts are covered\n1..1\nok 3 - every added primitive is covered by those tests # time=0.822ms\n\n# Subtest: the Playwright leg drives the model page against committed baselines\nok 1 - the added entity has committed baselines\nnot ok 2 - the Playwright suite exits 0\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 280\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:280:11)\n  source: >2\n            }"
-        }
-      ]
-    },
-    {
-      "package": "blong-marine",
-      "path": "demo/blong-marine",
-      "runners": [
-        "playwright"
-      ],
-      "counts": {
-        "total": 20,
-        "passed": 18,
+        "total": 1273,
+        "passed": 1269,
         "failed": 2,
         "flaky": 0,
-        "skipped": 0,
+        "skipped": 2,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "species.play.ts › Marine Species",
-          "test": "browse marine species",
+          "suite": "src/docs/storybookSites.test.ts",
+          "test": "the register in the repository matches what the command reads › sport exists",
           "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/0b9abfbb-9ea7-4e85-b743-f2dbe43a0b5b-attachment.zip"
+          "runner": "tap",
+          "file": "src/docs/storybookSites.test.ts",
+          "line": 84,
+          "stack": "Test.<anonymous> (src/docs/storybookSites.test.ts:84:11)\nsrc/docs/storybookSites.test.ts:76:3\n",
+          "evidence": "    t.test('the register in the repository matches what the command reads', t => {\n        const sites = loadStorybookSites(repoRoot(import.meta.dirname));\n        t.same(\n    ------^\n            sites.map(site => site.name),\n            ['browser', 'suite', 'log'],\n  ...\n\nok 2 - browser exists\nok 3 - suite exists\nnot ok 4 - sport exists\n  ---\n  at:\n    fileName: src/docs/storybookSites.test.ts\n    lineNumber: 84\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (src/docs/storybookSites.test.ts:84:11)\n    src/docs/storybookSites.test.ts:76:3\n  source: >2\n        );\n        for (const site of sites) {"
         },
         {
-          "suite": "portal.play.ts",
-          "test": "open and close browse tab",
+          "suite": "src/docs/storybookSites.test.ts",
+          "test": "the register in the repository matches what the command reads › the checkout publishes three Storybooks",
           "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/44f56c15-c018-4e0e-a390-f1a7775093b4-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-party",
-      "path": "realm/blong-party",
-      "runners": [
-        "tap",
-        "playwright"
-      ],
-      "counts": {
-        "total": 93,
-        "passed": 92,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "unit.play.ts › Party Unit",
-          "test": "edit party unit",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/a1250a53-f533-4185-a68a-529dddcfa1f3-attachment.zip"
+          "runner": "tap",
+          "file": "src/docs/storybookSites.test.ts",
+          "line": 78,
+          "message": "--- expected\n+++ actual\n@@ -1,5 +1,6 @@\n Array [\n   \"browser\",\n   \"suite\",\n+  \"sport\",\n   \"log\",\n ]",
+          "stack": "Test.<anonymous> (src/docs/storybookSites.test.ts:78:7)\nsrc/docs/storybookSites.test.ts:76:3\n",
+          "evidence": "ok 4 - and changes nothing\n1..4\nok 17 - sortSection drops exact duplicates and is idempotent # time=3.902ms\n\n1..17\n# time=153.443ms\nok 12 - src/cspell/cspellConfig.test.ts # time=153.443ms\n\n# Subtest: src/docs/storybookSites.test.ts\n# Subtest: the register in the repository matches what the command reads\nnot ok 1 - the checkout publishes three Storybooks\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,5 +1,6 @@\n     Array [\n       \"browser\",\n       \"suite\",\n    +  \"sport\",\n       \"log\",\n     ]\n  at:"
         }
       ]
     },
@@ -160,56 +87,31 @@
       "package": "blong-sport",
       "path": "realm/blong-sport",
       "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 10,
-        "passed": 9,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "sport flow (server) › sport athlete profile › login › testAdmin permission map includes sportAthleteAdd",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-chain/executor.ts",
-          "line": 444,
-          "message": "simple",
-          "stack": "call (../../core/blong-chain/executor.ts:444:28)\nProxy.<anonymous> (../../core/blong-chain/executor.ts:473:44)\nlogin (server/test/test/testAthlete.ts:51:28)\nexecuteStepFn (../../core/blong-chain/executor.ts:970:34)\nTest.<anonymous> (../../core/blong-chain/executor.ts:1134:17)\n",
-          "evidence": "# Subtest: sport flow (server)\nAssertionError [ERR_ASSERTION]: testAdmin permission map includes sportAthleteAdd\nat call (/home/runner/work/blong/blong/core/blong-chain/executor.ts:444:28)\nat Proxy.<anonymous> (/home/runner/work/blong/blong/core/blong-chain/executor.ts:473:44)\nat login (/home/runner/work/blong/blong/realm/blong-sport/server/test/test/testAthlete.ts:51:28)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async executeStepFn (/home/runner/work/blong/blong/core/blong-chain/executor.ts:970:34)\nat async Test.<anonymous> (/home/runner/work/blong/blong/core/blong-chain/executor.ts:1134:17)\n# Subtest: sport athlete profile\n# Subtest: login\nnot ok 1 - testAdmin permission map includes sportAthleteAdd\n  ---\n  stack: |\n    call (../../core/blong-chain/executor.ts:444:28)\n    Proxy.<anonymous> (../../core/blong-chain/executor.ts:473:44)\n    login (server/test/test/testAthlete.ts:51:28)\n    executeStepFn (../../core/blong-chain/executor.ts:970:34)\n    Test.<anonymous> (../../core/blong-chain/executor.ts:1134:17)\n  at:\n    fileName: ../../core/blong-chain/executor.ts\n    lineNumber: 444\n    columnNumber: 28\n    functionName: call"
-        }
-      ]
-    },
-    {
-      "package": "blong-suite",
-      "path": "suite/blong-suite",
-      "runners": [
+        "tap",
         "playwright"
       ],
       "counts": {
-        "total": 22,
-        "passed": 21,
-        "failed": 1,
+        "total": 126,
+        "passed": 124,
+        "failed": 2,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "../../../demo/blong-marine/test/species.play.ts › Marine Species",
-          "test": "browse marine species",
+          "suite": "olympic.play.ts › Olympic",
+          "test": "browse sport campaign",
           "status": "failed",
           "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/c9161a11-ca11-490a-a1cd-be4c6f48a091-attachment.zip"
+          "trace": "traces/7da8672d-44a1-468d-92be-6fa77a722ddf-attachment.zip"
+        },
+        {
+          "suite": "competition.play.ts › Competition",
+          "test": "browse sport competition",
+          "status": "failed",
+          "runner": "playwright",
+          "trace": "traces/43d1ce1a-af5c-4437-baeb-0a0f0a1ab9c0-attachment.zip"
         }
       ]
     }

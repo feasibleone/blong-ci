@@ -1,0 +1,29 @@
+{
+  "package": "blong-sim-api",
+  "status": "passed",
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 24.445,
+  "outsideTestsMs": 10146.555,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 10171
+    }
+  ]
+}

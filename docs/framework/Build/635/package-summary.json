@@ -1,0 +1,29 @@
+{
+  "package": "framework",
+  "status": "passed",
+  "counts": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 1338.689,
+  "outsideTestsMs": 23247.311,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 3,
+        "passed": 3,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 24586
+    }
+  ]
+}
