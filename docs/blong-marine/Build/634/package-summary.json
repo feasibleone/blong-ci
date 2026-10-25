@@ -1,0 +1,29 @@
+{
+  "package": "blong-marine",
+  "status": "failed",
+  "counts": {
+    "total": 20,
+    "passed": 18,
+    "failed": 2,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 310754,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "playwright",
+      "status": "failed",
+      "counts": {
+        "total": 20,
+        "passed": 18,
+        "failed": 2,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 190070
+    }
+  ]
+}
