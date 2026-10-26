@@ -1,0 +1,29 @@
+{
+  "package": "semantic-log",
+  "status": "passed",
+  "counts": {
+    "total": 3280,
+    "passed": 3278,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 2,
+    "todo": 0
+  },
+  "testsMs": 188746,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 3280,
+        "passed": 3278,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 2,
+        "todo": 0
+      },
+      "durationMs": 188746
+    }
+  ]
+}
