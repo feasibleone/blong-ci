@@ -1,39 +1,39 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-26T14:25:13.536Z",
+  "generatedAt": "2026-10-26T19:23:35.616Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 637,
-  "commit": "dd49c8f04d68cbb7b896d6070a4c88d5bc6e918e",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/40332991168",
+  "run": 638,
+  "commit": "77cb239a2238409cf6c3546fe64a365e2a1dd42f",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/40380011021",
   "totals": {
     "packages": 1,
-    "tests": 3,
-    "failed": 3,
+    "tests": 1,
+    "failed": 1,
     "flaky": 0,
-    "newFailures": 3
+    "newFailures": 1
   },
   "allure": "index.html",
   "packages": [
     {
-      "package": "blong-realm",
-      "path": "core/blong-realm",
+      "package": "blong-party",
+      "path": "realm/blong-party",
       "runners": [
         "tap",
         "playwright"
       ],
       "counts": {
-        "total": 15,
-        "passed": 12,
-        "failed": 3,
+        "total": 93,
+        "passed": 92,
+        "failed": 1,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "blong.play.ts",
-          "test": "open blong.digest.browse",
+          "suite": "person.play.ts › Party Person",
+          "test": "edit party person",
           "status": "failed",
           "runner": "playwright",
           "history": {
@@ -41,31 +41,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/3538e5ae-7af4-4772-b4a8-97a4cdafb8af-attachment.zip"
-        },
-        {
-          "suite": "blong.play.ts",
-          "test": "open blong.flow.browse",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/d4bce185-d2af-467e-b984-fab91ef80698-attachment.zip"
-        },
-        {
-          "suite": "blong.play.ts",
-          "test": "open blong.template.browse",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/0b6708c8-a3b6-44da-b8d5-6a007684c157-attachment.zip"
+          "trace": "traces/2730be2d-13e2-4bec-afd6-305f22650cca-attachment.zip"
         }
       ]
     }
