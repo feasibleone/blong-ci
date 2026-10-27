@@ -1,0 +1,29 @@
+{
+  "package": "handler-test-poc",
+  "status": "passed",
+  "counts": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 844.3919999999999,
+  "outsideTestsMs": 9619.608,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 24,
+        "passed": 24,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 10464
+    }
+  ]
+}

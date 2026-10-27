@@ -1,0 +1,29 @@
+{
+  "package": "blong-sport",
+  "status": "failed",
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 3822.802,
+  "outsideTestsMs": 1125.1979999999999,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "failed",
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 4948
+    }
+  ]
+}
