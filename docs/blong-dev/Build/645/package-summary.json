@@ -1,0 +1,29 @@
+{
+  "package": "blong-dev",
+  "status": "passed",
+  "counts": {
+    "total": 1340,
+    "passed": 1338,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 2,
+    "todo": 0
+  },
+  "testsMs": 92566,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 1340,
+        "passed": 1338,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 2,
+        "todo": 0
+      },
+      "durationMs": 92566
+    }
+  ]
+}
