@@ -1,15 +1,15 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-27T23:40:06.253Z",
+  "generatedAt": "2026-10-28T09:11:43.617Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 643,
-  "commit": "2832032832cc88e7cb75a0adb3b21774cba0203f",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/40598911517",
+  "run": 644,
+  "commit": "728f1d6b170664bb9ac406edb1fe2c41228a5b61",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/40657284095",
   "totals": {
     "packages": 1,
-    "tests": 5,
-    "failed": 5,
+    "tests": 3,
+    "failed": 3,
     "flaky": 0,
     "newFailures": 0
   },
@@ -23,35 +23,13 @@
       ],
       "counts": {
         "total": 125,
-        "passed": 120,
-        "failed": 5,
+        "passed": 122,
+        "failed": 3,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › plan find › planIsDeterministic › plan",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-chain/executor.ts",
-          "line": 917,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -75,21 +75,21 @@\n       },\n     ],\n     \"suite\": Object {\n       \"database\": false,\n       \"entry\": undefined,\n       \"frameworkImage\": \"ghcr.io/feasibleone/blong-gogo\",\n       \"intents\": undefined,\n       \"minFrameworkVersion\": undefined,\n       \"name\": \"blong-suite\",\n       \"namespace\": \"blong-suite\",\n-      \"version\": \"0.1.0\",\n+      \"version\": \"0.2.0\",\n     },\n     \"suiteVolume\": Object {\n       \"artifact\": undefined,\n       \"attemptRetention\": 5,\n       \"backend\": \"nodeLocal\",\n       \"retention\": 3,\n       \"rwxManifest\": undefined,\n       \"rwxProvider\": undefined,\n       \"storageClassName\": undefined,\n     },",
-          "stack": "Proxy.<anonymous> (../../core/blong-chain/executor.ts:917:55)\nplanIsDeterministic (server/test/test/testPlanFind.ts:140:67)\nexecuteStepFn (../../core/blong-chain/executor.ts:970:34)\nTest.<anonymous> (../../core/blong-chain/executor.ts:1134:17)\n",
-          "evidence": "# Subtest: aRealmDeclaresItsOwnRole\n1..0\nok 2 - aRealmDeclaresItsOwnRole # time=14.94ms\n\n# Subtest: theOperatorIsAnotherTree\n1..0\nok 3 - theOperatorIsAnotherTree # time=8.258ms\n\n# Subtest: planIsDeterministic\nnot ok 1 - plan\n  ---\n  found: |-\n    Object {\n      \"assets\": Array [],\n      \"backingServiceRequest\": Object {},\n      \"backingServices\": Array [],\n      \"crd\": undefined,\n      \"deployments\": Array [\n        Object {\n          \"layers\": Array [\n            \"kustomize.orchestrator\",\n            \"kustomize.gateway\","
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › tree generate › aSplitTreeKeepsTheArtifactOutOfTheBase › splitTree",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-chain/executor.ts",
-          "line": 917,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -7,22 +7,22 @@\n       \"name: blong\",\n     ],\n     \"fillImageInTemplate\": true,\n     \"frameworkImageInBase\": false,\n     \"frameworkImageInOverlay\": true,\n     \"identityInBase\": false,\n     \"identityInBaseFiles\": Array [],\n     \"identityInLocal\": true,\n     \"imagesInBase\": 2,\n     \"instanceDirs\": Array [\n-      \"local/suite/cache/blong-suite-fill-0.1.0-a1b2c3d4-node-a\",\n-      \"local/suite/cache/blong-suite-fill-0.1.0-a1b2c3d4-node-b\",\n+      \"local/suite/cache/blong-suite-fill-0.2.0-a1b2c3d4-node-a\",\n+      \"local/suite/cache/blong-suite-fill-0.2.0-a1b2c3d4-node-b\",\n     ],\n     \"moduleInBase\": false,\n     \"namespacesInBase\": 0,\n     \"nodesInBase\": 0,\n     \"nodesInLocal\": 2,\n     \"patches\": 13,\n     \"placeholderInBase\": true,\n     \"placeholdersInTemplate\": true,\n     \"realVolumeInPatch\": true,\n     \"rootNamesNamespace\": false,",
-          "stack": "Proxy.<anonymous> (../../core/blong-chain/executor.ts:917:55)\npin (server/test/test/testTreeGenerate.ts:79:55)\naSplitTreeKeepsTheArtifactOutOfTheBase (server/test/test/testTreeGenerate.ts:367:21)\nexecuteStepFn (../../core/blong-chain/executor.ts:970:34)\nTest.<anonymous> (../../core/blong-chain/executor.ts:1134:17)\n",
-          "evidence": "# Subtest: theSerializedTreeIgnoresKeyOrder\n1..0\nok 2 - theSerializedTreeIgnoresKeyOrder # time=55.132ms\n\n# Subtest: aCrSpecDrivesTheTree\nok 1 - crSpec\n1..1\nok 3 - aCrSpecDrivesTheTree # time=28.932ms\n\n# Subtest: aSplitTreeKeepsTheArtifactOutOfTheBase\nnot ok 1 - splitTree\n  ---\n  found: |-\n    Object {\n      \"deploymentPatch\": Array [\n        \"- image: ghcr.io/feasibleone/blong-gogo:latest\",\n        \"app.kubernetes.io/name: blong-suite\",\n        \"app.kubernetes.io/name: blong-suite\",\n        \"name: blong\",\n      ],\n      \"fillImageInTemplate\": true,\n      \"frameworkImageInBase\": false,\n      \"frameworkImageInOverlay\": true,"
-        },
         {
           "suite": "index.test.ts",
           "test": "kustomize flow (server) › tree generate › theOperatorIsInstalledOnceForTheCluster › operatorInstall",
@@ -72,7 +50,7 @@
           "line": 917,
           "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,20 +1,20 @@\n String(\n   Object {\n     \"generatedFolders\": Array [\n       \"assets/kustomization.yaml\",\n       \"secrets/kustomization.yaml\",\n     ],\n     \"mounted\": Array [\n       Object {\n         \"hostPath\": Object {\n-          \"path\": \"/var/lib/blong/suites/shop/0.1.0\",\n+          \"path\": \"/var/lib/blong/suites/shop/0.2.0\",\n           \"type\": \"Directory\",\n         },\n         \"name\": \"suite\",\n       },\n       Object {\n         \"name\": \"shop-data\",\n         \"persistentVolumeClaim\": Object {\n           \"claimName\": \"shop-data\",\n         },\n       },",
           "stack": "Proxy.<anonymous> (../../core/blong-chain/executor.ts:917:55)\npin (server/test/test/testTreeGenerate.ts:79:55)\ntheTreeCarriesWhatARealmDeclares (server/test/test/testTreeGenerate.ts:2572:17)\nexecuteStepFn (../../core/blong-chain/executor.ts:970:40)\n../../core/blong-chain/executor.ts:1106:69\nTest.<anonymous> (../../core/blong-chain/executor.ts:1134:23)\n",
-          "evidence": "1..1\nok 32 - aVolumeIsNamedAfterItsArtifact # time=2.202ms\n\n# Subtest: objectsAreFingerprinted\nok 1 - generatedFileCount\nok 2 - generatedTree\n1..2\nok 33 - objectsAreFingerprinted # time=6.798ms\n\n# Subtest: theTreeCarriesWhatARealmDeclares\nnot ok 1 - realmDeclarations\n  ---\n  found: |-\n    Object {\n      \"generatedFolders\": Array [\n        \"assets/kustomization.yaml\",\n        \"secrets/kustomization.yaml\",\n      ],\n      \"mounted\": Array [\n        Object {\n          \"hostPath\": Object {\n            \"path\": \"/var/lib/blong/suites/shop/0.2.0\",\n            \"type\": \"Directory\","
+          "evidence": "1..1\nok 32 - aVolumeIsNamedAfterItsArtifact # time=1.724ms\n\n# Subtest: objectsAreFingerprinted\nok 1 - generatedFileCount\nok 2 - generatedTree\n1..2\nok 33 - objectsAreFingerprinted # time=20.913ms\n\n# Subtest: theTreeCarriesWhatARealmDeclares\nnot ok 1 - realmDeclarations\n  ---\n  found: |-\n    Object {\n      \"generatedFolders\": Array [\n        \"assets/kustomization.yaml\",\n        \"secrets/kustomization.yaml\",\n      ],\n      \"mounted\": Array [\n        Object {\n          \"hostPath\": Object {\n            \"path\": \"/var/lib/blong/suites/shop/0.2.0\",\n            \"type\": \"Directory\","
         },
         {
           "suite": "index.test.ts",
@@ -83,7 +61,7 @@
           "line": 917,
           "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,7 +1,7 @@\n String(\n   Object {\n     \"declared\": \"9.8.7\",\n-    \"realm\": \"0.1.0\",\n-    \"unversioned\": \"0.1.0\",\n+    \"realm\": \"0.2.0\",\n+    \"unversioned\": \"0.2.0\",\n   }\n )",
           "stack": "Proxy.<anonymous> (../../core/blong-chain/executor.ts:917:55)\npin (server/test/test/testTreeGenerate.ts:79:55)\ntheVersionLabelIsTheSuitesOwn (server/test/test/testTreeGenerate.ts:2440:21)\nexecuteStepFn (../../core/blong-chain/executor.ts:970:40)\n../../core/blong-chain/executor.ts:1106:69\nTest.<anonymous> (../../core/blong-chain/executor.ts:1134:23)\n",
-          "evidence": "ok 2 - migrationStep\n1..2\nok 29 - everyNamespaceTheResolverAsksForHasAService # time=5.98ms\n\n# Subtest: everyReferenceInTheTreeResolves\nok 1 - danglingReferences\n1..1\nok 30 - everyReferenceInTheTreeResolves # time=5.731ms\n\n# Subtest: theVersionLabelIsTheSuitesOwn\nnot ok 1 - versionLabels\n  ---\n  found: |-\n    Object {\n      \"declared\": \"9.8.7\",\n      \"realm\": \"0.2.0\",\n      \"unversioned\": \"0.2.0\",\n    }\n  wanted: |-\n    Object {\n      \"declared\": \"9.8.7\",\n      \"realm\": \"0.1.0\",\n      \"unversioned\": \"0.1.0\","
+          "evidence": "ok 2 - migrationStep\n1..2\nok 29 - everyNamespaceTheResolverAsksForHasAService # time=9.82ms\n\n# Subtest: everyReferenceInTheTreeResolves\nok 1 - danglingReferences\n1..1\nok 30 - everyReferenceInTheTreeResolves # time=10.797ms\n\n# Subtest: theVersionLabelIsTheSuitesOwn\nnot ok 1 - versionLabels\n  ---\n  found: |-\n    Object {\n      \"declared\": \"9.8.7\",\n      \"realm\": \"0.2.0\",\n      \"unversioned\": \"0.2.0\",\n    }\n  wanted: |-\n    Object {\n      \"declared\": \"9.8.7\",\n      \"realm\": \"0.1.0\",\n      \"unversioned\": \"0.1.0\","
         }
       ]
     }
