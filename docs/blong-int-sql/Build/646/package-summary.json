@@ -9,8 +9,8 @@
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 4212.915,
-  "outsideTestsMs": 12874.085,
+  "testsMs": 4144.642999999999,
+  "outsideTestsMs": 9676.357,
   "runs": [
     {
       "runner": "tap",
@@ -23,7 +23,7 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 17087
+      "durationMs": 13821
     }
   ]
 }

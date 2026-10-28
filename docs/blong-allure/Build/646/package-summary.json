@@ -9,7 +9,7 @@
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 2840,
+  "testsMs": 3242,
   "outsideTestsMs": 0,
   "runs": [
     {
@@ -23,7 +23,7 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 2840
+      "durationMs": 3242
     }
   ]
 }

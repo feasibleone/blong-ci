@@ -9,7 +9,7 @@
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 40978,
+  "testsMs": 37149,
   "outsideTestsMs": 0,
   "runs": [
     {
@@ -23,7 +23,7 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 6563
+      "durationMs": 5560
     },
     {
       "runner": "storybook",
@@ -36,7 +36,7 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 40978
+      "durationMs": 37149
     }
   ]
 }

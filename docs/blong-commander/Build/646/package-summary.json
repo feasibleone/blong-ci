@@ -9,7 +9,7 @@
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 161312.984,
+  "testsMs": 155546.654,
   "outsideTestsMs": 0,
   "runs": [
     {
@@ -23,7 +23,7 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 19301
+      "durationMs": 18155
     },
     {
       "runner": "playwright",
@@ -36,7 +36,7 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 134778
+      "durationMs": 129660
     }
   ]
 }

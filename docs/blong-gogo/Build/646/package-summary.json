@@ -1,29 +1,29 @@
 {
   "package": "blong-gogo",
-  "status": "failed",
+  "status": "passed",
   "counts": {
-    "total": 724,
-    "passed": 723,
-    "failed": 1,
+    "total": 787,
+    "passed": 787,
+    "failed": 0,
     "flaky": 0,
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 11041.266000000001,
+  "testsMs": 40.247,
   "outsideTestsMs": 0,
   "runs": [
     {
       "runner": "tap",
-      "status": "failed",
+      "status": "passed",
       "counts": {
-        "total": 724,
-        "passed": 723,
-        "failed": 1,
+        "total": 787,
+        "passed": 787,
+        "failed": 0,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 99055
+      "durationMs": 71836
     }
   ]
 }
