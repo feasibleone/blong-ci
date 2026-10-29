@@ -1,0 +1,29 @@
+{
+  "package": "config-hot-reload",
+  "status": "passed",
+  "counts": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 9.277000000000001,
+  "outsideTestsMs": 7930.723,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 7940
+    }
+  ]
+}

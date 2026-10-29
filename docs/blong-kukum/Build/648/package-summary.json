@@ -1,0 +1,29 @@
+{
+  "package": "blong-kukum",
+  "status": "passed",
+  "counts": {
+    "total": 623,
+    "passed": 623,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 4.139,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 623,
+        "passed": 623,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 139261
+    }
+  ]
+}
