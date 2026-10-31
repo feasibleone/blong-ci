@@ -1,0 +1,29 @@
+{
+  "package": "blong-gogo",
+  "status": "passed",
+  "counts": {
+    "total": 907,
+    "passed": 907,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 32.347,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 907,
+        "passed": 907,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 62153
+    }
+  ]
+}
