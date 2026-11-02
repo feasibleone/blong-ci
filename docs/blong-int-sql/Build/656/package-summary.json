@@ -1,0 +1,29 @@
+{
+  "package": "blong-int-sql",
+  "status": "passed",
+  "counts": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 4161.7080000000005,
+  "outsideTestsMs": 5141.2919999999995,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 5,
+        "passed": 5,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 9303
+    }
+  ]
+}
