@@ -1,0 +1,271 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-02T22:23:42.319Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 657,
+  "commit": "0454fe02f585366dcb3ea3ccfd0e370aae637c22",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/41531727787",
+  "totals": {
+    "packages": 4,
+    "tests": 15,
+    "failed": 15,
+    "flaky": 0,
+    "newFailures": 15
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-access",
+      "path": "realm/blong-access",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 102,
+        "passed": 96,
+        "failed": 6,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "role.play.ts › Access Role",
+          "test": "cleanup access role",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/de83679e-c3e8-4e60-b82d-c73f3d4e4928-attachment.zip"
+        },
+        {
+          "suite": "session-popup.play.ts › Access session login popup",
+          "test": "expired session shows the login popup and re-login recovers",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/173f7d74-458a-4763-8f81-557429ed77de-attachment.zip"
+        },
+        {
+          "suite": "session-reload.play.ts › Access session reload & logout",
+          "test": "logout revokes the session and reload shows the login screen",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/0377c6fb-e0ba-44ec-a102-b4d4bd0c452d-attachment.zip"
+        },
+        {
+          "suite": "profile.play.ts › Access user profile",
+          "test": "opens the profile from the account menu, edits details and changes the password",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/3d95f586-6bda-49f0-8852-5d327ae49138-attachment.zip"
+        },
+        {
+          "suite": "session-reload.play.ts › Access session reload & logout",
+          "test": "reload skips the login screen when a live session cookie exists",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/cea58f5a-d76c-4d03-8f16-c02c341d9261-attachment.zip"
+        },
+        {
+          "suite": "language-switch.play.ts › Portal language switcher",
+          "test": "switches the UI language ad-hoc from the menubar",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/83be22e7-bfab-4018-b0d7-0202abfd3bce-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-gateway",
+      "path": "realm/blong-gateway",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 40,
+        "passed": 39,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "portalMerge.play.ts",
+          "test": "both realms contribute their menu to one portal",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/000ab08f-c2f8-4222-a355-1661c7fe9326-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-party",
+      "path": "realm/blong-party",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 93,
+        "passed": 86,
+        "failed": 7,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "person.play.ts › Party Person",
+          "test": "browse party person",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/5a2ebf4e-2f6c-48f7-9d98-6f6d54daf929-attachment.zip"
+        },
+        {
+          "suite": "person.play.ts › Party Person",
+          "test": "create party person",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/8e174e7e-fc6f-4b48-ae63-50aef7dd1ca7-attachment.zip"
+        },
+        {
+          "suite": "person.play.ts › Party Person",
+          "test": "edit party person",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/449a174b-23b9-469b-8777-3cb7d47a65b0-attachment.zip"
+        },
+        {
+          "suite": "portal.play.ts",
+          "test": "open and close person browse tab",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/2738884b-19aa-4592-b6cb-63f41177654a-attachment.zip"
+        },
+        {
+          "suite": "portal.play.ts",
+          "test": "portal loads after login",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/2e952a53-1224-4531-8474-9fb4b13e9d0d-attachment.zip"
+        },
+        {
+          "suite": "selfRegistration.play.ts",
+          "test": "self-registration: create account and auto-login",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/49e3cde6-ad2e-4822-b5a1-992f0ba119b8-attachment.zip"
+        },
+        {
+          "suite": "profile.play.ts › Party user profile",
+          "test": "shows personal details and allows editing the profile and password",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/1b91d515-296b-4228-a3ef-b78c231ff011-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 173,
+        "passed": 172,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "feedback.play.ts",
+          "test": "feedback mode captures comments and the review page hands them over",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 4,
+            "failedRuns": 0
+          },
+          "trace": "traces/4ef922f9-7a3f-4d74-8668-5191fc553a4b-attachment.zip"
+        }
+      ]
+    }
+  ]
+}

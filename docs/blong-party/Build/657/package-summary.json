@@ -1,0 +1,42 @@
+{
+  "package": "blong-party",
+  "status": "failed",
+  "counts": {
+    "total": 93,
+    "passed": 86,
+    "failed": 7,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 283895.181,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 77,
+        "passed": 77,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 41063
+    },
+    {
+      "runner": "playwright",
+      "status": "failed",
+      "counts": {
+        "total": 16,
+        "passed": 9,
+        "failed": 7,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 230279
+    }
+  ]
+}
