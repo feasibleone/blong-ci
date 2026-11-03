@@ -1,12 +1,12 @@
 # Failed tests
 
-_feasibleone/blong · workflow Build · build #663_
+_feasibleone/blong · workflow Build · build #664_
 
-[Full run](https://github.com/feasibleone/blong/actions/runs/41711075342) | [Allure report](index.html)
+[Full run](https://github.com/feasibleone/blong/actions/runs/41724259275) | [Allure report](index.html)
 
 **1 failing test(s) in 1 package(s)**
 
 ## blong-sport
 
 - 🟡 flaky **records.play.ts › Documents and awards › cleanup sport conferral** — `new`
-  - trace: `traces/7fdfd2a6-e712-45d6-bdb1-980cbc19605f-attachment.zip`
+  - trace: `traces/9bc687e0-df45-470f-9735-6175c80aa2e7-attachment.zip`
