@@ -1,193 +1,37 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-03T10:01:00.082Z",
+  "generatedAt": "2026-11-03T12:56:04.383Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 659,
-  "commit": "8235e2ef675e4618fc85890243ced6c3d2927726",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/41609975490",
+  "run": 660,
+  "commit": "a812263e0fff92d223e09493eadfa10a4f72738e",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/41634010775",
   "totals": {
-    "packages": 2,
-    "tests": 15,
-    "failed": 14,
-    "flaky": 1,
-    "newFailures": 15
+    "packages": 1,
+    "tests": 1,
+    "failed": 1,
+    "flaky": 0,
+    "newFailures": 1
   },
   "allure": "index.html",
   "packages": [
     {
-      "package": "blong-marine",
-      "path": "demo/blong-marine",
+      "package": "blong-suite",
+      "path": "suite/blong-suite",
       "runners": [
         "playwright"
       ],
       "counts": {
-        "total": 20,
-        "passed": 6,
-        "failed": 14,
+        "total": 22,
+        "passed": 21,
+        "failed": 1,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "coral.play.ts › Marine Coral",
-          "test": "browse marine coral",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/ace8a521-cbff-4f7c-8965-390dddd8aeef-attachment.zip"
-        },
-        {
-          "suite": "family.play.ts › Marine Family",
-          "test": "browse marine family",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/a4f877e1-e795-4fd3-bd50-5e6ef166392c-attachment.zip"
-        },
-        {
-          "suite": "habitat.play.ts › Marine Habitat",
-          "test": "browse marine habitat",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/b9f10fda-4ad1-4eb7-b591-5901ab1aaa59-attachment.zip"
-        },
-        {
-          "suite": "species.play.ts › Marine Species",
-          "test": "browse marine species",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/61bf4450-d58a-4223-9e93-416e19842865-attachment.zip"
-        },
-        {
-          "suite": "coral.play.ts › Marine Coral",
-          "test": "create marine coral",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/ecd185ec-9eec-4e10-8672-f6c83e2a96c4-attachment.zip"
-        },
-        {
-          "suite": "family.play.ts › Marine Family",
-          "test": "create marine family",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/1e435370-63f0-4141-bb18-84aa3b32996e-attachment.zip"
-        },
-        {
-          "suite": "habitat.play.ts › Marine Habitat",
-          "test": "create marine habitat",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/dac55e81-61ef-45ac-a45a-6118cdc12ed0-attachment.zip"
-        },
-        {
-          "suite": "species.play.ts › Marine Species",
-          "test": "create marine species",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/cf7fb7e4-811c-43a2-ad4b-086f386b003f-attachment.zip"
-        },
-        {
-          "suite": "coral.play.ts › Marine Coral",
-          "test": "edit marine coral",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/98de6ad1-208f-4843-ab0f-cd39b34225e3-attachment.zip"
-        },
-        {
-          "suite": "family.play.ts › Marine Family",
-          "test": "edit marine family",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/3c627cf0-f213-4f31-9633-4f0eae823d61-attachment.zip"
-        },
-        {
-          "suite": "habitat.play.ts › Marine Habitat",
-          "test": "edit marine habitat",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/357abe4b-072a-405b-a592-5c327b3d9136-attachment.zip"
-        },
-        {
-          "suite": "species.play.ts › Marine Species",
-          "test": "edit marine species",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/ca686589-9d09-4e3c-8e69-649969c9740a-attachment.zip"
-        },
-        {
-          "suite": "portal.play.ts",
-          "test": "open and close browse tab",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/554ce929-5aba-4594-b4c8-7ec4b494eb16-attachment.zip"
-        },
-        {
-          "suite": "portal.play.ts",
+          "suite": "../../../demo/blong-marine/test/portal.play.ts",
           "test": "portal loads after login",
           "status": "failed",
           "runner": "playwright",
@@ -196,37 +40,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/64ec5c52-3c81-4e36-b019-1a09e4715e23-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-access",
-      "path": "realm/blong-access",
-      "runners": [
-        "tap",
-        "playwright"
-      ],
-      "counts": {
-        "total": 102,
-        "passed": 101,
-        "failed": 0,
-        "flaky": 1,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "profile.play.ts › Access user profile",
-          "test": "opens the profile from the account menu, edits details and changes the password",
-          "status": "flaky",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/cc6a7b73-5690-4490-a7f6-37b8f021cbab-attachment.zip"
+          "trace": "traces/533628d1-473c-4abd-93fb-5facb678c6e5-attachment.zip"
         }
       ]
     }
