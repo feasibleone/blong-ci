@@ -1,0 +1,29 @@
+{
+  "package": "blong-browser",
+  "status": "passed",
+  "counts": {
+    "total": 803,
+    "passed": 803,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 39219,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "vitest",
+      "status": "passed",
+      "counts": {
+        "total": 803,
+        "passed": 803,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 39219
+    }
+  ]
+}

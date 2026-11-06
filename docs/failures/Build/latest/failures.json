@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-04T15:51:03.159Z",
+  "generatedAt": "2026-11-06T13:32:54.124Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 665,
-  "commit": "7d1956bb89e08cb37e94d0f6dcf36a59278771a7",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/41855710977",
+  "run": 666,
+  "commit": "fccedbb8ce3ca66ba1a96441ac62af58ba708b51",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/42221623547",
   "totals": {
     "packages": 1,
-    "tests": 1,
-    "failed": 0,
+    "tests": 2,
+    "failed": 1,
     "flaky": 1,
-    "newFailures": 1
+    "newFailures": 2
   },
   "allure": "index.html",
   "packages": [
@@ -23,14 +23,26 @@
         "playwright"
       ],
       "counts": {
-        "total": 138,
+        "total": 139,
         "passed": 137,
-        "failed": 0,
+        "failed": 1,
         "flaky": 1,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
+        {
+          "suite": "feedback.play.ts",
+          "test": "feedback mode captures comments and the review page hands them over",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/60c9292e-85e3-47df-95f5-5cf83415a85c-attachment.zip"
+        },
         {
           "suite": "records.play.ts › Documents and awards",
           "test": "cleanup sport conferral",
@@ -41,7 +53,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/3c8daf88-c5ae-40e4-97c2-624b315a176b-attachment.zip"
+          "trace": "traces/134510a5-fdee-45c7-8228-e262f449f41f-attachment.zip"
         }
       ]
     }
