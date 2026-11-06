@@ -1,20 +1,303 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-06T13:32:54.124Z",
+  "generatedAt": "2026-11-06T17:41:02.313Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 666,
-  "commit": "fccedbb8ce3ca66ba1a96441ac62af58ba708b51",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/42221623547",
+  "run": 667,
+  "commit": "38dc3f4a496540d3174ab9134f1f57c425118a49",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/42258885506",
   "totals": {
-    "packages": 1,
-    "tests": 2,
-    "failed": 1,
+    "packages": 7,
+    "tests": 17,
+    "failed": 16,
     "flaky": 1,
-    "newFailures": 2
+    "newFailures": 9
   },
   "allure": "index.html",
   "packages": [
+    {
+      "package": "blong-access",
+      "path": "realm/blong-access",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 70,
+        "passed": 62,
+        "failed": 8,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › addRole › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › addUser › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › cleanup › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › editRoleBit › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › editUser › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › findUsers › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › getRole › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        },
+        {
+          "suite": "index.test.ts",
+          "test": "blong-access login flow (server) › access model flow › getUserDetails › Role bit 8 is already used by the role Access Customer",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-gogo/src/error.ts",
+          "line": 191,
+          "stack": "Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\nAdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
+          "evidence": "role.bitTaken: Role bit 8 is already used by the role Access Customer\nat Proxy.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.accessRoleEnsure (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleEnsure.ts:65:30)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async AdapterBase.accessRoleAdd (/home/runner/work/blong/blong/realm/blong-access/adapter/db/accessRoleAdd.ts:34:37)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: addRole\nnot ok 1 - Role bit 8 is already used by the role Access Customer\n  ---\n  stack: |\n    Proxy.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.accessRoleEnsure (adapter/db/accessRoleEnsure.ts:65:30)\n    AdapterBase.accessRoleAdd (adapter/db/accessRoleAdd.ts:34:37)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191"
+        }
+      ]
+    },
+    {
+      "package": "blong-commander",
+      "path": "realm/blong-commander",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 28,
+        "passed": 27,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "observedBranchList.play.ts",
+          "test": "the orchestrator dispatch is drawn with its milestones and its outgoing leg",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/0c76d687-5758-4e52-8540-acd1df159bb3-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-gateway",
+      "path": "realm/blong-gateway",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 40,
+        "passed": 39,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "observedFlow.play.ts",
+          "test": "a flow this realm served is drawn as a diagram",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/1d47ed62-464e-4245-ba60-e4d83c596047-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-kopi",
+      "path": "core/blong-kopi",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 10,
+        "passed": 6,
+        "failed": 4,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "$subject.play.ts › $Object",
+          "test": "browse $subject $object",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/37d980a5-c4ad-45fd-acd2-804e995d0a48-attachment.zip"
+        },
+        {
+          "suite": "$subject.play.ts › $Object",
+          "test": "cleanup $subject $object",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/9865ebe6-0380-47fd-ad15-a13b914b13c5-attachment.zip"
+        },
+        {
+          "suite": "$subject.play.ts › $Object",
+          "test": "create $subject $object",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/eb4b4076-86c6-4f3a-a52b-968af41df774-attachment.zip"
+        },
+        {
+          "suite": "$subject.play.ts › $Object",
+          "test": "edit $subject $object",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/a9532973-d5cd-4127-9085-4be80930ad24-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-party",
+      "path": "realm/blong-party",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 93,
+        "passed": 92,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "selfRegistration.play.ts",
+          "test": "self-registration: create account and auto-login",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/b6e4da40-74ac-4161-ad62-207c5e9ff8a0-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-realm",
+      "path": "core/blong-realm",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 15,
+        "passed": 14,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "blong.play.ts › a role without the capability",
+          "test": "is refused, not shown an empty page",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/1018a3dc-447f-48dd-aaf5-ab7d840143a2-attachment.zip"
+        }
+      ]
+    },
     {
       "package": "blong-sport",
       "path": "realm/blong-sport",
@@ -23,37 +306,25 @@
         "playwright"
       ],
       "counts": {
-        "total": 139,
-        "passed": 137,
-        "failed": 1,
+        "total": 141,
+        "passed": 140,
+        "failed": 0,
         "flaky": 1,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "feedback.play.ts",
-          "test": "feedback mode captures comments and the review page hands them over",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/60c9292e-85e3-47df-95f5-5cf83415a85c-attachment.zip"
-        },
-        {
-          "suite": "records.play.ts › Documents and awards",
-          "test": "cleanup sport conferral",
+          "suite": "bgModels.play.ts",
+          "test": "bg create cycle +5 (empty form)",
           "status": "flaky",
           "runner": "playwright",
           "history": {
             "kind": "new",
-            "runs": 5,
+            "runs": 2,
             "failedRuns": 0
           },
-          "trace": "traces/134510a5-fdee-45c7-8228-e262f449f41f-attachment.zip"
+          "trace": "traces/36168bf8-ab07-4d9a-834c-5fade73a6777-attachment.zip"
         }
       ]
     }

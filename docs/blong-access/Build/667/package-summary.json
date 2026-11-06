@@ -1,0 +1,29 @@
+{
+  "package": "blong-access",
+  "status": "failed",
+  "counts": {
+    "total": 70,
+    "passed": 62,
+    "failed": 8,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 2820.952,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "failed",
+      "counts": {
+        "total": 70,
+        "passed": 62,
+        "failed": 8,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 14630
+    }
+  ]
+}
