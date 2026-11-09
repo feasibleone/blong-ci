@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-09T12:59:48.628Z",
+  "generatedAt": "2026-11-09T14:15:05.112Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 674,
-  "commit": "42d429f915d618ad0fa83acccba6dacdb2a4cc17",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/42616626040",
+  "run": 675,
+  "commit": "1d3836b2035dbb808af50113d527016fc73bb299",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/42628100953",
   "totals": {
-    "packages": 6,
-    "tests": 8,
-    "failed": 8,
-    "flaky": 0,
-    "newFailures": 8
+    "packages": 2,
+    "tests": 3,
+    "failed": 2,
+    "flaky": 1,
+    "newFailures": 2
   },
   "allure": "index.html",
   "packages": [
@@ -32,8 +32,8 @@
       },
       "failures": [
         {
-          "suite": "observedBranchList.play.ts",
-          "test": "the orchestrator dispatch is drawn with its milestones and its outgoing leg",
+          "suite": "explore.play.ts",
+          "test": "mongo-dev — databases and collections",
           "status": "failed",
           "runner": "playwright",
           "history": {
@@ -41,120 +41,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/79014e2a-2d0c-4423-92f1-9947a3c9c4be-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-gateway",
-      "path": "realm/blong-gateway",
-      "runners": [
-        "tap",
-        "playwright"
-      ],
-      "counts": {
-        "total": 40,
-        "passed": 38,
-        "failed": 2,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "observedMergeFlow.play.ts",
-          "test": "a checkpoint and a branch are drawn for a flow this realm served",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/9b46d8bd-df6d-4ce9-a6fe-ae7f45aea429-attachment.zip"
-        },
-        {
-          "suite": "observedFlow.play.ts",
-          "test": "a flow this realm served is drawn as a diagram",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/07b1e0dd-2f93-4782-b057-d6379c2f37d1-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-marine",
-      "path": "demo/blong-marine",
-      "runners": [
-        "playwright"
-      ],
-      "counts": {
-        "total": 21,
-        "passed": 20,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "portal.play.ts",
-          "test": "portal loads after login",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/fc50c3c2-3690-4f74-b123-3516d35e8f27-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-realm",
-      "path": "core/blong-realm",
-      "runners": [
-        "tap",
-        "playwright"
-      ],
-      "counts": {
-        "total": 15,
-        "passed": 13,
-        "failed": 2,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "blong.play.ts",
-          "test": "an observed execution is drawn as a diagram",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/b9ac387f-0a82-4eef-bd21-8e75e4188a99-attachment.zip"
-        },
-        {
-          "suite": "blong.play.ts",
-          "test": "every run of a kind is drawn together",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/063a53ed-3247-46f7-8174-d54b33eec079-attachment.zip"
+          "trace": "traces/bf1a237a-7f65-4927-8038-91b201a77c36-attachment.zip"
         }
       ]
     },
@@ -167,9 +54,9 @@
       ],
       "counts": {
         "total": 145,
-        "passed": 144,
+        "passed": 143,
         "failed": 1,
-        "flaky": 0,
+        "flaky": 1,
         "skipped": 0,
         "todo": 0
       },
@@ -184,36 +71,19 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/89e9170e-b154-466b-a8e9-8aa4fd91f989-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-suite",
-      "path": "suite/blong-suite",
-      "runners": [
-        "playwright"
-      ],
-      "counts": {
-        "total": 23,
-        "passed": 22,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
+          "trace": "traces/7ed7def7-93c4-4a25-8b65-b4a211acfa18-attachment.zip"
+        },
         {
-          "suite": "../../../demo/blong-marine/test/portal.play.ts",
-          "test": "portal loads after login",
-          "status": "failed",
+          "suite": "portal.play.ts",
+          "test": "portal carries the sport menu",
+          "status": "flaky",
           "runner": "playwright",
           "history": {
-            "kind": "new",
+            "kind": "recurring",
             "runs": 5,
-            "failedRuns": 0
+            "failedRuns": 1
           },
-          "trace": "traces/b7db7c34-62d3-4fb7-ad08-6fa21ea05a48-attachment.zip"
+          "trace": "traces/3e725b3e-05cf-4588-80e7-017765be83c6-attachment.zip"
         }
       ]
     }
