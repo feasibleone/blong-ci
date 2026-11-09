@@ -1,0 +1,29 @@
+{
+  "package": "blong-suite",
+  "status": "failed",
+  "counts": {
+    "total": 23,
+    "passed": 22,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 326664,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "playwright",
+      "status": "failed",
+      "counts": {
+        "total": 23,
+        "passed": 22,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 188930
+    }
+  ]
+}
