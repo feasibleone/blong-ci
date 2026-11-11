@@ -1,29 +1,29 @@
 {
   "package": "blong-agent",
-  "status": "failed",
+  "status": "passed",
   "counts": {
-    "total": 1,
-    "passed": 0,
-    "failed": 1,
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
     "flaky": 0,
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 3754.384,
-  "outsideTestsMs": 770.616,
+  "testsMs": 11081,
+  "outsideTestsMs": 0,
   "runs": [
     {
       "runner": "tap",
-      "status": "failed",
+      "status": "passed",
       "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
+        "total": 2,
+        "passed": 2,
+        "failed": 0,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 4525
+      "durationMs": 11081
     }
   ]
 }

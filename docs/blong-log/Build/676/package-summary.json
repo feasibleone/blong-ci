@@ -1,15 +1,15 @@
 {
   "package": "blong-log",
-  "status": "failed",
+  "status": "passed",
   "counts": {
-    "total": 105,
-    "passed": 83,
-    "failed": 22,
+    "total": 104,
+    "passed": 104,
+    "failed": 0,
     "flaky": 0,
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 27897,
+  "testsMs": 31550,
   "outsideTestsMs": 0,
   "runs": [
     {
@@ -23,20 +23,20 @@
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 2740
+      "durationMs": 4279
     },
     {
       "runner": "storybook",
-      "status": "failed",
+      "status": "passed",
       "counts": {
-        "total": 23,
-        "passed": 1,
-        "failed": 22,
+        "total": 22,
+        "passed": 22,
+        "failed": 0,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 27897
+      "durationMs": 31550
     }
   ]
 }

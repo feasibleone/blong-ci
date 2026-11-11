@@ -1,29 +1,29 @@
 {
   "package": "blong-kukum",
-  "status": "failed",
+  "status": "passed",
   "counts": {
-    "total": 615,
-    "passed": 609,
-    "failed": 6,
+    "total": 634,
+    "passed": 634,
+    "failed": 0,
     "flaky": 0,
     "skipped": 0,
     "todo": 0
   },
-  "testsMs": 3505.246,
+  "testsMs": 5.034,
   "outsideTestsMs": 0,
   "runs": [
     {
       "runner": "tap",
-      "status": "failed",
+      "status": "passed",
       "counts": {
-        "total": 615,
-        "passed": 609,
-        "failed": 6,
+        "total": 634,
+        "passed": 634,
+        "failed": 0,
         "flaky": 0,
         "skipped": 0,
         "todo": 0
       },
-      "durationMs": 25698
+      "durationMs": 162342
     }
   ]
 }

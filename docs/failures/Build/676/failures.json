@@ -1,530 +1,30 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-11T14:45:16.165Z",
+  "generatedAt": "2026-11-11T22:03:17.578Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
   "run": 676,
   "commit": "931ea3a6a00944bc9a431cff4b14e3fd822e67bc",
   "runUrl": "https://github.com/feasibleone/blong/actions/runs/43032166272",
   "totals": {
-    "packages": 10,
-    "tests": 43,
-    "failed": 43,
-    "flaky": 0,
+    "packages": 2,
+    "tests": 3,
+    "failed": 2,
+    "flaky": 1,
     "newFailures": 0
   },
   "allure": "index.html",
   "packages": [
     {
-      "package": "blong-agent",
-      "path": "realm/blong-agent",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:42:10.481Z info  blong.testDispatch dispatch event adapter.start [semlog://r/01M75GY9XHEQDCC0X1JP6RK8TR semlog://t/62982d1431ea]\n    2026-11-11T14:42:10.482Z info  agent.engine dispatch event adapter.start [semlog://r/01M75GY9XJQW4Z41P2NGBD2RVF semlog://t/8d01ace3e21b]\n    2026-11-11T14:42:10.482Z info  agent.notify redis event adapter.start [semlog://r/01M75GY9XJQW4Z41P2NGBD2RVH semlog://t/168e4f34fc58]\n    2026-11-11T14:42:10.483Z info  agent.task http event adapter.start [semlog://r/01M75GY9XK7W6Q9PJK464BCM2X semlog://t/02bad641f2e1]\n    2026-11-11T14:42:10.484Z info  agent.workspace dispatch event adapter.start [semlog://r/01M75GY9XMCS7T38K0YV88CR71 semlog://t/e57a8c9be847]\n    2026-11-11T14:42:10.487Z info  agent.agentDispatch dispatch event adapter.start [semlog://r/01M75GY9XQEWXKEEQFB5CKP4KG semlog://t/14f918735ac3]\n    2026-11-11T14:42:10.488Z info  agent.testDispatch dispatch event adapter.start [semlog://r/01M75GY9XRESY787GER42M8PJJ semlog://t/cd14047faa7b]\n    2026-11-11T14:42:10.489Z info  testRealm.testDispatch dispatch event adapter.start [semlog://r/01M75GY9XS3AG9GGJQ9NV0CGF7 semlog://t/9581ba1e5768]\n    2026-11-11T14:42:10.489Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=3754.384ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-agent\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-agent/index.test.ts\n  exitCode: 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-chat",
-      "path": "realm/blong-chat",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 49,
-        "passed": 48,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:41:16.245Z info  gateway.meter redis event adapter.start [semlog://r/01M75GWMYNDXVJ311A9RVFK9FG semlog://t/7c73a62befee]\n    2026-11-11T14:41:16.246Z info  gateway.testDispatch dispatch event adapter.start [semlog://r/01M75GWMYP0H5QRT1ZB41AZ6N6 semlog://t/7d9560087ba2]\n    2026-11-11T14:41:16.248Z info  chat.slack slack event adapter.start [semlog://r/01M75GWMYRB6S1TTAKSAGSJ0GZ semlog://t/8ed63bf187e5]\n    2026-11-11T14:41:16.253Z info  chat.viber viber event adapter.start [semlog://r/01M75GWMYWMA4AWT0BVVV1157G semlog://t/c884ac920b1a]\n    2026-11-11T14:41:16.258Z info  chat.chatDispatch dispatch event adapter.start [semlog://r/01M75GWMZ2Q17RH3P653JDJ527 semlog://t/876afc1c61f0]\n    2026-11-11T14:41:16.259Z info  chat.slackSim webhook event adapter.start [semlog://r/01M75GWMZ3JHNHKC73V559A5EQ semlog://t/5a3d1f49881a]\n    2026-11-11T14:41:16.262Z info  chat.viberSim webhook event adapter.start [semlog://r/01M75GWMZ67GCXT7990XE4CPWZ semlog://t/b64732254c02]\n    2026-11-11T14:41:16.265Z info  chat.testDispatch dispatch event adapter.start [semlog://r/01M75GWMZ9KM1S8FXVTGSB5HYY semlog://t/bd83cc41dace]\n    2026-11-11T14:41:16.265Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 2 - index.test.ts # time=5254.302ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-chat\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-chat/index.test.ts\n  jobId: 2"
-        }
-      ]
-    },
-    {
-      "package": "blong-feedback",
-      "path": "realm/blong-feedback",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:39:15.424Z info  srv.subject dispatch event adapter.start [semlog://t/2bc167d5caff]\n    2026-11-11T14:39:15.426Z info  login.loginDispatch dispatch event adapter.start [semlog://r/01M75GRYZ2S66Z60N3K8Y0A3ZE semlog://t/e8f99203eb6c]\n    2026-11-11T14:39:15.427Z info  core.testDispatch dispatch event adapter.start [semlog://t/b1dcda55f757]\n    2026-11-11T14:39:15.428Z info  access.testDispatch dispatch event adapter.start [semlog://r/01M75GRYZ4Q4799QZAZT3NKD93 semlog://t/53ea056b83e4]\n    2026-11-11T14:39:15.429Z info  blong.semlog http event adapter.start [semlog://r/01M75GRYZ5XE3JC6SHTX762CD0 semlog://t/d64858a846f2]\n    2026-11-11T14:39:15.429Z info  blong.blong dispatch event adapter.start [semlog://r/01M75GRYZ5XE3JC6SHTX762CD2 semlog://t/f9dcbc13356c]\n    2026-11-11T14:39:15.430Z info  blong.testDispatch dispatch event adapter.start [semlog://r/01M75GRYZ6E1993XQFYNHMDNNC semlog://t/62982d1431ea]\n    2026-11-11T14:39:15.431Z info  feedback.testDispatch dispatch event adapter.start [semlog://r/01M75GRYZ7P3JXD7D9Z00WE2SQ semlog://t/70b15be69f72]\n    2026-11-11T14:39:15.431Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=3546.667ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-feedback\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-feedback/index.test.ts\n  exitCode: 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-int-adapter",
-      "path": "test/blong-int-adapter",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "(unparsed)",
-          "test": "tap exited with code 1 without reporting a failing test",
-          "status": "failed",
-          "runner": "tap",
-          "message": "tap exited with code 1 and its own report names no failing test, which is what a run killed by an expired budget or a crash looks like; see tap.raw.tap in the same directory for the reason.",
-          "evidence": "error  vault.generic: Vault Error\nvault.generic: Vault Error\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/vault.ts:329:66)\nat process.processTicksAndRejections (node:internal/process/task_queues:104:5)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: listSecrets\nnot ok 1 - Vault Error\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/vault.ts:329:66)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        }
-      ]
-    },
-    {
-      "package": "blong-kopi",
-      "path": "core/blong-kopi",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
-        "failed": 1,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:36:07.440Z info  login.loginDispatch dispatch event adapter.start [semlog://r/01M75GK7CGA3NNK8SVY3WAK89N semlog://t/e8f99203eb6c]\n    2026-11-11T14:36:07.441Z info  core.testDispatch dispatch event adapter.start [semlog://t/b1dcda55f757]\n    2026-11-11T14:36:07.442Z info  access.testDispatch dispatch event adapter.start [semlog://r/01M75GK7CJFSSAC4TEN5JJ7ZW0 semlog://t/53ea056b83e4]\n    2026-11-11T14:36:07.442Z info  blong.semlog http event adapter.start [semlog://r/01M75GK7CJFSSAC4TEN5JJ7ZW2 semlog://t/d64858a846f2]\n    2026-11-11T14:36:07.442Z info  blong.blong dispatch event adapter.start [semlog://r/01M75GK7CJFSSAC4TEN5JJ7ZW4 semlog://t/f9dcbc13356c]\n    2026-11-11T14:36:07.443Z info  blong.testDispatch dispatch event adapter.start [semlog://r/01M75GK7CKRDBNYKSQYWNA489Y semlog://t/62982d1431ea]\n    2026-11-11T14:36:07.445Z info  $subject.testDispatch dispatch event adapter.start [semlog://r/01M75GK7CNKRCW86E476B1JJKC semlog://t/b75a647af95b]\n    2026-11-11T14:36:07.446Z info  testRealm.testDispatch dispatch event adapter.start [semlog://r/01M75GK7CP3MQ4ZSCDR2GV5D0C semlog://t/9581ba1e5768]\n    2026-11-11T14:36:07.446Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=4278.825ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/core/blong-kopi\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/core/blong-kopi/index.test.ts\n  exitCode: 1"
-        }
-      ]
-    },
-    {
-      "package": "blong-kukum",
-      "path": "core/blong-kukum",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 615,
-        "passed": 609,
-        "failed": 6,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
-          "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:36:10.531Z info  srv.subject dispatch event adapter.start [semlog://t/2bc167d5caff]\n    2026-11-11T14:36:10.534Z info  login.loginDispatch dispatch event adapter.start [semlog://r/01M75GKAD6X3HWJ20PQGK7846Y semlog://t/e8f99203eb6c]\n    2026-11-11T14:36:10.535Z info  core.testDispatch dispatch event adapter.start [semlog://t/b1dcda55f757]\n    2026-11-11T14:36:10.535Z info  access.testDispatch dispatch event adapter.start [semlog://r/01M75GKAD77D1EXT367QRA06ZX semlog://t/53ea056b83e4]\n    2026-11-11T14:36:10.536Z info  blong.semlog http event adapter.start [semlog://r/01M75GKAD8YP1W0P08RV92BDBE semlog://t/d64858a846f2]\n    2026-11-11T14:36:10.536Z info  blong.blong dispatch event adapter.start [semlog://r/01M75GKAD8YP1W0P08RV92BDBG semlog://t/f9dcbc13356c]\n    2026-11-11T14:36:10.537Z info  blong.testDispatch dispatch event adapter.start [semlog://r/01M75GKAD9NS65BVGZHZS5WKVX semlog://t/62982d1431ea]\n    2026-11-11T14:36:10.538Z info  kukum.kukum dispatch event adapter.start [semlog://r/01M75GKADA3KTW9QZF0JHYEG17 semlog://t/16331e112750]\n    2026-11-11T14:36:10.538Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 3 - index.test.ts # time=3505.246ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/core/blong-kukum\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/core/blong-kukum/index.test.ts\n  exitCode: 1"
-        },
-        {
-          "suite": "e2e.test.ts",
-          "test": "the realm runs its server and browser tests over the added entity › the added browser group ran",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "line": 196,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/e2e flow browser › addGadget$/m\n+\"# e2e-realm: 0 passed, 1 failed (1 total)\"",
-          "stack": "Test.<anonymous> (e2e.test.ts:196:11)\n",
-          "evidence": "    Test.<anonymous> (e2e.test.ts:195:11)\n  source: >2\n            const names = [summary, ...passed].join('\\n');\n            t.match(names, /(^| › )addGadget$/m, 'the added server test ran: add');\n            t.match(names, /(^| › )findGadget$/m, 'the added server test ran: find');\n    ----------^\n            t.match(names, /e2e flow browser › addGadget$/m, 'the added browser group ran');\n        },\n  ...\n\nnot ok 7 - the added browser group ran\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/e2e flow browser › addGadget$/m\n    +\"# e2e-realm: 0 passed, 1 failed (1 total)\"\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 196\n    columnNumber: 11\n    typeName: Test"
-        },
-        {
-          "suite": "e2e.test.ts",
-          "test": "the realm runs its server and browser tests over the added entity › the added server test ran: add",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "line": 194,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/(^| › )addGadget$/m\n+\"# e2e-realm: 0 passed, 1 failed (1 total)\"",
-          "stack": "Test.<anonymous> (e2e.test.ts:194:11)\n",
-          "evidence": "            const names = [summary, ...passed].join('\\n');\n            t.match(names, /(^| › )addGadget$/m, 'the added server test ran: add');\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -0\n    +1\n  ...\n\nnot ok 5 - the added server test ran: add\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/(^| › )addGadget$/m\n    +\"# e2e-realm: 0 passed, 1 failed (1 total)\"\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 194\n    columnNumber: 11\n    typeName: Test"
-        },
-        {
-          "suite": "e2e.test.ts",
-          "test": "the realm runs its server and browser tests over the added entity › the added server test ran: find",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "line": 195,
-          "message": "--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-/(^| › )findGadget$/m\n+\"# e2e-realm: 0 passed, 1 failed (1 total)\"",
-          "stack": "Test.<anonymous> (e2e.test.ts:195:11)\n",
-          "evidence": "    Test.<anonymous> (e2e.test.ts:194:11)\n  source: >2\n            t.equal(failed, 0, 'the report records no failing test');\n            const names = [summary, ...passed].join('\\n');\n            t.match(names, /(^| › )addGadget$/m, 'the added server test ran: add');\n    ----------^\n            t.match(names, /(^| › )findGadget$/m, 'the added server test ran: find');\n            t.match(names, /e2e flow browser › addGadget$/m, 'the added browser group ran');\n  ...\n\nnot ok 6 - the added server test ran: find\n  ---\n  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -/(^| › )findGadget$/m\n    +\"# e2e-realm: 0 passed, 1 failed (1 total)\"\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 195\n    columnNumber: 11\n    typeName: Test"
-        },
-        {
-          "suite": "e2e.test.ts",
-          "test": "the realm runs its server and browser tests over the added entity › the realm suite exits 0",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "line": 179,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (e2e.test.ts:179:11)\n",
-          "evidence": "ok 2 - regenerated meta/type/gadget.ts\nok 3 - regenerated server/test/test/testGadget.ts\nok 4 - regenerated browser/test/test/testGadget.flow.ts\nok 5 - regenerated meta/model/e2eGadgetModel.ts\nok 6 - every generated test group was registered\nok 7 - the committed baselines survived the regeneration\n1..7\nok 1 - the fixtures are regenerated from the templates on every run # time=26.021ms\n\n# Subtest: the realm runs its server and browser tests over the added entity\nnot ok 1 - the realm suite exits 0\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 179\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:179:11)\n  source: >2\n            }"
-        },
-        {
-          "suite": "e2e.test.ts",
-          "test": "the realm runs its server and browser tests over the added entity › the report records no failing test",
-          "status": "failed",
-          "runner": "tap",
-          "file": "e2e.test.ts",
-          "line": 192,
-          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
-          "stack": "Test.<anonymous> (e2e.test.ts:192:11)\n",
-          "evidence": "  diff: |\n    --- expected\n    +++ actual\n    @@ -1,1 +1,1 @@\n    -0\n    +1\n  ...\n\nok 2 - no tap failures in the console output\nok 3 - the tap leg reported into the package (the report holds every runner that did)\nnot ok 4 - the report records no failing test\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 192\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:192:11)\n  source: >2\n                'the tap leg reported into the package (the report holds every runner that did)',\n            );"
-        }
-      ]
-    },
-    {
-      "package": "blong-kustomize",
-      "path": "realm/blong-kustomize",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 137,
-        "passed": 129,
-        "failed": 8,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › plan find › planDescribesTheSuite › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › plan find › planIsDeterministic › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › plan find › theOperatorIsAnotherTree › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › tree generate › aBaseAndItsOverlayMaterializeToTheFlatTree › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › tree generate › aSplitTreeComposesToTheFlatTree › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › tree generate › aSplitTreeKeepsTheArtifactOutOfTheBase › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › tree generate › aWrittenTreeReadsBackAsItself › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        },
-        {
-          "suite": "index.test.ts",
-          "test": "kustomize flow (server) › tree generate › theSerializedTreeIgnoresKeyOrder › Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-gogo/src/error.ts",
-          "line": 191,
-          "stack": "Object.handler (../../core/blong-gogo/src/error.ts:191:35)\nAdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nanswered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\nexec (../../core/blong-gogo/src/loop.ts:270:24)\n<anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n",
-          "evidence": "error  k8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nk8s.failed: Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\nat Object.handler (/home/runner/work/blong/blong/core/blong-gogo/src/error.ts:191:35)\nat AdapterBase.exec (/home/runner/work/blong/blong/core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\nat async answered (/home/runner/work/blong/blong/core/blong-gogo/src/AdapterBase.ts:422:32)\nat async exec (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:270:24)\nat async <anonymous> (/home/runner/work/blong/blong/core/blong-gogo/src/loop.ts:18:27)\nat async file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n# Subtest: plan find\n# Subtest: planDescribesTheSuite\nnot ok 1 - Kubernetes API error: Error: HTTP protocol is not allowed when skipTLSVerify is not set or false (status none)\n  ---\n  stack: |\n    Object.handler (../../core/blong-gogo/src/error.ts:191:35)\n    AdapterBase.exec (../../core/blong-gogo/src/adapter/server/k8s.ts:1037:48)\n    answered (../../core/blong-gogo/src/AdapterBase.ts:422:32)\n    exec (../../core/blong-gogo/src/loop.ts:270:24)\n    <anonymous> (../../core/blong-gogo/src/loop.ts:18:27)\n    ../../common/temp/node_modules/.pnpm/p-queue@9.1.0/node_modules/p-queue/dist/index.js:394:36\n  at:\n    fileName: ../../core/blong-gogo/src/error.ts\n    lineNumber: 191\n    columnNumber: 35"
-        }
-      ]
-    },
-    {
-      "package": "blong-log",
-      "path": "tools/blong-log",
+      "package": "blong-commander",
+      "path": "realm/blong-commander",
       "runners": [
         "tap",
-        "storybook"
+        "playwright"
       ],
       "counts": {
-        "total": 105,
-        "passed": 83,
-        "failed": 22,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › AllFiltersShowcase › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025390625% different from snapshot (234 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--all-filters-showcase-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › DarkTheme › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025390625% different from snapshot (234 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--dark-theme-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › Empty › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--empty-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › ErrorsOnly › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--errors-only-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › ExpandedExceptionDetails › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-exception-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › ExpandedHTTPDetails › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-http-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › ExpandedMixedContent › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-mixed-content-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › FilteredServer › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025390625% different from snapshot (234 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--filtered-server-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › HTTPErrorWithBody › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-error-with-body-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › HTTPFullDetails › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-full-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › HTTPSuccessWithBody › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-success-with-body-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › HTTPWithCacheHeaders › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-with-cache-headers-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › LargeDataset › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › LargeDatasetLight › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.027126736111111112% different from snapshot (250 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-light-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › LightTheme › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.026801215277777776% different from snapshot (247 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--light-theme-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › SearchHighlightingExpanded › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-expanded-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › SearchHighlightingHTTPAndErrors › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-http-and-errors-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › SearchHighlightingSingleLine › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-single-line-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › SingleService › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-service-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › SingleTrace › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-trace-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "LogViewer › WithHTTPDetails › smoke-test",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "Error: Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--with-http-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:183:32)"
-        },
-        {
-          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "test": "tools/blong-log/src/client/LogViewer.stories.tsx — test file failed to run",
-          "status": "failed",
-          "runner": "storybook",
-          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
-          "message": "  ● LogViewer › DarkTheme › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025390625% different from snapshot (234 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--dark-theme-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › LightTheme › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.026801215277777776% different from snapshot (247 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--light-theme-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › Empty › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--empty-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › ErrorsOnly › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--errors-only-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › LargeDataset › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › LargeDatasetLight › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.027126736111111112% different from snapshot (250 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-light-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › WithHTTPDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--with-http-details-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › AllFiltersShowcase › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025390625% different from snapshot (234 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--all-filters-showcase-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › SingleService › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-service-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › SingleTrace › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-trace-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › ExpandedHTTPDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-http-details-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › ExpandedExceptionDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-exception-details-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › ExpandedMixedContent › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-mixed-content-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › HTTPFullDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-full-details-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › HTTPSuccessWithBody › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-success-with-body-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › HTTPErrorWithBody › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-error-with-body-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › HTTPWithCacheHeaders › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-with-cache-headers-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › SearchHighlightingSingleLine › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-single-line-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › SearchHighlightingExpanded › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-expanded-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › SearchHighlightingHTTPAndErrors › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025716145833333332% different from snapshot (237 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-http-and-errors-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n\n  ● LogViewer › FilteredServer › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.025390625% different from snapshot (234 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--filtered-server-diff.png\n\n      181 |             // Full-page screenshot comparison — saves real PNG files\n      182 |             const screenshot = await page.screenshot({fullPage: true});\n    > 183 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      184 |                 customSnapshotsDir: path.join(\n      185 |                     __dirname,\n      186 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:183:32)\n"
-        }
-      ]
-    },
-    {
-      "package": "blong-realm",
-      "path": "core/blong-realm",
-      "runners": [
-        "tap"
-      ],
-      "counts": {
-        "total": 1,
-        "passed": 0,
+        "total": 28,
+        "passed": 27,
         "failed": 1,
         "flaky": 0,
         "skipped": 0,
@@ -532,13 +32,16 @@
       },
       "failures": [
         {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
+          "suite": "explore.play.ts",
+          "test": "mongo-dev — databases and collections",
           "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:31:58.214Z info  srv.db knex event adapter.start [semlog://r/01M75GBM05Y8RHDX5NVD5V3H65 semlog://t/6032f6ed1930 p=01M75GBKZ8H5X151XYYWMEXW3S]\n    2026-11-11T14:31:58.216Z info  srv.subject dispatch event adapter.start [semlog://t/2bc167d5caff]\n    2026-11-11T14:31:58.218Z info  login.loginDispatch dispatch event adapter.start [semlog://r/01M75GBM0A0CV5A76GMBKC7WVT semlog://t/e8f99203eb6c]\n    2026-11-11T14:31:58.219Z info  core.testDispatch dispatch event adapter.start [semlog://t/b1dcda55f757]\n    2026-11-11T14:31:58.220Z info  access.testDispatch dispatch event adapter.start [semlog://r/01M75GBM0CFHMWCCNYWRN5SP36 semlog://t/53ea056b83e4]\n    2026-11-11T14:31:58.221Z info  blong.semlog http event adapter.start [semlog://r/01M75GBM0DP4Y01QR2J36ZCZGG semlog://t/d64858a846f2]\n    2026-11-11T14:31:58.221Z info  blong.blong dispatch event adapter.start [semlog://r/01M75GBM0DP4Y01QR2J36ZCZGJ semlog://t/f9dcbc13356c]\n    2026-11-11T14:31:58.222Z info  blong.testDispatch dispatch event adapter.start [semlog://r/01M75GBM0ESDX62PW1XX7TW369 semlog://t/62982d1431ea]\n    2026-11-11T14:31:58.222Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=3466.489ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/core/blong-realm\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/core/blong-realm/index.test.ts\n  exitCode: 1"
+          "runner": "playwright",
+          "history": {
+            "kind": "recurring",
+            "runs": 5,
+            "failedRuns": 1
+          },
+          "trace": "traces/2899d55f-7a70-4193-a186-38b0e46b3b66-attachment.zip"
         }
       ]
     },
@@ -546,25 +49,41 @@
       "package": "blong-sport",
       "path": "realm/blong-sport",
       "runners": [
-        "tap"
+        "tap",
+        "playwright"
       ],
       "counts": {
-        "total": 1,
-        "passed": 0,
+        "total": 145,
+        "passed": 143,
         "failed": 1,
-        "flaky": 0,
+        "flaky": 1,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "index.test.ts",
-          "test": "index.test.ts",
+          "suite": "reference.play.ts › Reference",
+          "test": "edit sport area",
           "status": "failed",
-          "runner": "tap",
-          "file": "index.test.ts",
-          "message": "test process exited with code 1",
-          "evidence": "    2026-11-11T14:31:45.124Z info  blong.blong dispatch event adapter.start [semlog://r/01M75GB774W82NE0S55P0Y8D8B semlog://t/f9dcbc13356c]\n    2026-11-11T14:31:45.125Z info  blong.testDispatch dispatch event adapter.start [semlog://r/01M75GB77528Q2PFMSPE08YR6D semlog://t/62982d1431ea]\n    2026-11-11T14:31:45.125Z info  gateway.meter redis event adapter.start [semlog://r/01M75GB77528Q2PFMSPE08YR6F semlog://t/7c73a62befee]\n    2026-11-11T14:31:45.127Z info  gateway.testDispatch dispatch event adapter.start [semlog://r/01M75GB777S174QXME17Z2BRWT semlog://t/7d9560087ba2]\n    2026-11-11T14:31:45.128Z info  party.testDispatch dispatch event adapter.start [semlog://r/01M75GB778Z5G7PMMQ8XBZSDEV semlog://t/a4b1063314b6]\n    2026-11-11T14:31:45.129Z info  sport.testDispatch dispatch event adapter.start [semlog://r/01M75GB779QNYP3JHXFJSNHJRQ semlog://t/a4da1909eaa6]\n    2026-11-11T14:31:45.130Z info  feedback.testDispatch dispatch event adapter.start [semlog://r/01M75GB77A1KS3QQ8G426EKAK3 semlog://t/70b15be69f72]\n    2026-11-11T14:31:45.132Z info  testRealm.testDispatch dispatch event adapter.start [semlog://r/01M75GB77CEQ8P697TYY2VF6HC semlog://t/9581ba1e5768]\n    2026-11-11T14:31:45.132Z info  codec.testDispatch dispatch event adapter.ready [semlog://t/d345e4212ad2]\n    1..0 # no tests found\nnot ok 1 - index.test.ts # time=4180.456ms\n  ---\n  stdio: pipe\n  cwd: /home/runner/work/blong/blong/realm/blong-sport\n  externalID: index.test.ts\n  command: /opt/hostedtoolcache/node/24.22.2/x64/bin/node\n  args:\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+typescript@3.5.12_@swc+core@1.15.21_@tapjs+core@4.6.0_@swc+core@1.15.…\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+mock@4.4.10_@tapjs+core@4.6.0_@swc+core@1.15.21_@types+node@24.12.0_r…\n    - --enable-source-maps\n    - --import=file:///home/runner/work/blong/blong/common/temp/node_modules/.pnpm/@tapjs+processinfo@3.1.12/node_modules/@tapjs/processinfo/dist/esm/import.mjs\n    - /home/runner/work/blong/blong/realm/blong-sport/index.test.ts\n  exitCode: 1"
+          "runner": "playwright",
+          "history": {
+            "kind": "recurring",
+            "runs": 5,
+            "failedRuns": 1
+          },
+          "trace": "traces/42c675ae-be10-4ae8-a1c5-afe46233300f-attachment.zip"
+        },
+        {
+          "suite": "portal.play.ts",
+          "test": "portal carries the sport menu",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "intermittent",
+            "runs": 5,
+            "failedRuns": 1
+          },
+          "trace": "traces/ea58b357-c398-40f6-9a7a-7c9bd76475f2-attachment.zip"
         }
       ]
     }
