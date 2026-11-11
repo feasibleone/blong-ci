@@ -1,0 +1,29 @@
+{
+  "package": "blong-chat",
+  "status": "failed",
+  "counts": {
+    "total": 49,
+    "passed": 48,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 5254.302,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "failed",
+      "counts": {
+        "total": 49,
+        "passed": 48,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 6210
+    }
+  ]
+}

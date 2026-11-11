@@ -1,0 +1,29 @@
+{
+  "package": "blong-realm",
+  "status": "failed",
+  "counts": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 3466.489,
+  "outsideTestsMs": 696.511,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "failed",
+      "counts": {
+        "total": 1,
+        "passed": 0,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 4163
+    }
+  ]
+}
