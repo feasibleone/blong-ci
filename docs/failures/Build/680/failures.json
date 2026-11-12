@@ -1,0 +1,192 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-12T22:56:23.685Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 680,
+  "commit": "121596e09920ea72633caf610220f2af28243450",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/43319630347",
+  "totals": {
+    "packages": 6,
+    "tests": 6,
+    "failed": 5,
+    "flaky": 1,
+    "newFailures": 4
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-int-adapter",
+      "path": "test/blong-int-adapter",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 165,
+        "passed": 164,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "mysql.test.ts",
+          "test": "blong int-adapter › mysql CRUD › findWithOptions › findWithOptions",
+          "status": "failed",
+          "runner": "tap",
+          "file": "../../core/blong-chain/executor.ts",
+          "line": 995,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,14 +1,14 @@\n String(\n   Array [\n     Object {\n-      \"unitDescription\": \"First blong integration test widget\",\n+      \"unitDescription\": \"Created via upsert in integration test\",\n       \"unitId\": \"<masked>\",\n-      \"unitName\": \"Widget Alpha\",\n+      \"unitName\": \"Widget Merged\",\n     },\n     Object {\n-      \"unitDescription\": \"Second blong integration test widget\",\n+      \"unitDescription\": \"First blong integration test widget\",\n       \"unitId\": \"<masked>\",\n-      \"unitName\": \"Widget Beta\",\n+      \"unitName\": \"Widget Alpha\",\n     },\n   ]\n )",
+          "stack": "executeStepFn (../../core/blong-chain/executor.ts:995:37)\nTest.<anonymous> (../../core/blong-chain/executor.ts:1134:17)\n",
+          "evidence": "# Subtest: insertUnits\n1..0\nok 12 - insertUnits # time=8.587ms\n\n# Subtest: verifyInsert\n1..0\nok 13 - verifyInsert # time=9.948ms\n\n2026-11-12T22:46:13.103Z warn  mysql.sql knex flow=01M78Z1AFH2JBNY5XD8QJ80KY5/-#-1 leg=sql.unit.find#1 [sql.unit.find] ignoring order by \"unitName\": no suc…\n# Subtest: findWithOptions\nnot ok 1 - findWithOptions\n  ---\n  found: |-\n    Array [\n      Object {\n        \"unitDescription\": \"Created via upsert in integration test\",\n        \"unitId\": \"<masked>\",\n        \"unitName\": \"Widget Merged\",\n      },\n      Object {\n        \"unitDescription\": \"First blong integration test widget\",\n        \"unitId\": \"<masked>\",\n        \"unitName\": \"Widget Alpha\","
+        }
+      ]
+    },
+    {
+      "package": "blong-kopi",
+      "path": "core/blong-kopi",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 10,
+        "passed": 9,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "$subject.play.ts › $Object",
+          "test": "browse $subject $object",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/f82c454a-cf49-4014-9b1e-f857e8d9bbb0-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-kukum",
+      "path": "core/blong-kukum",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 634,
+        "passed": 633,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "e2e.test.ts",
+          "test": "the Playwright leg drives the model page against committed baselines › the Playwright suite exits 0",
+          "status": "failed",
+          "runner": "tap",
+          "file": "e2e.test.ts",
+          "line": 285,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-0\n+1",
+          "stack": "Test.<anonymous> (e2e.test.ts:285:11)\n",
+          "evidence": "# (node:27316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# (node:27607) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# (node:27845) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# (node:28564) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# (node:28974) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n# (Use `node --trace-warnings ...` to show where the warning was created)\nnot ok 2 - the Playwright suite exits 0\n  ---\n  compare: ===\n  at:\n    fileName: e2e.test.ts\n    lineNumber: 285\n    columnNumber: 11\n    typeName: Test\n  stack: |\n    Test.<anonymous> (e2e.test.ts:285:11)\n  source: >2\n                t.comment(`Playwright exited ${status}. Last lines of its output:\\n${tail}`);\n            }"
+        }
+      ]
+    },
+    {
+      "package": "blong-marine",
+      "path": "demo/blong-marine",
+      "runners": [
+        "playwright"
+      ],
+      "counts": {
+        "total": 21,
+        "passed": 20,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "portal.play.ts",
+          "test": "open and close browse tab",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/5ac75130-9607-4b42-b62d-82d776c3765d-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-suite",
+      "path": "suite/blong-suite",
+      "runners": [
+        "playwright"
+      ],
+      "counts": {
+        "total": 23,
+        "passed": 22,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "../../../demo/blong-marine/test/portal.play.ts",
+          "test": "open and close browse tab",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/47ea3597-e299-4593-b1d6-d294abbc5952-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 147,
+        "passed": 146,
+        "failed": 0,
+        "flaky": 1,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "relationships.play.ts › Relationships",
+          "test": "edit sport specialist",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          }
+        }
+      ]
+    }
+  ]
+}

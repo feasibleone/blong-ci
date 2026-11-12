@@ -1,0 +1,42 @@
+{
+  "package": "blong-kopi",
+  "status": "failed",
+  "counts": {
+    "total": 10,
+    "passed": 9,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 41293.845,
+  "outsideTestsMs": 21828.155,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 6,
+        "passed": 6,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 8875
+    },
+    {
+      "runner": "playwright",
+      "status": "failed",
+      "counts": {
+        "total": 4,
+        "passed": 3,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 54247
+    }
+  ]
+}
