@@ -1,0 +1,42 @@
+{
+  "package": "blong-sport",
+  "status": "flaky",
+  "counts": {
+    "total": 147,
+    "passed": 143,
+    "failed": 0,
+    "flaky": 4,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 828319.333,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 13,
+        "passed": 13,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 38062
+    },
+    {
+      "runner": "playwright",
+      "status": "flaky",
+      "counts": {
+        "total": 134,
+        "passed": 130,
+        "failed": 0,
+        "flaky": 4,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 518124
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-13T15:14:16.267Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 682,
+  "commit": "a7a15f1994e70fadd7707cf747b43b89edbceb11",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/43445314099",
+  "totals": {
+    "packages": 2,
+    "tests": 6,
+    "failed": 2,
+    "flaky": 4,
+    "newFailures": 5
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-access",
+      "path": "realm/blong-access",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 102,
+        "passed": 100,
+        "failed": 2,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "capability.play.ts › Access Capability",
+          "test": "create access capability",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/7c4d0aa0-f100-4313-bfdc-932d79177b0f-attachment.zip"
+        },
+        {
+          "suite": "capability.play.ts › Access Capability",
+          "test": "edit access capability",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/fe72cdbb-2943-4a96-848c-98c3fe8d6e79-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 147,
+        "passed": 143,
+        "failed": 0,
+        "flaky": 4,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "reference.play.ts › Reference",
+          "test": "cleanup sport cycle",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/7b1f0648-04d6-46b8-a396-afdcb56dec87-attachment.zip"
+        },
+        {
+          "suite": "reference.play.ts › Reference",
+          "test": "edit sport area",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "intermittent",
+            "runs": 5,
+            "failedRuns": 1
+          },
+          "trace": "traces/465db15d-7bad-4ae2-ba24-94f699d865c8-attachment.zip"
+        },
+        {
+          "suite": "records.play.ts › Documents and awards",
+          "test": "edit sport document",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/82ca46d6-6909-42c8-a962-4357609fb48b-attachment.zip"
+        },
+        {
+          "suite": "bgModels.play.ts",
+          "test": "open sport.discipline.browse +5",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/952d218c-0b5f-4357-9fbf-bed453478026-attachment.zip"
+        }
+      ]
+    }
+  ]
+}
