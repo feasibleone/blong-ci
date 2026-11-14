@@ -1,0 +1,76 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-14T15:34:31.719Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 684,
+  "commit": "2d77a859a15bd3e1437cc3ef5ed95759c4f13f7f",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/43608145298",
+  "totals": {
+    "packages": 2,
+    "tests": 2,
+    "failed": 1,
+    "flaky": 1,
+    "newFailures": 1
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-gogo",
+      "path": "core/blong-gogo",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 1196,
+        "passed": 1195,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "src/grant.test.ts",
+          "test": "a grant asks for calls through the one seam the gateway uses › a short-lived token still verifies while it is live",
+          "status": "failed",
+          "runner": "tap",
+          "file": "src/grant.test.ts",
+          "line": 167,
+          "stack": "Test.<anonymous> (src/grant.test.ts:167:7)\n",
+          "evidence": "# Subtest: an env key that is not a JWK is reported rather than used\nok 1 - expected to reject\nok 2 - verification refuses it too\n1..2\nok 11 - an env key that is not a JWK is reported rather than used # time=7.088ms\n\n# Subtest: a grant asks for calls through the one seam the gateway uses\nok 1 - a granted request asks for calls\nok 2 - a request with no grant asks for nothing\nok 3 - and a tampered one asks for nothing\nnot ok 4 - a short-lived token still verifies while it is live\n  ---\n  at:\n    fileName: src/grant.test.ts\n    lineNumber: 167\n    columnNumber: 7\n    typeName: Test\n  stack: |\n    Test.<anonymous> (src/grant.test.ts:167:7)\n  source: >2\n        );\n        const expired = await verifyGrant(await mintGrant({cap: ['calls'], ttlSeconds: 1}), undefined);\n        t.ok((expired?.exp ?? 0) > 0, 'a short-lived token still verifies while it is live');"
+        }
+      ]
+    },
+    {
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 147,
+        "passed": 146,
+        "failed": 0,
+        "flaky": 1,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "reference.play.ts › Reference",
+          "test": "create sport sport",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/22f72af6-4a47-4fc8-9259-08935abb1a5c-attachment.zip"
+        }
+      ]
+    }
+  ]
+}
