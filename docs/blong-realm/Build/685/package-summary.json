@@ -1,0 +1,42 @@
+{
+  "package": "blong-realm",
+  "status": "passed",
+  "counts": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 68051.772,
+  "outsideTestsMs": 12501.228000000003,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 12135
+    },
+    {
+      "runner": "playwright",
+      "status": "passed",
+      "counts": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 68418
+    }
+  ]
+}
