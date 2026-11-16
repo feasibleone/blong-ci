@@ -1,0 +1,29 @@
+{
+  "package": "blong-eip",
+  "status": "passed",
+  "counts": {
+    "total": 23,
+    "passed": 23,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 77.39700000000002,
+  "outsideTestsMs": 7164.603,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 23,
+        "passed": 23,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 7242
+    }
+  ]
+}
