@@ -1,11 +1,11 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T16:07:16.821Z",
+  "generatedAt": "2026-11-20T16:53:16.302Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 701,
-  "commit": "f70bd34bde352943847e7aff0eacd42b4a65213a",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/44763452146",
+  "run": 702,
+  "commit": "6581ca8fb8aa97aee91e0ffaa3c40b26f6096235",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/44772877233",
   "totals": {
     "packages": 3,
     "tests": 6,
@@ -41,7 +41,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/835d4efb-949d-4a0b-a548-c180ddbc6a32-attachment.zip"
+          "trace": "traces/fc470bdb-ac2c-4f72-9a8c-a647b257f58b-attachment.zip"
         }
       ]
     },
@@ -71,7 +71,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/6db317af-25b4-4a9d-9b46-e06de9c2a1c2-attachment.zip"
+          "trace": "traces/0fa51e8c-ca82-442b-a98e-2052444e5dd0-attachment.zip"
         },
         {
           "suite": "observedFlow.play.ts",
@@ -83,7 +83,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/be70d3e4-ef69-4df9-92b2-29b640c0350d-attachment.zip"
+          "trace": "traces/8c1bb478-99af-4175-bd02-ed81dc61f17e-attachment.zip"
         },
         {
           "suite": "observedMergeFlow.play.ts",
@@ -95,7 +95,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/69ee01d1-c0ff-4c9c-9c89-64dc0a15c61b-attachment.zip"
+          "trace": "traces/c4bd81b9-6760-483b-bca8-c6f96663e06b-attachment.zip"
         }
       ]
     },
@@ -125,7 +125,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/d2700d56-af48-4227-8977-183da9961758-attachment.zip"
+          "trace": "traces/c996c8e8-a753-4717-8998-e7b97ac178e3-attachment.zip"
         },
         {
           "suite": "blong.play.ts",
@@ -137,7 +137,7 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/56fcdc33-d0af-4be5-b4f5-9bc5d9c0173d-attachment.zip"
+          "trace": "traces/deaabf86-c07f-46c2-a487-4aebd62d3159-attachment.zip"
         }
       ]
     }
