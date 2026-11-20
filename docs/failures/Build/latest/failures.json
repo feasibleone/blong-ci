@@ -1,30 +1,29 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-20T16:53:16.302Z",
+  "generatedAt": "2026-11-20T21:14:52.547Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 702,
-  "commit": "6581ca8fb8aa97aee91e0ffaa3c40b26f6096235",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/44772877233",
+  "run": 703,
+  "commit": "9fecc771110db29c11005904c4e5a35aa5cc2ebd",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/44814694245",
   "totals": {
-    "packages": 3,
-    "tests": 6,
-    "failed": 6,
-    "flaky": 0,
-    "newFailures": 6
+    "packages": 2,
+    "tests": 2,
+    "failed": 1,
+    "flaky": 1,
+    "newFailures": 0
   },
   "allure": "index.html",
   "packages": [
     {
-      "package": "blong-commander",
-      "path": "realm/blong-commander",
+      "package": "blong-agent",
+      "path": "realm/blong-agent",
       "runners": [
-        "tap",
-        "playwright"
+        "tap"
       ],
       "counts": {
-        "total": 30,
-        "passed": 29,
+        "total": 53,
+        "passed": 52,
         "failed": 1,
         "flaky": 0,
         "skipped": 0,
@@ -32,112 +31,45 @@
       },
       "failures": [
         {
-          "suite": "observedBranchList.play.ts",
-          "test": "the orchestrator dispatch is drawn with its milestones and its outgoing leg",
+          "suite": "test/lukaot.reach.test.ts",
+          "test": "the declared signals reach the store, the service and the line › which is the tick the worker ran",
           "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/fc470bdb-ac2c-4f72-9a8c-a647b257f58b-attachment.zip"
+          "runner": "tap",
+          "file": "test/lukaot.reach.test.ts",
+          "line": 145,
+          "message": "assertion failed (===)\n--- expected\n+++ actual\n@@ -1,1 +1,1 @@\n-agent.worker.tick\n+test.agent.recovery",
+          "stack": "Test.<anonymous> (test/lukaot.reach.test.ts:145:7)\n",
+          "evidence": "ok 3 - and the line that announced it was printed\nok 4 - the line carries a reference (2026-11-20T21:11:24.629Z info  dispatch flow=01M7XCSFK20Z8KF1VP4WVYVMZ1/-\\#-1 leg=agent.worker.tick\\#1 intent=test…\nok 5 - the claim record carries the decision behind it\nok 6 - and the arm that was taken\nok 7 - and the intent names the entry that asked for the work, not the hop it was written on\nok 8 - a session announces the loop that drives it\nok 9 - and the mode it ran is a recorded decision\nok 10 - and lukaot inspect resolves it against the store\nok 11 - to the record the declared identifier names\nok 12 - and the flow ledger lists the execution the claim belongs to\nnot ok 13 - which is the tick the worker ran\n  ---\n  compare: ===\n  at:\n    fileName: test/lukaot.reach.test.ts\n    lineNumber: 145\n    columnNumber: 7\n    typeName: Test\n  stack: |\n    Test.<anonymous> (test/lukaot.reach.test.ts:145:7)\n  source: >2\n        );\n        t.ok(session, 'and the flow ledger lists the execution the claim belongs to');"
         }
       ]
     },
     {
-      "package": "blong-gateway",
-      "path": "realm/blong-gateway",
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
       "runners": [
         "tap",
         "playwright"
       ],
       "counts": {
-        "total": 40,
-        "passed": 37,
-        "failed": 3,
-        "flaky": 0,
+        "total": 153,
+        "passed": 152,
+        "failed": 0,
+        "flaky": 1,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "observedMergeFlow.play.ts",
-          "test": "a checkpoint and a branch are drawn for a flow this realm served",
-          "status": "failed",
+          "suite": "portal.play.ts",
+          "test": "portal carries the sport menu",
+          "status": "flaky",
           "runner": "playwright",
           "history": {
-            "kind": "new",
+            "kind": "intermittent",
             "runs": 5,
-            "failedRuns": 0
+            "failedRuns": 1
           },
-          "trace": "traces/0fa51e8c-ca82-442b-a98e-2052444e5dd0-attachment.zip"
-        },
-        {
-          "suite": "observedFlow.play.ts",
-          "test": "a flow this realm served is drawn as a diagram",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/8c1bb478-99af-4175-bd02-ed81dc61f17e-attachment.zip"
-        },
-        {
-          "suite": "observedMergeFlow.play.ts",
-          "test": "the branch the handler took is drawn as an alt block",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/c4bd81b9-6760-483b-bca8-c6f96663e06b-attachment.zip"
-        }
-      ]
-    },
-    {
-      "package": "blong-realm",
-      "path": "core/blong-realm",
-      "runners": [
-        "tap",
-        "playwright"
-      ],
-      "counts": {
-        "total": 13,
-        "passed": 11,
-        "failed": 2,
-        "flaky": 0,
-        "skipped": 0,
-        "todo": 0
-      },
-      "failures": [
-        {
-          "suite": "blong.play.ts",
-          "test": "an observed execution is drawn as a diagram",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/c996c8e8-a753-4717-8998-e7b97ac178e3-attachment.zip"
-        },
-        {
-          "suite": "blong.play.ts",
-          "test": "every run of a kind is drawn together",
-          "status": "failed",
-          "runner": "playwright",
-          "history": {
-            "kind": "new",
-            "runs": 5,
-            "failedRuns": 0
-          },
-          "trace": "traces/deaabf86-c07f-46c2-a487-4aebd62d3159-attachment.zip"
+          "trace": "traces/6ceac109-a267-4e39-9207-5cfb4a8b4beb-attachment.zip"
         }
       ]
     }

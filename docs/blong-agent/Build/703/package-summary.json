@@ -1,0 +1,29 @@
+{
+  "package": "blong-agent",
+  "status": "failed",
+  "counts": {
+    "total": 53,
+    "passed": 52,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 18924,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "failed",
+      "counts": {
+        "total": 53,
+        "passed": 52,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 18924
+    }
+  ]
+}

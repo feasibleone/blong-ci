@@ -1,0 +1,42 @@
+{
+  "package": "blong-log",
+  "status": "passed",
+  "counts": {
+    "total": 162,
+    "passed": 162,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 32847,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 134,
+        "passed": 134,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 7472
+    },
+    {
+      "runner": "storybook",
+      "status": "passed",
+      "counts": {
+        "total": 28,
+        "passed": 28,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 32847
+    }
+  ]
+}
