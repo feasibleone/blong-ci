@@ -1,0 +1,29 @@
+{
+  "package": "lukaot",
+  "status": "passed",
+  "counts": {
+    "total": 1698,
+    "passed": 1698,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 63119,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 1698,
+        "passed": 1698,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 63119
+    }
+  ]
+}

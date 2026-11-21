@@ -1,0 +1,286 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-21T17:15:30.180Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 706,
+  "commit": "da800b01013b995837937bc2b3722fa9668132aa",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/44926577798",
+  "totals": {
+    "packages": 2,
+    "tests": 29,
+    "failed": 29,
+    "flaky": 0,
+    "newFailures": 0
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-log",
+      "path": "tools/blong-log",
+      "runners": [
+        "tap",
+        "storybook"
+      ],
+      "counts": {
+        "total": 164,
+        "passed": 136,
+        "failed": 28,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › AllFiltersShowcase › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 3.0150945216049383% different from snapshot (62521 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--all-filters-showcase-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › DarkTheme › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 3.0150945216049383% different from snapshot (62521 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--dark-theme-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › Empty › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.08116319444444445% different from snapshot (1683 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--empty-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › ErrorsOnly › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.9228395061728395% different from snapshot (19136 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--errors-only-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › ExpandedExceptionDetails › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.0541570216049383% different from snapshot (21859 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-exception-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › ExpandedHTTPDetails › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.2351466049382718% different from snapshot (25612 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-http-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › ExpandedMixedContent › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.9603587962962963% different from snapshot (19914 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-mixed-content-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › FilteredServer › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 3.155140817901234% different from snapshot (65425 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--filtered-server-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › HTTPErrorWithBody › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.6509934413580246% different from snapshot (13499 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-error-with-body-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › HTTPFullDetails › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.2332175925925926% different from snapshot (25572 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-full-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › HTTPSuccessWithBody › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.6633873456790124% different from snapshot (13756 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-success-with-body-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › HTTPWithCacheHeaders › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.5964506172839507% different from snapshot (12368 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-with-cache-headers-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LargeDataset › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 7.820457175925926% different from snapshot (162165 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at processImmediate (node:internal/timers:541:9)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LargeDatasetLight › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 7.906201774691358% different from snapshot (163943 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-light-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LightTheme › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 3.044656635802469% different from snapshot (63134 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--light-theme-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LukaotCapturesExpanded › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.373070987654321% different from snapshot (28472 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-captures-expanded-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LukaotFrameDump › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.7496624228395062% different from snapshot (15545 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-frame-dump-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LukaotFrameDumpLight › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.755787037037037% different from snapshot (15672 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-frame-dump-light-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LukaotRecordContext › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.7107928240740741% different from snapshot (14739 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-record-context-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LukaotRecords › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 2.462818287037037% different from snapshot (51069 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-records-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › LukaotSignalExpanded › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.1645447530864197% different from snapshot (24148 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-signal-expanded-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › SearchHighlightingExpanded › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.7113233024691359% different from snapshot (14750 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-expanded-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › SearchHighlightingHTTPAndErrors › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.0794753086419753% different from snapshot (22384 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-http-and-errors-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › SearchHighlightingSingleLine › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.4139178240740741% different from snapshot (8583 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-single-line-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › SingleService › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 0.6369116512345679% different from snapshot (13207 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-service-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › SingleTrace › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.056712962962963% different from snapshot (21912 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-trace-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "LogViewer › WithHTTPDetails › smoke-test",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "Error: Expected image to match or be a close match to snapshot but was 1.5266685956790123% different from snapshot (31657 differing pixels).\nSee diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--with-http-details-diff.png\n    at postVisit (/home/runner/work/blong/blong/tools/blong-log/.storybook/test-runner.cjs:196:32)"
+        },
+        {
+          "suite": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "test": "tools/blong-log/src/client/LogViewer.stories.tsx — test file failed to run",
+          "status": "failed",
+          "runner": "storybook",
+          "file": "tools/blong-log/src/client/LogViewer.stories.tsx",
+          "message": "  ● LogViewer › DarkTheme › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 3.0150945216049383% different from snapshot (62521 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--dark-theme-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LightTheme › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 3.044656635802469% different from snapshot (63134 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--light-theme-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › Empty › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.08116319444444445% different from snapshot (1683 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--empty-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › ErrorsOnly › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.9228395061728395% different from snapshot (19136 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--errors-only-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LargeDataset › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 7.820457175925926% different from snapshot (162165 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LargeDatasetLight › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 7.906201774691358% different from snapshot (163943 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--large-dataset-light-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › WithHTTPDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.5266685956790123% different from snapshot (31657 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--with-http-details-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › AllFiltersShowcase › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 3.0150945216049383% different from snapshot (62521 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--all-filters-showcase-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › SingleService › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.6369116512345679% different from snapshot (13207 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-service-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › SingleTrace › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.056712962962963% different from snapshot (21912 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--single-trace-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › ExpandedHTTPDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.2351466049382718% different from snapshot (25612 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-http-details-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › ExpandedExceptionDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.0541570216049383% different from snapshot (21859 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-exception-details-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › ExpandedMixedContent › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.9603587962962963% different from snapshot (19914 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--expanded-mixed-content-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LukaotRecords › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 2.462818287037037% different from snapshot (51069 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-records-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LukaotCapturesExpanded › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.373070987654321% different from snapshot (28472 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-captures-expanded-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LukaotRecordContext › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.7107928240740741% different from snapshot (14739 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-record-context-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LukaotFrameDump › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.7496624228395062% different from snapshot (15545 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-frame-dump-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LukaotFrameDumpLight › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.755787037037037% different from snapshot (15672 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-frame-dump-light-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › LukaotSignalExpanded › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.1645447530864197% different from snapshot (24148 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--lukaot-signal-expanded-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › HTTPFullDetails › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.2332175925925926% different from snapshot (25572 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-full-details-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › HTTPSuccessWithBody › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.6633873456790124% different from snapshot (13756 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-success-with-body-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › HTTPErrorWithBody › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.6509934413580246% different from snapshot (13499 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-error-with-body-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › HTTPWithCacheHeaders › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.5964506172839507% different from snapshot (12368 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--http-with-cache-headers-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › SearchHighlightingSingleLine › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.4139178240740741% different from snapshot (8583 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-single-line-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › SearchHighlightingExpanded › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 0.7113233024691359% different from snapshot (14750 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-expanded-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › SearchHighlightingHTTPAndErrors › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 1.0794753086419753% different from snapshot (22384 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--search-highlighting-http-and-errors-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n\n  ● LogViewer › FilteredServer › smoke-test\n\n    Expected image to match or be a close match to snapshot but was 3.155140817901234% different from snapshot (65425 differing pixels).\n    See diff for details: /home/runner/work/blong/blong/tools/blong-log/src/client/__image_snapshots__/__diff_output__/logviewer--filtered-server-diff.png\n\n      194 |             // Full-page screenshot comparison — saves real PNG files\n      195 |             const screenshot = await page.screenshot({fullPage: true});\n    > 196 |             expect(screenshot).toMatchImageSnapshot({\n          |                                ^\n      197 |                 customSnapshotsDir: path.join(\n      198 |                     __dirname,\n      199 |                     '..',\n\n      at postVisit (tools/blong-log/.storybook/test-runner.cjs:196:32)\n"
+        }
+      ]
+    },
+    {
+      "package": "blong-viewer",
+      "path": "realm/blong-viewer",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 12,
+        "passed": 11,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "viewer.play.ts",
+          "test": "the page receives wakes over a stream",
+          "status": "failed",
+          "runner": "playwright",
+          "trace": "traces/e458a44c-476b-4633-8ea1-9b737eb0c0a1-attachment.zip"
+        }
+      ]
+    }
+  ]
+}
