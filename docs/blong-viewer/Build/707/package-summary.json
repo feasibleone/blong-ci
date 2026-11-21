@@ -1,0 +1,42 @@
+{
+  "package": "blong-viewer",
+  "status": "failed",
+  "counts": {
+    "total": 16,
+    "passed": 15,
+    "failed": 1,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 35670,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 13,
+        "passed": 13,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 10272
+    },
+    {
+      "runner": "playwright",
+      "status": "failed",
+      "counts": {
+        "total": 3,
+        "passed": 2,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 63176
+    }
+  ]
+}
