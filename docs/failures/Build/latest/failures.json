@@ -1,17 +1,17 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-22T10:24:56.549Z",
+  "generatedAt": "2026-11-22T15:44:26.712Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 709,
-  "commit": "20037761ea8f5708672f5001dbc790b0129e8f52",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/45009193528",
+  "run": 710,
+  "commit": "ce6869eef8d06ec703e641bd7ce5e49381e92741",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/45037345301",
   "totals": {
     "packages": 1,
-    "tests": 1,
+    "tests": 4,
     "failed": 0,
-    "flaky": 1,
-    "newFailures": 1
+    "flaky": 4,
+    "newFailures": 4
   },
   "allure": "index.html",
   "packages": [
@@ -24,16 +24,16 @@
       ],
       "counts": {
         "total": 153,
-        "passed": 152,
+        "passed": 149,
         "failed": 0,
-        "flaky": 1,
+        "flaky": 4,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "records.play.ts › Documents and awards",
-          "test": "edit sport award",
+          "suite": "bgModels.play.ts",
+          "test": "bg create club +5 (empty form)",
           "status": "flaky",
           "runner": "playwright",
           "history": {
@@ -41,7 +41,43 @@
             "runs": 5,
             "failedRuns": 0
           },
-          "trace": "traces/961b4046-bdf6-49a6-8091-a6122f513778-attachment.zip"
+          "trace": "traces/c2f65339-873d-4476-94ff-e5c104e84820-attachment.zip"
+        },
+        {
+          "suite": "olympic.play.ts › Olympic",
+          "test": "cleanup sport cycle",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/4dbfc7b7-331c-4d68-b155-23a3feca04cd-attachment.zip"
+        },
+        {
+          "suite": "deletion.play.ts › Deletion modes",
+          "test": "deactivate: the record is hidden, not removed",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/0b1943f7-231c-420a-be75-2c188e750246-attachment.zip"
+        },
+        {
+          "suite": "reference.play.ts › Reference",
+          "test": "edit sport sport",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/e5fa4683-243a-4976-8d57-6f0ece8a0696-attachment.zip"
         }
       ]
     }
