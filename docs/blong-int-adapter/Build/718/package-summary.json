@@ -1,0 +1,29 @@
+{
+  "package": "blong-int-adapter",
+  "status": "passed",
+  "counts": {
+    "total": 175,
+    "passed": 175,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 20691.594999999987,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 175,
+        "passed": 175,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 31185
+    }
+  ]
+}
