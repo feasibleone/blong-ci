@@ -1,45 +1,59 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-25T22:11:54.477Z",
+  "generatedAt": "2026-11-26T13:28:39.462Z",
   "repository": "feasibleone/blong",
   "workflow": "Build",
-  "run": 719,
-  "commit": "c4da14e26ed3c9f86ea33edeaed85cec853a6148",
-  "runUrl": "https://github.com/feasibleone/blong/actions/runs/45705521262",
+  "run": 720,
+  "commit": "4fb4dd8d5b3e442fab4cea8e3e7b35ff1839d124",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/45824519237",
   "totals": {
     "packages": 1,
-    "tests": 1,
-    "failed": 1,
-    "flaky": 0,
-    "newFailures": 0
+    "tests": 2,
+    "failed": 0,
+    "flaky": 2,
+    "newFailures": 2
   },
   "allure": "index.html",
   "packages": [
     {
-      "package": "blong-int-adapter",
-      "path": "test/blong-int-adapter",
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
       "runners": [
-        "tap"
+        "tap",
+        "playwright"
       ],
       "counts": {
-        "total": 175,
-        "passed": 174,
-        "failed": 1,
-        "flaky": 0,
+        "total": 153,
+        "passed": 151,
+        "failed": 0,
+        "flaky": 2,
         "skipped": 0,
         "todo": 0
       },
       "failures": [
         {
-          "suite": "kafka.test.ts",
-          "test": "blong int-adapter › kafka telemetry burst latency › burstsOfTraffic › throughput 132 msg/s is at least 150",
-          "status": "failed",
-          "runner": "tap",
-          "file": "../../core/blong-chain/executor.ts",
-          "line": 469,
-          "message": "simple",
-          "stack": "call (../../core/blong-chain/executor.ts:469:28)\nProxy.<anonymous> (../../core/blong-chain/executor.ts:498:44)\nburstsOfTraffic (kafka/test/test/testKafkaPerf.ts:327:32)\nexecuteStepFn (../../core/blong-chain/executor.ts:1005:34)\nTest.<anonymous> (../../core/blong-chain/executor.ts:1174:17)\n",
-          "evidence": "| warm p95                       |  29.00 | ms      |\n| watch close                    |   1.00 | ms      |\n| sends over 100 ms              |   0.00 | sends   |\n| first send after silence (max) |  63.00 | ms      |\n| first after silence (max)      |  23.00 | ms      |\n\n2026-11-25T21:58:11.928Z error Watch flow=01M8ABEBQ78R1NK13J0HWZQEEH/kafka telemetry burst latency#0 intent=test.kafka.perf step burstsOfTraffic failed: th…\nstep: burstsOfTraffic\nreason: throughput 132 msg/s is at least 150\n# Subtest: burstsOfTraffic\nnot ok 1 - throughput 132 msg/s is at least 150\n  ---\n  stack: |\n    call (../../core/blong-chain/executor.ts:469:28)\n    Proxy.<anonymous> (../../core/blong-chain/executor.ts:498:44)\n    burstsOfTraffic (kafka/test/test/testKafkaPerf.ts:327:32)\n    executeStepFn (../../core/blong-chain/executor.ts:1005:34)\n    Test.<anonymous> (../../core/blong-chain/executor.ts:1174:17)\n  at:\n    fileName: ../../core/blong-chain/executor.ts\n    lineNumber: 469\n    columnNumber: 28\n    functionName: call"
+          "suite": "olympic.play.ts › Olympic",
+          "test": "create sport cycle",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/66fcfde3-bb14-42f7-ba2c-832246132ac2-attachment.zip"
+        },
+        {
+          "suite": "portal.play.ts",
+          "test": "portal carries the sport menu",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/cbc45351-e5eb-4d51-ba90-bf891749e623-attachment.zip"
         }
       ]
     }
