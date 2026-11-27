@@ -1,0 +1,42 @@
+{
+  "package": "blong-agent",
+  "status": "passed",
+  "counts": {
+    "total": 294,
+    "passed": 294,
+    "failed": 0,
+    "flaky": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "testsMs": 18289,
+  "outsideTestsMs": 0,
+  "runs": [
+    {
+      "runner": "tap",
+      "status": "passed",
+      "counts": {
+        "total": 293,
+        "passed": 293,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 50131
+    },
+    {
+      "runner": "playwright",
+      "status": "passed",
+      "counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "durationMs": 18289
+    }
+  ]
+}
