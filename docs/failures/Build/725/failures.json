@@ -1,0 +1,117 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-11-28T12:54:02.439Z",
+  "repository": "feasibleone/blong",
+  "workflow": "Build",
+  "run": 725,
+  "commit": "c01547ea17c66dcffedb10dd1f7426058c8e6070",
+  "runUrl": "https://github.com/feasibleone/blong/actions/runs/46143994064",
+  "totals": {
+    "packages": 3,
+    "tests": 4,
+    "failed": 2,
+    "flaky": 2,
+    "newFailures": 3
+  },
+  "allure": "index.html",
+  "packages": [
+    {
+      "package": "blong-agent",
+      "path": "realm/blong-agent",
+      "runners": [
+        "tap"
+      ],
+      "counts": {
+        "total": 270,
+        "passed": 269,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "index.test.ts",
+          "test": "timeout!",
+          "status": "failed",
+          "runner": "tap",
+          "file": "index.test.ts",
+          "message": "timeout: the run's own budget expired while this test was still running",
+          "evidence": "2026-11-28T12:49:31.220Z info  agent.engine(dispatch) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882MKG7T6WC25646GDRY]\n2026-11-28T12:49:31.221Z info  agent.kafka(kafka) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882MKG7T6WC25646GDRZ]\n2026-11-28T12:49:31.224Z info  agent.notify(redis) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882NT4P62NXNB78Z2EFJ]\n2026-11-28T12:49:31.224Z info  agent.task(http) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882RZYVM2SZRRKP6EGC7]\n2026-11-28T12:49:31.224Z info  agent.workspace(dispatch) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882RZYVM2SZRRKP6EGC8]\n2026-11-28T12:49:31.225Z info  agent.agentDispatch(dispatch) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882RZYVM2SZRRKP6EGC9]\n2026-11-28T12:49:31.225Z info  agent.testDispatch(dispatch) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882S69S7PN9J1G4BMQPM]\n2026-11-28T12:49:31.225Z info  gateway.meter(redis) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882S69S7PN9J1G4BMQPN]\n2026-11-28T12:49:31.225Z info  gateway.testDispatch(dispatch) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882S69S7PN9J1G4BMQPP]\n2026-11-28T12:49:31.225Z info  testRealm.testDispatch(dispatch) event adapter.stop [lukaot://t/0cc3bf136c8a p=01M8H3882S69S7PN9J1G4BMQPQ]\nnot ok 2 - timeout!\n  ---\n  signal: SIGALRM\n  expired: TAP\n  test: TAP\n  ...\n\n1..2\n# time=240022.882ms\nnot ok 1 - index.test.ts # time=240022.882ms\n---\nstdio: pipe\ncwd: /home/runner/work/blong/blong/realm/blong-agent"
+        }
+      ]
+    },
+    {
+      "package": "blong-commander",
+      "path": "realm/blong-commander",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 30,
+        "passed": 29,
+        "failed": 1,
+        "flaky": 0,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "explore.play.ts",
+          "test": "kafka-dev — topics and message viewer",
+          "status": "failed",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/9ade7c2d-27e9-4bce-a34f-d7e75dc427d7-attachment.zip"
+        }
+      ]
+    },
+    {
+      "package": "blong-sport",
+      "path": "realm/blong-sport",
+      "runners": [
+        "tap",
+        "playwright"
+      ],
+      "counts": {
+        "total": 153,
+        "passed": 151,
+        "failed": 0,
+        "flaky": 2,
+        "skipped": 0,
+        "todo": 0
+      },
+      "failures": [
+        {
+          "suite": "reference.play.ts › Reference",
+          "test": "edit sport discipline",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/de30d8ce-3702-4601-a2e0-bd867017d88e-attachment.zip"
+        },
+        {
+          "suite": "portal.play.ts",
+          "test": "portal carries the sport menu",
+          "status": "flaky",
+          "runner": "playwright",
+          "history": {
+            "kind": "new",
+            "runs": 5,
+            "failedRuns": 0
+          },
+          "trace": "traces/1220924b-d87b-4de2-b336-8e62a29f5e73-attachment.zip"
+        }
+      ]
+    }
+  ]
+}
